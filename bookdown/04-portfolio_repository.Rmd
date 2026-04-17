@@ -1,8 +1,4 @@
----
-title: "Portfolio repository"
-output: html_document
-date: "`r Sys.Date()`"
----
+# Portfolio repository
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)

@@ -36,6 +36,46 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -105,5 +145,112 @@
 Over 1-2 jaar zie ik mijzelf werken in een onderzoeksgroep binnen de life sciences, bijvoorbeeld in academisch onderzoek, een biotechbedrijf of een diagnostisch laboratorium. Mijn droombaan zou een functie zijn waarin ik biologische vragen kan beantwoorden door werk op het lab en data-ananlyse met elkaar te combineren.\\
 \strut \\
 Op dit moment heb ik een goede basis in data-analyse met R en bash. Ik heb onder andere ervaring met het werken met tidyverse, visualisatie met ggplot2 en het analyseren van RNA-sequentie en metagenomics data. Tijdens de cursus Projecticum Biomolecular Research heb ik ook ervaring opgedaan met het analyseren van metagenomics data van samples van patiënten met parodontitis. Op dit moment wil ik mijn kennis in metagenomics analyses verdiepen of vebreden.
+
+\chapter{Portfolio repository}\label{portfolio-repository}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fs}\SpecialCharTok{::}\FunctionTok{dir\_tree}\NormalTok{(here}\SpecialCharTok{::}\FunctionTok{here}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## C:/Users/rache/Documents/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/bookdown
+## +-- 01-intro.md
+## +-- 01-intro.Rmd
+## +-- 02-curriculum_vitae.md
+## +-- 02-curriculum_vitae.Rmd
+## +-- 03-plan_voor_de_toekomst.md
+## +-- 03-plan_voor_de_toekomst.Rmd
+## +-- 04-portfolio_repository.Rmd
+## +-- book.bib
+## +-- bookdown-demo.tex
+## +-- bookdown-portfolio.rds
+## +-- bookdown-portfolio.Rproj
+## +-- bookdown-portfolio.tex
+## +-- bookdown-portfolio_files
+## |   \-- figure-html
+## |       \-- nice-fig-1.png
+## +-- curriculum_vitae.html
+## +-- DESCRIPTION
+## +-- Dockerfile
+## +-- index.md
+## +-- index.Rmd
+## +-- LICENSE
+## +-- now.json
+## +-- packages.bib
+## +-- preamble.tex
+## +-- README.md
+## +-- render29002366426b.rds
+## +-- style.css
+## +-- toc.css
+## +-- _book
+## |   +-- 01-intro.md
+## |   +-- 02-curriculum_vitae.md
+## |   +-- 03-plan_voor_de_toekomst.md
+## |   +-- 04-portfolio_repository.md
+## |   +-- 06-portfolio_repository.md
+## |   +-- 404.html
+## |   +-- a-tibble-3-5.html
+## |   +-- applications.html
+## |   +-- bookdown-demo_files
+## |   |   \-- figure-html
+## |   |       \-- nice-fig-1.png
+## |   +-- bookdown-portfolio_files
+## |   |   \-- figure-html
+## |   |       \-- nice-fig-1.png
+## |   +-- curriculum-vitae-1.html
+## |   +-- curriculum-vitae.html
+## |   +-- curriculum_vitae.html
+## |   +-- extra-chapter-1-1.html
+## |   +-- extra-chapter-1.html
+## |   +-- extra-chapter-2.html
+## |   +-- final-words.html
+## |   +-- index.html
+## |   +-- index.md
+## |   +-- intro.html
+## |   +-- introduction.html
+## |   +-- libs
+## |   |   +-- anchor-sections-1.1.0
+## |   |   |   +-- anchor-sections-hash.css
+## |   |   |   +-- anchor-sections.css
+## |   |   |   \-- anchor-sections.js
+## |   |   +-- gitbook-2.6.7
+## |   |   |   +-- css
+## |   |   |   |   +-- fontawesome
+## |   |   |   |   |   \-- fontawesome-webfont.ttf
+## |   |   |   |   +-- plugin-bookdown.css
+## |   |   |   |   +-- plugin-clipboard.css
+## |   |   |   |   +-- plugin-fontsettings.css
+## |   |   |   |   +-- plugin-highlight.css
+## |   |   |   |   +-- plugin-search.css
+## |   |   |   |   +-- plugin-table.css
+## |   |   |   |   \-- style.css
+## |   |   |   \-- js
+## |   |   |       +-- app.min.js
+## |   |   |       +-- clipboard.min.js
+## |   |   |       +-- jquery.highlight.js
+## |   |   |       +-- plugin-bookdown.js
+## |   |   |       +-- plugin-clipboard.js
+## |   |   |       +-- plugin-fontsettings.js
+## |   |   |       +-- plugin-search.js
+## |   |   |       \-- plugin-sharing.js
+## |   |   \-- jquery-3.6.0
+## |   |       \-- jquery-3.6.0.min.js
+## |   +-- literature.html
+## |   +-- methods.html
+## |   +-- plan-voor-de-toekomst.html
+## |   +-- portfolio-repository.html
+## |   +-- references-1.html
+## |   +-- references.html
+## |   +-- search_index.json
+## |   \-- style.css
+## +-- _bookdown.yml
+## +-- _bookdown_files
+## +-- _build.sh
+## +-- _deploy.sh
+## +-- _output.yml
+## \-- _publish.R
+\end{verbatim}
 
 \end{document}
