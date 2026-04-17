@@ -1,0 +1,80 @@
+---
+title: Curriculum Vitae
+name: Rachel
+surname: van der Kreeft
+position: "Student HBO Life Sciences, Hogeschool Utrecht"
+github: RachelvanderKreeft
+date: "`r format(Sys.time(), '%B %Y')`"
+output:
+  vitae::markdowncv:
+    theme: kjhealy
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+## Profile
+Third-year HBO Life Sciences student, specialized in Biomolecular Research. Has experience with modern laboratory techniques, including nanopore sequencing and data analysis with Bash. Is pursuing the Data Sciences for Biology minor and developing additional data analysis skills through this.
+
+## Education
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "HBO Life Sciences", "09/2022 - present", "Hogeschool Utrecht", "Utrecht, Netherlands",
+  "HAVO eenjarig", "09/2021 - 07/2022", "VAVO Lyceum", "Utrecht, Netherlands",
+  "MBO Dierverzorging (Animal Care)", "09/2018 - 07/2021", "Wellantcollege", "Houten, Netherlands"
+) %>%
+  detailed_entries(Degree, Year, Institution, Where)
+
+```
+
+## Internships
+
+```{r}
+library(tibble)
+tribble(
+  ~ Role, ~ Year, ~Organization , ~ Where,
+  "Animal caretaker", "09/2020 – 11/2020", "Kinderboerderij Nieuw Rotsoord", "Utrecht, Netherlands",
+  "Animal caretaker", "03/2020 – 05/2020", "Kinderboerderij Nieuw Rotsoord", "Utrecht, Netherlands",
+  "Animal caretaker", "02/2020", "Kooise Zorgboerderij Camping", "Acqouy, Netherlands",
+  "Animal caretaker", "10/2018 – 07/2019", "Kinderboerderij de Schaapskooi", "Bilthoven, Netherlands"
+) %>%
+  detailed_entries(Role, Year, Organization, Where)
+
+```
+
+## Projects
+
+```{r}
+library(tibble)
+tribble(
+  ~ Project, ~ Year, ~ Description,
+  "Patients-Like-Me dashboard", "04/2026 - 06/2026", "Created a R shiny dashboard for an external client.",
+  "Nanopore sequencing - periodontitis", "09/2021 - 07/2022", "Did 16s and whole genome sequencing with the MinION to determine the composition of the oral microbiome of patients with periodontitis and healthy people.",
+  "Literature review – algae as an alternative protein source in animal feed", "01/2025 - 04/2025", "Researched how the palatability and production of algae in animal feed can be improved",
+) %>%
+  detailed_entries(Project, Year, Description)
+
+```
+
+## Languages
+
+-**Dutch** - Native \
+-**English** - Fluent \
+
+## Computer skills
+
+**Programming & data analysis** \
+- R (tidyverse, DESeq2, ggplot2, Shiny) \
+- Bash (file management, text processing, bash scripts) \
+
+**Bioinformatics** \
+- RNA-seq analysis \
+- Metagenomics analysis \
+
+### Credits
+This CV template is provided by the **vitae R package** authored and maintained by *Mitchell O’Hara-Wild*, with the HTML `markdowncv` theme originally designed by *Eliseo Papa*.

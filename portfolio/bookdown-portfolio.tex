@@ -118,12 +118,12 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={A Minimal Book Example},
+  pdftitle={Portfolio Workflows},
   pdfauthor={Rachel van der Kreeft},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{A Minimal Book Example}
+\title{Portfolio Workflows}
 \author{Rachel van der Kreeft}
 \date{2026-04-16}
 
@@ -152,82 +152,14 @@ Remember each Rmd file contains one and only one chapter, and a chapter is defin
 
 To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.org/tinytex/}.
 
-\chapter{Introduction}\label{intro}
-
-You can label chapter and section titles using \texttt{\{\#label\}} after them, e.g., we can reference Chapter \ref{intro}. If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \ref{methods}.
-
-Figures and tables with captions will be placed in \texttt{figure} and \texttt{table} environments, respectively.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, .}\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
-\FunctionTok{plot}\NormalTok{(pressure, }\AttributeTok{type =} \StringTok{\textquotesingle{}b\textquotesingle{}}\NormalTok{, }\AttributeTok{pch =} \DecValTok{19}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\linewidth]{01-intro_files/figure-latex/nice-fig-1} 
-
-}
-
-\caption{Here is a nice figure!}\label{fig:nice-fig}
-\end{figure}
-
-Reference a figure by its code chunk label with the \texttt{fig:} prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can reference tables generated from \texttt{knitr::kable()}, e.g., see Table \ref{tab:nice-tab}.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}
-  \FunctionTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\AttributeTok{caption =} \StringTok{\textquotesingle{}Here is a nice table!\textquotesingle{}}\NormalTok{,}
-  \AttributeTok{booktabs =} \ConstantTok{TRUE}
-\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{table}
-
-\caption{\label{tab:nice-tab}Here is a nice table!}
-\centering
-\begin{tabular}[t]{rrrrl}
-\toprule
-Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
-\midrule
-5.1 & 3.5 & 1.4 & 0.2 & setosa\\
-4.9 & 3.0 & 1.4 & 0.2 & setosa\\
-4.7 & 3.2 & 1.3 & 0.2 & setosa\\
-4.6 & 3.1 & 1.5 & 0.2 & setosa\\
-5.0 & 3.6 & 1.4 & 0.2 & setosa\\
-\addlinespace
-5.4 & 3.9 & 1.7 & 0.4 & setosa\\
-4.6 & 3.4 & 1.4 & 0.3 & setosa\\
-5.0 & 3.4 & 1.5 & 0.2 & setosa\\
-4.4 & 2.9 & 1.4 & 0.2 & setosa\\
-4.9 & 3.1 & 1.5 & 0.1 & setosa\\
-\addlinespace
-5.4 & 3.7 & 1.5 & 0.2 & setosa\\
-4.8 & 3.4 & 1.6 & 0.2 & setosa\\
-4.8 & 3.0 & 1.4 & 0.1 & setosa\\
-4.3 & 3.0 & 1.1 & 0.1 & setosa\\
-5.8 & 4.0 & 1.2 & 0.2 & setosa\\
-\addlinespace
-5.7 & 4.4 & 1.5 & 0.4 & setosa\\
-5.4 & 3.9 & 1.3 & 0.4 & setosa\\
-5.1 & 3.5 & 1.4 & 0.3 & setosa\\
-5.7 & 3.8 & 1.7 & 0.3 & setosa\\
-5.1 & 3.8 & 1.5 & 0.3 & setosa\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+\chapter{Introduction}\label{introduction}
 
 \chapter{Curriculum Vitae}\label{curriculum-vitae}
 
 \chapter{Plan voor de toekomst}\label{plan-voor-de-toekomst}
 
-Over 1-2 jaar zie ik mijzelf werken in een onderzoeksgroep binnen de life sciences, bijvoorbeeld in academisch onderzoek, een biotechbedrijf of een diagnostisch laboratorium. Mijn droombaan zou een functie zijn waarin ik biologische vragen kan beantwoorden door werk op het lab en data-ananlyse met elkaar te combineren.
-/
+Over 1-2 jaar zie ik mijzelf werken in een onderzoeksgroep binnen de life sciences, bijvoorbeeld in academisch onderzoek, een biotechbedrijf of een diagnostisch laboratorium. Mijn droombaan zou een functie zijn waarin ik biologische vragen kan beantwoorden door werk op het lab en data-ananlyse met elkaar te combineren.\\
+\strut \\
 Op dit moment heb ik een goede basis in data-analyse met R en bash. Ik heb onder andere ervaring met het werken met tidyverse, visualisatie met ggplot2 en het analyseren van RNA-sequentie en metagenomics data. Tijdens de cursus Projecticum Biomolecular Research heb ik ook ervaring opgedaan met het analyseren van metagenomics data van samples van patiënten met parodontitis. Op dit moment wil ik mijn kennis in metagenomics analyses verdiepen of vebreden.
 
 \end{document}
