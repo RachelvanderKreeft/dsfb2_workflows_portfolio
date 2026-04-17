@@ -1,0 +1,24 @@
+---
+title: "Portfolio repository"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(fs)
+library(here)
+
+```
+
+```{r}
+
+fs::dir_tree(here::here())
+
+```
+
+
+
+
+
