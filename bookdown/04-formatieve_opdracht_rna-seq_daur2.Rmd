@@ -1,8 +1,4 @@
----
-title: "Formatieve opdracht rna-seq daur2"
-output: html_document
-date: "`r Sys.Date()`"
----
+# RNA-sequencing repository"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)

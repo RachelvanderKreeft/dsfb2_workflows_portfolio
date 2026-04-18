@@ -26,10 +26,10 @@ fs::dir_tree(here::here())
 
 ```{r readme, echo=FALSE}
 
-readme_3a_1 <-  rasterGrob(as.raster(readPNG("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/3a_formatieve_opdracht_rna-seq_daur2/readme_screenshot_3a_1.png")))
+readme_3a_1 <-  rasterGrob(as.raster(readPNG("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/3a_formatieve_opdracht_rna-seq_daur2/readme_screenshot_3a_1.png")))
 grid.arrange(readme_3a_1, ncol=1, top=textGrob("README from the RNA-seq formative assignment:", gp=gpar(fontsize=20,font=8)))
 
-readme_3a_2 <-  rasterGrob(as.raster(readPNG("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/3a_formatieve_opdracht_rna-seq_daur2/readme_screenshot_3a_2.png")))
+readme_3a_2 <-  rasterGrob(as.raster(readPNG("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/3a_formatieve_opdracht_rna-seq_daur2/readme_screenshot_3a_2.png")))
 grid.arrange(readme_3a_2, ncol=1, top=textGrob("", gp=gpar(fontsize=20,font=8)))
 
 ```
