@@ -20,7 +20,7 @@ library(gridExtra)
 
 ```{r, echo=FALSE}
 
-fs::dir_tree(here::here())
+fs::dir_tree("~/documents/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/3a_formatieve_opdracht_rna-seq_daur2/rnaseq_ipsc")
 
 ```
 

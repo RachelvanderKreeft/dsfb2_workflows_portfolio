@@ -1,116 +1,57 @@
-% Options for packages loaded elsewhere
-\PassOptionsToPackage{unicode}{hyperref}
-\PassOptionsToPackage{hyphens}{url}
-\documentclass[
-]{book}
-\usepackage{xcolor}
-\usepackage{amsmath,amssymb}
-\setcounter{secnumdepth}{5}
-\usepackage{iftex}
-\ifPDFTeX
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provide euro and other symbols
-\else % if luatex or xetex
-  \usepackage{unicode-math} % this also loads fontspec
-  \defaultfontfeatures{Scale=MatchLowercase}
-  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-\fi
-\usepackage{lmodern}
-\ifPDFTeX\else
-  % xetex/luatex font selection
-\fi
-% Use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
-  \usepackage[]{microtype}
-  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
-\makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
-  \IfFileExists{parskip.sty}{%
-    \usepackage{parskip}
-  }{% else
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
-  \KOMAoptions{parskip=half}}
-\makeatother
-\usepackage{longtable,booktabs,array}
-\usepackage{calc} % for calculating minipage widths
-% Correct order of tables after \paragraph or \subparagraph
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
-\makeatother
-% Allow footnotes in longtable head/foot
-\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
-\makesavenoteenv{longtable}
-\usepackage{graphicx}
-\makeatletter
-\newsavebox\pandoc@box
-\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
-  \sbox\pandoc@box{#1}%
-  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
-  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
-  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
-  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
-  \else\usebox{\pandoc@box}%
-  \fi%
-}
-% Set default figure placement to htbp
-\def\fps@figure{htbp}
-\makeatother
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\usepackage[]{natbib}
-\bibliographystyle{plainnat}
-\usepackage{booktabs}
-\usepackage{amsthm}
-\makeatletter
-\def\thm@space@setup{%
-  \thm@preskip=8pt plus 2pt minus 4pt
-  \thm@postskip=\thm@preskip
-}
-\makeatother
-\usepackage{bookmark}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same}
-\hypersetup{
-  pdftitle={Portfolio Workflows},
-  pdfauthor={Rachel van der Kreeft},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
+--- 
+title: "Portfolio Workflows"
+author: "Rachel van der Kreeft"
+date: "2026-04-18"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+# bibliography: [book.bib, packages.bib]
+# biblio-style: apalike
+# link-citations: yes
+github-repo: rstudio/bookdown-demo
+description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+---
 
-\title{Portfolio Workflows}
-\author{Rachel van der Kreeft}
-\date{2026-04-18}
-
-\begin{document}
-\maketitle
-
-{
-\setcounter{tocdepth}{1}
-\tableofcontents
-}
-\chapter{Introductie}\label{introductie}
+# Introductie
 
 Introductie wordt toegevoegd in de eindversie
 
-\chapter{Curriculum Vitae}\label{curriculum-vitae}
 
-\chapter{Plan voor de toekomst}\label{plan-voor-de-toekomst}
 
-Over 1-2 jaar zie ik mijzelf werken in een onderzoeksgroep binnen de life sciences, bijvoorbeeld in academisch onderzoek, een biotechbedrijf of een diagnostisch laboratorium. Mijn droombaan zou een functie zijn waarin ik biologische vragen kan beantwoorden door werk op het lab en data-ananlyse met elkaar te combineren.\\
-\strut \\
+
+
+
+<!--chapter:end:index.Rmd-->
+
+# Curriculum Vitae
+
+
+```{=html}
+<iframe src="curriculum_vitae.html" style="width:100%; height:1200px; border:none;"></iframe>
+```
+
+<!--chapter:end:01-curriculum_vitae.Rmd-->
+
+# Plan voor de toekomst
+
+Over 1-2 jaar zie ik mijzelf werken in een onderzoeksgroep binnen de life sciences, bijvoorbeeld in academisch onderzoek, een biotechbedrijf of een diagnostisch laboratorium. Mijn droombaan zou een functie zijn waarin ik biologische vragen kan beantwoorden door werk op het lab en data-ananlyse met elkaar te combineren.
+\
+\
 Op dit moment heb ik een goede basis in data-analyse met R en bash. Ik heb onder andere ervaring met het werken met tidyverse, visualisatie met ggplot2 en het analyseren van RNA-sequentie en metagenomics data. Tijdens de cursus Projecticum Biomolecular Research heb ik ook ervaring opgedaan met het analyseren van metagenomics data van samples van patiënten met parodontitis. Op dit moment wil ik mijn kennis in metagenomics analyses verdiepen of vebreden.
 
-\chapter{Vrije opdracht}\label{vrije-opdracht}
+<!--chapter:end:02-plan_voor_de_toekomst.Rmd-->
 
-\chapter{RNA-sequencing repository}\label{rna-sequencing-repository}
+# Vrije opdracht
 
-\begin{verbatim}
+
+<!--chapter:end:03-vrije_opdracht.Rmd-->
+
+# RNA-sequencing repository
+
+
+
+
+```
 ## ~/documents/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/3a_formatieve_opdracht_rna-seq_daur2/rnaseq_ipsc
 ## +-- analyses
 ## |   \-- fastqc
@@ -220,13 +161,18 @@ Op dit moment heb ik een goede basis in data-analyse met R en bash. Ik heb onder
 ##     +-- principal_component_analysis.R
 ##     +-- volcano_plots.R
 ##     \-- workflow.Rmd
-\end{verbatim}
+```
 
-\pandocbounded{\includegraphics[keepaspectratio]{04-formatieve_opdracht_rna-seq_daur2_files/figure-latex/readme-1.pdf}} \pandocbounded{\includegraphics[keepaspectratio]{04-formatieve_opdracht_rna-seq_daur2_files/figure-latex/readme-2.pdf}}
+![](04-formatieve_opdracht_rna-seq_daur2_files/figure-latex/readme-1.pdf)<!-- --> ![](04-formatieve_opdracht_rna-seq_daur2_files/figure-latex/readme-2.pdf)<!-- --> 
 
-\chapter{Portfolio repository}\label{portfolio-repository}
+<!--chapter:end:04-formatieve_opdracht_rna-seq_daur2.Rmd-->
 
-\begin{verbatim}
+# Portfolio repository
+
+
+
+
+```
 ## ~/documents/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio
 ## +-- bookdown
 ## |   +-- 01-curriculum_vitae.md
@@ -471,8 +417,12 @@ Op dit moment heb ik een goede basis in data-analyse met R en bash. Ik heb onder
 ## |       +-- portfolio_repository.Rmd
 ## |       \-- readme_screenshot.png
 ## \-- README.md
-\end{verbatim}
+```
 
-\pandocbounded{\includegraphics[keepaspectratio]{05-portfolio_repository_files/figure-latex/readme-1.pdf}}
 
-\end{document}
+![](05-portfolio_repository_files/figure-latex/readme-1.pdf)<!-- --> 
+
+
+
+<!--chapter:end:05-portfolio_repository.Rmd-->
+

@@ -13,22 +13,28 @@ https://github.com/RachelvanderKreeft/dsfb2_workflows_portfolio.git
 
 ## Inhoud:
 
-### 1a_curriculum_vitae:
+### projecten:
+
+#### 1a_curriculum_vitae:
 -Bevat mijn curriculum vitae in .Rmd format
 -Gebruikte packages: vitae
 
-### 1b_plan_voor toekomst:
+#### 1b_plan_voor toekomst:
 -Beschrijft waar ik mijzelf over 1-2 jaar zie werken en welke skills ik op dit moment wil leren.
 
-### 2_vrije_opdracht
+#### 2_vrije_opdracht
 -Voor deze opdracht heb ik 32 uur besteed aan het leren een nieuwe zelf gekozen Data Science for Biology skill.
--Opdracht moet op het moment dat versie 1 van de README geschreven is nog bepaald worden.
+-Opdracht moet op het moment dat laatste versie van de README geschreven is nog bepaald worden.
 
 ### 3a_formatieve_opdracht_rna-seq_daur2
 -Hierin heb ik de Guerilla Analytics regels toegepast voor data management op de RNA-sequencing formatieve opdracht van de *DAUR2* module uit de cursus *Data Sciences for Biology 2*
--Gebruikte libraries: fs, here, png, grid, gridExtra
+-Gebruikte packages: fs, here, png, grid, gridExtra
 
 ### 3b_portfolio_repository
 -Hierin heb ik de Guerilla Analytics regels toegepast voor data management op mijn portfolio repository.
--Gebruikte libraries: fs, here, png, grid, gridExtra
+-Gebruikte packages: fs, here, png, grid, gridExtra
 
+(meer zal nog volgen)
+
+
+### bookdown:

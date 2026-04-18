@@ -104,125 +104,115 @@
             <section class="normal" id="section-">
 <div id="rna-sequencing-repository" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">Chapter 5</span> RNA-sequencing repository<a href="rna-sequencing-repository.html#rna-sequencing-repository" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<pre><code>## C:/Users/rache/Documents/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/bookdown
-## ├── 01-curriculum_vitae.Rmd
-## ├── 02-plan_voor_de_toekomst.Rmd
-## ├── 03-vrije_opdracht.Rmd
-## ├── 04-formatieve_opdracht_rna-seq_daur2.Rmd
-## ├── 04-formatieve_opdracht_rna-seq_daur2_files
-## │   ├── figure-html
-## │   │   ├── readme-1.png
-## │   │   └── readme-2.png
-## │   └── figure-latex
-## │       ├── readme-1.pdf
-## │       └── readme-2.pdf
-## ├── 05-portfolio_repository.Rmd
-## ├── 05-portfolio_repository_files
-## │   ├── figure-html
-## │   │   └── readme-1.png
-## │   └── figure-latex
-## │       └── readme-1.pdf
-## ├── book.bib
-## ├── bookdown-demo.tex
-## ├── bookdown-portfolio.rds
-## ├── bookdown-portfolio.Rproj
-## ├── bookdown-portfolio.tex
-## ├── curriculum_vitae.html
-## ├── DESCRIPTION
-## ├── Dockerfile
-## ├── index.Rmd
-## ├── LICENSE
-## ├── now.json
-## ├── packages.bib
-## ├── preamble.tex
+<pre><code>## ~/documents/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/3a_formatieve_opdracht_rna-seq_daur2/rnaseq_ipsc
+## ├── analyses
+## │   └── fastqc
+## │       ├── SRR7866687_1.fastq.html
+## │       ├── SRR7866687_1.fastq.zip
+## │       ├── SRR7866687_2.fastq.html
+## │       ├── SRR7866687_2.fastq.zip
+## │       ├── SRR7866688_1.fastq.html
+## │       ├── SRR7866688_1.fastq.zip
+## │       ├── SRR7866688_2.fastq.html
+## │       ├── SRR7866688_2.fastq.zip
+## │       ├── SRR7866689_1.fastq.html
+## │       ├── SRR7866689_1.fastq.zip
+## │       ├── SRR7866689_2.fastq.html
+## │       ├── SRR7866689_2.fastq.zip
+## │       ├── SRR7866690_1.fastq.html
+## │       ├── SRR7866690_1.fastq.zip
+## │       ├── SRR7866690_2.fastq.html
+## │       ├── SRR7866690_2.fastq.zip
+## │       ├── SRR7866691_1.fastq.html
+## │       ├── SRR7866691_1.fastq.zip
+## │       ├── SRR7866691_2.fastq.html
+## │       ├── SRR7866691_2.fastq.zip
+## │       ├── SRR7866692_1.fastq.html
+## │       ├── SRR7866692_1.fastq.zip
+## │       ├── SRR7866692_2.fastq.html
+## │       ├── SRR7866692_2.fastq.zip
+## │       ├── SRR7866693_1.fastq.html
+## │       ├── SRR7866693_1.fastq.zip
+## │       ├── SRR7866693_2.fastq.html
+## │       ├── SRR7866693_2.fastq.zip
+## │       ├── SRR7866694_1.fastq.html
+## │       ├── SRR7866694_1.fastq.zip
+## │       ├── SRR7866694_2.fastq.html
+## │       └── SRR7866694_2.fastq.zip
+## ├── data
+## │   ├── alignment
+## │   │   ├── alignment_statistics.rds
+## │   │   ├── SRR7866687.bam
+## │   │   ├── SRR7866687.bam.indel.vcf
+## │   │   ├── SRR7866687.bam.summary
+## │   │   ├── SRR7866688.bam
+## │   │   ├── SRR7866688.bam.indel.vcf
+## │   │   ├── SRR7866688.bam.summary
+## │   │   ├── SRR7866689.bam
+## │   │   ├── SRR7866689.bam.indel.vcf
+## │   │   ├── SRR7866689.bam.summary
+## │   │   ├── SRR7866690.bam
+## │   │   ├── SRR7866690.bam.indel.vcf
+## │   │   ├── SRR7866690.bam.summary
+## │   │   ├── SRR7866691.bam
+## │   │   ├── SRR7866691.bam.indel.vcf
+## │   │   ├── SRR7866691.bam.summary
+## │   │   ├── SRR7866692.bam
+## │   │   ├── SRR7866692.bam.indel.vcf
+## │   │   ├── SRR7866692.bam.summary
+## │   │   ├── SRR7866693.bam
+## │   │   ├── SRR7866693.bam.indel.vcf
+## │   │   ├── SRR7866693.bam.summary
+## │   │   ├── SRR7866694.bam
+## │   │   ├── SRR7866694.bam.indel.vcf
+## │   │   └── SRR7866694.bam.summary
+## │   └── counts
+## │       └── read_counts.rds
+## ├── formatieve_opdracht_iPSC.Rmd
+## ├── raw_data
+## │   ├── fastq
+## │   │   ├── SRR7866687_1.fastq.gz
+## │   │   ├── SRR7866687_2.fastq.gz
+## │   │   ├── SRR7866688_1.fastq.gz
+## │   │   ├── SRR7866688_2.fastq.gz
+## │   │   ├── SRR7866689_1.fastq.gz
+## │   │   ├── SRR7866689_2.fastq.gz
+## │   │   ├── SRR7866690_1.fastq.gz
+## │   │   ├── SRR7866690_2.fastq.gz
+## │   │   ├── SRR7866691_1.fastq.gz
+## │   │   ├── SRR7866691_2.fastq.gz
+## │   │   ├── SRR7866692_1.fastq.gz
+## │   │   ├── SRR7866692_2.fastq.gz
+## │   │   ├── SRR7866693_1.fastq.gz
+## │   │   ├── SRR7866693_2.fastq.gz
+## │   │   ├── SRR7866694_1.fastq.gz
+## │   │   └── SRR7866694_2.fastq.gz
+## │   └── ipsc_sampledata
+## │       └── ipsc_sampledata.csv
 ## ├── README.md
-## ├── render412424a04110.rds
-## ├── style.css
-## ├── toc.css
-## ├── _book
-## │   ├── 01-curriculum_vitae.md
-## │   ├── 01-intro.md
-## │   ├── 02-curriculum_vitae.md
-## │   ├── 02-plan_voor_de_toekomst.md
-## │   ├── 03-plan_voor_de_toekomst.md
-## │   ├── 03-vrije_opdracht.md
-## │   ├── 04-formatieve_opdracht_rna-seq_daur2.md
-## │   ├── 04-formatieve_opdracht_rna-seq_daur2_files
-## │   │   └── figure-html
-## │   │       ├── readme-1.png
-## │   │       └── readme-2.png
-## │   ├── 04-portfolio_repository.md
-## │   ├── 04-portfolio_repository_files
-## │   │   └── figure-html
-## │   │       └── readme-1.png
-## │   ├── 05-formatieve_opdracht_rna-seq_daur2.md
-## │   ├── 05-formatieve_opdracht_rna-seq_daur2_files
-## │   │   └── figure-html
-## │   │       ├── readme-1.png
-## │   │       └── readme-2.png
-## │   ├── 05-portfolio_repository.md
-## │   ├── 05-portfolio_repository_files
-## │   │   └── figure-html
-## │   │       └── readme-1.png
-## │   ├── 06-portfolio_repository.md
-## │   ├── 06-portfolio_repository_files
-## │   │   └── figure-html
-## │   │       └── readme-1.png
-## │   ├── 404.html
-## │   ├── bookdown-demo_files
-## │   │   └── figure-html
-## │   │       └── nice-fig-1.png
-## │   ├── bookdown-portfolio_files
-## │   │   └── figure-html
-## │   │       └── nice-fig-1.png
-## │   ├── curriculum-vitae.html
-## │   ├── curriculum_vitae.html
-## │   ├── formatieve-opdracht-rna-sequencing-repository.html
-## │   ├── index.html
-## │   ├── index.md
-## │   ├── libs
-## │   │   ├── anchor-sections-1.1.0
-## │   │   │   ├── anchor-sections-hash.css
-## │   │   │   ├── anchor-sections.css
-## │   │   │   └── anchor-sections.js
-## │   │   ├── gitbook-2.6.7
-## │   │   │   ├── css
-## │   │   │   │   ├── fontawesome
-## │   │   │   │   │   └── fontawesome-webfont.ttf
-## │   │   │   │   ├── plugin-bookdown.css
-## │   │   │   │   ├── plugin-clipboard.css
-## │   │   │   │   ├── plugin-fontsettings.css
-## │   │   │   │   ├── plugin-highlight.css
-## │   │   │   │   ├── plugin-search.css
-## │   │   │   │   ├── plugin-table.css
-## │   │   │   │   └── style.css
-## │   │   │   └── js
-## │   │   │       ├── app.min.js
-## │   │   │       ├── clipboard.min.js
-## │   │   │       ├── jquery.highlight.js
-## │   │   │       ├── plugin-bookdown.js
-## │   │   │       ├── plugin-clipboard.js
-## │   │   │       ├── plugin-fontsettings.js
-## │   │   │       ├── plugin-search.js
-## │   │   │       └── plugin-sharing.js
-## │   │   └── jquery-3.6.0
-## │   │       └── jquery-3.6.0.min.js
-## │   ├── literature.html
-## │   ├── methods.html
-## │   ├── plan-voor-de-toekomst.html
-## │   ├── portfolio-repository.html
-## │   ├── reference-keys.txt
-## │   ├── references.html
-## │   ├── rna-sequencing-repository.html
-## │   ├── search_index.json
-## │   ├── style.css
-## │   └── vrije-opdracht.html
-## ├── _bookdown.yml
-## ├── _bookdown_files
-## ├── _build.sh
-## ├── _deploy.sh
-## ├── _output.yml
-## └── _publish.R</code></pre>
+## ├── reference
+## │   └── hg38_index
+## │       ├── hg38_index.00.b.array
+## │       ├── hg38_index.00.b.tab
+## │       ├── hg38_index.files
+## │       ├── hg38_index.log
+## │       └── hg38_index.reads
+## └── scripts
+##     ├── aligning_reads.Rmd
+##     ├── annotation_DE_genes.R
+##     ├── correlations_heatmap.R
+##     ├── count_plots.R
+##     ├── count_table.R
+##     ├── deseq_object.Rmd
+##     ├── dge_analysis.R
+##     ├── fastqc_analysis.sh
+##     ├── fastq_download.sh
+##     ├── go_term_enrichment_analysis.R
+##     ├── heatmap_scaling.R
+##     ├── normalizing_RNA-seq_count_data.R
+##     ├── principal_component_analysis.R
+##     ├── volcano_plots.R
+##     └── workflow.Rmd</code></pre>
 <p><img src="04-formatieve_opdracht_rna-seq_daur2_files/figure-html/readme-1.png" alt="" width="672" /><img src="04-formatieve_opdracht_rna-seq_daur2_files/figure-html/readme-2.png" alt="" width="672" /></p>
 
 </div>
