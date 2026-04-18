@@ -1,5 +1,0 @@
----
-title: "aligning_reads"
-output: html_document
----
-
