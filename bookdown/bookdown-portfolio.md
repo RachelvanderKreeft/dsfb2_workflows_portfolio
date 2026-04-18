@@ -211,7 +211,7 @@ Op dit moment heb ik een goede basis in data-analyse met R en bash. Ik heb onder
 ## |   +-- packages.bib
 ## |   +-- preamble.tex
 ## |   +-- README.md
-## |   +-- render45906ebf2ac3.rds
+## |   +-- render3c2875e53500.rds
 ## |   +-- style.css
 ## |   +-- toc.css
 ## |   +-- _book
