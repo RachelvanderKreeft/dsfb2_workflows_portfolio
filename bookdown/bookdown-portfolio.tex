@@ -36,6 +36,46 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -108,8 +148,8 @@ Op dit moment heb ik een goede basis in data-analyse met R en bash. Ik heb onder
 
 \chapter{Vrije opdracht}\label{vrije-opdracht}
 
-\section{1. Het kiezen van een nieuwe Data Science for Biology skill}\label{het-kiezen-van-een-nieuwe-data-science-for-biology-skill}
-
+\hfill\break
+\#\# 1. Het kiezen van een nieuwe Data Science for Biology skill
 Tijdens de cursus Projecticum Biomolecular Research had ik samen met een paar medestudenten onderzoek gedaan naar de samenstelling van het orale microbioom van parodontitis patïenten en van gezonde mensen.\\
 \strut \\
 Er waren acht parondontitis samples en vier samples van gezonde personen beschikbaar, hierop werd 16s en whole genome sequencing uitgevoerd met de MinION mk1b. Na het sequencen werd door het programma MinKNOW één .bam bestand gegenereerd met alle reads van alle samples. Door middel van demultiplexing kon de data van iedere sample apart worden gekeken. Het resultaat hiervan was een krona visualisatie van iedere sample, oftewel een cirkeldiagram waarin de samenstelling van de bacteriën per taxonomisch niveau werd weergeven. Verder waren er grafieken gemaakt waarin de relatieve abundance van een aantal bacteriesoorten van de parodontitis samples werden vergeleken met de samples van de gezonde mensen.\\
@@ -308,6 +348,14 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   |   \-- readme-1.png
 ## |   |   \-- figure-latex
 ## |   |       \-- readme-1.pdf
+## |   +-- 06-data_analyse_van_een_ander_reproduceren.Rmd
+## |   +-- 06-data_analyse_van_een_ander_reproduceren_files
+## |   |   +-- figure-html
+## |   |   |   +-- normalised scatterplot-1.png
+## |   |   |   \-- Scatterplot-1.png
+## |   |   \-- figure-latex
+## |   |       +-- normalised scatterplot-1.pdf
+## |   |       \-- Scatterplot-1.pdf
 ## |   +-- book.bib
 ## |   +-- bookdown-demo.tex
 ## |   +-- bookdown-portfolio.rds
@@ -323,7 +371,7 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   +-- packages.bib
 ## |   +-- preamble.tex
 ## |   +-- README.md
-## |   +-- render51181ef11ad0.rds
+## |   +-- renderaf8655d4b86.rds
 ## |   +-- style.css
 ## |   +-- toc.css
 ## |   +-- _book
@@ -339,9 +387,15 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   +-- 05-portfolio_repository_files
 ## |   |   |   \-- figure-html
 ## |   |   |       \-- readme-1.png
+## |   |   +-- 06-data_analyse_van_een_ander_reproduceren.md
+## |   |   +-- 06-data_analyse_van_een_ander_reproduceren_files
+## |   |   |   \-- figure-html
+## |   |   |       +-- normalised scatterplot-1.png
+## |   |   |       \-- Scatterplot-1.png
 ## |   |   +-- 404.html
 ## |   |   +-- curriculum-vitae.html
 ## |   |   +-- curriculum_vitae.html
+## |   |   +-- een-data-analyse-van-een-ander-reproduceren.html
 ## |   |   +-- index.html
 ## |   |   +-- index.md
 ## |   |   +-- libs
@@ -591,13 +645,263 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |           +-- principal_component_analysis.R
 ## |   |           +-- volcano_plots.R
 ## |   |           \-- workflow.Rmd
-## |   \-- 3b_portfolio_repository
-## |       +-- portfolio_repository.html
-## |       +-- portfolio_repository.Rmd
-## |       \-- readme_screenshot.png
+## |   +-- 3b_portfolio_repository
+## |   |   +-- portfolio_repository.html
+## |   |   +-- portfolio_repository.Rmd
+## |   |   \-- readme_screenshot.png
+## |   \-- 4a_data_analyse_van_een_ander_reproduceren
+## |       +-- CE.LIQ.FLOW.062_Tidydata.xlsx
+## |       +-- data_analyse_van_een_ander_reproduceren.html
+## |       +-- data_analyse_van_een_ander_reproduceren.Rmd
+## |       \-- ~$CE.LIQ.FLOW.062_Tidydata.xlsx
 ## \-- README.md
 \end{verbatim}
 
 \pandocbounded{\includegraphics[keepaspectratio]{05-portfolio_repository_files/figure-latex/readme-1.pdf}}
+
+\chapter{Een data analyse van een ander reproduceren''}\label{een-data-analyse-van-een-ander-reproduceren}
+
+\section{Data inlezen}\label{data-inlezen}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Laad de libraries tidyverse en readxl}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(readxl)}
+
+\CommentTok{\# Importeer het bestand CE.LIQ.FLOW.062\_Tidydata.xlsx in Rstudio}
+\NormalTok{dataset\_4a }\OtherTok{\textless{}{-}}\FunctionTok{read\_excel}\NormalTok{(}\StringTok{"\textasciitilde{}/dsfb2/dsfb2\_workflows\_portfolio/dsfb2\_workflows\_portfolio/projecten/4a\_data\_analyse\_van\_een\_ander\_reproduceren/CE.LIQ.FLOW.062\_Tidydata.xlsx"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hfill\break
+De data is goed ingelezen en is al in tidy format gezet, er hoeft dus niks aangepast te worden..
+
+\section{Data types voor RawData, compName en compConcentration}\label{data-types-voor-rawdata-compname-en-compconcentration}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Controleer data type voor de kolom RawData}
+\FunctionTok{class}\NormalTok{(dataset\_4a}\SpecialCharTok{$}\NormalTok{RawData)  }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "numeric"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Controleer data type voor de kolom compName}
+\FunctionTok{class}\NormalTok{(dataset\_4a}\SpecialCharTok{$}\NormalTok{compName)  }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "character"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Controleer data type voor de kolom compConcentration}
+\FunctionTok{class}\NormalTok{(dataset\_4a}\SpecialCharTok{$}\NormalTok{compConcentration)  }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "character"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Maak de kolom compConcentration numeric }
+\NormalTok{dataset\_4a}\SpecialCharTok{$}\NormalTok{compConcentration }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(dataset\_4a}\SpecialCharTok{$}\NormalTok{compConcentration)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: NAs introduced by coercion
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(dataset\_4a}\SpecialCharTok{$}\NormalTok{compConcentration)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  num [1:360] 4.99 4.99 4.99 4.99 4.99 4.99 4.99 4.99 4.99 4.99 ...
+\end{verbatim}
+
+\section{Scatterplot}\label{scatterplot}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ dataset\_4a, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ compConcentration, }\AttributeTok{y =}\NormalTok{ RawData)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_jitter}\NormalTok{(}
+    \FunctionTok{aes}\NormalTok{(}\AttributeTok{color =}\NormalTok{ compName, }\AttributeTok{shape =}\NormalTok{ expType),}
+    \AttributeTok{width =} \FloatTok{0.05}\NormalTok{,   }\CommentTok{\# kleine jitter op x}
+    \AttributeTok{height =} \DecValTok{0}\NormalTok{,     }\CommentTok{\# geen jitter op y}
+    \AttributeTok{size =} \DecValTok{3}\NormalTok{,}
+    \AttributeTok{alpha =} \FloatTok{0.8}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_log10}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}
+    \AttributeTok{title =} \StringTok{"Relation between flipper length and body mass"}\NormalTok{,}
+    \AttributeTok{y =} \StringTok{"Aantal nakomelingen"}\NormalTok{,}
+    \AttributeTok{x =} \StringTok{"Gebruikte concentratie van chemicalie (nM)"}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{8}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\pandocbounded{\includegraphics[keepaspectratio]{06-data_analyse_van_een_ander_reproduceren_files/figure-latex/Scatterplot-1.pdf}}
+
+\section{Normaliseer de data}\label{normaliseer-de-data}
+
+De gemiddelde waarde voor de negatieve controle (controlNegative) moet gelijk zijn als 1. De andere meetwaarden (experiment, controlPositive en controlVehicleA) moeten worden uitgedrukt als een fractie daarvan.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Bereken het gemiddelde van de negatieve controle}
+\NormalTok{mean\_neg\_control }\OtherTok{\textless{}{-}}\NormalTok{ dataset\_4a }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(expType }\SpecialCharTok{==} \StringTok{"controlNegative"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{mean\_raw =} \FunctionTok{mean}\NormalTok{(RawData, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{pull}\NormalTok{(mean\_raw)}
+\DocumentationTok{\#\# Het gemiddelde is 85.9}
+
+\CommentTok{\# Voeg de kolom RawData\_norm toe die de genormaliseerde waarden bevat}
+\NormalTok{dataset\_4a\_normalised }\OtherTok{\textless{}{-}}\NormalTok{ dataset\_4a }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}
+    \AttributeTok{RawData\_norm =}\NormalTok{ RawData }\SpecialCharTok{/}\NormalTok{ mean\_neg\_control}
+\NormalTok{  )}
+
+\CommentTok{\# Controleer data type voor de kolom RawData\_norm}
+\FunctionTok{class}\NormalTok{(dataset\_4a\_normalised}\SpecialCharTok{$}\NormalTok{RawData\_norm)  }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "numeric"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Controleer data type voor de kolom compConcentration}
+\FunctionTok{class}\NormalTok{(dataset\_4a}\SpecialCharTok{$}\NormalTok{compConcentration)  }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "numeric"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Maak de kolom compConcentration numeric }
+\NormalTok{dataset\_4a\_normalised}\SpecialCharTok{$}\NormalTok{compConcentration }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(dataset\_4a\_normalised}\SpecialCharTok{$}\NormalTok{compConcentration)}
+\FunctionTok{str}\NormalTok{(dataset\_4a}\SpecialCharTok{$}\NormalTok{compConcentration)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  num [1:360] 4.99 4.99 4.99 4.99 4.99 4.99 4.99 4.99 4.99 4.99 ...
+\end{verbatim}
+
+\section{Scatterplot met genormaliseerde waarden}\label{scatterplot-met-genormaliseerde-waarden}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggplot}\NormalTok{(dataset\_4a\_normalised, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ compConcentration, }\AttributeTok{y =}\NormalTok{ RawData\_norm)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_jitter}\NormalTok{(}
+    \FunctionTok{aes}\NormalTok{(}\AttributeTok{color =}\NormalTok{ compName, }\AttributeTok{shape =}\NormalTok{ expType),}
+    \AttributeTok{width =} \FloatTok{0.05}\NormalTok{, }\CommentTok{\# kleine jitter op x}
+    \AttributeTok{height =} \DecValTok{0}\NormalTok{, }\CommentTok{\# geen jitter op y}
+    \AttributeTok{size =} \DecValTok{3}\NormalTok{,}
+    \AttributeTok{alpha =} \FloatTok{0.8}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_log10}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}
+    \AttributeTok{title =} \StringTok{"Relation between flipper length and body mass"}\NormalTok{,}
+    \AttributeTok{y =} \StringTok{"Genormaliseerde aantal nakomelingen }\SpecialCharTok{\textbackslash{}n}\StringTok{(controlNegative = 1)"}\NormalTok{,}
+    \AttributeTok{x =} \StringTok{"Gebruikte concentratie van chemicalie (nM)"}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}
+    \AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{8}\NormalTok{)}
+\NormalTok{  )}
+\end{Highlighting}
+\end{Shaded}
+
+\pandocbounded{\includegraphics[keepaspectratio]{06-data_analyse_van_een_ander_reproduceren_files/figure-latex/normalised scatterplot-1.pdf}}
+
+\section{Controlegroepen}\label{controlegroepen}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Controleer de verschillende controlegroepen van de variable expType}
+\FunctionTok{unique}\NormalTok{(dataset\_4a}\SpecialCharTok{$}\NormalTok{expType)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "experiment"      "controlPositive" "controlNegative" "controlVehicleA"
+\end{verbatim}
+
+De groepen die voor dit experiment waren gebruikt waren als volgt:\\
+-experiment: Deze groep bevat de echte chemicaliën + concentraties die getest moeten worden voor de onderzoeksvraag.\\
+-controlNegative: Is de negatieve controle. Hier is géén toxische stof aan toegevoegd.\\
+-controlPositive:Is de positieve controle. bij deze conditie wordt een chemicalie gebruikt waarvan bekend is dat het een toxisch effect heeft.\\
+-controlVehicleA: Bevat alleen oplosmiddel (bijvoorbeeld DMSO of een buffer). Hiermee wordt gecontroleerd of het oplosmiddel zelf effect heeft.\\
+\strut \\
+De data werd genormaliseerd omdat dit de experimentele variabiliteit tussen groepen verminderd. Hierdoor wordt directe vergelijking van behandelingseffecten tussen verschillende verbindingen en concentraties mogelijk.
+
+\section{Stappenplan voor vervolgonderzoek}\label{stappenplan-voor-vervolgonderzoek}
+
+Om de IC50 concentratie van de verschillende chemicaliën te bepalen, moet er een dose-response analyse met een log-logistisch model worden uitgevoerd. In Rstudio is hiervoor het drc package beschikbaar. Om deze analyse uit te kunnen voeren, moeten de volgende stappen worden uitgevoerd:\\
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Installeer het drc package
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(drc)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Laad de data in Rstudio.\\
+\item
+  Controleer of de data in tidy format staat (voor het bestand CE.LIQ.FLOW.062\_Tidydata.xlsx is dit al het geval)\\
+\item
+  Voer normalisatie van de data uit, waarbij het gemiddelde van de negatieve controle gelijk wordt gesteld aan 1.\\
+\item
+  Maak een scatterplot waarin dose en response tegenover elkaar worden gezet.\\
+\item
+  Kies een niet-liniair model, vaak wordt het log-logistisch model (LL.4) gebruikt\\
+\item
+  Model fitten met drc, oftewel: probeer een wiskundig model te laten passen op de biologische data.\\
+  -Hiermee wordt onderzocht welke curve het verband tussen de dosis en het effect het beste omschrijft.\\
+  -Vaak is dit een S-curve.\\
+\item
+  Visualiseer de dosis-response curves.\\
+\item
+  Voer de IC50 / ED50 berekening uit.\\
+\item
+  Vergelijk de IC50 waarden van de verschillende chemicaliën.\\
+\item
+  Interpretatie van resultaten.\\
+\item
+  Voeg een modelvalidatie toe.
+\end{enumerate}
 
 \end{document}

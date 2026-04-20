@@ -27,6 +27,14 @@
 ## |   |   |   \-- readme-1.png
 ## |   |   \-- figure-latex
 ## |   |       \-- readme-1.pdf
+## |   +-- 06-data_analyse_van_een_ander_reproduceren.Rmd
+## |   +-- 06-data_analyse_van_een_ander_reproduceren_files
+## |   |   +-- figure-html
+## |   |   |   +-- normalised scatterplot-1.png
+## |   |   |   \-- Scatterplot-1.png
+## |   |   \-- figure-latex
+## |   |       +-- normalised scatterplot-1.pdf
+## |   |       \-- Scatterplot-1.pdf
 ## |   +-- book.bib
 ## |   +-- bookdown-demo.tex
 ## |   +-- bookdown-portfolio.rds
@@ -42,7 +50,7 @@
 ## |   +-- packages.bib
 ## |   +-- preamble.tex
 ## |   +-- README.md
-## |   +-- render51181ef11ad0.rds
+## |   +-- renderaf8655d4b86.rds
 ## |   +-- style.css
 ## |   +-- toc.css
 ## |   +-- _book
@@ -58,9 +66,15 @@
 ## |   |   +-- 05-portfolio_repository_files
 ## |   |   |   \-- figure-html
 ## |   |   |       \-- readme-1.png
+## |   |   +-- 06-data_analyse_van_een_ander_reproduceren.md
+## |   |   +-- 06-data_analyse_van_een_ander_reproduceren_files
+## |   |   |   \-- figure-html
+## |   |   |       +-- normalised scatterplot-1.png
+## |   |   |       \-- Scatterplot-1.png
 ## |   |   +-- 404.html
 ## |   |   +-- curriculum-vitae.html
 ## |   |   +-- curriculum_vitae.html
+## |   |   +-- een-data-analyse-van-een-ander-reproduceren.html
 ## |   |   +-- index.html
 ## |   |   +-- index.md
 ## |   |   +-- libs
@@ -310,10 +324,15 @@
 ## |   |           +-- principal_component_analysis.R
 ## |   |           +-- volcano_plots.R
 ## |   |           \-- workflow.Rmd
-## |   \-- 3b_portfolio_repository
-## |       +-- portfolio_repository.html
-## |       +-- portfolio_repository.Rmd
-## |       \-- readme_screenshot.png
+## |   +-- 3b_portfolio_repository
+## |   |   +-- portfolio_repository.html
+## |   |   +-- portfolio_repository.Rmd
+## |   |   \-- readme_screenshot.png
+## |   \-- 4a_data_analyse_van_een_ander_reproduceren
+## |       +-- CE.LIQ.FLOW.062_Tidydata.xlsx
+## |       +-- data_analyse_van_een_ander_reproduceren.html
+## |       +-- data_analyse_van_een_ander_reproduceren.Rmd
+## |       \-- ~$CE.LIQ.FLOW.062_Tidydata.xlsx
 ## \-- README.md
 ```
 
