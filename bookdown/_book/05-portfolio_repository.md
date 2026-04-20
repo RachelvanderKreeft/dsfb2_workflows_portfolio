@@ -42,7 +42,7 @@
 ## |   +-- packages.bib
 ## |   +-- preamble.tex
 ## |   +-- README.md
-## |   +-- render3c2875e53500.rds
+## |   +-- render51181ef11ad0.rds
 ## |   +-- style.css
 ## |   +-- toc.css
 ## |   +-- _book
@@ -102,6 +102,57 @@
 ## |   +-- _deploy.sh
 ## |   +-- _output.yml
 ## |   \-- _publish.R
+## +-- docs
+## |   +-- 01-curriculum_vitae.md
+## |   +-- 02-plan_voor_de_toekomst.md
+## |   +-- 03-vrije_opdracht.md
+## |   +-- 04-formatieve_opdracht_rna-seq_daur2.md
+## |   +-- 04-formatieve_opdracht_rna-seq_daur2_files
+## |   |   \-- figure-html
+## |   |       +-- readme-1.png
+## |   |       \-- readme-2.png
+## |   +-- 05-portfolio_repository.md
+## |   +-- 05-portfolio_repository_files
+## |   |   \-- figure-html
+## |   |       \-- readme-1.png
+## |   +-- 404.html
+## |   +-- curriculum-vitae.html
+## |   +-- curriculum_vitae.html
+## |   +-- index.html
+## |   +-- index.md
+## |   +-- libs
+## |   |   +-- anchor-sections-1.1.0
+## |   |   |   +-- anchor-sections-hash.css
+## |   |   |   +-- anchor-sections.css
+## |   |   |   \-- anchor-sections.js
+## |   |   +-- gitbook-2.6.7
+## |   |   |   +-- css
+## |   |   |   |   +-- fontawesome
+## |   |   |   |   |   \-- fontawesome-webfont.ttf
+## |   |   |   |   +-- plugin-bookdown.css
+## |   |   |   |   +-- plugin-clipboard.css
+## |   |   |   |   +-- plugin-fontsettings.css
+## |   |   |   |   +-- plugin-highlight.css
+## |   |   |   |   +-- plugin-search.css
+## |   |   |   |   +-- plugin-table.css
+## |   |   |   |   \-- style.css
+## |   |   |   \-- js
+## |   |   |       +-- app.min.js
+## |   |   |       +-- clipboard.min.js
+## |   |   |       +-- jquery.highlight.js
+## |   |   |       +-- plugin-bookdown.js
+## |   |   |       +-- plugin-clipboard.js
+## |   |   |       +-- plugin-fontsettings.js
+## |   |   |       +-- plugin-search.js
+## |   |   |       \-- plugin-sharing.js
+## |   |   \-- jquery-3.6.0
+## |   |       \-- jquery-3.6.0.min.js
+## |   +-- plan-voor-de-toekomst.html
+## |   +-- portfolio-repository.html
+## |   +-- rna-sequencing-repository.html
+## |   +-- search_index.json
+## |   +-- style.css
+## |   \-- vrije-opdracht.html
 ## +-- dsfb2_workflows_portfolio.Rproj
 ## +-- projecten
 ## |   +-- 1a_curriculum_vitae
@@ -126,9 +177,25 @@
 ## |   |   \-- packages.bib
 ## |   +-- 1b_plan_voor_de_toekomst
 ## |   |   +-- plan_voor_de_toekomst.html
-## |   |   \-- plan_voor_de_toekomst.Rmd
+## |   |   +-- plan_voor_de_toekomst.Rmd
+## |   |   \-- README.md
 ## |   +-- 2_vrije_opdracht
-## |   |   \-- vrije_opdracht.Rmd
+## |   |   +-- achtergrond
+## |   |   |   +-- NGS WGS presentatie.pptx
+## |   |   |   +-- Presentatie Parodontitis 16s sequencing eindversie.pptx
+## |   |   |   \-- Resultaten lab parodontitis project.xlsx
+## |   |   +-- analyses
+## |   |   +-- data
+## |   |   +-- logboek_vrije_opdracht.xlsx
+## |   |   +-- metadata
+## |   |   |   \-- overzicht_gebruikte_flowcells.xlsx
+## |   |   +-- raw_data
+## |   |   +-- README.md
+## |   |   +-- scripts
+## |   |   +-- verslag
+## |   |   +-- vrije_opdracht.html
+## |   |   +-- vrije_opdracht_voorbereiding.html
+## |   |   \-- vrije_opdracht_voorbereiding.Rmd
 ## |   +-- 3a_formatieve_opdracht_rna-seq_daur2
 ## |   |   +-- formatieve_opdracht_rna-seq_daur2.html
 ## |   |   +-- formatieve_opdracht_rna-seq_daur2.Rmd

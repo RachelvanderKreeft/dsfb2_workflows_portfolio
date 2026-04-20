@@ -23,7 +23,7 @@
 <meta name="author" content="Rachel van der Kreeft" />
 
 
-<meta name="date" content="2026-04-18" />
+<meta name="date" content="2026-04-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -79,7 +79,18 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introductie</a></li>
 <li class="chapter" data-level="2" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html"><i class="fa fa-check"></i><b>2</b> Curriculum Vitae</a></li>
 <li class="chapter" data-level="3" data-path="plan-voor-de-toekomst.html"><a href="plan-voor-de-toekomst.html"><i class="fa fa-check"></i><b>3</b> Plan voor de toekomst</a></li>
-<li class="chapter" data-level="4" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html"><i class="fa fa-check"></i><b>4</b> Vrije opdracht</a></li>
+<li class="chapter" data-level="4" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html"><i class="fa fa-check"></i><b>4</b> Vrije opdracht</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#het-kiezen-van-een-nieuwe-data-science-for-biology-skill"><i class="fa fa-check"></i><b>4.1</b> 1. Het kiezen van een nieuwe Data Science for Biology skill</a></li>
+<li class="chapter" data-level="4.2" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#planning"><i class="fa fa-check"></i><b>4.2</b> 2. Planning</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-2-data-structureren-demultiplexing-6-uur"><i class="fa fa-check"></i><b>4.2.1</b> Fase 2 – Data structureren &amp; demultiplexing (6 uur)</a></li>
+<li class="chapter" data-level="4.2.2" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-3-taxonomische-profiling-6-uur"><i class="fa fa-check"></i><b>4.2.2</b> Fase 3 – Taxonomische profiling (6 uur)</a></li>
+<li class="chapter" data-level="4.2.3" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-4-microbiome-analyse-in-r-phyloseq-8-uur"><i class="fa fa-check"></i><b>4.2.3</b> Fase 4 – Microbiome analyse in R (phyloseq) (8 uur)</a></li>
+<li class="chapter" data-level="4.2.4" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-5-visualisatie-interpretatie-5-uur"><i class="fa fa-check"></i><b>4.2.4</b> Fase 5 – Visualisatie &amp; interpretatie (5 uur)</a></li>
+<li class="chapter" data-level="4.2.5" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-6-rapportage-in-bookdown-3-uur"><i class="fa fa-check"></i><b>4.2.5</b> Fase 6 – Rapportage in Bookdown (3 uur)</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="rna-sequencing-repository.html"><a href="rna-sequencing-repository.html"><i class="fa fa-check"></i><b>5</b> RNA-sequencing repository</a></li>
 <li class="chapter" data-level="6" data-path="portfolio-repository.html"><a href="portfolio-repository.html"><i class="fa fa-check"></i><b>6</b> Portfolio repository</a></li>
 <li class="divider"></li>
@@ -129,6 +140,7 @@
 ## │   │       └── readme-1.pdf
 ## │   ├── book.bib
 ## │   ├── bookdown-demo.tex
+## │   ├── bookdown-portfolio.md
 ## │   ├── bookdown-portfolio.rds
 ## │   ├── bookdown-portfolio.Rproj
 ## │   ├── bookdown-portfolio.tex
@@ -142,7 +154,7 @@
 ## │   ├── packages.bib
 ## │   ├── preamble.tex
 ## │   ├── README.md
-## │   ├── render2a8043153804.rds
+## │   ├── render4e101227e5f.rds
 ## │   ├── style.css
 ## │   ├── toc.css
 ## │   ├── _book
@@ -202,6 +214,57 @@
 ## │   ├── _deploy.sh
 ## │   ├── _output.yml
 ## │   └── _publish.R
+## ├── docs
+## │   ├── 01-curriculum_vitae.md
+## │   ├── 02-plan_voor_de_toekomst.md
+## │   ├── 03-vrije_opdracht.md
+## │   ├── 04-formatieve_opdracht_rna-seq_daur2.md
+## │   ├── 04-formatieve_opdracht_rna-seq_daur2_files
+## │   │   └── figure-html
+## │   │       ├── readme-1.png
+## │   │       └── readme-2.png
+## │   ├── 05-portfolio_repository.md
+## │   ├── 05-portfolio_repository_files
+## │   │   └── figure-html
+## │   │       └── readme-1.png
+## │   ├── 404.html
+## │   ├── curriculum-vitae.html
+## │   ├── curriculum_vitae.html
+## │   ├── index.html
+## │   ├── index.md
+## │   ├── libs
+## │   │   ├── anchor-sections-1.1.0
+## │   │   │   ├── anchor-sections-hash.css
+## │   │   │   ├── anchor-sections.css
+## │   │   │   └── anchor-sections.js
+## │   │   ├── gitbook-2.6.7
+## │   │   │   ├── css
+## │   │   │   │   ├── fontawesome
+## │   │   │   │   │   └── fontawesome-webfont.ttf
+## │   │   │   │   ├── plugin-bookdown.css
+## │   │   │   │   ├── plugin-clipboard.css
+## │   │   │   │   ├── plugin-fontsettings.css
+## │   │   │   │   ├── plugin-highlight.css
+## │   │   │   │   ├── plugin-search.css
+## │   │   │   │   ├── plugin-table.css
+## │   │   │   │   └── style.css
+## │   │   │   └── js
+## │   │   │       ├── app.min.js
+## │   │   │       ├── clipboard.min.js
+## │   │   │       ├── jquery.highlight.js
+## │   │   │       ├── plugin-bookdown.js
+## │   │   │       ├── plugin-clipboard.js
+## │   │   │       ├── plugin-fontsettings.js
+## │   │   │       ├── plugin-search.js
+## │   │   │       └── plugin-sharing.js
+## │   │   └── jquery-3.6.0
+## │   │       └── jquery-3.6.0.min.js
+## │   ├── plan-voor-de-toekomst.html
+## │   ├── portfolio-repository.html
+## │   ├── rna-sequencing-repository.html
+## │   ├── search_index.json
+## │   ├── style.css
+## │   └── vrije-opdracht.html
 ## ├── dsfb2_workflows_portfolio.Rproj
 ## ├── projecten
 ## │   ├── 1a_curriculum_vitae
@@ -226,9 +289,25 @@
 ## │   │   └── packages.bib
 ## │   ├── 1b_plan_voor_de_toekomst
 ## │   │   ├── plan_voor_de_toekomst.html
-## │   │   └── plan_voor_de_toekomst.Rmd
+## │   │   ├── plan_voor_de_toekomst.Rmd
+## │   │   └── README.md
 ## │   ├── 2_vrije_opdracht
-## │   │   └── vrije_opdracht.Rmd
+## │   │   ├── achtergrond
+## │   │   │   ├── NGS WGS presentatie.pptx
+## │   │   │   ├── Presentatie Parodontitis 16s sequencing eindversie.pptx
+## │   │   │   └── Resultaten lab parodontitis project.xlsx
+## │   │   ├── analyses
+## │   │   ├── data
+## │   │   ├── logboek_vrije_opdracht.xlsx
+## │   │   ├── metadata
+## │   │   │   └── overzicht_gebruikte_flowcells.xlsx
+## │   │   ├── raw_data
+## │   │   ├── README.md
+## │   │   ├── scripts
+## │   │   ├── verslag
+## │   │   ├── vrije_opdracht.html
+## │   │   ├── vrije_opdracht_voorbereiding.html
+## │   │   └── vrije_opdracht_voorbereiding.Rmd
 ## │   ├── 3a_formatieve_opdracht_rna-seq_daur2
 ## │   │   ├── formatieve_opdracht_rna-seq_daur2.html
 ## │   │   ├── formatieve_opdracht_rna-seq_daur2.Rmd

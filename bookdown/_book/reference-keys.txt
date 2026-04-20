@@ -1,0 +1,13 @@
+introductie
+curriculum-vitae
+plan-voor-de-toekomst
+vrije-opdracht
+het-kiezen-van-een-nieuwe-data-science-for-biology-skill
+planning
+fase-2-data-structureren-demultiplexing-6-uur
+fase-3-taxonomische-profiling-6-uur
+fase-4-microbiome-analyse-in-r-phyloseq-8-uur
+fase-5-visualisatie-interpretatie-5-uur
+fase-6-rapportage-in-bookdown-3-uur
+rna-sequencing-repository
+portfolio-repository

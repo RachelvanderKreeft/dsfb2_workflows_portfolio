@@ -85,7 +85,7 @@
 
 \title{Portfolio Workflows}
 \author{Rachel van der Kreeft}
-\date{2026-04-18}
+\date{2026-04-20}
 
 \begin{document}
 \maketitle
@@ -107,6 +107,64 @@ Over 1-2 jaar zie ik mijzelf werken in een onderzoeksgroep binnen de life scienc
 Op dit moment heb ik een goede basis in data-analyse met R en bash. Ik heb onder andere ervaring met het werken met tidyverse, visualisatie met ggplot2 en het analyseren van RNA-sequentie en metagenomics data. Tijdens de cursus Projecticum Biomolecular Research heb ik ook ervaring opgedaan met het analyseren van metagenomics data van samples van patiënten met parodontitis. Op dit moment wil ik mijn kennis in metagenomics analyses verdiepen of vebreden.
 
 \chapter{Vrije opdracht}\label{vrije-opdracht}
+
+\section{1. Het kiezen van een nieuwe Data Science for Biology skill}\label{het-kiezen-van-een-nieuwe-data-science-for-biology-skill}
+
+Tijdens de cursus Projecticum Biomolecular Research had ik samen met een paar medestudenten onderzoek gedaan naar de samenstelling van het orale microbioom van parodontitis patïenten en van gezonde mensen.\\
+\strut \\
+Er waren acht parondontitis samples en vier samples van gezonde personen beschikbaar, hierop werd 16s en whole genome sequencing uitgevoerd met de MinION mk1b. Na het sequencen werd door het programma MinKNOW één .bam bestand gegenereerd met alle reads van alle samples. Door middel van demultiplexing kon de data van iedere sample apart worden gekeken. Het resultaat hiervan was een krona visualisatie van iedere sample, oftewel een cirkeldiagram waarin de samenstelling van de bacteriën per taxonomisch niveau werd weergeven. Verder waren er grafieken gemaakt waarin de relatieve abundance van een aantal bacteriesoorten van de parodontitis samples werden vergeleken met de samples van de gezonde mensen.\\
+\strut \\
+Zoals vermeld in het hoofdstuk `Plan voor de toekomst' wil ik mijn kennis in metagenomics analyses verdiepen of vebreden. Tijdens de cursus DAUR2 had ik aan de hand van een voorbeeld dataset geleerd om na het uitvoeren van de kraken2 en bracken analyse de data te importeren met phyloseq en vervolgens verschillende statistische testen uit te voeren. Ik wil dezelfde analyse uitvoeren met de 16s sequencing data van de laatste 16s sequencing run die was uitgevoerd voor het projecticum. Van deze dataset is al bekend dat niet alle bacteriesoorten die werden verwacht werden gedetecteerd en dat sommige bacteriesoorten alleen op hogere taxa werden gedecteerd, dit kan op gebied van data-analyse extra uitdagingen geven.\\
+\strut \\
+Het doel van deze opdracht is dat ik de metagenomics workflow van DAUR2 kan toepassen op een realistische dataset.\\
+\strut \\
+
+\section{2. Planning}\label{planning}
+
+Deze planning is nog niet definitief. Wanneer de opdracht is goedgekeurd en de voorbereiding is uitgevoerd, zal de plannig nogmaals geavalueerd worden.\\
+\strut \\
+Het volledige portfolio moet op 25 mei voor 23:59 worden ingeleverd, deze opdracht moet dus in ongeveer vier weken af zijn. Omdat er ook andere opdrachten voor het portfolio worden uitgevoerd, is het handig als deze opdracht in ongeveer drie weken afgerond is. Dat betekent dat er ongeveer 11 uur per week aan deze opdracht moet worden besteed. Er wordt aan deze opdracht gewerkt op dagen dat er geen les is, het streven is om 3 tot 4 dagen in de week ongeveer 4 uur per dag aan de opdracht te besteden. Indien er tijd overblijft na het maken van de overige portfolio opdrachten en de uitvoering van het data science projecticum, kan het aantal uur opgehoogd worden.\\
+\strut \\
+\#\#\# Fase 1 -- Afbakening \& voorbereiding
+-Projectdoel en onderzoeksvraag vastleggen.\\
+-Data van Rstudio server halen en in lokale Rstduio plaatsen.\\
+-Overzicht maken van beschikbare data.\\
+-Bepalen van de analysemethode.\\
+-Controleren wat de workflow voor de dataset was bij Projecticum Biomolecular Research.\\
+-Eventueel een korte literatuurverkenning (parodontitis + microbiome).\\
+
+\subsection{Fase 2 -- Data structureren \& demultiplexing (6 uur)}\label{fase-2-data-structureren-demultiplexing-6-uur}
+
+-Controleren hoe barcodes in BAM zijn opgeslagen.\\
+-BAM naar FASTQ omzetten.\\
+-Demultiplexen in 8 parodontitis + 4 gezonde samples.\\
+-Bestandsstructuur organiseren.\\
+
+\subsection{Fase 3 -- Taxonomische profiling (6 uur)}\label{fase-3-taxonomische-profiling-6-uur}
+
+-Taxonomische classificatie uitvoeren.\\
+-Abundance tables per sample maken?\\
+
+\subsection{Fase 4 -- Microbiome analyse in R (phyloseq) (8 uur)}\label{fase-4-microbiome-analyse-in-r-phyloseq-8-uur}
+
+-phyloseq object opbouwen.\\
+-Sample metadata koppelen.\\
+-Hier is ruimte om statistische testen uit te voeren, nog goed nadenken welke uitgeoverdk kunnen worden.\\
+
+\subsection{Fase 5 -- Visualisatie \& interpretatie (5 uur)}\label{fase-5-visualisatie-interpretatie-5-uur}
+
+-Hier verschillende figuren maken (nog overwegen welke).\\
+-Interpreteren: verschillen tussen ziekte/gezond, ontbrekende verwachte taxa, beperkingen van Nanopore 16S.\\
+
+\subsection{Fase 6 -- Rapportage in Bookdown (3 uur)}\label{fase-6-rapportage-in-bookdown-3-uur}
+
+-Methoden beschrijven.\\
+-Resultaten samenvatten.\\
+-Discussie + reflectie.\\
+-Conclusie schrijven.\\
+\strut \\
+\strut \\
+Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb gebruikt of zelf heb gemaakt, waarbij ik bij elke stap heb toegelicht wat er is uitgevoerd. Indien ik bestaande scripts heb gebruikt, licht ik ook toe wat ik heb aangepast en waarom. Verder laat ik de output van mijn code zien aan de hand van verschillende figuren \emph{(nog bepalen welke!)}. Als laatste houd ik een README bij voor deze opdracht, waarin ik toelicht waar elk bestand voor deze opdracht voor dient.
 
 \chapter{RNA-sequencing repository}\label{rna-sequencing-repository}
 
@@ -265,7 +323,7 @@ Op dit moment heb ik een goede basis in data-analyse met R en bash. Ik heb onder
 ## |   +-- packages.bib
 ## |   +-- preamble.tex
 ## |   +-- README.md
-## |   +-- render3c2875e53500.rds
+## |   +-- render51181ef11ad0.rds
 ## |   +-- style.css
 ## |   +-- toc.css
 ## |   +-- _book
@@ -325,6 +383,57 @@ Op dit moment heb ik een goede basis in data-analyse met R en bash. Ik heb onder
 ## |   +-- _deploy.sh
 ## |   +-- _output.yml
 ## |   \-- _publish.R
+## +-- docs
+## |   +-- 01-curriculum_vitae.md
+## |   +-- 02-plan_voor_de_toekomst.md
+## |   +-- 03-vrije_opdracht.md
+## |   +-- 04-formatieve_opdracht_rna-seq_daur2.md
+## |   +-- 04-formatieve_opdracht_rna-seq_daur2_files
+## |   |   \-- figure-html
+## |   |       +-- readme-1.png
+## |   |       \-- readme-2.png
+## |   +-- 05-portfolio_repository.md
+## |   +-- 05-portfolio_repository_files
+## |   |   \-- figure-html
+## |   |       \-- readme-1.png
+## |   +-- 404.html
+## |   +-- curriculum-vitae.html
+## |   +-- curriculum_vitae.html
+## |   +-- index.html
+## |   +-- index.md
+## |   +-- libs
+## |   |   +-- anchor-sections-1.1.0
+## |   |   |   +-- anchor-sections-hash.css
+## |   |   |   +-- anchor-sections.css
+## |   |   |   \-- anchor-sections.js
+## |   |   +-- gitbook-2.6.7
+## |   |   |   +-- css
+## |   |   |   |   +-- fontawesome
+## |   |   |   |   |   \-- fontawesome-webfont.ttf
+## |   |   |   |   +-- plugin-bookdown.css
+## |   |   |   |   +-- plugin-clipboard.css
+## |   |   |   |   +-- plugin-fontsettings.css
+## |   |   |   |   +-- plugin-highlight.css
+## |   |   |   |   +-- plugin-search.css
+## |   |   |   |   +-- plugin-table.css
+## |   |   |   |   \-- style.css
+## |   |   |   \-- js
+## |   |   |       +-- app.min.js
+## |   |   |       +-- clipboard.min.js
+## |   |   |       +-- jquery.highlight.js
+## |   |   |       +-- plugin-bookdown.js
+## |   |   |       +-- plugin-clipboard.js
+## |   |   |       +-- plugin-fontsettings.js
+## |   |   |       +-- plugin-search.js
+## |   |   |       \-- plugin-sharing.js
+## |   |   \-- jquery-3.6.0
+## |   |       \-- jquery-3.6.0.min.js
+## |   +-- plan-voor-de-toekomst.html
+## |   +-- portfolio-repository.html
+## |   +-- rna-sequencing-repository.html
+## |   +-- search_index.json
+## |   +-- style.css
+## |   \-- vrije-opdracht.html
 ## +-- dsfb2_workflows_portfolio.Rproj
 ## +-- projecten
 ## |   +-- 1a_curriculum_vitae
@@ -349,9 +458,25 @@ Op dit moment heb ik een goede basis in data-analyse met R en bash. Ik heb onder
 ## |   |   \-- packages.bib
 ## |   +-- 1b_plan_voor_de_toekomst
 ## |   |   +-- plan_voor_de_toekomst.html
-## |   |   \-- plan_voor_de_toekomst.Rmd
+## |   |   +-- plan_voor_de_toekomst.Rmd
+## |   |   \-- README.md
 ## |   +-- 2_vrije_opdracht
-## |   |   \-- vrije_opdracht.Rmd
+## |   |   +-- achtergrond
+## |   |   |   +-- NGS WGS presentatie.pptx
+## |   |   |   +-- Presentatie Parodontitis 16s sequencing eindversie.pptx
+## |   |   |   \-- Resultaten lab parodontitis project.xlsx
+## |   |   +-- analyses
+## |   |   +-- data
+## |   |   +-- logboek_vrije_opdracht.xlsx
+## |   |   +-- metadata
+## |   |   |   \-- overzicht_gebruikte_flowcells.xlsx
+## |   |   +-- raw_data
+## |   |   +-- README.md
+## |   |   +-- scripts
+## |   |   +-- verslag
+## |   |   +-- vrije_opdracht.html
+## |   |   +-- vrije_opdracht_voorbereiding.html
+## |   |   \-- vrije_opdracht_voorbereiding.Rmd
 ## |   +-- 3a_formatieve_opdracht_rna-seq_daur2
 ## |   |   +-- formatieve_opdracht_rna-seq_daur2.html
 ## |   |   +-- formatieve_opdracht_rna-seq_daur2.Rmd

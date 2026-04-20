@@ -23,7 +23,7 @@
 <meta name="author" content="Rachel van der Kreeft" />
 
 
-<meta name="date" content="2026-04-18" />
+<meta name="date" content="2026-04-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -79,7 +79,17 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introductie</a></li>
 <li class="chapter" data-level="2" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html"><i class="fa fa-check"></i><b>2</b> Curriculum Vitae</a></li>
 <li class="chapter" data-level="3" data-path="plan-voor-de-toekomst.html"><a href="plan-voor-de-toekomst.html"><i class="fa fa-check"></i><b>3</b> Plan voor de toekomst</a></li>
-<li class="chapter" data-level="4" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html"><i class="fa fa-check"></i><b>4</b> Vrije opdracht</a></li>
+<li class="chapter" data-level="4" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html"><i class="fa fa-check"></i><b>4</b> Vrije opdracht</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#planning"><i class="fa fa-check"></i><b>4.1</b> 2. Planning</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-2-data-structureren-demultiplexing-6-uur"><i class="fa fa-check"></i><b>4.1.1</b> Fase 2 – Data structureren &amp; demultiplexing (6 uur)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-3-taxonomische-profiling-6-uur"><i class="fa fa-check"></i><b>4.1.2</b> Fase 3 – Taxonomische profiling (6 uur)</a></li>
+<li class="chapter" data-level="4.1.3" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-4-microbiome-analyse-in-r-phyloseq-8-uur"><i class="fa fa-check"></i><b>4.1.3</b> Fase 4 – Microbiome analyse in R (phyloseq) (8 uur)</a></li>
+<li class="chapter" data-level="4.1.4" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-5-visualisatie-interpretatie-5-uur"><i class="fa fa-check"></i><b>4.1.4</b> Fase 5 – Visualisatie &amp; interpretatie (5 uur)</a></li>
+<li class="chapter" data-level="4.1.5" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-6-rapportage-in-bookdown-3-uur"><i class="fa fa-check"></i><b>4.1.5</b> Fase 6 – Rapportage in Bookdown (3 uur)</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="rna-sequencing-repository.html"><a href="rna-sequencing-repository.html"><i class="fa fa-check"></i><b>5</b> RNA-sequencing repository</a></li>
 <li class="chapter" data-level="6" data-path="portfolio-repository.html"><a href="portfolio-repository.html"><i class="fa fa-check"></i><b>6</b> Portfolio repository</a></li>
 <li class="divider"></li>
@@ -104,7 +114,70 @@
             <section class="normal" id="section-">
 <div id="vrije-opdracht" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Vrije opdracht<a href="vrije-opdracht.html#vrije-opdracht" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><br />
+## 1. Het kiezen van een nieuwe Data Science for Biology skill
+Tijdens de cursus Projecticum Biomolecular Research had ik samen met een paar medestudenten onderzoek gedaan naar de samenstelling van het orale microbioom van parodontitis patïenten en van gezonde mensen.<br />
+<br />
+Er waren acht parondontitis samples en vier samples van gezonde personen beschikbaar, hierop werd 16s en whole genome sequencing uitgevoerd met de MinION mk1b. Na het sequencen werd door het programma MinKNOW één .bam bestand gegenereerd met alle reads van alle samples. Door middel van demultiplexing kon de data van iedere sample apart worden gekeken. Het resultaat hiervan was een krona visualisatie van iedere sample, oftewel een cirkeldiagram waarin de samenstelling van de bacteriën per taxonomisch niveau werd weergeven. Verder waren er grafieken gemaakt waarin de relatieve abundance van een aantal bacteriesoorten van de parodontitis samples werden vergeleken met de samples van de gezonde mensen.<br />
+<br />
+Zoals vermeld in het hoofdstuk ‘Plan voor de toekomst’ wil ik mijn kennis in metagenomics analyses verdiepen of vebreden. Tijdens de cursus DAUR2 had ik aan de hand van een voorbeeld dataset geleerd om na het uitvoeren van de kraken2 en bracken analyse de data te importeren met phyloseq en vervolgens verschillende statistische testen uit te voeren. Ik wil dezelfde analyse uitvoeren met de 16s sequencing data van de laatste 16s sequencing run die was uitgevoerd voor het projecticum. Van deze dataset is al bekend dat niet alle bacteriesoorten die werden verwacht werden gedetecteerd en dat sommige bacteriesoorten alleen op hogere taxa werden gedecteerd, dit kan op gebied van data-analyse extra uitdagingen geven.<br />
+<br />
+Het doel van deze opdracht is dat ik de metagenomics workflow van DAUR2 kan toepassen op een realistische dataset.<br />
+<br />
+</p>
+<div id="planning" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> 2. Planning<a href="vrije-opdracht.html#planning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Deze planning is nog niet definitief. Wanneer de opdracht is goedgekeurd en de voorbereiding is uitgevoerd, zal de plannig nogmaals geavalueerd worden.<br />
+<br />
+Het volledige portfolio moet op 25 mei voor 23:59 worden ingeleverd, deze opdracht moet dus in ongeveer vier weken af zijn. Omdat er ook andere opdrachten voor het portfolio worden uitgevoerd, is het handig als deze opdracht in ongeveer drie weken afgerond is. Dat betekent dat er ongeveer 11 uur per week aan deze opdracht moet worden besteed. Er wordt aan deze opdracht gewerkt op dagen dat er geen les is, het streven is om 3 tot 4 dagen in de week ongeveer 4 uur per dag aan de opdracht te besteden. Indien er tijd overblijft na het maken van de overige portfolio opdrachten en de uitvoering van het data science projecticum, kan het aantal uur opgehoogd worden.<br />
+<br />
+### Fase 1 – Afbakening &amp; voorbereiding
+-Projectdoel en onderzoeksvraag vastleggen.<br />
+-Data van Rstudio server halen en in lokale Rstduio plaatsen.<br />
+-Overzicht maken van beschikbare data.<br />
+-Bepalen van de analysemethode.<br />
+-Controleren wat de workflow voor de dataset was bij Projecticum Biomolecular Research.<br />
+-Eventueel een korte literatuurverkenning (parodontitis + microbiome).<br />
+</p>
+<div id="fase-2-data-structureren-demultiplexing-6-uur" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Fase 2 – Data structureren &amp; demultiplexing (6 uur)<a href="vrije-opdracht.html#fase-2-data-structureren-demultiplexing-6-uur" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>-Controleren hoe barcodes in BAM zijn opgeslagen.<br />
+-BAM naar FASTQ omzetten.<br />
+-Demultiplexen in 8 parodontitis + 4 gezonde samples.<br />
+-Bestandsstructuur organiseren.<br />
+</p>
+</div>
+<div id="fase-3-taxonomische-profiling-6-uur" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Fase 3 – Taxonomische profiling (6 uur)<a href="vrije-opdracht.html#fase-3-taxonomische-profiling-6-uur" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>-Taxonomische classificatie uitvoeren.<br />
+-Abundance tables per sample maken?<br />
+</p>
+</div>
+<div id="fase-4-microbiome-analyse-in-r-phyloseq-8-uur" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Fase 4 – Microbiome analyse in R (phyloseq) (8 uur)<a href="vrije-opdracht.html#fase-4-microbiome-analyse-in-r-phyloseq-8-uur" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>-phyloseq object opbouwen.<br />
+-Sample metadata koppelen.<br />
+-Hier is ruimte om statistische testen uit te voeren, nog goed nadenken welke uitgeoverdk kunnen worden.<br />
+</p>
+</div>
+<div id="fase-5-visualisatie-interpretatie-5-uur" class="section level3 hasAnchor" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> Fase 5 – Visualisatie &amp; interpretatie (5 uur)<a href="vrije-opdracht.html#fase-5-visualisatie-interpretatie-5-uur" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>-Hier verschillende figuren maken (nog overwegen welke).<br />
+-Interpreteren: verschillen tussen ziekte/gezond, ontbrekende verwachte taxa, beperkingen van Nanopore 16S.<br />
+</p>
+</div>
+<div id="fase-6-rapportage-in-bookdown-3-uur" class="section level3 hasAnchor" number="4.1.5">
+<h3><span class="header-section-number">4.1.5</span> Fase 6 – Rapportage in Bookdown (3 uur)<a href="vrije-opdracht.html#fase-6-rapportage-in-bookdown-3-uur" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>-Methoden beschrijven.<br />
+-Resultaten samenvatten.<br />
+-Discussie + reflectie.<br />
+-Conclusie schrijven.<br />
+<br />
+<br />
+Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb gebruikt of zelf heb gemaakt, waarbij ik bij elke stap heb toegelicht wat er is uitgevoerd. Indien ik bestaande scripts heb gebruikt, licht ik ook toe wat ik heb aangepast en waarom. Verder laat ik de output van mijn code zien aan de hand van verschillende figuren <em>(nog bepalen welke!)</em>. Als laatste houd ik een README bij voor deze opdracht, waarin ik toelicht waar elk bestand voor deze opdracht voor dient.</p>
 
+</div>
+</div>
 </div>
             </section>
 
