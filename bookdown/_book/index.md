@@ -1,7 +1,7 @@
 --- 
 title: "Portfolio Workflows"
 author: "Rachel van der Kreeft"
-date: "2026-04-20"
+date: "2026-04-22"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book

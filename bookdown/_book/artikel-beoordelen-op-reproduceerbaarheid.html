@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 8 Artikel beoordelen op reproduceerbaarheid | Portfolio Workflows</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 8 Artikel beoordelen op reproduceerbaarheid | Portfolio Workflows" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 Artikel beoordelen op reproduceerbaarheid | Portfolio Workflows" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Rachel van der Kreeft" />
+
+
+<meta name="date" content="2026-04-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="data-analyse-van-een-ander-reproduceren.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Portfolio Workflows</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introductie</a></li>
+<li class="chapter" data-level="2" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html"><i class="fa fa-check"></i><b>2</b> Curriculum Vitae</a></li>
+<li class="chapter" data-level="3" data-path="plan-voor-de-toekomst.html"><a href="plan-voor-de-toekomst.html"><i class="fa fa-check"></i><b>3</b> Plan voor de toekomst</a></li>
+<li class="chapter" data-level="4" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html"><i class="fa fa-check"></i><b>4</b> Vrije opdracht</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#het-kiezen-van-een-nieuwe-data-science-for-biology-skill"><i class="fa fa-check"></i><b>4.1</b> Het kiezen van een nieuwe Data Science for Biology skill</a></li>
+<li class="chapter" data-level="4.2" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#planning"><i class="fa fa-check"></i><b>4.2</b> Planning</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-2-data-structureren-demultiplexing-6-uur"><i class="fa fa-check"></i><b>4.2.1</b> Fase 2 – Data structureren &amp; demultiplexing (6 uur)</a></li>
+<li class="chapter" data-level="4.2.2" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-3-taxonomische-profiling-6-uur"><i class="fa fa-check"></i><b>4.2.2</b> Fase 3 – Taxonomische profiling (6 uur)</a></li>
+<li class="chapter" data-level="4.2.3" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-4-microbiome-analyse-in-r-phyloseq-8-uur"><i class="fa fa-check"></i><b>4.2.3</b> Fase 4 – Microbiome analyse in R (phyloseq) (8 uur)</a></li>
+<li class="chapter" data-level="4.2.4" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-5-visualisatie-interpretatie-5-uur"><i class="fa fa-check"></i><b>4.2.4</b> Fase 5 – Visualisatie &amp; interpretatie (5 uur)</a></li>
+<li class="chapter" data-level="4.2.5" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-6-rapportage-in-bookdown-3-uur"><i class="fa fa-check"></i><b>4.2.5</b> Fase 6 – Rapportage in Bookdown (3 uur)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="rna-sequencing-repository.html"><a href="rna-sequencing-repository.html"><i class="fa fa-check"></i><b>5</b> RNA-sequencing repository</a></li>
+<li class="chapter" data-level="6" data-path="portfolio-repository.html"><a href="portfolio-repository.html"><i class="fa fa-check"></i><b>6</b> Portfolio repository</a></li>
+<li class="chapter" data-level="7" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html"><i class="fa fa-check"></i><b>7</b> Data analyse van een ander reproduceren</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#data-inlezen"><i class="fa fa-check"></i><b>7.1</b> Data inlezen</a></li>
+<li class="chapter" data-level="7.2" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#data-types-voor-rawdata-compname-en-compconcentration"><i class="fa fa-check"></i><b>7.2</b> Data types voor RawData, compName en compConcentration</a></li>
+<li class="chapter" data-level="7.3" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#scatterplot"><i class="fa fa-check"></i><b>7.3</b> Scatterplot</a></li>
+<li class="chapter" data-level="7.4" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#normaliseer-de-data"><i class="fa fa-check"></i><b>7.4</b> Normaliseer de data</a></li>
+<li class="chapter" data-level="7.5" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#scatterplot-met-genormaliseerde-waarden"><i class="fa fa-check"></i><b>7.5</b> Scatterplot met genormaliseerde waarden</a></li>
+<li class="chapter" data-level="7.6" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#controlegroepen"><i class="fa fa-check"></i><b>7.6</b> Controlegroepen</a></li>
+<li class="chapter" data-level="7.7" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#stappenplan-voor-vervolgonderzoek"><i class="fa fa-check"></i><b>7.7</b> Stappenplan voor vervolgonderzoek</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html"><i class="fa fa-check"></i><b>8</b> Artikel beoordelen op reproduceerbaarheid</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#gekozen-artikel"><i class="fa fa-check"></i><b>8.1</b> Gekozen artikel</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#onderzoeksvraag"><i class="fa fa-check"></i><b>8.1.1</b> Onderzoeksvraag:</a></li>
+<li class="chapter" data-level="8.1.2" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#methode"><i class="fa fa-check"></i><b>8.1.2</b> Methode:</a></li>
+<li class="chapter" data-level="8.1.3" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#resultaten"><i class="fa fa-check"></i><b>8.1.3</b> Resultaten:</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#beoordelingscriteria-voor-reproduceerbaarheid"><i class="fa fa-check"></i><b>8.2</b> Beoordelingscriteria voor reproduceerbaarheid</a></li>
+<li class="chapter" data-level="8.3" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#reproduceerbaarheid-van-de-gedeelde-r-code"><i class="fa fa-check"></i><b>8.3</b> Reproduceerbaarheid van de gedeelde R code</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#importeer-de-dataset-death-data18-64.xlsx"><i class="fa fa-check"></i><b>8.3.1</b> Importeer de dataset Death data(18-64).xlsx</a></li>
+<li class="chapter" data-level="8.3.2" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#selecteren-en-filteren-van-data"><i class="fa fa-check"></i><b>8.3.2</b> Selecteren en filteren van data</a></li>
+<li class="chapter" data-level="8.3.3" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#samenvatting"><i class="fa fa-check"></i><b>8.3.3</b> Samenvatting</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Portfolio Workflows</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="artikel-beoordelen-op-reproduceerbaarheid" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Artikel beoordelen op reproduceerbaarheid<a href="artikel-beoordelen-op-reproduceerbaarheid.html#artikel-beoordelen-op-reproduceerbaarheid" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="gekozen-artikel" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Gekozen artikel<a href="artikel-beoordelen-op-reproduceerbaarheid.html#gekozen-artikel" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Het artikel dat is onderzocht voor deze opdracht is ‘Infectivity and fatality of influenza in pre- and post-COVID-19 pandemic year’, geschreven door Shuanglin Jing en Hao Wang.<br />
+<br />
+Link naar artikel:
+<a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013229" class="uri">https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013229</a><br />
+<br />
+</p>
+<div id="onderzoeksvraag" class="section level3 hasAnchor" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Onderzoeksvraag:<a href="artikel-beoordelen-op-reproduceerbaarheid.html#onderzoeksvraag" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>De onderzoeksvraag is: Hoe zijn de epidemiologische kenmerken van influenza veranderd tussen de periode vóór en na de pandemie?<br />
+<br />
+</p>
+</div>
+<div id="methode" class="section level3 hasAnchor" number="8.1.2">
+<h3><span class="header-section-number">8.1.2</span> Methode:<a href="artikel-beoordelen-op-reproduceerbaarheid.html#methode" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Er zijn twee wiskundige modellen gebruikt om de transmissie- en sterftecijfers van influenza in te schatten. Het eerste model is een leeftijdsgestructureerd model waarbij de populatie in meerdere leeftijdsgroepen worden verdeeld, Elke groep wordt vervolgens onderverdeeld in de subklassen vatbaar, latent, geïnfecteerd, hersteld en overleden. Het tweede model is een multistammenmodel dat de transmissie- en sterftecijfers van meerdere influenzastammen binnen de gehele populatie beschouwt. Beide modellen bevatten tijdsafhankelijke parameters om de variabiliteit in influenzatransmissie en -ernst weer te geven.<br />
+<br />
+</p>
+</div>
+<div id="resultaten" class="section level3 hasAnchor" number="8.1.3">
+<h3><span class="header-section-number">8.1.3</span> Resultaten:<a href="artikel-beoordelen-op-reproduceerbaarheid.html#resultaten" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>-De transmissiesnelheid van influenza onder de bevolking van 18 jaar en ouder was in het laatste jaar van de COVID-19-pandemie (2022-2023) relatief laag.<br />
+-In het eerste jaar na de pandemie (2023-2024) was de transmissiesnelheid in deze leeftijdsgroep weer gestegen tot het niveau van vóór de pandemie.<br />
+-Bij personen onder de 18 jaar bleef de transmissiesnelheid stabiel.<br />
+-Bij influenza a waren deze verschillen groter dan bij influenza b.<br />
+-In 2022-2023 vertoonden de grieptesterftecijfers verhoogde niveaus bij alle 3 de leeftijdscategorieën (0-17 jaar, 18-64 jaar en 65-plussers). In 2023-2024 daalden de sterftecijfers door influenza in alle drie de leeftijdsgroepen terug naar het niveau van vóór de pandemie.</p>
+</div>
+</div>
+<div id="beoordelingscriteria-voor-reproduceerbaarheid" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Beoordelingscriteria voor reproduceerbaarheid<a href="artikel-beoordelen-op-reproduceerbaarheid.html#beoordelingscriteria-voor-reproduceerbaarheid" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Transparency.Criteria</th>
+<th align="left">Response</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Study Purpose</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">Data Availability Statement</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="odd">
+<td align="left">Data Location</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">Study Location</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="odd">
+<td align="left">Author Review</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">Funding Statement</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="odd">
+<td align="left">Code Availability</td>
+<td align="left">Yes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="reproduceerbaarheid-van-de-gedeelde-r-code" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Reproduceerbaarheid van de gedeelde R code<a href="artikel-beoordelen-op-reproduceerbaarheid.html#reproduceerbaarheid-van-de-gedeelde-r-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>-Er is een bestand genaamd README toegevoegd aan de repository, maar deze is niet ingevuld. Dit maakt het lastig om te bepalen welke bestanden nodig zijn.<br />
+-Het artikel staat in de website onder artikelen die R code bevatten, maar in werkelijkheid is er gebruik gemaakt van analyse in MATLAB, wat te zien is aan het gebruik van .m en .mat bestanden. Dit maakt volledige analyse in Rstudio niet mogelijk.<br />
+-Er zijn wel .csv en .xlsx bestanden beschikbaar. Deze zijn al in tidy format gezet.<br />
+Ik heb geprobeerd om figuur 1E van het artikel zoveel mogelijk te reproduceren in Rstudio. Hiervoor heb ik het bestand Death data(18-64).xlsx gebruikt. Dit bestand is hier te vinden: /
+<a href="https://github.com/shuanglinjing/Long-COVID-impact-on-influenza-infectivity-and-fatality/blob/master/Transmission%20and%20mortality%20rates%20of%20age%20structure%20model/Death%20data(18-64).xlsx" class="uri">https://github.com/shuanglinjing/Long-COVID-impact-on-influenza-infectivity-and-fatality/blob/master/Transmission%20and%20mortality%20rates%20of%20age%20structure%20model/Death%20data(18-64).xlsx</a></p>
+<div id="importeer-de-dataset-death-data18-64.xlsx" class="section level3 hasAnchor" number="8.3.1">
+<h3><span class="header-section-number">8.3.1</span> Importeer de dataset Death data(18-64).xlsx<a href="artikel-beoordelen-op-reproduceerbaarheid.html#importeer-de-dataset-death-data18-64.xlsx" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb25-1" tabindex="-1"></a><span class="co"># Laad de libraries tidyverse en readxl</span></span>
+<span id="cb25-2"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb25-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb25-3"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb25-3" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb25-4"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb25-4" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb25-5" tabindex="-1"></a><span class="co"># Importeer het bestand Death data(18-64).xlsx in Rstudio</span></span>
+<span id="cb25-6"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb25-6" tabindex="-1"></a>death_data_18_64 <span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">&quot;~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/4b_artikel_beoordelen_op_reproduceerbaarheid/Death data(18-64).xlsx&quot;</span>)</span></code></pre></div>
+</div>
+<div id="selecteren-en-filteren-van-data" class="section level3 hasAnchor" number="8.3.2">
+<h3><span class="header-section-number">8.3.2</span> Selecteren en filteren van data<a href="artikel-beoordelen-op-reproduceerbaarheid.html#selecteren-en-filteren-van-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Selecteer de volgende data:<br />
+-SEASON: 2023-24<br />
+-WEEK: 40 t/m 52 en 1 t/m 15<br />
+-NUM INFLUENZA DEATHS die bij deze rijen horen<br />
+</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-1" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb26-2"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-2" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-3" tabindex="-1"></a><span class="co"># Definieer correcte weekvolgorde</span></span>
+<span id="cb26-4"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-4" tabindex="-1"></a>week_order <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">40</span><span class="sc">:</span><span class="dv">52</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>)</span>
+<span id="cb26-5"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-5" tabindex="-1"></a></span>
+<span id="cb26-6"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-6" tabindex="-1"></a><span class="co"># Selecteer en filter de volgende data:</span></span>
+<span id="cb26-7"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-7" tabindex="-1"></a><span class="do">## SEASON: 2023-24</span></span>
+<span id="cb26-8"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-8" tabindex="-1"></a><span class="do">## WEEK: 40 t/m 52 en 1 t/m 15</span></span>
+<span id="cb26-9"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-9" tabindex="-1"></a><span class="do">## NUM INFLUENZA DEATHS die bij deze rijen horen</span></span>
+<span id="cb26-10"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-10" tabindex="-1"></a></span>
+<span id="cb26-11"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-11" tabindex="-1"></a>fig1e_data <span class="ot">&lt;-</span> death_data_18_64 <span class="sc">%&gt;%</span></span>
+<span id="cb26-12"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-12" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb26-13"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-13" tabindex="-1"></a>    SEASON <span class="sc">==</span> <span class="st">&quot;2023-24&quot;</span>,</span>
+<span id="cb26-14"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-14" tabindex="-1"></a>    WEEK <span class="sc">%in%</span> week_order</span>
+<span id="cb26-15"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-15" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb26-16"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-16" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb26-17"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-17" tabindex="-1"></a>    <span class="at">WEEK =</span> <span class="fu">factor</span>(WEEK, <span class="at">levels =</span> week_order)</span>
+<span id="cb26-18"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-18" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb26-19"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-19" tabindex="-1"></a>  <span class="fu">arrange</span>(WEEK) <span class="sc">%&gt;%</span></span>
+<span id="cb26-20"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-20" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb26-21"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-21" tabindex="-1"></a>    SEASON,</span>
+<span id="cb26-22"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-22" tabindex="-1"></a>    WEEK,</span>
+<span id="cb26-23"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-23" tabindex="-1"></a>    <span class="st">`</span><span class="at">NUM INFLUENZA DEATHS</span><span class="st">`</span></span>
+<span id="cb26-24"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-24" tabindex="-1"></a>  )</span>
+<span id="cb26-25"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-25" tabindex="-1"></a></span>
+<span id="cb26-26"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-26" tabindex="-1"></a><span class="co"># Controleer of de juiste data is geselecteerd</span></span>
+<span id="cb26-27"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb26-27" tabindex="-1"></a>fig1e_data</span></code></pre></div>
+<pre><code>## # A tibble: 28 × 3
+##    SEASON  WEEK  `NUM INFLUENZA DEATHS`
+##    &lt;chr&gt;   &lt;fct&gt;                  &lt;dbl&gt;
+##  1 2023-24 40                         6
+##  2 2023-24 41                        12
+##  3 2023-24 42                        11
+##  4 2023-24 43                         7
+##  5 2023-24 44                        21
+##  6 2023-24 45                        17
+##  7 2023-24 46                        29
+##  8 2023-24 47                        42
+##  9 2023-24 48                        38
+## 10 2023-24 49                        69
+## # ℹ 18 more rows</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb28-2"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-2" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb28-3"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-3" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-4" tabindex="-1"></a><span class="co"># Labels die op de x-as worden getoond (elke 3 weken)</span></span>
+<span id="cb28-5"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-5" tabindex="-1"></a>label_weeks <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">40</span>, <span class="dv">43</span>, <span class="dv">46</span>, <span class="dv">49</span>, <span class="dv">52</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">9</span>, <span class="dv">12</span>, <span class="dv">15</span>)</span>
+<span id="cb28-6"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-6" tabindex="-1"></a></span>
+<span id="cb28-7"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-7" tabindex="-1"></a><span class="co"># Pas namen op de x-as aan zodat ze genoteerd staan als jaar-week</span></span>
+<span id="cb28-8"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-8" tabindex="-1"></a>fig1e_plot_data <span class="ot">&lt;-</span> fig1e_data <span class="sc">%&gt;%</span></span>
+<span id="cb28-9"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-9" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb28-10"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-10" tabindex="-1"></a>    <span class="at">WEEK =</span> <span class="fu">factor</span>(WEEK, <span class="at">levels =</span> week_order),</span>
+<span id="cb28-11"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-11" tabindex="-1"></a>    <span class="at">YEAR_WEEK =</span> <span class="fu">case_when</span>(</span>
+<span id="cb28-12"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-12" tabindex="-1"></a>      <span class="fu">as.numeric</span>(<span class="fu">as.character</span>(WEEK)) <span class="sc">&gt;=</span> <span class="dv">40</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">&quot;2023-&quot;</span>, WEEK),</span>
+<span id="cb28-13"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-13" tabindex="-1"></a>      <span class="fu">as.numeric</span>(<span class="fu">as.character</span>(WEEK)) <span class="sc">&lt;=</span> <span class="dv">15</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">&quot;2024-&quot;</span>, WEEK)</span>
+<span id="cb28-14"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-14" tabindex="-1"></a>    )</span>
+<span id="cb28-15"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-15" tabindex="-1"></a>  )</span>
+<span id="cb28-16"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-16" tabindex="-1"></a></span>
+<span id="cb28-17"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-17" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb28-18"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-18" tabindex="-1"></a>  fig1e_plot_data,</span>
+<span id="cb28-19"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-19" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb28-20"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-20" tabindex="-1"></a>    <span class="at">x =</span> WEEK,</span>
+<span id="cb28-21"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-21" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">`</span><span class="at">NUM INFLUENZA DEATHS</span><span class="st">`</span>,</span>
+<span id="cb28-22"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-22" tabindex="-1"></a>    <span class="at">group =</span> <span class="dv">1</span></span>
+<span id="cb28-23"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-23" tabindex="-1"></a>  )</span>
+<span id="cb28-24"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-24" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb28-25"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-25" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">&quot;red&quot;</span>, <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb28-26"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-26" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">15</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span></span>
+<span id="cb28-27"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-27" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(</span>
+<span id="cb28-28"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-28" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="fu">as.character</span>(label_weeks),</span>
+<span id="cb28-29"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-29" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">case_when</span>(</span>
+<span id="cb28-30"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-30" tabindex="-1"></a>      label_weeks <span class="sc">&gt;=</span> <span class="dv">40</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">&quot;2023-&quot;</span>, label_weeks),</span>
+<span id="cb28-31"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-31" tabindex="-1"></a>      label_weeks <span class="sc">&lt;=</span> <span class="dv">15</span> <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">&quot;2024-&quot;</span>, label_weeks)</span>
+<span id="cb28-32"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-32" tabindex="-1"></a>    )</span>
+<span id="cb28-33"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-33" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb28-34"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-34" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb28-35"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-35" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">&quot;New deaths&quot;</span>,</span>
+<span id="cb28-36"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-36" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(</span>
+<span id="cb28-37"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-37" tabindex="-1"></a>      <span class="dv">0</span>,</span>
+<span id="cb28-38"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-38" tabindex="-1"></a>      <span class="fu">max</span>(fig1e_plot_data<span class="sc">$</span><span class="st">`</span><span class="at">NUM INFLUENZA DEATHS</span><span class="st">`</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb28-39"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-39" tabindex="-1"></a>      <span class="at">by =</span> <span class="dv">50</span></span>
+<span id="cb28-40"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-40" tabindex="-1"></a>    )</span>
+<span id="cb28-41"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-41" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb28-42"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-42" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb28-43"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-43" tabindex="-1"></a>    <span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb28-44"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-44" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;(E) 18–64 years old&quot;</span></span>
+<span id="cb28-45"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-45" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb28-46"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-46" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb28-47"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-47" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb28-48"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-48" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>, <span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb28-49"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-49" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>)</span>
+<span id="cb28-50"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#cb28-50" tabindex="-1"></a>  )</span></code></pre></div>
+<p><img src="07-artikel_beoordelen_op_reproduceerbaarheid_files/figure-html/ggplot-1.png" alt="" width="672" /></p>
+<p>Binnen Rstudio was het mogelijk om het aantal personen (18-64 jaar) dat per week was overleden aan influenza in seizoen 2023-2024 te visualiseren. De labels op de x-as en y-as komen ook overeen met het oorspronkelijke figuur. Een belangrijk verschil is dat de lijn nu is getrokken door het aantal overleden personen per week, terwijl in de oorspronkelijke figuur de lijn werd gebruik voor het geschatte aantal overleden personen. Dit komt omdat deze data niet kon worden teruggevonden, mogelijk is deze data opgesteld aan de hand van een functie die niet in Rstudio beschikbaar is. Het aantal overleden personen per week komt overeen met wat in figuur 1E afgebeeld stond.<br />
+<br />
+In de gemaakte figuur missen de volgende onderdelen:<br />
+-Cubic spline fitting<br />
+-95% CI-band<br />
+-MATLAB age-structured model<br />
+</p>
+</div>
+<div id="samenvatting" class="section level3 hasAnchor" number="8.3.3">
+<h3><span class="header-section-number">8.3.3</span> Samenvatting<a href="artikel-beoordelen-op-reproduceerbaarheid.html#samenvatting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Het artikel zelf voldoet aan de eisen voor reproduceerbaarheid. Het artikel verschijnt echter ten onrechte tussen de resultaten wanneer er gefilterd wordt op R code bij Data Availability. Het artikel hoort onder MATLAB gefilterd te worden. De reproduceerbaarheid binnen Rstudio is niet goed omdat Rstudio niet de benodigde functies heeft om de figuur volledig te reproduceren. De data die is gegeven lijkt wel overeen te komen met de figuren in het artikel en aan de hand van de figuur beschrijving van figuur 1 was het mogelijk om de figuur deels te reproduceren.<br />
+<br />
+Voor reproduceerbaarheid binnen Rstudio krijgt dit onderzoek daarom het cijfer 2. Als er voor deze opdracht met MATLAB gewerkt zou worden, zou deze score waarschijnlijk hoger zijn.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="data-analyse-van-een-ander-reproduceren.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": {},
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

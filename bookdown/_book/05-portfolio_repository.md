@@ -35,6 +35,12 @@
 ## |   |   \-- figure-latex
 ## |   |       +-- normalised scatterplot-1.pdf
 ## |   |       \-- Scatterplot-1.pdf
+## |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid.Rmd
+## |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid_files
+## |   |   +-- figure-html
+## |   |   |   \-- ggplot-1.png
+## |   |   \-- figure-latex
+## |   |       \-- ggplot-1.pdf
 ## |   +-- book.bib
 ## |   +-- bookdown-demo.tex
 ## |   +-- bookdown-portfolio.rds
@@ -50,7 +56,7 @@
 ## |   +-- packages.bib
 ## |   +-- preamble.tex
 ## |   +-- README.md
-## |   +-- renderaf8655d4b86.rds
+## |   +-- render372c6d8a2862.rds
 ## |   +-- style.css
 ## |   +-- toc.css
 ## |   +-- _book
@@ -71,9 +77,15 @@
 ## |   |   |   \-- figure-html
 ## |   |   |       +-- normalised scatterplot-1.png
 ## |   |   |       \-- Scatterplot-1.png
+## |   |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid.md
+## |   |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid_files
+## |   |   |   \-- figure-html
+## |   |   |       \-- ggplot-1.png
 ## |   |   +-- 404.html
+## |   |   +-- artikel-beoordelen-op-reproduceerbaarheid.html
 ## |   |   +-- curriculum-vitae.html
 ## |   |   +-- curriculum_vitae.html
+## |   |   +-- data-analyse-van-een-ander-reproduceren.html
 ## |   |   +-- een-data-analyse-van-een-ander-reproduceren.html
 ## |   |   +-- index.html
 ## |   |   +-- index.md
@@ -328,11 +340,17 @@
 ## |   |   +-- portfolio_repository.html
 ## |   |   +-- portfolio_repository.Rmd
 ## |   |   \-- readme_screenshot.png
-## |   \-- 4a_data_analyse_van_een_ander_reproduceren
-## |       +-- CE.LIQ.FLOW.062_Tidydata.xlsx
-## |       +-- data_analyse_van_een_ander_reproduceren.html
-## |       +-- data_analyse_van_een_ander_reproduceren.Rmd
-## |       \-- ~$CE.LIQ.FLOW.062_Tidydata.xlsx
+## |   +-- 4a_data_analyse_van_een_ander_reproduceren
+## |   |   +-- CE.LIQ.FLOW.062_Tidydata.xlsx
+## |   |   +-- data_analyse_van_een_ander_reproduceren.html
+## |   |   \-- data_analyse_van_een_ander_reproduceren.Rmd
+## |   \-- 4b_artikel_beoordelen_op_reproduceerbaarheid
+## |       +-- 4b_artikel_beoordelen_op_reproduceerbaarheid.html
+## |       +-- 4b_artikel_beoordelen_op_reproduceerbaarheid.Rmd
+## |       \-- Death data(18-64).xlsx
+## +-- prompts
+## |   \-- artikel_beoordelen_op_reproduceerbaarheid
+## +-- README.html
 ## \-- README.md
 ```
 

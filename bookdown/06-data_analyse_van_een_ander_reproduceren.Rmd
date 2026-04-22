@@ -1,4 +1,4 @@
-# Data analyse van een ander reproduceren"
+# Data analyse van een ander reproduceren
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -17,7 +17,7 @@ dataset_4a <-read_excel("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portf
 
 ```
 \
-De data is goed ingelezen en is al in tidy format gezet, er hoeft dus niks aangepast te worden..
+De data is goed ingelezen en is al in tidy format gezet, er hoeft dus niks aangepast te worden.
 
 ## Data types voor RawData, compName en compConcentration
 

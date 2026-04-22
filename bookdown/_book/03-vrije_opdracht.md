@@ -2,7 +2,11 @@
 
 
 \
-## 1. Het kiezen van een nieuwe Data Science for Biology skill 
+\
+Belangrijk: Dit is pas een tijdelijk plan. De kans is groot de exacte inhoud nog gaat veranderen.
+\
+
+## Het kiezen van een nieuwe Data Science for Biology skill 
 Tijdens de cursus Projecticum Biomolecular Research had ik samen met een paar medestudenten onderzoek gedaan naar de samenstelling van het orale microbioom van parodontitis patïenten en van gezonde mensen. 
 \
 \
@@ -16,7 +20,7 @@ Het doel van deze opdracht is dat ik de metagenomics workflow van DAUR2 kan toep
 \
 \
 
-## 2. Planning
+## Planning
 
 Deze planning is nog niet definitief. Wanneer de opdracht is goedgekeurd en de voorbereiding is uitgevoerd, zal de plannig nogmaals geavalueerd worden.
 \

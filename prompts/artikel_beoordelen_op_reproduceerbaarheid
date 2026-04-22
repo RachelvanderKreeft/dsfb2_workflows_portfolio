@@ -1,0 +1,12 @@
+Prompt 1:
+Ik heb het bestand Death data(18-64).xlsx al geïmporteerd in Rstudio met de variabele naam death_data_18_64. Ik wil nu de data selecteren die ik nodig heb om figuur 1e van het artikel te reproduceren. Kan je voor mij code schrijven waarin je de volgende data van de volgende kolommen selecteert? 
+SEASON: 2023-2024
+WEEK: 40 t/m 52 en 1 t/m 15 (in de volgorde waarin ik het nu heb opgeschreven) 
+en de bijhorende NUM INFLUENZA DEATHS van de rijen die ik met SEASON en WEEK heb geselecteerd.
+
+
+Prompt 2:
+Schrijf ggplot-code waarbij figuur 1E zoveel mogelijk wordt gereproduceerd in Rstudio. Het moet een lijn zijn met vierkante punten. Voor de y-as moet NUM INFLUENZA DEATHS worden gebruikt en deze moet in de figuur New deaths genoemd worden. De punten op de y-as moeten in stappen van 50 worden gezet (dus 0, 50, 100, etc.)
+
+Voor de x-as moet WEEK worden gebruikt. Elke week moet als in vierkant in de figuur staan, maar de x-as moet stappen van 3 weken weergeven. De schrijfwijze van de x-as is als volgt: het jaar moet worden opgeschreven gevolgd door de week. Weken 40 t/m 52 vallen onder 2023 en weken 1 t/m 15 horen onder 2024. Een voorbeeld van de juiste schrijfwijze is 2023-40 voor week 40. Belangrijk is dat de weken in de volgorde blijven staan die ik je eerder heb gegeven. Boven de figuur moet de tekst (E) 18-64 years old staan. Laat mij weten wat wel en niet gereproduceerd kan worden.
+

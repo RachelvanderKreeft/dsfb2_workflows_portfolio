@@ -125,7 +125,7 @@
 
 \title{Portfolio Workflows}
 \author{Rachel van der Kreeft}
-\date{2026-04-20}
+\date{2026-04-22}
 
 \begin{document}
 \maketitle
@@ -149,7 +149,11 @@ Op dit moment heb ik een goede basis in data-analyse met R en bash. Ik heb onder
 \chapter{Vrije opdracht}\label{vrije-opdracht}
 
 \hfill\break
-\#\# 1. Het kiezen van een nieuwe Data Science for Biology skill
+\hfill\break
+Belangrijk: Dit is pas een tijdelijk plan. De kans is groot de exacte inhoud nog gaat veranderen.\\
+
+\section{Het kiezen van een nieuwe Data Science for Biology skill}\label{het-kiezen-van-een-nieuwe-data-science-for-biology-skill}
+
 Tijdens de cursus Projecticum Biomolecular Research had ik samen met een paar medestudenten onderzoek gedaan naar de samenstelling van het orale microbioom van parodontitis patïenten en van gezonde mensen.\\
 \strut \\
 Er waren acht parondontitis samples en vier samples van gezonde personen beschikbaar, hierop werd 16s en whole genome sequencing uitgevoerd met de MinION mk1b. Na het sequencen werd door het programma MinKNOW één .bam bestand gegenereerd met alle reads van alle samples. Door middel van demultiplexing kon de data van iedere sample apart worden gekeken. Het resultaat hiervan was een krona visualisatie van iedere sample, oftewel een cirkeldiagram waarin de samenstelling van de bacteriën per taxonomisch niveau werd weergeven. Verder waren er grafieken gemaakt waarin de relatieve abundance van een aantal bacteriesoorten van de parodontitis samples werden vergeleken met de samples van de gezonde mensen.\\
@@ -159,7 +163,7 @@ Zoals vermeld in het hoofdstuk `Plan voor de toekomst' wil ik mijn kennis in met
 Het doel van deze opdracht is dat ik de metagenomics workflow van DAUR2 kan toepassen op een realistische dataset.\\
 \strut \\
 
-\section{2. Planning}\label{planning}
+\section{Planning}\label{planning}
 
 Deze planning is nog niet definitief. Wanneer de opdracht is goedgekeurd en de voorbereiding is uitgevoerd, zal de plannig nogmaals geavalueerd worden.\\
 \strut \\
@@ -356,6 +360,12 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   \-- figure-latex
 ## |   |       +-- normalised scatterplot-1.pdf
 ## |   |       \-- Scatterplot-1.pdf
+## |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid.Rmd
+## |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid_files
+## |   |   +-- figure-html
+## |   |   |   \-- ggplot-1.png
+## |   |   \-- figure-latex
+## |   |       \-- ggplot-1.pdf
 ## |   +-- book.bib
 ## |   +-- bookdown-demo.tex
 ## |   +-- bookdown-portfolio.rds
@@ -371,7 +381,7 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   +-- packages.bib
 ## |   +-- preamble.tex
 ## |   +-- README.md
-## |   +-- renderaf8655d4b86.rds
+## |   +-- render372c6d8a2862.rds
 ## |   +-- style.css
 ## |   +-- toc.css
 ## |   +-- _book
@@ -392,9 +402,15 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   |   \-- figure-html
 ## |   |   |       +-- normalised scatterplot-1.png
 ## |   |   |       \-- Scatterplot-1.png
+## |   |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid.md
+## |   |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid_files
+## |   |   |   \-- figure-html
+## |   |   |       \-- ggplot-1.png
 ## |   |   +-- 404.html
+## |   |   +-- artikel-beoordelen-op-reproduceerbaarheid.html
 ## |   |   +-- curriculum-vitae.html
 ## |   |   +-- curriculum_vitae.html
+## |   |   +-- data-analyse-van-een-ander-reproduceren.html
 ## |   |   +-- een-data-analyse-van-een-ander-reproduceren.html
 ## |   |   +-- index.html
 ## |   |   +-- index.md
@@ -649,17 +665,23 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   +-- portfolio_repository.html
 ## |   |   +-- portfolio_repository.Rmd
 ## |   |   \-- readme_screenshot.png
-## |   \-- 4a_data_analyse_van_een_ander_reproduceren
-## |       +-- CE.LIQ.FLOW.062_Tidydata.xlsx
-## |       +-- data_analyse_van_een_ander_reproduceren.html
-## |       +-- data_analyse_van_een_ander_reproduceren.Rmd
-## |       \-- ~$CE.LIQ.FLOW.062_Tidydata.xlsx
+## |   +-- 4a_data_analyse_van_een_ander_reproduceren
+## |   |   +-- CE.LIQ.FLOW.062_Tidydata.xlsx
+## |   |   +-- data_analyse_van_een_ander_reproduceren.html
+## |   |   \-- data_analyse_van_een_ander_reproduceren.Rmd
+## |   \-- 4b_artikel_beoordelen_op_reproduceerbaarheid
+## |       +-- 4b_artikel_beoordelen_op_reproduceerbaarheid.html
+## |       +-- 4b_artikel_beoordelen_op_reproduceerbaarheid.Rmd
+## |       \-- Death data(18-64).xlsx
+## +-- prompts
+## |   \-- artikel_beoordelen_op_reproduceerbaarheid
+## +-- README.html
 ## \-- README.md
 \end{verbatim}
 
 \pandocbounded{\includegraphics[keepaspectratio]{05-portfolio_repository_files/figure-latex/readme-1.pdf}}
 
-\chapter{Een data analyse van een ander reproduceren''}\label{een-data-analyse-van-een-ander-reproduceren}
+\chapter{Data analyse van een ander reproduceren}\label{data-analyse-van-een-ander-reproduceren}
 
 \section{Data inlezen}\label{data-inlezen}
 
@@ -675,7 +697,7 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 \end{Shaded}
 
 \hfill\break
-De data is goed ingelezen en is al in tidy format gezet, er hoeft dus niks aangepast te worden..
+De data is goed ingelezen en is al in tidy format gezet, er hoeft dus niks aangepast te worden.
 
 \section{Data types voor RawData, compName en compConcentration}\label{data-types-voor-rawdata-compname-en-compconcentration}
 
@@ -903,5 +925,202 @@ Om de IC50 concentratie van de verschillende chemicaliën te bepalen, moet er ee
 \item
   Voeg een modelvalidatie toe.
 \end{enumerate}
+
+\chapter{Artikel beoordelen op reproduceerbaarheid}\label{artikel-beoordelen-op-reproduceerbaarheid}
+
+\section{Gekozen artikel}\label{gekozen-artikel}
+
+Het artikel dat is onderzocht voor deze opdracht is `Infectivity and fatality of influenza in pre- and post-COVID-19 pandemic year', geschreven door Shuanglin Jing en Hao Wang.\\
+\strut \\
+Link naar artikel:
+\url{https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013229}\\
+\strut \\
+
+\subsection{Onderzoeksvraag:}\label{onderzoeksvraag}
+
+De onderzoeksvraag is: Hoe zijn de epidemiologische kenmerken van influenza veranderd tussen de periode vóór en na de pandemie?\\
+\strut \\
+
+\subsection{Methode:}\label{methode}
+
+Er zijn twee wiskundige modellen gebruikt om de transmissie- en sterftecijfers van influenza in te schatten. Het eerste model is een leeftijdsgestructureerd model waarbij de populatie in meerdere leeftijdsgroepen worden verdeeld, Elke groep wordt vervolgens onderverdeeld in de subklassen vatbaar, latent, geïnfecteerd, hersteld en overleden. Het tweede model is een multistammenmodel dat de transmissie- en sterftecijfers van meerdere influenzastammen binnen de gehele populatie beschouwt. Beide modellen bevatten tijdsafhankelijke parameters om de variabiliteit in influenzatransmissie en -ernst weer te geven.\\
+\strut \\
+
+\subsection{Resultaten:}\label{resultaten}
+
+-De transmissiesnelheid van influenza onder de bevolking van 18 jaar en ouder was in het laatste jaar van de COVID-19-pandemie (2022-2023) relatief laag.\\
+-In het eerste jaar na de pandemie (2023-2024) was de transmissiesnelheid in deze leeftijdsgroep weer gestegen tot het niveau van vóór de pandemie.\\
+-Bij personen onder de 18 jaar bleef de transmissiesnelheid stabiel.\\
+-Bij influenza a waren deze verschillen groter dan bij influenza b.\\
+-In 2022-2023 vertoonden de grieptesterftecijfers verhoogde niveaus bij alle 3 de leeftijdscategorieën (0-17 jaar, 18-64 jaar en 65-plussers). In 2023-2024 daalden de sterftecijfers door influenza in alle drie de leeftijdsgroepen terug naar het niveau van vóór de pandemie.
+
+\section{Beoordelingscriteria voor reproduceerbaarheid}\label{beoordelingscriteria-voor-reproduceerbaarheid}
+
+\begin{tabular}{l|l}
+\hline
+Transparency.Criteria & Response\\
+\hline
+Study Purpose & Yes\\
+\hline
+Data Availability Statement & Yes\\
+\hline
+Data Location & Yes\\
+\hline
+Study Location & Yes\\
+\hline
+Author Review & Yes\\
+\hline
+Funding Statement & Yes\\
+\hline
+Code Availability & Yes\\
+\hline
+\end{tabular}
+
+\section{Reproduceerbaarheid van de gedeelde R code}\label{reproduceerbaarheid-van-de-gedeelde-r-code}
+
+-Er is een bestand genaamd README toegevoegd aan de repository, maar deze is niet ingevuld. Dit maakt het lastig om te bepalen welke bestanden nodig zijn.\\
+-Het artikel staat in de website onder artikelen die R code bevatten, maar in werkelijkheid is er gebruik gemaakt van analyse in MATLAB, wat te zien is aan het gebruik van .m en .mat bestanden. Dit maakt volledige analyse in Rstudio niet mogelijk.\\
+-Er zijn wel .csv en .xlsx bestanden beschikbaar. Deze zijn al in tidy format gezet.\\
+Ik heb geprobeerd om figuur 1E van het artikel zoveel mogelijk te reproduceren in Rstudio. Hiervoor heb ik het bestand Death data(18-64).xlsx gebruikt. Dit bestand is hier te vinden: /
+\url{https://github.com/shuanglinjing/Long-COVID-impact-on-influenza-infectivity-and-fatality/blob/master/Transmission\%20and\%20mortality\%20rates\%20of\%20age\%20structure\%20model/Death\%20data(18-64).xlsx}
+
+\subsection{Importeer de dataset Death data(18-64).xlsx}\label{importeer-de-dataset-death-data18-64.xlsx}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Laad de libraries tidyverse en readxl}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(readxl)}
+
+\CommentTok{\# Importeer het bestand Death data(18{-}64).xlsx in Rstudio}
+\NormalTok{death\_data\_18\_64 }\OtherTok{\textless{}{-}}\FunctionTok{read\_excel}\NormalTok{(}\StringTok{"\textasciitilde{}/dsfb2/dsfb2\_workflows\_portfolio/dsfb2\_workflows\_portfolio/projecten/4b\_artikel\_beoordelen\_op\_reproduceerbaarheid/Death data(18{-}64).xlsx"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Selecteren en filteren van data}\label{selecteren-en-filteren-van-data}
+
+Selecteer de volgende data:\\
+-SEASON: 2023-24\\
+-WEEK: 40 t/m 52 en 1 t/m 15\\
+-NUM INFLUENZA DEATHS die bij deze rijen horen\\
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(dplyr)}
+
+\CommentTok{\# Definieer correcte weekvolgorde}
+\NormalTok{week\_order }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{40}\SpecialCharTok{:}\DecValTok{52}\NormalTok{, }\DecValTok{1}\SpecialCharTok{:}\DecValTok{15}\NormalTok{)}
+
+\CommentTok{\# Selecteer en filter de volgende data:}
+\DocumentationTok{\#\# SEASON: 2023{-}24}
+\DocumentationTok{\#\# WEEK: 40 t/m 52 en 1 t/m 15}
+\DocumentationTok{\#\# NUM INFLUENZA DEATHS die bij deze rijen horen}
+
+\NormalTok{fig1e\_data }\OtherTok{\textless{}{-}}\NormalTok{ death\_data\_18\_64 }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(}
+\NormalTok{    SEASON }\SpecialCharTok{==} \StringTok{"2023{-}24"}\NormalTok{,}
+\NormalTok{    WEEK }\SpecialCharTok{\%in\%}\NormalTok{ week\_order}
+\NormalTok{  ) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}
+    \AttributeTok{WEEK =} \FunctionTok{factor}\NormalTok{(WEEK, }\AttributeTok{levels =}\NormalTok{ week\_order)}
+\NormalTok{  ) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(WEEK) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(}
+\NormalTok{    SEASON,}
+\NormalTok{    WEEK,}
+    \StringTok{\textasciigrave{}}\AttributeTok{NUM INFLUENZA DEATHS}\StringTok{\textasciigrave{}}
+\NormalTok{  )}
+
+\CommentTok{\# Controleer of de juiste data is geselecteerd}
+\NormalTok{fig1e\_data}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 28 x 3
+##    SEASON  WEEK  `NUM INFLUENZA DEATHS`
+##    <chr>   <fct>                  <dbl>
+##  1 2023-24 40                         6
+##  2 2023-24 41                        12
+##  3 2023-24 42                        11
+##  4 2023-24 43                         7
+##  5 2023-24 44                        21
+##  6 2023-24 45                        17
+##  7 2023-24 46                        29
+##  8 2023-24 47                        42
+##  9 2023-24 48                        38
+## 10 2023-24 49                        69
+## # i 18 more rows
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(dplyr)}
+
+\CommentTok{\# Labels die op de x{-}as worden getoond (elke 3 weken)}
+\NormalTok{label\_weeks }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{40}\NormalTok{, }\DecValTok{43}\NormalTok{, }\DecValTok{46}\NormalTok{, }\DecValTok{49}\NormalTok{, }\DecValTok{52}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{15}\NormalTok{)}
+
+\CommentTok{\# Pas namen op de x{-}as aan zodat ze genoteerd staan als jaar{-}week}
+\NormalTok{fig1e\_plot\_data }\OtherTok{\textless{}{-}}\NormalTok{ fig1e\_data }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}
+    \AttributeTok{WEEK =} \FunctionTok{factor}\NormalTok{(WEEK, }\AttributeTok{levels =}\NormalTok{ week\_order),}
+    \AttributeTok{YEAR\_WEEK =} \FunctionTok{case\_when}\NormalTok{(}
+      \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{as.character}\NormalTok{(WEEK)) }\SpecialCharTok{\textgreater{}=} \DecValTok{40} \SpecialCharTok{\textasciitilde{}} \FunctionTok{paste0}\NormalTok{(}\StringTok{"2023{-}"}\NormalTok{, WEEK),}
+      \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{as.character}\NormalTok{(WEEK)) }\SpecialCharTok{\textless{}=} \DecValTok{15} \SpecialCharTok{\textasciitilde{}} \FunctionTok{paste0}\NormalTok{(}\StringTok{"2024{-}"}\NormalTok{, WEEK)}
+\NormalTok{    )}
+\NormalTok{  )}
+
+\FunctionTok{ggplot}\NormalTok{(}
+\NormalTok{  fig1e\_plot\_data,}
+  \FunctionTok{aes}\NormalTok{(}
+    \AttributeTok{x =}\NormalTok{ WEEK,}
+    \AttributeTok{y =} \StringTok{\textasciigrave{}}\AttributeTok{NUM INFLUENZA DEATHS}\StringTok{\textasciigrave{}}\NormalTok{,}
+    \AttributeTok{group =} \DecValTok{1}
+\NormalTok{  )}
+\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{geom\_line}\NormalTok{(}\AttributeTok{color =} \StringTok{"red"}\NormalTok{, }\AttributeTok{linewidth =} \DecValTok{1}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{shape =} \DecValTok{15}\NormalTok{, }\AttributeTok{size =} \DecValTok{3}\NormalTok{, }\AttributeTok{color =} \StringTok{"black"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_discrete}\NormalTok{(}
+    \AttributeTok{breaks =} \FunctionTok{as.character}\NormalTok{(label\_weeks),}
+    \AttributeTok{labels =} \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{      label\_weeks }\SpecialCharTok{\textgreater{}=} \DecValTok{40} \SpecialCharTok{\textasciitilde{}} \FunctionTok{paste0}\NormalTok{(}\StringTok{"2023{-}"}\NormalTok{, label\_weeks),}
+\NormalTok{      label\_weeks }\SpecialCharTok{\textless{}=} \DecValTok{15} \SpecialCharTok{\textasciitilde{}} \FunctionTok{paste0}\NormalTok{(}\StringTok{"2024{-}"}\NormalTok{, label\_weeks)}
+\NormalTok{    )}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{scale\_y\_continuous}\NormalTok{(}
+    \AttributeTok{name =} \StringTok{"New deaths"}\NormalTok{,}
+    \AttributeTok{breaks =} \FunctionTok{seq}\NormalTok{(}
+      \DecValTok{0}\NormalTok{,}
+      \FunctionTok{max}\NormalTok{(fig1e\_plot\_data}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{NUM INFLUENZA DEATHS}\StringTok{\textasciigrave{}}\NormalTok{, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{),}
+      \AttributeTok{by =} \DecValTok{50}
+\NormalTok{    )}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}
+    \AttributeTok{x =} \ConstantTok{NULL}\NormalTok{,}
+    \AttributeTok{title =} \StringTok{"(E) 18–64 years old"}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}
+    \AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{, }\AttributeTok{face =} \StringTok{"bold"}\NormalTok{, }\AttributeTok{size =} \DecValTok{14}\NormalTok{),}
+    \AttributeTok{axis.text.x =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{angle =} \DecValTok{45}\NormalTok{, }\AttributeTok{hjust =} \DecValTok{1}\NormalTok{)}
+\NormalTok{  )}
+\end{Highlighting}
+\end{Shaded}
+
+\pandocbounded{\includegraphics[keepaspectratio]{07-artikel_beoordelen_op_reproduceerbaarheid_files/figure-latex/ggplot-1.pdf}}
+
+Binnen Rstudio was het mogelijk om het aantal personen (18-64 jaar) dat per week was overleden aan influenza in seizoen 2023-2024 te visualiseren. De labels op de x-as en y-as komen ook overeen met het oorspronkelijke figuur. Een belangrijk verschil is dat de lijn nu is getrokken door het aantal overleden personen per week, terwijl in de oorspronkelijke figuur de lijn werd gebruik voor het geschatte aantal overleden personen. Dit komt omdat deze data niet kon worden teruggevonden, mogelijk is deze data opgesteld aan de hand van een functie die niet in Rstudio beschikbaar is. Het aantal overleden personen per week komt overeen met wat in figuur 1E afgebeeld stond.\\
+\strut \\
+In de gemaakte figuur missen de volgende onderdelen:\\
+-Cubic spline fitting\\
+-95\% CI-band\\
+-MATLAB age-structured model\\
+
+\subsection{Samenvatting}\label{samenvatting}
+
+Het artikel zelf voldoet aan de eisen voor reproduceerbaarheid. Het artikel verschijnt echter ten onrechte tussen de resultaten wanneer er gefilterd wordt op R code bij Data Availability. Het artikel hoort onder MATLAB gefilterd te worden. De reproduceerbaarheid binnen Rstudio is niet goed omdat Rstudio niet de benodigde functies heeft om de figuur volledig te reproduceren. De data die is gegeven lijkt wel overeen te komen met de figuren in het artikel en aan de hand van de figuur beschrijving van figuur 1 was het mogelijk om de figuur deels te reproduceren.\\
+\strut \\
+Voor reproduceerbaarheid binnen Rstudio krijgt dit onderzoek daarom het cijfer 2. Als er voor deze opdracht met MATLAB gewerkt zou worden, zou deze score waarschijnlijk hoger zijn.
 
 \end{document}

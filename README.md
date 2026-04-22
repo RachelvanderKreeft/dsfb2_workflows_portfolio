@@ -13,6 +13,14 @@ https://github.com/RachelvanderKreeft/dsfb2_workflows_portfolio.git
 
 ## Inhoud:
 
+### bookdown:
+Bevat de bestanden waarmee de lokale versie van de bookdown wordt opgebouwd.
+
+
+### docs:
+Bevat de bestanden waar het online portfolio uit opgebouwd is.
+
+
 ### projecten:
 
 #### 1a_curriculum_vitae:
@@ -34,7 +42,16 @@ https://github.com/RachelvanderKreeft/dsfb2_workflows_portfolio.git
 -Hierin heb ik de Guerilla Analytics regels toegepast voor data management op mijn portfolio repository.
 -Gebruikte packages: fs, here, png, grid, gridExtra
 
+### 4a. Een data analyse van een ander reproduceren
+-Bij deze opdracht is gekeken naar de data van een collega-laborant. Deze analyse is reproduceerbaar uitgewerkt in een Rmarkdown bestand.
+-De data is afkomstig van het HU lectoraat Innovative Testing in Life Sciences & Chemistry. De data is verkregen door C. elegans bloot te stellen aan verschillende doses van verschillende chemicaliën.
+
+### 4b. Een artikel beoordelen op reproduceerbaarheid
+-Bij deze opdracht is de reproduceerbaarheid van het artikel 
+'Infectivity and fatality of influenza in pre- and post-COVID-19 pandemic year' van Shuanglin Jing,Hao Wang beoordeeld.
+-Link naar artikel: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013229
+
+
 (meer zal nog volgen)
 
 
-### bookdown:
