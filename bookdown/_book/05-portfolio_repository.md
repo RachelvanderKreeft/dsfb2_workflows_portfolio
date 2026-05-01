@@ -41,6 +41,7 @@
 ## |   |   |   \-- ggplot-1.png
 ## |   |   \-- figure-latex
 ## |   |       \-- ggplot-1.pdf
+## |   +-- 08-r_package.Rmd
 ## |   +-- book.bib
 ## |   +-- bookdown-demo.tex
 ## |   +-- bookdown-portfolio.rds
@@ -55,8 +56,7 @@
 ## |   +-- now.json
 ## |   +-- packages.bib
 ## |   +-- preamble.tex
-## |   +-- README.md
-## |   +-- render372c6d8a2862.rds
+## |   +-- render38f067fe1c14.rds
 ## |   +-- style.css
 ## |   +-- toc.css
 ## |   +-- _book
@@ -81,6 +81,7 @@
 ## |   |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid_files
 ## |   |   |   \-- figure-html
 ## |   |   |       \-- ggplot-1.png
+## |   |   +-- 08-r_package.md
 ## |   |   +-- 404.html
 ## |   |   +-- artikel-beoordelen-op-reproduceerbaarheid.html
 ## |   |   +-- curriculum-vitae.html
@@ -118,6 +119,8 @@
 ## |   |   |       \-- jquery-3.6.0.min.js
 ## |   |   +-- plan-voor-de-toekomst.html
 ## |   |   +-- portfolio-repository.html
+## |   |   +-- portfoliotools.html
+## |   |   +-- r-package.html
 ## |   |   +-- rna-sequencing-repository.html
 ## |   |   +-- search_index.json
 ## |   |   +-- style.css
@@ -141,9 +144,21 @@
 ## |   +-- 05-portfolio_repository_files
 ## |   |   \-- figure-html
 ## |   |       \-- readme-1.png
+## |   +-- 06-data_analyse_van_een_ander_reproduceren.md
+## |   +-- 06-data_analyse_van_een_ander_reproduceren_files
+## |   |   \-- figure-html
+## |   |       +-- normalised scatterplot-1.png
+## |   |       \-- Scatterplot-1.png
+## |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid.md
+## |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid_files
+## |   |   \-- figure-html
+## |   |       \-- ggplot-1.png
 ## |   +-- 404.html
+## |   +-- artikel-beoordelen-op-reproduceerbaarheid.html
 ## |   +-- curriculum-vitae.html
 ## |   +-- curriculum_vitae.html
+## |   +-- data-analyse-van-een-ander-reproduceren.html
+## |   +-- een-data-analyse-van-een-ander-reproduceren.html
 ## |   +-- index.html
 ## |   +-- index.md
 ## |   +-- libs
@@ -175,6 +190,7 @@
 ## |   |       \-- jquery-3.6.0.min.js
 ## |   +-- plan-voor-de-toekomst.html
 ## |   +-- portfolio-repository.html
+## |   +-- reference-keys.txt
 ## |   +-- rna-sequencing-repository.html
 ## |   +-- search_index.json
 ## |   +-- style.css
@@ -211,6 +227,16 @@
 ## |   |   |   +-- Presentatie Parodontitis 16s sequencing eindversie.pptx
 ## |   |   |   \-- Resultaten lab parodontitis project.xlsx
 ## |   |   +-- analyses
+## |   |   |   +-- nanoplot_filtered
+## |   |   |   |   +-- NanoPlot-report.html
+## |   |   |   |   +-- NanoStats.txt
+## |   |   |   |   \-- read_length_vs_quality_filtered.png
+## |   |   |   +-- nanoplot_not_filtered
+## |   |   |   |   +-- NanoPlot-report.html
+## |   |   |   |   +-- NanoStats.txt
+## |   |   |   |   \-- read_length_vs_quality_not_filtered.png
+## |   |   |   \-- original_projecticum_analysis
+## |   |   |       \-- read_length_vs_quality_filtered_original analysis.png
 ## |   |   +-- data
 ## |   |   +-- logboek_vrije_opdracht.xlsx
 ## |   |   +-- metadata
@@ -220,6 +246,7 @@
 ## |   |   +-- scripts
 ## |   |   +-- verslag
 ## |   |   +-- vrije_opdracht.html
+## |   |   +-- vrije_opdracht.Rmd
 ## |   |   +-- vrije_opdracht_voorbereiding.html
 ## |   |   \-- vrije_opdracht_voorbereiding.Rmd
 ## |   +-- 3a_formatieve_opdracht_rna-seq_daur2

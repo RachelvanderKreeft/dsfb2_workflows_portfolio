@@ -77,6 +77,7 @@
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -125,7 +126,7 @@
 
 \title{Portfolio Workflows}
 \author{Rachel van der Kreeft}
-\date{2026-04-22}
+\date{2026-05-01}
 
 \begin{document}
 \maketitle
@@ -366,6 +367,7 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   |   \-- ggplot-1.png
 ## |   |   \-- figure-latex
 ## |   |       \-- ggplot-1.pdf
+## |   +-- 08-r_package.Rmd
 ## |   +-- book.bib
 ## |   +-- bookdown-demo.tex
 ## |   +-- bookdown-portfolio.rds
@@ -380,8 +382,7 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   +-- now.json
 ## |   +-- packages.bib
 ## |   +-- preamble.tex
-## |   +-- README.md
-## |   +-- render372c6d8a2862.rds
+## |   +-- render38f067fe1c14.rds
 ## |   +-- style.css
 ## |   +-- toc.css
 ## |   +-- _book
@@ -406,6 +407,7 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid_files
 ## |   |   |   \-- figure-html
 ## |   |   |       \-- ggplot-1.png
+## |   |   +-- 08-r_package.md
 ## |   |   +-- 404.html
 ## |   |   +-- artikel-beoordelen-op-reproduceerbaarheid.html
 ## |   |   +-- curriculum-vitae.html
@@ -443,6 +445,8 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   |       \-- jquery-3.6.0.min.js
 ## |   |   +-- plan-voor-de-toekomst.html
 ## |   |   +-- portfolio-repository.html
+## |   |   +-- portfoliotools.html
+## |   |   +-- r-package.html
 ## |   |   +-- rna-sequencing-repository.html
 ## |   |   +-- search_index.json
 ## |   |   +-- style.css
@@ -466,9 +470,21 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   +-- 05-portfolio_repository_files
 ## |   |   \-- figure-html
 ## |   |       \-- readme-1.png
+## |   +-- 06-data_analyse_van_een_ander_reproduceren.md
+## |   +-- 06-data_analyse_van_een_ander_reproduceren_files
+## |   |   \-- figure-html
+## |   |       +-- normalised scatterplot-1.png
+## |   |       \-- Scatterplot-1.png
+## |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid.md
+## |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid_files
+## |   |   \-- figure-html
+## |   |       \-- ggplot-1.png
 ## |   +-- 404.html
+## |   +-- artikel-beoordelen-op-reproduceerbaarheid.html
 ## |   +-- curriculum-vitae.html
 ## |   +-- curriculum_vitae.html
+## |   +-- data-analyse-van-een-ander-reproduceren.html
+## |   +-- een-data-analyse-van-een-ander-reproduceren.html
 ## |   +-- index.html
 ## |   +-- index.md
 ## |   +-- libs
@@ -500,6 +516,7 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |       \-- jquery-3.6.0.min.js
 ## |   +-- plan-voor-de-toekomst.html
 ## |   +-- portfolio-repository.html
+## |   +-- reference-keys.txt
 ## |   +-- rna-sequencing-repository.html
 ## |   +-- search_index.json
 ## |   +-- style.css
@@ -536,6 +553,16 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   |   +-- Presentatie Parodontitis 16s sequencing eindversie.pptx
 ## |   |   |   \-- Resultaten lab parodontitis project.xlsx
 ## |   |   +-- analyses
+## |   |   |   +-- nanoplot_filtered
+## |   |   |   |   +-- NanoPlot-report.html
+## |   |   |   |   +-- NanoStats.txt
+## |   |   |   |   \-- read_length_vs_quality_filtered.png
+## |   |   |   +-- nanoplot_not_filtered
+## |   |   |   |   +-- NanoPlot-report.html
+## |   |   |   |   +-- NanoStats.txt
+## |   |   |   |   \-- read_length_vs_quality_not_filtered.png
+## |   |   |   \-- original_projecticum_analysis
+## |   |   |       \-- read_length_vs_quality_filtered_original analysis.png
 ## |   |   +-- data
 ## |   |   +-- logboek_vrije_opdracht.xlsx
 ## |   |   +-- metadata
@@ -545,6 +572,7 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   +-- scripts
 ## |   |   +-- verslag
 ## |   |   +-- vrije_opdracht.html
+## |   |   +-- vrije_opdracht.Rmd
 ## |   |   +-- vrije_opdracht_voorbereiding.html
 ## |   |   \-- vrije_opdracht_voorbereiding.Rmd
 ## |   +-- 3a_formatieve_opdracht_rna-seq_daur2
@@ -1122,5 +1150,140 @@ In de gemaakte figuur missen de volgende onderdelen:\\
 Het artikel zelf voldoet aan de eisen voor reproduceerbaarheid. Het artikel verschijnt echter ten onrechte tussen de resultaten wanneer er gefilterd wordt op R code bij Data Availability. Het artikel hoort onder MATLAB gefilterd te worden. De reproduceerbaarheid binnen Rstudio is niet goed omdat Rstudio niet de benodigde functies heeft om de figuur volledig te reproduceren. De data die is gegeven lijkt wel overeen te komen met de figuren in het artikel en aan de hand van de figuur beschrijving van figuur 1 was het mogelijk om de figuur deels te reproduceren.\\
 \strut \\
 Voor reproduceerbaarheid binnen Rstudio krijgt dit onderzoek daarom het cijfer 2. Als er voor deze opdracht met MATLAB gewerkt zou worden, zou deze score waarschijnlijk hoger zijn.
+
+\chapter{R package}\label{r-package}
+
+De repository voor de R package is via onderstaande link te bereiken:\\
+\url{https://github.com/RachelvanderKreeft/portfoliotools}\strut \\
+Hieronder staat de README van de R package\\
+
+\section{portfoliotools}\label{portfoliotools}
+
+portfoliotools is a small R package that provides simple helper functions
+for data cleaning, filtering, summarising, and selecting columns.
+It is designed for beginner-friendly and consistent data manipulation workflows.\\
+\strut \\
+This package contains four functions:\\
+1. summary\_by\_group\\
+2. filter\_range\\
+3. select\_columns\\
+4. drop\_na\_cols\\
+
+\subsection{Installation}\label{installation}
+
+You can install the development version of portfoliotools like so:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\NormalTok{devtools}\SpecialCharTok{::}\FunctionTok{install\_github}\NormalTok{(}\StringTok{"RachelvanderKreeft/portfoliotools"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Load portfoliotools package}\label{load-portfoliotools-package}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(portfoliotools)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{filter\_range}\label{filter_range}
+
+This function filters a data frame based on a numeric column, keeping only rows where the selected column falls within a specified range. Missing values in the selected column are automatically removed.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# Filter rows within a numeric range}
+
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
+    \AttributeTok{age =} \FunctionTok{c}\NormalTok{(}\DecValTok{20}\NormalTok{, }\DecValTok{35}\NormalTok{, }\DecValTok{50}\NormalTok{, }\DecValTok{65}\NormalTok{, }\DecValTok{80}\NormalTok{),}
+    \AttributeTok{score =} \FunctionTok{c}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{30}\NormalTok{, }\DecValTok{40}\NormalTok{, }\DecValTok{50}\NormalTok{)}
+\NormalTok{  )}
+
+\CommentTok{\# Keep only ages between 30 and 70}
+\FunctionTok{filter\_range}\NormalTok{(df, age, }\DecValTok{30}\NormalTok{, }\DecValTok{70}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   age score
+## 1  35    20
+## 2  50    30
+## 3  65    40
+\end{verbatim}
+
+\subsection{drop\_na\_cols}\label{drop_na_cols}
+
+This function filters a data frame by removing rows that contain NA values in any of the specified columns.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# Remove rows with missing values in selected columns}
+
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
+  \AttributeTok{age =} \FunctionTok{c}\NormalTok{(}\DecValTok{20}\NormalTok{, }\ConstantTok{NA}\NormalTok{, }\DecValTok{40}\NormalTok{),}
+  \AttributeTok{score =} \FunctionTok{c}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{20}\NormalTok{, }\ConstantTok{NA}\NormalTok{),}
+  \AttributeTok{group =} \FunctionTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"B"}\NormalTok{, }\StringTok{"C"}\NormalTok{)}
+\NormalTok{)}
+
+\CommentTok{\# Remove rows with missing values in age or score}
+\FunctionTok{drop\_na\_cols}\NormalTok{(df, age, score)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   age score group
+## 1  20    10     A
+\end{verbatim}
+
+\subsection{select\_columns}\label{select_columns}
+
+This function selects one or more columns from a data frame.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# select one or more columns from a data frame.}
+
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
+    \AttributeTok{age =} \FunctionTok{c}\NormalTok{(}\DecValTok{20}\NormalTok{, }\DecValTok{30}\NormalTok{),}
+    \AttributeTok{score =} \FunctionTok{c}\NormalTok{(}\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{),}
+    \AttributeTok{group =} \FunctionTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"B"}\NormalTok{)}
+\NormalTok{  )}
+
+\FunctionTok{select\_columns}\NormalTok{(df, age, score)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   age score
+## 1  20     5
+## 2  30     6
+\end{verbatim}
+
+\subsection{summary\_by\_group}\label{summary_by_group}
+
+This function groups a data frame by a categorical variable and computes the mean, standard deviation, and number of observations for a specified numeric column within each group.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# Summarise a numeric column by group}
+
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
+    \AttributeTok{Treatment =} \FunctionTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"A"}\NormalTok{, }\StringTok{"A"}\NormalTok{, }\StringTok{"B"}\NormalTok{, }\StringTok{"B"}\NormalTok{, }\StringTok{"B"}\NormalTok{),}
+    \AttributeTok{EPIC\_TOT =} \FunctionTok{c}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{18}\NormalTok{, }\DecValTok{22}\NormalTok{)}
+\NormalTok{  )}
+
+\FunctionTok{summary\_by\_group}\NormalTok{(df, Treatment, EPIC\_TOT)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 2 x 4
+##   Treatment  mean    sd     n
+##   <chr>     <dbl> <dbl> <int>
+## 1 A            12     2     3
+## 2 B            20     2     3
+\end{verbatim}
 
 \end{document}

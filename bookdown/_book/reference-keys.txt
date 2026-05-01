@@ -30,3 +30,11 @@ reproduceerbaarheid-van-de-gedeelde-r-code
 importeer-de-dataset-death-data18-64.xlsx
 selecteren-en-filteren-van-data
 samenvatting
+r-package
+portfoliotools
+installation
+load-portfoliotools-package
+filter_range
+drop_na_cols
+select_columns
+summary_by_group

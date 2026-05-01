@@ -23,7 +23,7 @@
 <meta name="author" content="Rachel van der Kreeft" />
 
 
-<meta name="date" content="2026-04-22" />
+<meta name="date" content="2026-05-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -184,6 +184,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#samenvatting"><i class="fa fa-check"></i><b>8.3.3</b> Samenvatting</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="9" data-path="r-package.html"><a href="r-package.html"><i class="fa fa-check"></i><b>9</b> R package</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="r-package.html"><a href="r-package.html#portfoliotools"><i class="fa fa-check"></i><b>9.1</b> portfoliotools</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="r-package.html"><a href="r-package.html#installation"><i class="fa fa-check"></i><b>9.1.1</b> Installation</a></li>
+<li class="chapter" data-level="9.1.2" data-path="r-package.html"><a href="r-package.html#load-portfoliotools-package"><i class="fa fa-check"></i><b>9.1.2</b> Load portfoliotools package</a></li>
+<li class="chapter" data-level="9.1.3" data-path="r-package.html"><a href="r-package.html#filter_range"><i class="fa fa-check"></i><b>9.1.3</b> filter_range</a></li>
+<li class="chapter" data-level="9.1.4" data-path="r-package.html"><a href="r-package.html#drop_na_cols"><i class="fa fa-check"></i><b>9.1.4</b> drop_na_cols</a></li>
+<li class="chapter" data-level="9.1.5" data-path="r-package.html"><a href="r-package.html#select_columns"><i class="fa fa-check"></i><b>9.1.5</b> select_columns</a></li>
+<li class="chapter" data-level="9.1.6" data-path="r-package.html"><a href="r-package.html#summary_by_group"><i class="fa fa-check"></i><b>9.1.6</b> summary_by_group</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -243,6 +255,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## │   │   │   └── ggplot-1.png
 ## │   │   └── figure-latex
 ## │   │       └── ggplot-1.pdf
+## │   ├── 08-r_package.Rmd
 ## │   ├── book.bib
 ## │   ├── bookdown-demo.tex
 ## │   ├── bookdown-portfolio.rds
@@ -257,8 +270,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## │   ├── now.json
 ## │   ├── packages.bib
 ## │   ├── preamble.tex
-## │   ├── README.md
-## │   ├── render5d5cc1347d3.rds
+## │   ├── render47f023557e6e.rds
 ## │   ├── style.css
 ## │   ├── toc.css
 ## │   ├── _book
@@ -283,6 +295,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## │   │   ├── 07-artikel_beoordelen_op_reproduceerbaarheid_files
 ## │   │   │   └── figure-html
 ## │   │   │       └── ggplot-1.png
+## │   │   ├── 08-r_package.md
 ## │   │   ├── 404.html
 ## │   │   ├── artikel-beoordelen-op-reproduceerbaarheid.html
 ## │   │   ├── curriculum-vitae.html
@@ -320,6 +333,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## │   │   │       └── jquery-3.6.0.min.js
 ## │   │   ├── plan-voor-de-toekomst.html
 ## │   │   ├── portfolio-repository.html
+## │   │   ├── portfoliotools.html
+## │   │   ├── r-package.html
 ## │   │   ├── rna-sequencing-repository.html
 ## │   │   ├── search_index.json
 ## │   │   ├── style.css
@@ -343,9 +358,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## │   ├── 05-portfolio_repository_files
 ## │   │   └── figure-html
 ## │   │       └── readme-1.png
+## │   ├── 06-data_analyse_van_een_ander_reproduceren.md
+## │   ├── 06-data_analyse_van_een_ander_reproduceren_files
+## │   │   └── figure-html
+## │   │       ├── normalised scatterplot-1.png
+## │   │       └── Scatterplot-1.png
+## │   ├── 07-artikel_beoordelen_op_reproduceerbaarheid.md
+## │   ├── 07-artikel_beoordelen_op_reproduceerbaarheid_files
+## │   │   └── figure-html
+## │   │       └── ggplot-1.png
 ## │   ├── 404.html
+## │   ├── artikel-beoordelen-op-reproduceerbaarheid.html
 ## │   ├── curriculum-vitae.html
 ## │   ├── curriculum_vitae.html
+## │   ├── data-analyse-van-een-ander-reproduceren.html
+## │   ├── een-data-analyse-van-een-ander-reproduceren.html
 ## │   ├── index.html
 ## │   ├── index.md
 ## │   ├── libs
@@ -377,6 +404,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## │   │       └── jquery-3.6.0.min.js
 ## │   ├── plan-voor-de-toekomst.html
 ## │   ├── portfolio-repository.html
+## │   ├── reference-keys.txt
 ## │   ├── rna-sequencing-repository.html
 ## │   ├── search_index.json
 ## │   ├── style.css
@@ -413,6 +441,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## │   │   │   ├── Presentatie Parodontitis 16s sequencing eindversie.pptx
 ## │   │   │   └── Resultaten lab parodontitis project.xlsx
 ## │   │   ├── analyses
+## │   │   │   ├── nanoplot_filtered
+## │   │   │   │   ├── NanoPlot-report.html
+## │   │   │   │   ├── NanoStats.txt
+## │   │   │   │   └── read_length_vs_quality_filtered.png
+## │   │   │   ├── nanoplot_not_filtered
+## │   │   │   │   ├── NanoPlot-report.html
+## │   │   │   │   ├── NanoStats.txt
+## │   │   │   │   └── read_length_vs_quality_not_filtered.png
+## │   │   │   └── original_projecticum_analysis
+## │   │   │       └── read_length_vs_quality_filtered_original analysis.png
 ## │   │   ├── data
 ## │   │   ├── logboek_vrije_opdracht.xlsx
 ## │   │   ├── metadata
@@ -422,6 +460,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## │   │   ├── scripts
 ## │   │   ├── verslag
 ## │   │   ├── vrije_opdracht.html
+## │   │   ├── vrije_opdracht.Rmd
 ## │   │   ├── vrije_opdracht_voorbereiding.html
 ## │   │   └── vrije_opdracht_voorbereiding.Rmd
 ## │   ├── 3a_formatieve_opdracht_rna-seq_daur2
