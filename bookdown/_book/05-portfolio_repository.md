@@ -42,7 +42,8 @@
 ## |   |   \-- figure-latex
 ## |   |       \-- ggplot-1.pdf
 ## |   +-- 08-r_package.Rmd
-## |   +-- book.bib
+## |   +-- 09-bronvermelding.Rmd
+## |   +-- bibliography.bib
 ## |   +-- bookdown-demo.tex
 ## |   +-- bookdown-portfolio.rds
 ## |   +-- bookdown-portfolio.Rproj
@@ -56,9 +57,10 @@
 ## |   +-- now.json
 ## |   +-- packages.bib
 ## |   +-- preamble.tex
-## |   +-- render38f067fe1c14.rds
+## |   +-- render1e184d845ab.rds
 ## |   +-- style.css
 ## |   +-- toc.css
+## |   +-- vancouver-ama.csl
 ## |   +-- _book
 ## |   |   +-- 01-curriculum_vitae.md
 ## |   |   +-- 02-plan_voor_de_toekomst.md
@@ -82,8 +84,10 @@
 ## |   |   |   \-- figure-html
 ## |   |   |       \-- ggplot-1.png
 ## |   |   +-- 08-r_package.md
+## |   |   +-- 09-bronvermelding.md
 ## |   |   +-- 404.html
 ## |   |   +-- artikel-beoordelen-op-reproduceerbaarheid.html
+## |   |   +-- bronvermelding.html
 ## |   |   +-- curriculum-vitae.html
 ## |   |   +-- curriculum_vitae.html
 ## |   |   +-- data-analyse-van-een-ander-reproduceren.html
@@ -371,10 +375,15 @@
 ## |   |   +-- CE.LIQ.FLOW.062_Tidydata.xlsx
 ## |   |   +-- data_analyse_van_een_ander_reproduceren.html
 ## |   |   \-- data_analyse_van_een_ander_reproduceren.Rmd
-## |   \-- 4b_artikel_beoordelen_op_reproduceerbaarheid
-## |       +-- 4b_artikel_beoordelen_op_reproduceerbaarheid.html
-## |       +-- 4b_artikel_beoordelen_op_reproduceerbaarheid.Rmd
-## |       \-- Death data(18-64).xlsx
+## |   +-- 4b_artikel_beoordelen_op_reproduceerbaarheid
+## |   |   +-- 4b_artikel_beoordelen_op_reproduceerbaarheid.html
+## |   |   +-- 4b_artikel_beoordelen_op_reproduceerbaarheid.Rmd
+## |   |   \-- Death data(18-64).xlsx
+## |   \-- 7_bronvermelding
+## |       +-- 7_bronvermelding.html
+## |       +-- 7_bronvermelding.Rmd
+## |       +-- bibliography.bib
+## |       \-- vancouver-ama.csl
 ## +-- prompts
 ## |   \-- artikel_beoordelen_op_reproduceerbaarheid
 ## +-- README.html

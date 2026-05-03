@@ -85,7 +85,7 @@ ggplot(data = dataset_4a, aes(x = compConcentration, y = RawData)) +
   theme(axis.text.x = element_text(size = 8))
 ```
 
-<img src="06-data_analyse_van_een_ander_reproduceren_files/figure-html/Scatterplot-1.png" alt="" width="672" />
+![](06-data_analyse_van_een_ander_reproduceren_files/figure-latex/Scatterplot-1.pdf)<!-- --> 
 
 ## Normaliseer de data
 
@@ -157,7 +157,7 @@ ggplot(dataset_4a_normalised, aes(x = compConcentration, y = RawData_norm)) +
   )
 ```
 
-<img src="06-data_analyse_van_een_ander_reproduceren_files/figure-html/normalised scatterplot-1.png" alt="" width="672" />
+![](06-data_analyse_van_een_ander_reproduceren_files/figure-latex/normalised scatterplot-1.pdf)<!-- --> 
 
 ## Controlegroepen
 

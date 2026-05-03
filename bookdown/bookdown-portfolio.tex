@@ -126,7 +126,7 @@
 
 \title{Portfolio Workflows}
 \author{Rachel van der Kreeft}
-\date{2026-05-01}
+\date{2026-05-03}
 
 \begin{document}
 \maketitle
@@ -368,7 +368,8 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   \-- figure-latex
 ## |   |       \-- ggplot-1.pdf
 ## |   +-- 08-r_package.Rmd
-## |   +-- book.bib
+## |   +-- 09-bronvermelding.Rmd
+## |   +-- bibliography.bib
 ## |   +-- bookdown-demo.tex
 ## |   +-- bookdown-portfolio.rds
 ## |   +-- bookdown-portfolio.Rproj
@@ -382,9 +383,10 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   +-- now.json
 ## |   +-- packages.bib
 ## |   +-- preamble.tex
-## |   +-- render38f067fe1c14.rds
+## |   +-- render1e184d845ab.rds
 ## |   +-- style.css
 ## |   +-- toc.css
+## |   +-- vancouver-ama.csl
 ## |   +-- _book
 ## |   |   +-- 01-curriculum_vitae.md
 ## |   |   +-- 02-plan_voor_de_toekomst.md
@@ -408,8 +410,10 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   |   \-- figure-html
 ## |   |   |       \-- ggplot-1.png
 ## |   |   +-- 08-r_package.md
+## |   |   +-- 09-bronvermelding.md
 ## |   |   +-- 404.html
 ## |   |   +-- artikel-beoordelen-op-reproduceerbaarheid.html
+## |   |   +-- bronvermelding.html
 ## |   |   +-- curriculum-vitae.html
 ## |   |   +-- curriculum_vitae.html
 ## |   |   +-- data-analyse-van-een-ander-reproduceren.html
@@ -697,10 +701,15 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   +-- CE.LIQ.FLOW.062_Tidydata.xlsx
 ## |   |   +-- data_analyse_van_een_ander_reproduceren.html
 ## |   |   \-- data_analyse_van_een_ander_reproduceren.Rmd
-## |   \-- 4b_artikel_beoordelen_op_reproduceerbaarheid
-## |       +-- 4b_artikel_beoordelen_op_reproduceerbaarheid.html
-## |       +-- 4b_artikel_beoordelen_op_reproduceerbaarheid.Rmd
-## |       \-- Death data(18-64).xlsx
+## |   +-- 4b_artikel_beoordelen_op_reproduceerbaarheid
+## |   |   +-- 4b_artikel_beoordelen_op_reproduceerbaarheid.html
+## |   |   +-- 4b_artikel_beoordelen_op_reproduceerbaarheid.Rmd
+## |   |   \-- Death data(18-64).xlsx
+## |   \-- 7_bronvermelding
+## |       +-- 7_bronvermelding.html
+## |       +-- 7_bronvermelding.Rmd
+## |       +-- bibliography.bib
+## |       \-- vancouver-ama.csl
 ## +-- prompts
 ## |   \-- artikel_beoordelen_op_reproduceerbaarheid
 ## +-- README.html
@@ -1285,5 +1294,22 @@ This function groups a data frame by a categorical variable and computes the mea
 ## 1 A            12     2     3
 ## 2 B            20     2     3
 \end{verbatim}
+
+\chapter{Bronvermelding}\label{bronvermelding}
+
+\section{Introductie}\label{introductie-1}
+
+Het projecticumproject richt zich op prostraatkanker, , de meest voorkomende vorm van kanker bij mannen. In Nederland worden jaarlijks 15.000 mannen met prostaatkanker gediagnosticeerd. Prostaatkanker wordt ingedeeld in laag, intermediair en hoog risico. Voor mannen met laag- en intermediair risico prostaatkanker zijn er drie behandelopties: actieve surveillance, bestralen of opereren \citep{CijfersProstaatkanker, BiologyProstateSpecificAntigen}.\\
+\strut \\
+Bij actieve surveillance krijgt de patiënt geen directe behandeling, maar de PSA-waarde wordt wel regelmatig gecontroleerd. PSA is een stof in het bloed dat gemaakt wordt door de prostaat, bij prostaatkanker is de PSA-waarde verhoogd. Een tweede optie is bestraling, waarbij fotonen het DNA van kankercellen beschadigen, waardoor deze cellen uiteindelijk afsterven. Dit leidt op termijn tot verlittekening van de prostaat \citep{BiologyProstateSpecificAntigen}. Tot slot kan gekozen worden voor een operatie, zoals een Robot-Assisted Laparoscopic Radical Prostatectomy (RALP), waarbij de prostaat volledig wordt verwijderd en de plasbuis opnieuw aan de blaas wordt gehecht \citep{OverviewMayoClinic}.\\
+\strut \\
+Het doel van deze opdracht is het ontwikkelen van een R Shiny-dashboard op basis van een dataset. Dashboards zijn tools die data visueel weergeven. Het dashboard is bedoeld voor patiënten met laag- en intermediair risico prostaatkanker. Op basis van de leeftijd, baseline PSA, T-stage en ISUP-groep van de patiënt worden gemiddelde EPIC- en IPSS-scores één maand na bestraling of operatie weergegeven. Door deze informatie visueel en overzichtelijk te presenteren, kunnen artsen en patiënten samen beter geïnformeerde behandelkeuzes maken \citep{ShinyDashboard}.\\
+\strut \\
+Voor de ontwikkeling van het dashboard wordt gebruikgemaakt van de RStudio-packages shiny en shinydashboard. Shiny maakt het mogelijk interactieve applicaties te bouwen. Shinydashboard is een uitbreiding van shiny, het biedt een vaste dashboardstructuur met een header, sidebar en body \citep{ShinyDashboard, zotero-item-18}.\\
+\strut \\
+
+\section{Referentielijst}\label{referentielijst}
+
+\bibliography{bibliography.bib}
 
 \end{document}

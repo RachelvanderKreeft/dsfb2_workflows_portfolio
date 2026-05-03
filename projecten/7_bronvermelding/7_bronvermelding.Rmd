@@ -1,0 +1,31 @@
+---
+title: "7_bronvermelding"
+output: html_document
+date: "`r Sys.Date()`"
+bibliography: bibliography.bib
+csl: vancouver-ama.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introductie
+
+Het projecticumproject richt zich op prostraatkanker, , de meest voorkomende vorm van kanker bij mannen. In Nederland worden jaarlijks 15.000 mannen met prostaatkanker gediagnosticeerd. Prostaatkanker wordt ingedeeld in laag, intermediair en hoog risico. Voor mannen met laag- en intermediair risico prostaatkanker zijn er drie behandelopties: actieve surveillance, bestralen of opereren [@CijfersProstaatkanker; @BiologyProstateSpecificAntigen].
+\
+\
+Bij actieve surveillance krijgt de patiënt geen directe behandeling, maar de PSA-waarde wordt wel regelmatig gecontroleerd. PSA is een stof in het bloed dat gemaakt wordt door de prostaat, bij prostaatkanker is de PSA-waarde verhoogd. Een tweede optie is bestraling, waarbij fotonen het DNA van kankercellen beschadigen, waardoor deze cellen uiteindelijk afsterven. Dit leidt op termijn tot verlittekening van de prostaat [@BiologyProstateSpecificAntigen]. Tot slot kan gekozen worden voor een operatie, zoals een Robot-Assisted Laparoscopic Radical Prostatectomy (RALP), waarbij de prostaat volledig wordt verwijderd en de plasbuis opnieuw aan de blaas wordt gehecht [@OverviewMayoClinic].
+\
+\
+Het doel van deze opdracht is het ontwikkelen van een R Shiny-dashboard op basis van een dataset. Dashboards zijn tools die data visueel weergeven. Het dashboard is bedoeld voor patiënten met laag- en intermediair risico prostaatkanker. Op basis van de leeftijd, baseline PSA, T-stage en ISUP-groep van de patiënt worden gemiddelde EPIC- en IPSS-scores één maand na bestraling of operatie weergegeven. Door deze informatie visueel en overzichtelijk te presenteren, kunnen artsen en patiënten samen beter geïnformeerde behandelkeuzes maken [@ShinyDashboard].
+\
+\
+Voor de ontwikkeling van het dashboard wordt gebruikgemaakt van de RStudio-packages shiny en shinydashboard. Shiny maakt het mogelijk interactieve applicaties te bouwen. Shinydashboard is een uitbreiding van shiny, het biedt een vaste dashboardstructuur met een header, sidebar en body [@ShinyDashboard; @zotero-item-18].
+\
+\
+
+## Referentielijst
+
+
+

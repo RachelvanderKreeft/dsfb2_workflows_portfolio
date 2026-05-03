@@ -23,7 +23,7 @@
 <meta name="author" content="Rachel van der Kreeft" />
 
 
-<meta name="date" content="2026-05-01" />
+<meta name="date" content="2026-05-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -124,6 +124,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -196,6 +218,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.1.6" data-path="r-package.html"><a href="r-package.html#summary_by_group"><i class="fa fa-check"></i><b>9.1.6</b> summary_by_group</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="10" data-path="bronvermelding.html"><a href="bronvermelding.html"><i class="fa fa-check"></i><b>10</b> Bronvermelding</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="bronvermelding.html"><a href="bronvermelding.html#introductie-1"><i class="fa fa-check"></i><b>10.1</b> Introductie</a></li>
+<li class="chapter" data-level="10.2" data-path="bronvermelding.html"><a href="bronvermelding.html#referentielijst"><i class="fa fa-check"></i><b>10.2</b> Referentielijst</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -256,7 +283,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## │   │   └── figure-latex
 ## │   │       └── ggplot-1.pdf
 ## │   ├── 08-r_package.Rmd
-## │   ├── book.bib
+## │   ├── 09-bronvermelding.Rmd
+## │   ├── bibliography.bib
 ## │   ├── bookdown-demo.tex
 ## │   ├── bookdown-portfolio.rds
 ## │   ├── bookdown-portfolio.Rproj
@@ -270,9 +298,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## │   ├── now.json
 ## │   ├── packages.bib
 ## │   ├── preamble.tex
-## │   ├── render47f023557e6e.rds
+## │   ├── render2c78585a4b7f.rds
 ## │   ├── style.css
 ## │   ├── toc.css
+## │   ├── vancouver-ama.csl
 ## │   ├── _book
 ## │   │   ├── 01-curriculum_vitae.md
 ## │   │   ├── 02-plan_voor_de_toekomst.md
@@ -296,8 +325,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## │   │   │   └── figure-html
 ## │   │   │       └── ggplot-1.png
 ## │   │   ├── 08-r_package.md
+## │   │   ├── 09-bronvermelding.md
 ## │   │   ├── 404.html
 ## │   │   ├── artikel-beoordelen-op-reproduceerbaarheid.html
+## │   │   ├── bronvermelding.html
 ## │   │   ├── curriculum-vitae.html
 ## │   │   ├── curriculum_vitae.html
 ## │   │   ├── data-analyse-van-een-ander-reproduceren.html
@@ -585,10 +616,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## │   │   ├── CE.LIQ.FLOW.062_Tidydata.xlsx
 ## │   │   ├── data_analyse_van_een_ander_reproduceren.html
 ## │   │   └── data_analyse_van_een_ander_reproduceren.Rmd
-## │   └── 4b_artikel_beoordelen_op_reproduceerbaarheid
-## │       ├── 4b_artikel_beoordelen_op_reproduceerbaarheid.html
-## │       ├── 4b_artikel_beoordelen_op_reproduceerbaarheid.Rmd
-## │       └── Death data(18-64).xlsx
+## │   ├── 4b_artikel_beoordelen_op_reproduceerbaarheid
+## │   │   ├── 4b_artikel_beoordelen_op_reproduceerbaarheid.html
+## │   │   ├── 4b_artikel_beoordelen_op_reproduceerbaarheid.Rmd
+## │   │   └── Death data(18-64).xlsx
+## │   └── 7_bronvermelding
+## │       ├── 7_bronvermelding.html
+## │       ├── 7_bronvermelding.Rmd
+## │       ├── bibliography.bib
+## │       └── vancouver-ama.csl
 ## ├── prompts
 ## │   └── artikel_beoordelen_op_reproduceerbaarheid
 ## ├── README.html
