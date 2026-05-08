@@ -1,0 +1,391 @@
+---
+title: "Vrije opdracht"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+Belangrijk: Omdat het aangleverde bestand en de bestanden die met deze workflow gegenereerd worden veel opslag innemen, is besloten om in de Rstudio server te werken in plats van de lokale versie.
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+````{r gebruikte libraries}
+
+# Importeren van PNG bestanden
+library(png)
+library(grid)
+library(gridExtra)
+
+
+````
+
+
+# 1. conda installeren
+Dit onderdeel hoeft alleen uitgevoerd te worden indien het conda installatie script nog niet is geïnstalleerd in Rstudio. Indien conda al is geïnstalleerd: begin bij stap 2.
+
+```{bash, eval=FALSE}
+
+# Download het conda installatie script
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+# Run het conda installatie script
+bash Miniconda3-latest-Linux-x86_64.sh -b
+
+# Belangrijk: Na installatie, sluit de terminal en open vervolgens een nieuwe terminal (menubalk -> tools -> terminal). Dit is nodig om (mini)conda te initieren
+
+```
+
+# 2. conda environment opzetten
+Maak een nieuwe conda environment met samtools en NanoPlot erin. Deze packages worden in de volgende stappen gebruikt.
+
+```{bash, eval=FALSE}
+
+# Aanmaken van een environment met samtools, nanoplot, kraken2 en bracken
+conda create -n nanopore_clean -c conda-forge -c bioconda \
+samtools nanoplot kraken2 bracken
+
+# Activeer de environment
+conda activate nanopore_clean
+
+# Maak een aparte environment voor krona (krona heeft namelijk andere dependencies)
+conda create -n krona
+
+# Installeer de krona package in de nieuwe environment (krona is op een andere manier geïnstalleerd omdat conda create -n in een incomplete installatie resulteerde)
+conda install bioconda::krona
+
+# Deactiveer de krona environment
+conda deactivate
+
+# Activeer de environment nanopore_clean opnieuw
+conda activate nanopore_clean
+
+
+```
+
+\
+
+## Krona handmatig installeren
+Soms mist krona na installatie het taxonomy bestand. Wanneer ktImportTaxonomy dan wordt gebruikt, resulteert dit in de melding ''Taxonomy not found in...''. Indien dit het geval is, kunnen de volgende stappen worden uitgevoerd om alsnog het taxonomy bestand te downloaden.
+
+
+```{bash, eval=FALSE}
+
+# Krona handmatig installeren
+# Stap 1 — ga naar taxonomy folder
+cd ~/miniconda3/envs/krona/opt/krona/taxonomy
+
+# Stap 2 — download direct (belangrijk)
+wget https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
+
+# Stap 3 — unpack
+tar -xzf taxdump.tar.gz
+
+# Stap 4 — check resultaat
+ls
+
+```
+
+\
+De Python versie in de environment nanopore_clean was 3.13.13. De versies van de packages waren als volgt: \
+-samtools 1.23.1 \
+-NanoPlot 1.46.2 \
+-kraken2  2.0.8_beta \
+-bracken 3.1 \
+\
+In de environment krona werd versie 2.8.1 van krona gebruikt.
+
+
+# 3 .bam -> .fastq
+
+De output van de nanopore sequencing werd aangeleverd als een .bam bestand. Het originele output bestand van de sequencing is terug te vinden in de gedeelde Rstudio server van daur1 via de volgende pathway:
+/home/data/projecticum/nanopore/paradontitis/16S114_exp1_VL5B06_11122025 \
+\
+Met behulp van samtools werd het .bam bestand omgezet naar een fastq bestand. \
+\
+Belangrijk: Vaak worden output bestanden als fastq aangeleverd. Indien dit het geval is, kan stap 3 worden overgeslagen.
+
+```{bash, eval=FALSE}
+
+samtools fastq "~/parodontitis16s/raw_data/16S_exp1_11122025.bam" > "~/parodontitis16s/data/16S_exp1_11122025_filtered.fastq"
+
+```
+
+\
+Belangrijk: Demultiplexing werd in het oorspronkelijke project uitgevoerd met MinKNOW op een krachtigere rekenomgeving. Voor deze heranalyse was deze stap niet reproduceerbaar, omdat alleen het bam bestand beschikbaar was zonder ruwe barcode-informatie. De demultiplexing werd oorspronkelijk waarschijnlijk op het FAST5 bestand uitgevoerd en dit bestand is alleen beschikbaar op de laptop waarop de nanopore sequencing was uitgevoerd. Daarom is ervoor gekozen om de rest van de analyse op alle samples uit te voeren. Dit betekent wel dat de data voor de parodontitis samples en de samples van de gezonde personen niet van elkaar gescheiden zijn.
+\
+
+# 4. analyse met NanoPlot
+NanoPlot is een quality control tool voor Nanopore sequencing data die statistieken en visualisaties genereert over readlengte, kwaliteit en sequencing output. \
+\
+Eerst werd de NanoPlot analyse uitgevoerd zonder de data te filteren.
+
+```{bash, eval=FALSE}
+
+# Voer een NanoPlot analyse uit zonder de reads te filteren
+NanoPlot \
+--fastq ~/parodontitis16s/data/16S_exp1_11122025_filtered.fastq \
+--outdir ~/parodontitis16s/nanoplot_output \
+--threads 6
+
+```
+
+\
+Hieronder staat een samenvatting van de statistieken van de NanoPlot analyse.
+\
+\
+General summary: \        
+Mean read length:                 1,612.0 \
+Mean read quality:                   11.8 \
+Median read length:               1,597.0 \
+Median read quality:                 14.2 \
+Number of reads:              5,582,411.0 \
+Read length N50:                  1,600.0 \
+STDEV read length:                1,054.3 \
+Total bases:              8,998,837,569.0 \
+Number, percentage and megabases of reads above quality cutoffs \
+>Q10:	4778884 (85.6%) 7677.8Mb \
+>Q15:	1975244 (35.4%) 3176.4Mb \
+>Q20:	1611 (0.0%) 2.2Mb \
+>Q25:	13 (0.0%) 0.0Mb \
+>Q30:	3 (0.0%) 0.0Mb \
+\
+
+Zoals hierobven te zien is, heeft 85.6% van de reads een kwaliteitsscore van >Q10. 35.4% van deze reads heeft een kwaliteitsscore van >Q15. Slechts 1627 reads hebben een kwlaiteitsscore van Q20 of hoger.
+\
+\
+In figuur 1 is de lengte van de reads uitgezet tegen de kwaliteit van deze reads bij de ongefilterde data.
+
+````{r, echo=FALSE, fig.cap="Figuur 1: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads van de ongefilterde data." }
+
+# Importeer figuur 'Read lengths vs Average read quality plot using dots' van het NanoPlot rapport
+nanoplot_not_filtered <-  rasterGrob(as.raster(readPNG("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/2_vrije_opdracht/analyses/nanoplot_not_filtered/read_length_vs_quality_not_filtered.png")))
+grid.arrange(nanoplot_not_filtered, ncol=1, top=textGrob("", gp=gpar(fontsize=20,font=8)))
+
+````
+
+\
+Zoals in figuur 1 te zien is, zijn de meeste reads 5k of kleiner. Een paar reads zijn veel groter dan de rest van de reads. Het is mogelijk dat twee of meer DNA-fragmenten tijdens de library prep aan elkaar zijn gaan plakken. De meeste van deze reads hebben een kwaliteitsscore van minder dan Q10, dus het is ook mogelijk dat een deel van het DNA niet goed is afgelezen tijdens de sequencing, waardoor ze als één lange read zijn geregistreerd.
+\
+
+# 5. Reads filteren
+Om verdere analyse op de data te doen, moeten de reads gefilterd worden.
+\
+\
+Voor het project werd de data gefilterd op een kwaliteitsscore van >Q10 en een lengte van 1200 tot 2000 bp. Bij nanopore sequencing is de error rate hoger dan bij illuma, daarom is gefilterd op >Q10 in plaats van >Q30, dit betekent dat de kans dat de reads kloppen 90% is. Er was op een lengte van 1200 tot 2000 bp gefilterd omdat verwacht werd dat de 16s regio's van de meeste bacteriën ongeveer tussen de 1400 bp en 1600 bp zou zijn, maar bekend was dat sommige bacteriesoorten een kortere of langere 16s regio konden hebben.
+\
+\
+Om de reproduceerbaarheid te controleren, is ervoor gekozen om de data deze keer op dezelfde manier te filteren.
+\
+
+```{bash, eval=FALSE}
+
+# Voer een NanoPlot analyse uit waarbij de reads worden gefilterd op >Q10 en een lengte van 1200 tot 2000 bp
+NanoPlot \
+--fastq ~/parodontitis16s/data/16S_exp1_11122025.fastq \
+--minqual 10 \
+--minlength 1200 \
+--maxlength 2000 \
+--outdir ~/parodontitis16s/analyses/filtered \
+--threads 6
+
+```
+\
+De General summary van het NanoPlot rapport veranderd niet wanneer de data is gefilterd, daarom is ervoor gekozen deze hier niet te laten zien. 
+\
+\
+In figuur 2 is de lengte van de reads uitgezet tegen de kwaliteit van deze reads bij de gefilterde data.
+\
+
+````{r, echo=FALSE, fig.cap="Figuur 2: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads. Voor dit figuur werd gefilterd op >Q10 en een lengte van 1200 tot 1600 bp." }
+
+# Importeer figuur 'Read lengths vs Average read quality plot using dots' van het gefilterde NanoPlot rapport
+nanoplot_filtered <-  rasterGrob(as.raster(readPNG("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/2_vrije_opdracht/analyses/nanoplot_filtered/read_length_vs_quality_filtered.png")))
+grid.arrange(nanoplot_filtered, ncol=1, top=textGrob("", gp=gpar(fontsize=20,font=8)))
+
+````
+
+\
+Zoals in figuur 2 te zien is, waren de meeste reads ongeveer tussen de 1500 en 1650 bp lang. Dit komt overeen met wat tijdens het projecticum werd waargenomen.
+\
+\
+
+# 6. Kraken2
+Kraken2 werd gebruikt om de reads toe te wijzen aan bacteriesoorten. Voor deze analyse werd gebruik gemaakt van de minikraken2_v2_8GB_201904_UPDATE database. \
+
+```{bash, eval=FALSE}
+
+# Voer een kraken2 analyse uit
+kraken2 \
+  --db /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE \
+  --threads 6 \
+  --report ~/parodontitis16s/analyses/kraken2/16S_exp1_11122025.report \
+  --output ~/parodontitis16s/analyses/kraken2/16S_exp1_11122025.out \
+  --use-names \
+  ~/parodontitis16s/data/16S_exp1_11122025.fastq
+
+```
+
+\
+Uit de kraken2 analyse kwamen de volgende resultaten: \
+5582411 sequences (8998.84 Mbp) processed in 110.178s (3040.0 Kseq/m, 4900.52 Mbp/m). \
+5360420 sequences classified (96.02%) \
+221991 sequences unclassified (3.98%) \
+\
+Van de reads kon 96.02% geclassificeerd worden, voor deze reeds kon dus een taxonomische toewijzing worden gemaakt. 3.98% van de reads konden niet geclassificeerd worden. Deze reads waren van lage kwaliteit óf deze reads zijn afkomstig van organismen die niet in de minikraken2_v2_8GB_201904_UPDATE database voorkomen 
+\
+
+# 7. Bracken
+Vervolgens werd een bracken analyse uitgevoerd, hiermee werd de abundantie van de bacteriesoorten opnieuw bepaald. Eerst werd de bracken analyse uitgevoerd op species niveau en een threshold van 0, wat betekent dat alle reads werden meegenomen. \
+\
+```{bash, eval=FALSE}
+
+# Voer een bracken analyse uit op species niveau en een threshold van 0
+bracken \
+  -d /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE \
+  -i ~/parodontitis16s/analyses/kraken2/16S_exp1_11122025.report \
+  -o ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold0.bracken \
+  -l S \
+  -t 0  
+
+```
+
+\
+De bracken analyse geeft de volgende resultaten: \
+    >>> Threshold: 0 \
+    >>> Number of species in sample: 3034 \
+          >> Number of species with reads > threshold: 3034 \
+          >> Number of species with reads < threshold: 0 \
+    >>> Total reads in sample: 5582411 \
+          >> Total reads kept at species level (reads > threshold): 4376954 \
+          >> Total reads discarded (species reads < threshold): 0 \
+          >> Reads distributed: 983434 \
+          >> Reads not distributed (eg. no species above threshold): 32 \
+          >> Unclassified reads: 221991 \
+
+\
+-Voor de bracken analyse had kraken2 4376954 reads op speciesniveau bepaald.
+-983434 reads die door kraken2 niet op speciesniveau konden worden bepaald, werden door bracken alsnog op speciesniveau bepaald. \
+-32 reads konden niet toegewezen worden aan een bacteriesoort. \
+-Het aantal ongeclassificeerde reads blijft gelijk; 221991 reads zijn ongeclassificeerd. \
+
+
+# 8 Krona
+De volgende stap is het uitvoeren van een krona visualisatie. Krona neemt de reads van een kraken2 of bracken analyse en maakt hiervan een cirkeldiagram. \
+\
+Voor deze visualisatie is gekozen om het bracken bestand als input te gebruiken.
+
+```{bash, eval=FALSE}
+
+awk -F'\t' 'NR>1 {print $6 "\t" $2}' \
+~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold0.bracken \
+> ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold0.bracken.txt
+
+
+ktImportTaxonomy \
+~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold0.bracken.txt \
+-o ~/parodontitis16s/analyses/krona/16S_exp1_11122025_bracken_species_threshold0.html
+
+```
+
+\
+In figuur 3 is de krona visualisatie te zien.
+\
+
+```{r, echo=FALSE, fig.cap="Figuur 3: Krona visualisatie op species niveau en een threshold van 0."}
+
+nanoplot_not_filtered <-  rasterGrob(as.raster(readPNG("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/2_vrije_opdracht/verslag/16S_exp1_11122025_bracken_species_threshold0.png")))
+grid.arrange(nanoplot_not_filtered, ncol=1, top=textGrob("", gp=gpar(fontsize=20,font=8)))
+
+```
+
+\
+Opmerking: De .html bestanden van de krona visualisaties konden niet direct op deze pagina worden geladen. In de .html bestanden kan geklikt worden op de cirkeldiagram om meer details te zien over de bacteriesoorten. Deze bestanden zijn terug te vinden in de GitHub repository [Klik hier voor de Krona-visualisatie](https://github.com/jouwgebruikersnaam/jouwrepository)
+
+
+via de pathway projecten/2_vrije_opdracht/analyses/krona
+
+
+## bracken en krona met threshold
+Zoals eerder vermeld, waren er 3034 bacteriesoorten gevonden in de dataset.
+
+
+```{bash, eval=FALSE}
+
+# Voer een bracken analyse uit op species niveau en een threshold van 5
+bracken \
+  -d /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE \
+  -i ~/parodontitis16s/analyses/kraken2/16S_exp1_11122025.report \
+  -o ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold5.bracken \
+  -l S \
+  -t 5  
+
+
+
+
+```
+
+De bracken analyse geeft de volgende resultaten: \
+    >>> Threshold: 5 \
+    >>> Number of species in sample: 3034 \
+          >> Number of species with reads > threshold: 1216 \
+          >> Number of species with reads < threshold: 1818 \
+    >>> Total reads in sample: 5582411 \
+          >> Total reads kept at species level (reads > threshold): 4373399 \
+          >> Total reads discarded (species reads < threshold): 3555 \
+          >> Reads distributed: 981503 \
+          >> Reads not distributed (eg. no species above threshold): 1963 \
+          >> Unclassified reads: 221991 \
+          
+\
+Van de 3034 bacteriesoorten voldeden 1216 bacteriesoorten aan de threshold van 5 reads. 1818 bacteriesoorten voldeden niet aan deze threshold, deze bacteriesoorten hadden samen 1963 reads.
+          
+        
+```{bash, eval=FALSE}
+
+awk -F'\t' 'NR>1 {print $6 "\t" $2}' \
+~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold5.bracken \
+> ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold5.txt
+
+
+ktImportTaxonomy \
+~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold5.txt \
+-o ~/parodontitis16s/analyses/krona/16S_exp1_11122025_bracken_species_threshold5.html
+
+```
+
+
+```{r, echo=FALSE, fig.cap="Figuur 4: Krona visualisatie op species niveau en een threshold van 0."}
+
+nanoplot_not_filtered <-  rasterGrob(as.raster(readPNG("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/2_vrije_opdracht/verslag/16S_exp1_11122025_bracken_species_threshold5.png")))
+grid.arrange(nanoplot_not_filtered, ncol=1, top=textGrob("", gp=gpar(fontsize=20,font=8)))
+
+```
+
+
+Figuur nog importeren!
+
+
+
+
+
+## Alternatief: krona vanuit kraken2
+
+```{bash, eval=FALSE}
+
+awk '{print $3 "\t" $5}' \
+~/parodontitis16s/analyses/kraken2/16S_exp1_11122025.report \
+> ~/parodontitis16s/analyses/krona/16S_exp1_11122025_krona_input.txt
+
+ktImportTaxonomy \
+~/parodontitis16s/analyses/krona/16S_exp1_11122025_krona_input.txt \
+-o ~/parodontitis16s/analyses/krona/16S_exp1_11122025_krona.html
+
+
+
+```
+
+
+
