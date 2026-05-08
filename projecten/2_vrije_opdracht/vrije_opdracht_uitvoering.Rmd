@@ -279,11 +279,12 @@ Voor deze visualisatie is gekozen om het bracken bestand als input te gebruiken.
 
 ```{bash, eval=FALSE}
 
+# Selecteer de variabelen taxonomy_id en fraction_total_reads zet de output in een .txt bestand
 awk -F'\t' 'NR>1 {print $6 "\t" $2}' \
 ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold0.bracken \
 > ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold0.bracken.txt
 
-
+# Maak een krona visualisatie
 ktImportTaxonomy \
 ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold0.bracken.txt \
 -o ~/parodontitis16s/analyses/krona/16S_exp1_11122025_bracken_species_threshold0.html
@@ -296,20 +297,23 @@ In figuur 3 is de krona visualisatie te zien.
 
 ```{r, echo=FALSE, fig.cap="Figuur 3: Krona visualisatie op species niveau en een threshold van 0."}
 
+# Importeer 16S_exp1_11122025_bracken_species_threshold0.png
 nanoplot_not_filtered <-  rasterGrob(as.raster(readPNG("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/2_vrije_opdracht/verslag/16S_exp1_11122025_bracken_species_threshold0.png")))
 grid.arrange(nanoplot_not_filtered, ncol=1, top=textGrob("", gp=gpar(fontsize=20,font=8)))
 
 ```
 
 \
-Opmerking: De .html bestanden van de krona visualisaties konden niet direct op deze pagina worden geladen. In de .html bestanden kan geklikt worden op de cirkeldiagram om meer details te zien over de bacteriesoorten. Deze bestanden zijn terug te vinden in de GitHub repository [Klik hier voor de Krona-visualisatie](https://github.com/jouwgebruikersnaam/jouwrepository)
-
-
-via de pathway projecten/2_vrije_opdracht/analyses/krona
+Opmerking: De .html bestanden van de krona visualisaties kunnen niet direct in dit document worden geladen. De .html bestanden zijn interactief, er kan geklikt worden op de cirkeldiagram om meer details te zien over de bacteriesoorten. Deze bestanden zijn terug te vinden in de GitHub repository. [Klik hier](https://github.com/RachelvanderKreeft/dsfb2_workflows_portfolio/tree/main/projecten/2_vrije_opdracht/analyses/krona)
+\
+\
+In figuur 3 (en de andere krona figuren) zijn de bacteriesoorten niet direct op species niveau te zien. Raadpleeg voor figuur 3 het html bestand 16S_exp1_11122025_bracken_species_threshold0.html in de GitHub repository.
+\
+In figuur 3 worden nu de prevalenties van 3034 bacteriesoorten gerepresenteerd. Van veel bacteriegroepen komen daarnaast veel subspecies voor die weinig reads bevatten. Het is mogelijk om bacteriesoorten met weinig reads eruit te filteren door de threshold bij de bracken analyse aan te passen.
 
 
 ## bracken en krona met threshold
-Zoals eerder vermeld, waren er 3034 bacteriesoorten gevonden in de dataset.
+Tijdens het projecticum werden bacteriesoorten met minder dan 5 reads uit de dataset gehaald voor de krona visualisatie.
 
 
 ```{bash, eval=FALSE}
@@ -321,9 +325,6 @@ bracken \
   -o ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold5.bracken \
   -l S \
   -t 5  
-
-
-
 
 ```
 
@@ -341,51 +342,189 @@ De bracken analyse geeft de volgende resultaten: \
           
 \
 Van de 3034 bacteriesoorten voldeden 1216 bacteriesoorten aan de threshold van 5 reads. 1818 bacteriesoorten voldeden niet aan deze threshold, deze bacteriesoorten hadden samen 1963 reads.
-          
+\          
         
 ```{bash, eval=FALSE}
 
+# Selecteer de variabelen taxonomy_id en fraction_total_reads zet de output in een .txt bestand
 awk -F'\t' 'NR>1 {print $6 "\t" $2}' \
 ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold5.bracken \
 > ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold5.txt
 
-
+# Maak een krona visualisatie
 ktImportTaxonomy \
 ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold5.txt \
 -o ~/parodontitis16s/analyses/krona/16S_exp1_11122025_bracken_species_threshold5.html
 
 ```
 
+\
+In figuur 4 is de krona visualisatie te zien waarbij was gefilterd op minimaal 5 reads per bacteriesoort.
+\
 
-```{r, echo=FALSE, fig.cap="Figuur 4: Krona visualisatie op species niveau en een threshold van 0."}
 
+```{r, echo=FALSE, fig.cap="Figuur 4: Krona visualisatie op species niveau en een threshold van 5."}
+
+# Importeer 16S_exp1_11122025_bracken_species_threshold5.png
 nanoplot_not_filtered <-  rasterGrob(as.raster(readPNG("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/2_vrije_opdracht/verslag/16S_exp1_11122025_bracken_species_threshold5.png")))
 grid.arrange(nanoplot_not_filtered, ncol=1, top=textGrob("", gp=gpar(fontsize=20,font=8)))
 
 ```
 
+\
+Raadpleeg voor figuur 4 het html bestand 16S_exp1_11122025_bracken_species_threshold5.html in de GitHub repository.
+\
+\
+Deze visualisatie 1216 bacteriesoorten in plaats van 3034. Desondanks blijven de prevalenties van de overgebleven bacteriesoorten klein. 
+\
+\
+Tijdens het projecticum bleven er 673 bacteriesoorten over bij de patiëntensamples en 453 bacteriesoorten bij de controlesamples bij gebruik van dezelfde threshold. Dat zou neerkomen op maximaal 1126 gevonden bacteriesoorten, maar het werkelijke aantal ligt waarschijnlijk veel lager omdat beide groepen overeenkomsten hadden in de gevonden bacteriesoorten.
+\
+\
+Omdat de dataset voor deze opdracht zowel de patiëntensamples als de controlesamples bevat, zijn er meer reads aanwezig in de dataset. Hierdoor wordt de threshold van 5 reads sneller bereikt. Hieronder worden de resultaten van het projecticum vergeleken met de resultaten van deze opdracht.
+\
+\
 
-Figuur nog importeren!
+### Krona visualisatie van patiënten en controlemonsters apart
+Om een idee te geven van hoe de krona visualisaties eruitzagen tijdens ghet projecticum, worden deze figuren hieronder weergegeven. Tijdens het projecticum werd apart naar de samenstelling van het mondmicrobioom gekeken in samples van patiënten met parodontitis en in samples van gezonde personen.
+\
+\
+Opmerking: van deze figuren zijn geen .html bestanden meer beschikbaar.
+
+```{r, echo=FALSE, fig.cap="Figuur 5: Krona visualisatie van de patiëntensamples. De Krona visualisatie bevat in totaal 453 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum."}
+
+# Importeer 16S_exp1_11122025_bracken_species_threshold5.png
+nanoplot_not_filtered <-  rasterGrob(as.raster(readPNG("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/2_vrije_opdracht/verslag/16S_exp1_11122025_bracken_species_patienten.png")))
+grid.arrange(nanoplot_not_filtered, ncol=1, top=textGrob("", gp=gpar(fontsize=20,font=8)))
+
+```
 
 
+```{r, echo=FALSE, fig.cap="Figuur 6: Krona visualisatie van de controlesamples. De Krona visualisatie bevat in totaal 673 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum."}
+
+# Importeer 16S_exp1_11122025_bracken_species_threshold5.png
+nanoplot_not_filtered <-  rasterGrob(as.raster(readPNG("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/2_vrije_opdracht/verslag/16S_exp1_11122025_bracken_species_controle.png")))
+grid.arrange(nanoplot_not_filtered, ncol=1, top=textGrob("", gp=gpar(fontsize=20,font=8)))
+
+```
+
+\
+In beide krona visualisaties zijn bacteriëren afgebeeld met een veel hogere prevalentie dan in de krona visualisatie van deze opdracht. Zo zijn bij de controlemonsters 26% van de reads aan Haemophilus parainfluenzae en 13% van de reads aan Stretopcoccus pneumoniae gekoppeld.
+\
 
 
+## bracken analyse met hogere thresholds
+Om het effect van een hogere threshold op de samenstelling van de data te testen, werd dezelfde bracken analyse uitgevoerd met een threshold van 10, 20, 30, 40 en 50 reads. Er is voor een maximale threshold van 50 gekozen omdat hogere thresholds kunnen resulteren in een vertekend beeld van de data. Hieronder staat de uitwerking van de analyse met een threshold van 50 reads.
 
-## Alternatief: krona vanuit kraken2
 
 ```{bash, eval=FALSE}
 
+# Voer een bracken analyse uit op species niveau en een threshold van 50
+bracken \
+  -d /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE \
+  -i ~/parodontitis16s/analyses/kraken2/16S_exp1_11122025.report \
+  -o ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold50.bracken \
+  -l S \
+  -t 50  
+
+```
+
+\
+Er bleven 480 bacteriesoorten over.
+\
+
+```{bash, eval=FALSE}
+
+# Selecteer de variabelen taxonomy_id en fraction_total_reads zet de output in een .txt bestand
+awk -F'\t' 'NR>1 {print $6 "\t" $2}' \
+~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold50.bracken \
+> ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold50.txt
+
+# Maak een krona visualisatie
+ktImportTaxonomy \
+~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold50.txt \
+-o ~/parodontitis16s/analyses/krona/16S_exp1_11122025_bracken_species_threshold50.html
+
+```
+
+\
+In figuur 7 is de krona visualisatie te zien waarbij was gefilterd op minimaal 5 reads per bacteriesoort.
+\
+
+```{r, echo=FALSE, fig.cap="Figuur 7: Krona visualisatie op species niveau en een threshold van 50."}
+
+# Importeer 16S_exp1_11122025_bracken_species_threshold5.png
+nanoplot_not_filtered <-  rasterGrob(as.raster(readPNG("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/2_vrije_opdracht/verslag/16S_exp1_11122025_bracken_species_threshold50.png")))
+grid.arrange(nanoplot_not_filtered, ncol=1, top=textGrob("", gp=gpar(fontsize=20,font=8)))
+
+```
+
+\
+Raadpleeg voor figuur 7 het html bestand 16S_exp1_11122025_bracken_species_threshold50.html in de GitHub repository.
+\
+\
+De prevalenties van de bacteriën blijven laag, maar er zijn nu wel een paar bacteriesoorten die nu een prevalentie van meer dan 2% hebben. Dit kan betekenen dat er geen bacteriesoorten zijn die dominant zijn in deze dataset.
+\
+\
+
+## Alternatief: krona vanuit kraken2
+Het is ook mogelijk om een krona visualisatie te maken op basis van het kraken2 .report bestand. Hieronder staat hoe deze visualisatie vanuit het kraken2 bestand kan worden gemaakt. Het principe is hetzelfde, alleen staan de benodigde variabelen (aantal reads en Taxonomy ID) op een andere volgorde in het .report bestand. \
+\
+\
+Voor de demonstratie van deze analyse is een threshold van 0 aangehouden
+
+
+```{bash, eval=FALSE}
+
+# Selecteer de variabelen taxonomy_id en fraction_total_reads zet de output in een .txt bestand
 awk '{print $3 "\t" $5}' \
 ~/parodontitis16s/analyses/kraken2/16S_exp1_11122025.report \
 > ~/parodontitis16s/analyses/krona/16S_exp1_11122025_krona_input.txt
 
+# Maak een krona visualisatie
 ktImportTaxonomy \
 ~/parodontitis16s/analyses/krona/16S_exp1_11122025_krona_input.txt \
 -o ~/parodontitis16s/analyses/krona/16S_exp1_11122025_krona.html
 
+```
 
+
+\
+In figuur 8 is de krona visualisatie te zien waarbij gebruik werd gemaakt van de data van kraken2
+\
+
+```{r, echo=FALSE, fig.cap="Figuur 8: Krona visualisatie op basis van kraken2 data op species niveau en een threshold van 50."}
+
+# Importeer 16S_exp1_11122025_bracken_species_threshold5.png
+nanoplot_not_filtered <-  rasterGrob(as.raster(readPNG("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/2_vrije_opdracht/verslag/16S_exp1_11122025_kraken2_species_threshold0.png")))
+grid.arrange(nanoplot_not_filtered, ncol=1, top=textGrob("", gp=gpar(fontsize=20,font=8)))
 
 ```
+
+\
+Raadpleeg voor figuur 8 het html bestand 16S_exp1_11122025_kraken2_species_threshold0.html in de GitHub repository.
+\
+\
+De kraken2 krona visualisatie laat 6543 bacteriesoorten zien, terwijl de krona visualisatie vanuit bracken 3034 bacteriesoorten liet zien. Mogelijk spelen de inclusie van taxa met een lage abundantie en taxa met een onduidelijke classificatie hier een rol bij. Om deze hypothese te bevestigen, werd de onderstaande code gebruikt:
+
+```{bash, eval=FALSE}
+
+# Controleer hoeveel bacteriesoorten minder dan 5 reads hebben
+awk '$4=="S" && $3<=5 {count++} END {print count}' 16S_exp1_11122025.report
+## 2289
+
+# Controleer hoeveel reads deze bacteriesoorten vertegenwoordigen
+awk '$4=="S" && $3<=5 {sum+=$3} END {print sum}' 16S_exp1_11122025.report
+## 3081
+
+```
+
+\
+Hieruit is gekomen dat 2289 bacteriesoorten minder dan 5 reads hebben, deze bacteriesoorten vertegenwoordigen 3081 reads.
+\
+\
+
+
 
 
 
