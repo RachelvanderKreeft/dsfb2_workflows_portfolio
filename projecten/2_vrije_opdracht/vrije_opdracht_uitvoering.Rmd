@@ -4,8 +4,7 @@ output: html_document
 date: "`r Sys.Date()`"
 ---
 
-Belangrijk: Omdat het aangleverde bestand en de bestanden die met deze workflow gegenereerd worden veel opslag innemen, is besloten om in de Rstudio server te werken in plats van de lokale versie.
-
+Belangrijk: Omdat het aangleverde bestand en de bestanden die met deze workflow gegenereerd worden veel opslag innemen, is besloten om in de Rstudio server te werken in plaats van de lokale versie.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -19,6 +18,12 @@ library(png)
 library(grid)
 library(gridExtra)
 
+# Importeren van Excel bestanden
+library(readxl)
+
+# Grafieken maken
+library(tidyverse)
+library(ggplot2)
 
 ````
 
@@ -102,6 +107,7 @@ In de environment krona werd versie 2.8.1 van krona gebruikt.
 
 De output van de nanopore sequencing werd aangeleverd als een .bam bestand. Het originele output bestand van de sequencing is terug te vinden in de gedeelde Rstudio server van daur1 via de volgende pathway:
 /home/data/projecticum/nanopore/paradontitis/16S114_exp1_VL5B06_11122025 \
+
 \
 Met behulp van samtools werd het .bam bestand omgezet naar een fastq bestand. \
 \
@@ -409,7 +415,7 @@ grid.arrange(nanoplot_not_filtered, ncol=1, top=textGrob("", gp=gpar(fontsize=20
 ```
 
 \
-In beide krona visualisaties zijn bacteriëren afgebeeld met een veel hogere prevalentie dan in de krona visualisatie van deze opdracht. Zo zijn bij de controlemonsters 26% van de reads aan Haemophilus parainfluenzae en 13% van de reads aan Stretopcoccus pneumoniae gekoppeld.
+In beide krona visualisaties zijn bacteriën afgebeeld met een veel hogere prevalentie dan in de krona visualisatie van deze opdracht. Zo zijn bij de controlemonsters 26% van de reads aan Haemophilus parainfluenzae en 13% van de reads aan Stretopcoccus pneumoniae gekoppeld.
 \
 
 
@@ -467,6 +473,53 @@ De prevalenties van de bacteriën blijven laag, maar er zijn nu wel een paar bac
 \
 \
 
+## Aantal soorten bacteriën per threshold
+Uiteindelijk werden de bracken analyse en de krona visualisatie uitgevoerd met thresholds van 0, 5, 10, 20, 30, 40 en 50. Zoals eerder benoemd neemt het aantal bacteriesoorten in de dataset af bij een hogere threshold.
+
+```{r threshold tabel}
+
+threshold_df <- data.frame(
+  threshold = c(0, 5, 10, 20, 30, 40, 50),
+  aantal_soorten_bacteriën = c(3034, 1216, 888, 662, 565, 519, 480)
+)
+
+# Laat tabel zien in RMarkdown
+knitr::kable(
+  threshold_df,
+  digits = 1,
+  caption = "Tabel 1: Aantal soorten bacteriën in bracken dataset bij verschillende thresholds "
+)
+
+```
+
+\
+Op basis van tabel 1 werd de onderstaande lijngrafiek gemaakt.
+\
+
+```{r threshold vergelijking}
+
+ggplot(threshold_df, aes(x = threshold, y = aantal_soorten_bacteriën)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 3) +
+  labs(
+    title = "Effect van threshold op aantal behouden bacteriesoorten",
+    x = "Bracken threshold",
+    y = "Aantal taxa"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+    axis.title.x = element_text(size = 12),
+    axis.title.y = element_text(size = 12)
+  )
+
+```
+
+\
+In de lijngrafiek is te zien dat het grootste deel van de bacteriesoorten uit de dataset wordt gefilterd bij een threshold van 5. Dit betekent dat het grootste deel van de bacteriesoorten minder dan 5 keer werd gedetecteerd. Ook bij een threshold van 10 was er sprake van afname van het aantal bacteriesoorten, maar deze afname was veel kleiner. Bij hogere threshold is het aantal bacteriesoorten veel stabieler, wat erop wijst dat de overgebleven bacteriesoorten relatief veel reads hebben.
+\
+\
+
 ## Alternatief: krona vanuit kraken2
 Het is ook mogelijk om een krona visualisatie te maken op basis van het kraken2 .report bestand. Hieronder staat hoe deze visualisatie vanuit het kraken2 bestand kan worden gemaakt. Het principe is hetzelfde, alleen staan de benodigde variabelen (aantal reads en Taxonomy ID) op een andere volgorde in het .report bestand. \
 \
@@ -488,12 +541,11 @@ ktImportTaxonomy \
 
 ```
 
-
 \
 In figuur 8 is de krona visualisatie te zien waarbij gebruik werd gemaakt van de data van kraken2
 \
 
-```{r, echo=FALSE, fig.cap="Figuur 8: Krona visualisatie op basis van kraken2 data op species niveau en een threshold van 50."}
+```{r, echo=FALSE, fig.cap="Figuur 9: Krona visualisatie op basis van kraken2 data op species niveau en een threshold van 50."}
 
 # Importeer 16S_exp1_11122025_bracken_species_threshold5.png
 nanoplot_not_filtered <-  rasterGrob(as.raster(readPNG("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/2_vrije_opdracht/verslag/16S_exp1_11122025_kraken2_species_threshold0.png")))
@@ -524,7 +576,177 @@ Hieruit is gekomen dat 2289 bacteriesoorten minder dan 5 reads hebben, deze bact
 \
 \
 
+# 9 Relatieve prevalenties volledige dataset vergelijken met individuele datasets
+Tijdens het projecticum werden 22 bacteriesoorten geselecteerd waarvan de relatieve prevalenties werden vergeleken tussen de patiënten samples en de controlesamples. Deze bacteriën werden volgens de volgende criteria uitgekozen: \
+\
+1. Vroege kolonisatoren: *Actinomyces* en *Streptococcus* soorten. \
+2. Zorgen voor progressie van een tandvleesontsteking naar parodontitis: *Fusobacterium* soorten. \
+3. Soorten waarvan bekend is dat ze een rol spelen bij parondititis: *Porphyromonas gingivalis*, *Tannerella forsythia* en *Treponema denticola*.
+4. Een paar soorten die een rol spelen bij de opbouw van het microbioom en normaal gesproken op de plekken binden waar de bacteriën geassocieerd met parodontitis ook aan kunnen binden.
+\
+\
+Het doel van dit onderdeel is om de relatieve prevalenties van deze bacteriesoorten in de volledige dataset te vergelijken met de relatieve prevalenties die in de gescheiden datasets werden gevonden. Voor de relatieve prevalenties wordt gebruik gemaakt van de bracken resultaten waarbij een threshold van 5 is gebruikt.
+\
+\
+Oorspronkelijk werden zowel de tabel met relatieve prevalenties als de bijhorende staafdiagram in Excel gemaakt. Voor deze opdracht is gekozen om de tabel in Excel handmatig aan te vullen met de relatieve prevalenties van de volledige dataset en de rest van de uitwerking in Rstudio te doen om de reproduceerbaarheid van de uitwerking te verhogen.
+\
+\
+Opmerking: De relatieve prevalenties van *Actinomyces sp.* en *Streptococcus sp.* werden bepaald door de relatieve prevalenties van meerdere subspecies bij elkaar op te tellen. Zo kwamen bij *Actinomyces sp.* onder andere *Actinomyces sp. oral taxon 414* en *Actinomyces sp. oral taxon 897* voor.
+\
+\
+Eerst werd de tabel met relatieve prevalenties in Rstudio geïmporteerd.
 
+```{r excel importeren}
+
+# Importeer Excel bestand met relatieve prevalenties per bacteriesoort
+dataset_prevalentie <-read_excel("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/2_vrije_opdracht/raw_data/relatieve_prevalentie_vergelijking.xlsx")
+
+# Laat tabel zien in RMarkdown
+knitr::kable(
+  dataset_prevalentie,
+  digits = 5,
+  caption = "Tabel 2: Relatieve prevalentie van geselecteerde bacteriesoorten (Bracken threshold 5)"
+)
+
+```
+
+\
+De dataset stond nog in wide format, met de functie pivot_longer() werd deze dataset naar tidy format omgezet.
+\
+
+
+```{r dataset tidy maken}
+
+# Gebruik pivot_longer() zodat de data in tidy format staat
+dataset_prevalentie_tidy <- dataset_prevalentie %>%
+  pivot_longer(
+    cols = c(Volledige_dataset, Patient_merge, Control_merge),
+    names_to = "Dataset",
+    values_to = "Percentage"
+  )
+
+# Laat de tidy tabel zien in RMarkdown
+knitr::kable(
+  dataset_prevalentie_tidy,
+  digits = 5,
+  caption = "Tabel 3: Relatieve prevalentie van geselecteerde bacteriesoorten in tidy format (Bracken threshold 5)"
+)
+
+```
+
+\
+Van de tidy dataset werd vervolgens een staafdiagram gemaakt.
+\
+
+```{r, fig.width = 15, fig.height = 10}
+
+# Maak een staafdiagram met de relatieve prevalenties
+ggplot(dataset_prevalentie_tidy,
+       aes(x = Bacteriën, y = Percentage, fill = Dataset)) +
+  geom_col(position = "dodge") +
+  labs(
+    title = "Relatieve prevalentie van geselecteerde bacteriesoorten",
+    x = "Bacteriesoort",
+    y = "Relatieve prevalentie (%)",
+    fill = "Dataset"
+  ) +
+  theme(
+    axis.text.x = element_text(
+      angle = 45,
+      hjust = 1,
+      vjust = 1,
+      size = 9
+    )
+  )
+
+```
+
+
+
+```{r, fig.width = 15, fig.height = 10}
+
+ggplot(dataset_prevalentie_tidy,
+       aes(x = Bacteriën, y = Percentage, fill = Dataset)) +
+  geom_col(position = "dodge") +
+  labs(
+    title = "Relatieve prevalentie van geselecteerde bacteriesoorten",
+    x = "Bacteriesoort",
+    y = "Relatieve prevalentie (%)",
+    fill = "Dataset"
+  ) +
+  theme_minimal() +
+  theme(
+    # Titel
+    plot.title = element_text(size = 20, face = "bold"),
+
+    # X- en Y-as titels
+    axis.title.x = element_text(size = 14),
+    axis.title.y = element_text(size = 14),
+
+    # Tekst van de bacteriën (x-as labels)
+    axis.text.x = element_text(
+      angle = 45,
+      hjust = 1,
+      vjust = 1,
+      size = 9
+    ),
+
+    # y-as cijfers
+    axis.text.y = element_text(size = 12),
+
+    # Legenda
+    legend.title = element_text(size = 12),
+    legend.text = element_text(size = 11)
+  )
+
+
+
+```
+
+
+
+\
+Vanwege de lage prevalenties van de bacteriesoorten in de volledige dataset is het lastig om deze af te lezen in de staafdiagram. Daarom wordt voor de conclusie gebruik gemaakt van de onbewerkte tabel.
+\
+
+# 10. Conclusie en discussie
+## Data
+### nanoplot
+85.6% van de reads had een kwaliteitsscore van >Q10. 35.4% van deze reads had een kwaliteitsscore van >Q15. Slechts 1627 reads hadden een kwlaiteitsscore van Q20 of hoger.
+
+
+
+Voor het project werd de data gefilterd op een kwaliteitsscore van >Q10 en een lengte van 1200 tot 2000 bp. Bij nanopore sequencing is de error rate hoger dan bij illuma, daarom is gefilterd op >Q10 in plaats van >Q30, dit betekent dat de kans dat de reads kloppen 90% is. Er was op een lengte van 1200 tot 2000 bp gefilterd omdat verwacht werd dat de 16s regio's van de meeste bacteriën ongeveer tussen de 1400 bp en 1600 bp zou zijn, maar bekend was dat sommige bacteriesoorten een kortere of langere 16s regio konden hebben. De meeste reads waren tussen de 1500 en 1650 bp lang.
+\
+\
+
+### bracken en krona
+In de volledige dataset werden 3034 bacteriesoorten gevonden. Bij hogere thresholds nam het aantal bacteriesoorten dat in de dataset bleef af, waarbij de grootste daling tussen threshold 0 en 5 zat. Het aantal bacteriesoorten was stabieler bij een thresholds hoger dan 10. Om ruis te reduceren en om te voorkomen dat bacteriesoorten met een hoger aantal reads onterecht uit de dataset worden gefilterd, zou een threshold van 5 tot 10 het beste zijn voor deze dataset.
+\
+\
+Bij threshold 5 bleven er 1216 bacteriesoorten over. In de dataset van de patiëntensamples waren 673 bacteriesoorten gevonden en in de dataset met controlesamples 453 bacteriesoorten. Bij de individuele datasets komt een deel van de bacteriesoorten in beide datasets toe, dus het totaal gevonden bacteriesoorten in de individuele datasets samen zal minder dan 1126 soorten zijn. Dat betekent dat er in de volledige dataset meer bacteriesoorten zijn die voldeden aan de threshold van 5 omdat deze dataset meer reads bevatte.
+\
+\
+
+### Relatieve prevalenties vergelijken
+Bij de volledige dataset werden lagere prevalenties bij de geselecteerde bacteriesoorten gevonden dan bij de datasets met alleen patiënten samples of controlesamples. Dit kan verklaard worden omdat de volledige dataset uit veel meer reads bestond en niet alle bacteriesoorten in zowel de patiënten samples of controlesamples zaten. 
+\
+\
+Bijna alle bacteriesoorten die niet werden gedetecteerd in de patiënten samples of controlesamples, werden ook niet gedecteteerd in de volledige dataset. De uitzondering hierop was  *Actinomyces sp.*, deze soort had een relatieve prevalentie van 0.00252% in de volledige dataset. *Actinomyces sp.* had meerdere subspecies met lage relatieve prevalenties. Er bestaat daarom een kans dat bij de volledige data de threshold van 5 reads wel was bereikt, terwijl dit bij de losse datasets niet het geval was.
+\
+\
+Opvallend was dat *Streptococcus gracilis* helemaal niet werd teruggevonden in de volledige dataset. Het is onwaarschijnlijk dat dit met het afronden van percentages in de bracken dataset te maken heeft, want bacteriesoorten met een lagere prevalentie dan 0.00001% worden in de bracken dataset afgerond tot 0.00000%.
+\
+\
+
+## Reproduceerbaarheid
+Demultiplexing bleek uiteindelijk niet mogelijk te zijn omdat oorspronkelijk MinKNOW werd gebruikt op een krachtigere rekenomgeving en omdat het FAST5 bestand niet via de daur1 server beschikbaar was. Dit heeft erin geresulteerd dat de resultaten niet precies hetzelfde waren als de resultaten van het projecticum. De overige stappen waren wel reproduceerbaar.
+
+
+
+
+
+FIGUREN VAN PROJECTICUM IN ACHTERGROND PLAATSEN!
 
 
 
