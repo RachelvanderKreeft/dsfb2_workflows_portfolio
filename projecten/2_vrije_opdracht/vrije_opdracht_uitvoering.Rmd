@@ -4,14 +4,14 @@ output: html_document
 date: "`r Sys.Date()`"
 ---
 
-Belangrijk: Omdat het aangleverde bestand en de bestanden die met deze workflow gegenereerd worden veel opslag innemen, is besloten om in de Rstudio server te werken in plaats van de lokale versie.
+Belangrijk: Omdat het aangleverde bestand en de bestanden die met deze workflow gegenereerd werden veel opslag innemen, is besloten om de opdracht in de Rstudio server uit te werken in plaats van de lokale versie.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
 ```
 
-````{r gebruikte libraries}
+````{r gebruikte libraries, message=FALSE}
 
 # Importeren van PNG bestanden
 library(png)
@@ -44,7 +44,7 @@ bash Miniconda3-latest-Linux-x86_64.sh -b
 ```
 
 # 2. conda environment opzetten
-Maak een nieuwe conda environment met samtools en NanoPlot erin. Deze packages worden in de volgende stappen gebruikt.
+Maak twee environments aan. In de eerste environment worden de pacakges samtools, NanoPlot, kraken2 en bracken geïnstalleerd. In de twee environment wordt krona geïnstalleerd. Krona moet in een aparte environment worden ingesteld omdat krona andere dependencies heeft.
 
 ```{bash, eval=FALSE}
 
@@ -105,9 +105,8 @@ In de environment krona werd versie 2.8.1 van krona gebruikt.
 
 # 3 .bam -> .fastq
 
-De output van de nanopore sequencing werd aangeleverd als een .bam bestand. Het originele output bestand van de sequencing is terug te vinden in de gedeelde Rstudio server van daur1 via de volgende pathway:
+De output van de nanopore sequencing werd in de Rstudio server aangeleverd als een .bam bestand. Het originele output bestand van de sequencing is terug te vinden in de gedeelde Rstudio server van daur1 via de volgende pathway:
 /home/data/projecticum/nanopore/paradontitis/16S114_exp1_VL5B06_11122025 \
-
 \
 Met behulp van samtools werd het .bam bestand omgezet naar een fastq bestand. \
 \
@@ -124,9 +123,9 @@ Belangrijk: Demultiplexing werd in het oorspronkelijke project uitgevoerd met Mi
 \
 
 # 4. analyse met NanoPlot
-NanoPlot is een quality control tool voor Nanopore sequencing data die statistieken en visualisaties genereert over readlengte, kwaliteit en sequencing output. \
+NanoPlot is een quality control tool voor Nanopore sequencing data. Het genereert statistieken en visualisaties over readlengte, kwaliteit en sequencing output. \
 \
-Eerst werd de NanoPlot analyse uitgevoerd zonder de data te filteren.
+Eerst werd de NanoPlot analyse uitgevoerd zonder de data te filteren. \
 
 ```{bash, eval=FALSE}
 
@@ -159,7 +158,7 @@ Number, percentage and megabases of reads above quality cutoffs \
 >Q30:	3 (0.0%) 0.0Mb \
 \
 
-Zoals hierobven te zien is, heeft 85.6% van de reads een kwaliteitsscore van >Q10. 35.4% van deze reads heeft een kwaliteitsscore van >Q15. Slechts 1627 reads hebben een kwlaiteitsscore van Q20 of hoger.
+Zoals hierboven te zien is, had 85.6% van de reads een kwaliteitsscore van >Q10. 35.4% van deze reads had een kwaliteitsscore van >Q15. Slechts 1627 reads hadden een kwaliteitsscore van Q20 of hoger.
 \
 \
 In figuur 1 is de lengte van de reads uitgezet tegen de kwaliteit van deze reads bij de ongefilterde data.
@@ -173,17 +172,17 @@ grid.arrange(nanoplot_not_filtered, ncol=1, top=textGrob("", gp=gpar(fontsize=20
 ````
 
 \
-Zoals in figuur 1 te zien is, zijn de meeste reads 5k of kleiner. Een paar reads zijn veel groter dan de rest van de reads. Het is mogelijk dat twee of meer DNA-fragmenten tijdens de library prep aan elkaar zijn gaan plakken. De meeste van deze reads hebben een kwaliteitsscore van minder dan Q10, dus het is ook mogelijk dat een deel van het DNA niet goed is afgelezen tijdens de sequencing, waardoor ze als één lange read zijn geregistreerd.
+Zoals in figuur 1 te zien is, waren de meeste reads 5k of kleiner. Een paar reads waren veel groter dan de rest van de reads. Het is voor deze reads mogelijk dat twee of meer DNA-fragmenten tijdens de library prep aan elkaar zijn gaan plakken. De meeste van deze reads hadden een kwaliteitsscore van minder dan Q10, dus het is ook mogelijk dat een deel van het DNA niet goed is afgelezen tijdens de sequencing, waardoor ze als één lange read werden geregistreerd.
 \
 
 # 5. Reads filteren
-Om verdere analyse op de data te doen, moeten de reads gefilterd worden.
+Voordat verdere analyse op de dataset uitgevoerd kan worden, moeten eerst de reads gefilterd worden op kwaliteitsscore en lengte van de reads.
 \
 \
-Voor het project werd de data gefilterd op een kwaliteitsscore van >Q10 en een lengte van 1200 tot 2000 bp. Bij nanopore sequencing is de error rate hoger dan bij illuma, daarom is gefilterd op >Q10 in plaats van >Q30, dit betekent dat de kans dat de reads kloppen 90% is. Er was op een lengte van 1200 tot 2000 bp gefilterd omdat verwacht werd dat de 16s regio's van de meeste bacteriën ongeveer tussen de 1400 bp en 1600 bp zou zijn, maar bekend was dat sommige bacteriesoorten een kortere of langere 16s regio konden hebben.
+Voor het project werd de data gefilterd op een kwaliteitsscore van >Q10 en een lengte van 1200 tot 2000 bp. Bij nanopore sequencing is de error rate hoger dan bij illuma, daarom werd deze dataset gefilterd op >Q10 in plaats van >Q30, dit betekent dat de kans dat de reads kloppen 90% is. Daarnaast werd op een lengte van 1200 tot 2000 bp gefilterd omdat verwacht werd dat de 16s regio's van de meeste bacteriën ongeveer tussen de 1400 bp en 1600 bp lang zou zijn, maar bekend was dat sommige bacteriesoorten een kortere of langere 16s regio konden hebben. 
 \
 \
-Om de reproduceerbaarheid te controleren, is ervoor gekozen om de data deze keer op dezelfde manier te filteren.
+Voor deze analyse werd gekozen om de data deze keer op dezelfde manier te filteren.
 \
 
 ```{bash, eval=FALSE}
