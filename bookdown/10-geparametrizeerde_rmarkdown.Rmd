@@ -1,0 +1,42 @@
+
+# Geparametrizeerde Rmarkdown
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introductie
+
+In de onderstaande video is de werking van de geparametrizeerde Rmarkdown rapport voor het aantal COVID-19 gevallen in Europa te zien. Het rapport bevat 3 parameters: \
+1. Het land waarover het rapport gaat. \
+2. Het jaar van de metingen in het rapport. \
+3. De maanden van de metingen in het rapport.\
+\
+De gerendeerde rapporten bevatten een grafiek voor het aantal COVID-19 gevallen en een grafiek voor het aantal COVID-19 gerelateerde sterfgevallen.
+
+\
+
+## Demonstratie
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/Hu_vHWpzqW8"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+\
+
+## html rapport
+
+Hieronder is het .html rapport van het eerste voorbeeld van de video te zien. Dit rapport bevat het aantal covid gevallen en het aantal mensen dat was gestorven als gevolg van covid tussen juli en december 2022 in Nederland.
+
+```{r, echo=FALSE}
+htmltools::tags$iframe(
+  src = "covid_Netherlands_2022_7-12.html",
+  style = "width:100%; height:1500px; border:none;"
+)
+
+```
+

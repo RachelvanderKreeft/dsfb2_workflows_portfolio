@@ -33,25 +33,15 @@ Er zijn twee wiskundige modellen gebruikt om de transmissie- en sterftecijfers v
 ## Beoordelingscriteria voor reproduceerbaarheid
 
 
-\begin{tabular}{l|l}
-\hline
-Transparency.Criteria & Response\\
-\hline
-Study Purpose & Yes\\
-\hline
-Data Availability Statement & Yes\\
-\hline
-Data Location & Yes\\
-\hline
-Study Location & Yes\\
-\hline
-Author Review & Yes\\
-\hline
-Funding Statement & Yes\\
-\hline
-Code Availability & Yes\\
-\hline
-\end{tabular}
+|Transparency.Criteria       |Response |
+|:---------------------------|:--------|
+|Study Purpose               |Yes      |
+|Data Availability Statement |Yes      |
+|Data Location               |Yes      |
+|Study Location              |Yes      |
+|Author Review               |Yes      |
+|Funding Statement           |Yes      |
+|Code Availability           |Yes      |
 
 
 ## Reproduceerbaarheid van de gedeelde R code
@@ -115,7 +105,7 @@ fig1e_data
 ```
 
 ```
-## # A tibble: 28 x 3
+## # A tibble: 28 × 3
 ##    SEASON  WEEK  `NUM INFLUENZA DEATHS`
 ##    <chr>   <fct>                  <dbl>
 ##  1 2023-24 40                         6
@@ -128,7 +118,7 @@ fig1e_data
 ##  8 2023-24 47                        42
 ##  9 2023-24 48                        38
 ## 10 2023-24 49                        69
-## # i 18 more rows
+## # ℹ 18 more rows
 ```
 
 
@@ -185,7 +175,7 @@ ggplot(
   )
 ```
 
-![](07-artikel_beoordelen_op_reproduceerbaarheid_files/figure-latex/ggplot-1.pdf)<!-- --> 
+<img src="07-artikel_beoordelen_op_reproduceerbaarheid_files/figure-html/ggplot-1.png" alt="" width="672" />
 
 Binnen Rstudio was het mogelijk om het aantal personen (18-64 jaar) dat per week was overleden aan influenza in seizoen 2023-2024 te visualiseren. De labels op de x-as en y-as komen ook overeen met het oorspronkelijke figuur. Een belangrijk verschil is dat de lijn nu is getrokken door het aantal overleden personen per week, terwijl in de oorspronkelijke figuur de lijn werd gebruik voor het geschatte aantal overleden personen. Dit komt omdat deze data niet kon worden teruggevonden, mogelijk is deze data opgesteld aan de hand van een functie die niet in Rstudio beschikbaar is. Het aantal overleden personen per week komt overeen met wat in figuur 1E afgebeeld stond.
 \

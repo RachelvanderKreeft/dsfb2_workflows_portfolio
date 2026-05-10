@@ -121,7 +121,7 @@ summary_by_group(df, Treatment, EPIC_TOT)
 ```
 
 ```
-## # A tibble: 2 x 4
+## # A tibble: 2 × 4
 ##   Treatment  mean    sd     n
 ##   <chr>     <dbl> <dbl> <int>
 ## 1 A            12     2     3

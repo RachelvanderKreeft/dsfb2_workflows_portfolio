@@ -126,7 +126,7 @@
 
 \title{Portfolio Workflows}
 \author{Rachel van der Kreeft}
-\date{2026-05-03}
+\date{2026-05-05}
 
 \begin{document}
 \maketitle
@@ -341,6 +341,9 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   +-- 04-formatieve_opdracht_rna-seq_daur2.md
 ## |   +-- 04-formatieve_opdracht_rna-seq_daur2.Rmd
 ## |   +-- 04-formatieve_opdracht_rna-seq_daur2_files
+## |   |   +-- figure-epub3
+## |   |   |   +-- readme-1.png
+## |   |   |   \-- readme-2.png
 ## |   |   +-- figure-html
 ## |   |   |   +-- readme-1.png
 ## |   |   |   \-- readme-2.png
@@ -349,12 +352,17 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |       \-- readme-2.pdf
 ## |   +-- 05-portfolio_repository.Rmd
 ## |   +-- 05-portfolio_repository_files
+## |   |   +-- figure-epub3
+## |   |   |   \-- readme-1.png
 ## |   |   +-- figure-html
 ## |   |   |   \-- readme-1.png
 ## |   |   \-- figure-latex
 ## |   |       \-- readme-1.pdf
 ## |   +-- 06-data_analyse_van_een_ander_reproduceren.Rmd
 ## |   +-- 06-data_analyse_van_een_ander_reproduceren_files
+## |   |   +-- figure-epub3
+## |   |   |   +-- normalised scatterplot-1.png
+## |   |   |   \-- Scatterplot-1.png
 ## |   |   +-- figure-html
 ## |   |   |   +-- normalised scatterplot-1.png
 ## |   |   |   \-- Scatterplot-1.png
@@ -363,17 +371,20 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |       \-- Scatterplot-1.pdf
 ## |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid.Rmd
 ## |   +-- 07-artikel_beoordelen_op_reproduceerbaarheid_files
+## |   |   +-- figure-epub3
+## |   |   |   \-- ggplot-1.png
 ## |   |   +-- figure-html
 ## |   |   |   \-- ggplot-1.png
 ## |   |   \-- figure-latex
 ## |   |       \-- ggplot-1.pdf
 ## |   +-- 08-r_package.Rmd
 ## |   +-- 09-bronvermelding.Rmd
+## |   +-- 10-geparametrizeerde_rmarkdown.Rmd
 ## |   +-- bibliography.bib
 ## |   +-- bookdown-demo.tex
 ## |   +-- bookdown-portfolio.rds
 ## |   +-- bookdown-portfolio.Rproj
-## |   +-- bookdown-portfolio.tex
+## |   +-- covid_Netherlands_2022_7-12.html
 ## |   +-- curriculum_vitae.html
 ## |   +-- DESCRIPTION
 ## |   +-- Dockerfile
@@ -383,12 +394,13 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   +-- now.json
 ## |   +-- packages.bib
 ## |   +-- preamble.tex
-## |   +-- render1e184d845ab.rds
+## |   +-- render342c1f9d6a0b.rds
 ## |   +-- style.css
 ## |   +-- toc.css
 ## |   +-- vancouver-ama.csl
 ## |   +-- _book
 ## |   |   +-- 01-curriculum_vitae.md
+## |   |   +-- 010-geparametrizeerde_rmarkdown.md
 ## |   |   +-- 02-plan_voor_de_toekomst.md
 ## |   |   +-- 03-vrije_opdracht.md
 ## |   |   +-- 04-formatieve_opdracht_rna-seq_daur2.md
@@ -411,13 +423,20 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   |       \-- ggplot-1.png
 ## |   |   +-- 08-r_package.md
 ## |   |   +-- 09-bronvermelding.md
+## |   |   +-- 10-geparametrizeerde_rmarkdown.md
 ## |   |   +-- 404.html
 ## |   |   +-- artikel-beoordelen-op-reproduceerbaarheid.html
+## |   |   +-- bookdown-portfolio.epub
+## |   |   +-- bookdown-portfolio.pdf
+## |   |   +-- bookdown-portfolio.tex
 ## |   |   +-- bronvermelding.html
+## |   |   +-- covid_Netherlands_2022_7-12.html
 ## |   |   +-- curriculum-vitae.html
 ## |   |   +-- curriculum_vitae.html
 ## |   |   +-- data-analyse-van-een-ander-reproduceren.html
 ## |   |   +-- een-data-analyse-van-een-ander-reproduceren.html
+## |   |   +-- geparametrizeerde-rmarkdown.html
+## |   |   +-- geparametrizeerde_rmarkdown.html
 ## |   |   +-- index.html
 ## |   |   +-- index.md
 ## |   |   +-- libs
@@ -425,6 +444,23 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   |   |   +-- anchor-sections-hash.css
 ## |   |   |   |   +-- anchor-sections.css
 ## |   |   |   |   \-- anchor-sections.js
+## |   |   |   +-- bootstrap-4.6.0
+## |   |   |   |   +-- bootstrap.bundle.min.js
+## |   |   |   |   +-- bootstrap.min.css
+## |   |   |   |   \-- fonts
+## |   |   |   |       \-- bootstrap
+## |   |   |   |           +-- glyphicons-halflings-regular.eot
+## |   |   |   |           +-- glyphicons-halflings-regular.svg
+## |   |   |   |           +-- glyphicons-halflings-regular.ttf
+## |   |   |   |           +-- glyphicons-halflings-regular.woff
+## |   |   |   |           \-- glyphicons-halflings-regular.woff2
+## |   |   |   +-- bs3compat-0.10.0
+## |   |   |   |   +-- bs3compat.js
+## |   |   |   |   +-- tabs.js
+## |   |   |   |   \-- transition.js
+## |   |   |   +-- bs4_book-1.0.0
+## |   |   |   |   +-- bs4_book.css
+## |   |   |   |   \-- bs4_book.js
 ## |   |   |   +-- gitbook-2.6.7
 ## |   |   |   |   +-- css
 ## |   |   |   |   |   +-- fontawesome
@@ -452,6 +488,7 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   +-- portfoliotools.html
 ## |   |   +-- r-package.html
 ## |   |   +-- rna-sequencing-repository.html
+## |   |   +-- search.json
 ## |   |   +-- search_index.json
 ## |   |   +-- style.css
 ## |   |   \-- vrije-opdracht.html
@@ -705,11 +742,19 @@ Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb geb
 ## |   |   +-- 4b_artikel_beoordelen_op_reproduceerbaarheid.html
 ## |   |   +-- 4b_artikel_beoordelen_op_reproduceerbaarheid.Rmd
 ## |   |   \-- Death data(18-64).xlsx
-## |   \-- 7_bronvermelding
-## |       +-- 7_bronvermelding.html
-## |       +-- 7_bronvermelding.Rmd
-## |       +-- bibliography.bib
-## |       \-- vancouver-ama.csl
+## |   +-- 7_bronvermelding
+## |   |   +-- 7_bronvermelding.html
+## |   |   +-- 7_bronvermelding.Rmd
+## |   |   +-- bibliography.bib
+## |   |   \-- vancouver-ama.csl
+## |   \-- 8_geparametrizeerde_rmarkdown
+## |       +-- covid-19_in_europa.html
+## |       +-- covid-19_in_europa.Rmd
+## |       +-- covid-19_in_europa_static_version.Rmd
+## |       +-- covid_Netherlands_2022_7-12.html
+## |       +-- data.csv
+## |       +-- data.xlsx
+## |       \-- render_covid-19_in_europa_reports.R
 ## +-- prompts
 ## |   \-- artikel_beoordelen_op_reproduceerbaarheid
 ## +-- README.html
@@ -1309,6 +1354,25 @@ Voor de ontwikkeling van het dashboard wordt gebruikgemaakt van de RStudio-packa
 \strut \\
 
 \section{Referentielijst}\label{referentielijst}
+
+\section{Introductie}\label{introductie-2}
+
+In de onderstaande video is de werking van de geparametrizeerde Rmarkdown rapport voor het aantal COVID-19 gevallen in Europa te zien. Het rapport bevat 3 parameters:\\
+1. Het land waarover het rapport gaat.\\
+2. Het jaar van de metingen in het rapport.\\
+3. De maanden van de metingen in het rapport.\\
+\strut \\
+De gerendeerde rapporten bevatten een grafiek voor het aantal COVID-19 gevallen en een grafiek voor het aantal COVID-19 gerelateerde sterfgevallen.
+
+\hfill\break
+
+\section{Demonstratie}\label{demonstratie}
+
+\hfill\break
+
+\section{html rapport}\label{html-rapport}
+
+Hieronder is het .html rapport van het eerste voorbeeld van de video te zien. Dit rapport bevat het aantal covid gevallen en het aantal mensen dat was gestorven als gevolg van covid tussen juli en december 2022 in Nederland.
 
 \bibliography{bibliography.bib}
 

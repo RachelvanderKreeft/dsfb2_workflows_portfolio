@@ -1,0 +1,85 @@
+---
+title: "COVID-19 in Europa"
+author: "Rachel van der Kreeft"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libraries, include=FALSE}
+
+library(tidyverse)
+library(ggplot2)
+
+```
+
+
+```{r importeer dataset, message=FALSE}
+
+# Importeer dataset met gegevens over het dagelijkse aantal nieuwe gemelde COVID-19-gevallen en sterfgevallen per EU/EER-land.
+covid <- read_csv("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/8_geparametrizeerde_rmarkdown/data.csv")
+
+
+```
+
+
+```{r parameters}
+
+# Definieer wat voor elke parameter geselecteerd moet worden (statische versie)
+selected_country <- "Netherlands"
+selected_year <- 2021
+selected_months <- c(1, 2, 3, 4, 5, 6)
+
+```
+
+
+```{r filteren op gedefinieerde waarden van de parameters}
+
+# Filter de data op gedefinieerde waarden van de parameters
+covid_filtered <- covid %>%
+  filter(
+    countriesAndTerritories == selected_country,
+    year == selected_year,
+    month %in% selected_months
+  )
+
+```
+
+## Grafiek 1: COVID-19 gevallen
+
+```{r}
+
+library(ggplot2)
+
+ggplot(covid_filtered, aes(x = month, y = cases)) +
+  geom_col(fill = "steelblue") +
+  labs(
+    title = paste("COVID-19 cases in", selected_country, "in", selected_year),
+    x = "Month",
+    y = "Number of cases"
+  ) +
+  theme_minimal()
+
+```
+
+
+## Grafiek 2: COVID-19 sterfgevallen
+
+```{r}
+
+ggplot(covid_filtered, aes(x = month, y = deaths)) +
+  geom_col(fill = "firebrick") +
+  labs(
+    title = paste("COVID-19 deaths in", selected_country, selected_year),
+    x = "Month",
+    y = "Number of deaths"
+  ) +
+  theme_minimal()
+
+
+
+```
+
