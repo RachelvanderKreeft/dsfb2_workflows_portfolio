@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2026-04-19" />
+<meta name="date" content="2026-05-11" />
 
 <title>Vrije opdracht</title>
 
@@ -350,51 +350,53 @@ display: none;
 
 
 <h1 class="title toc-ignore">Vrije opdracht</h1>
-<h4 class="date">2026-04-19</h4>
+<h4 class="date">2026-05-11</h4>
 
 </div>
 
 
-<div id="het-kiezen-van-een-nieuwe-data-science-for-biology-skill" class="section level2">
-<h2>1. Het kiezen van een nieuwe Data Science for Biology skill</h2>
-<p>Tijdens de cursus Projecticum Biomolecular Research had ik samen met
-een paar medestudenten onderzoek gedaan naar de samenstelling van het
-orale microbioom van parodontitis patïenten en van gezonde mensen.<br />
+<p><br />
+## 1. Het kiezen van een nieuwe Data Science for Biology skill Tijdens
+de cursus Projecticum Biomolecular Research had ik samen met een paar
+medestudenten onderzoek gedaan naar de samenstelling van het orale
+microbioom van parodontitis patïenten en van gezonde mensen.<br />
 <br />
 Er waren acht parondontitis samples en vier samples van gezonde personen
 beschikbaar, hierop werd 16s en whole genome sequencing uitgevoerd met
-de MinION mk1b. Na het sequencen werd door het programma MinKNOW één
-.bam bestand gegenereerd met alle reads van alle samples. Door middel
-van demultiplexing kon de data van iedere sample apart worden gekeken.
-Het resultaat hiervan was een krona visualisatie van iedere sample,
-oftewel een cirkeldiagram waarin de samenstelling van de bacteriën per
-taxonomisch niveau werd weergeven. Verder waren er grafieken gemaakt
-waarin de relatieve abundance van een aantal bacteriesoorten van de
-parodontitis samples werden vergeleken met de samples van de gezonde
-mensen.<br />
+de MinION mk1b. Na het sequencen werd er één .bam bestand gegenereerd
+met alle reads van alle samples. Door middel van demultiplexing werd de
+data gescheiden op basis van de barcodes die waren gebruikt, waarbij
+iedere sample aan 1 barcode was gekoppeld. In Rstudio werd het .bam
+bestand eerst met samtools omgezet tot een fastq bestand en vanuit dit
+bestand kon de kwaliteit van de reads vervolgens worden bepaald door
+middel van een nanoplot analyse. Daarna werden kraken2 en bracken
+gebruikt om te bepalen welke bacteriesoorten in de dataset aanwezig
+waren. De laatste stap binnen Rstudio was het maken van een krona
+visualisatie van iedere sample, oftewel een cirkeldiagram waarin de
+samenstelling van de bacteriën per taxonomisch niveau werd weergeven.
+Verder waren er grafieken gemaakt waarin de relatieve abundance van een
+aantal bacteriesoorten van de parodontitis samples werden vergeleken met
+de samples van de gezonde mensen.<br />
 <br />
 Zoals vermeld in het hoofdstuk ‘Plan voor de toekomst’ wil ik mijn
-kennis in metagenomics analyses verdiepen of vebreden. Tijdens de cursus
-DAUR2 had ik aan de hand van een voorbeeld dataset geleerd om na het
-uitvoeren van de kraken2 en bracken analyse de data te importeren met
-phyloseq en vervolgens verschillende statistische testen uit te voeren.
-Ik wil dezelfde analyse uitvoeren met de 16s sequencing data van de
-laatste 16s sequencing run die was uitgevoerd voor het projecticum. Van
-deze dataset is al bekend dat niet alle bacteriesoorten die werden
-verwacht werden gedetecteerd en dat sommige bacteriesoorten alleen op
-hogere taxa werden gedecteerd, dit kan op gebied van data-analyse extra
+kennis in metagenomics analyses verdiepen of vebreden. Voor de vrije
+opdracht wil ik gebruik maken van de 16s sequencing data van de laatste
+16s sequencing run die was uitgevoerd voor het projecticum. Van deze
+dataset is al bekend dat niet alle bacteriesoorten die werden verwacht
+werden gedetecteerd en dat sommige bacteriesoorten alleen op hogere taxa
+werden gedecteerd. Daarnaast werd de dataset aangeleverd als .bam
+bestand en mogelijk heb ik geen toegang tot dezelfde programma’s als
+tijdens het projecticum. Dit kan op gebied van data-analyse extra
 uitdagingen geven.<br />
 <br />
-Het doel van deze opdracht is dat ik de metagenomics workflow van DAUR2
-kan toepassen op een realistische dataset.<br />
+Het doel van deze opdracht is dat ik een metagenomics workflow kan
+toepassen op een realistische dataset en dat ik indien mogelijk
+aanvullende statistische testen uitvoer op de 16s sequencing data.<br />
 <br />
 </p>
-</div>
 <div id="planning" class="section level2">
 <h2>2. Planning</h2>
-<p>Deze planning is nog niet definitief. Wanneer de opdracht is
-goedgekeurd en de voorbereiding is uitgevoerd, zal de plannig nogmaals
-geavalueerd worden.<br />
+<p><br />
 <br />
 Het volledige portfolio moet op 25 mei voor 23:59 worden ingeleverd,
 deze opdracht moet dus in ongeveer vier weken af zijn. Omdat er ook
@@ -407,48 +409,64 @@ besteden. Indien er tijd overblijft na het maken van de overige
 portfolio opdrachten en de uitvoering van het data science projecticum,
 kan het aantal uur opgehoogd worden.<br />
 <br />
-### Fase 1 – Afbakening &amp; voorbereiding -Projectdoel en
-onderzoeksvraag vastleggen. -Data van Rstudio server halen en in lokale
-Rstduio plaatsen. -Overzicht maken van beschikbare data. -Bepalen van de
-analysemethode. -Controleren wat de workflow voor de dataset was bij
-Projecticum Biomolecular Research. -Eventueel een korte
-literatuurverkenning (parodontitis + microbiome).</p>
+### Fase 1 – Afbakening &amp; voorbereiding (6 uur) -Projectdoel en
+onderzoeksvraag vastleggen.<br />
+-Data van 16s sequencing van Rstudio server halen.<br />
+-Bepalen van de analysemethode.<br />
+-Controleren wat de workflow voor de dataset was bij Projecticum
+Biomolecular Research.<br />
+-Eventueel een korte literatuurverkenning (parodontitis +
+microbiome).<br />
+<br />
+</p>
 <div id="fase-2-data-structureren-demultiplexing-6-uur" class="section level3">
 <h3>Fase 2 – Data structureren &amp; demultiplexing (6 uur)</h3>
-<p>-Controleren hoe barcodes in BAM zijn opgeslagen. -BAM naar FASTQ
-omzetten. -Demultiplexen in 8 parodontitis + 4 gezonde samples.
--Bestandsstructuur organiseren.</p>
+<p>-Controleren hoe barcodes in BAM zijn opgeslagen.<br />
+-BAM naar FASTQ omzetten.<br />
+-Indien mogelijk: Demultiplexen in 8 parodontitis + 4 gezonde samples
+(bleek achteraf niet mogelijk te zijn omdat hiervoor niet de juiste
+bestanden beschikbaar waren en omdat demultiplexing tools veel van de
+CPU van een computer vragen).<br />
+-Bestandsstructuur organiseren.<br />
+<br />
+</p>
 </div>
-<div id="fase-3-taxonomische-profiling-6-uur" class="section level3">
-<h3>Fase 3 – Taxonomische profiling (6 uur)</h3>
-<p>-Taxonomische classificatie uitvoeren. -Abundance tables per sample
-maken?</p>
+<div id="fase-3-taxonomische-profiling-10-uur" class="section level3">
+<h3>Fase 3 – Taxonomische profiling (10 uur)</h3>
+<p>-Taxonomische classificatie uitvoeren met kraken2 en bracken.<br />
+-Resultaten van deze opdracht vergelijken met de resultaten van het
+projecticum.<br />
+<br />
+</p>
 </div>
-<div id="fase-4-microbiome-analyse-in-r-phyloseq-8-uur" class="section level3">
-<h3>Fase 4 – Microbiome analyse in R (phyloseq) (8 uur)</h3>
-<p>-phyloseq object opbouwen -Sample metadata koppelen -Hier is ruimte
-om statistische testen uit te voeren, nog goed nadenken welke
-uitgeoverdk kunnen worden.</p>
+<div id="fase-4-visualisatie-interpretatie-5-uur" class="section level3">
+<h3>Fase 4 – Visualisatie &amp; interpretatie (5 uur)</h3>
+<p>-Krona visualisaties maken met verschillende thresholds voor aantal
+reads.<br />
+-Resultaten van verschillende thresholds vergelijken in een
+grafiek.<br />
+-Interpreteren: verschillen tussen volledige datasets en datasets met
+alleen patiënten samples en controlesamples, ontbrekende verwachte
+taxa.<br />
+</p>
+<p>-Beperkingen van Nanopore 16S bespreken?.<br />
+<br />
+</p>
 </div>
-<div id="fase-5-visualisatie-interpretatie-5-uur" class="section level3">
-<h3>Fase 5 – Visualisatie &amp; interpretatie (5 uur)</h3>
-<p>-Hier verschillende figuren maken (nog overwegen welke).
--Interpreteren: verschillen tussen ziekte/gezond, ontbrekende verwachte
-taxa, beperkingen van Nanopore 16S.</p>
-</div>
-<div id="fase-6-rapportage-in-bookdown-3-uur" class="section level3">
-<h3>Fase 6 – Rapportage in Bookdown (3 uur)</h3>
-<p>-Methoden beschrijven. -Resultaten samenvatten. -Discussie +
-reflectie. -Conclusie schrijven.<br />
+<div id="fase-6-rapportage-in-bookdown-5-uur" class="section level3">
+<h3>Fase 6 – Rapportage in Bookdown (5 uur)</h3>
+<p>-Methoden beschrijven.<br />
+-Resultaten samenvatten.<br />
+-Conclusie + discussie + reflectie.<br />
 <br />
 Ik laat zien dat deze skill geleerd is door de code te laten zien die ik
 heb gebruikt of zelf heb gemaakt, waarbij ik bij elke stap heb
 toegelicht wat er is uitgevoerd. Indien ik bestaande scripts heb
 gebruikt, licht ik ook toe wat ik heb aangepast en waarom. Verder laat
-ik de output van mijn code zien aan de hand van verschillende figuren
-<em>(nog bepalen welke!)</em>. Als laatste houd ik een README bij voor
-deze opdracht, waarin ik toelicht waar elk bestand voor deze opdracht
-voor dient.</p>
+ik de output van mijn code zien aan de hand van krona visualisaties,
+tabellen en grafieken (staafdiagram + lijngrafiek). Als laatste houd ik
+een README bij voor deze opdracht, waarin ik toelicht waar elk bestand
+voor deze opdracht voor dient.</p>
 </div>
 </div>
 

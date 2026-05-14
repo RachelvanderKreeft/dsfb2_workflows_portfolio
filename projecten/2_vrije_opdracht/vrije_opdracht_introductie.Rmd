@@ -53,14 +53,11 @@ Het volledige portfolio moet op 25 mei voor 23:59 worden ingeleverd, deze opdrac
 -Krona visualisaties maken met verschillende thresholds voor aantal reads. \
 -Resultaten van verschillende thresholds vergelijken in een grafiek. \
 -Interpreteren: verschillen tussen volledige datasets en datasets met alleen patiënten samples en controlesamples, ontbrekende verwachte taxa. \
-
--Beperkingen van Nanopore 16S bespreken?.
-\
 \
 
-### Fase 6 – Rapportage in Bookdown (5 uur)
+### Fase 5 – Rapportage in Bookdown (5 uur)
 -Methoden beschrijven. \
 -Resultaten samenvatten. \
--Conclusie + discussie + reflectie. \
+-Conclusie + discussie + reflectie over reproduceerbaarheid. \
 \
 Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb gebruikt of zelf heb gemaakt, waarbij ik bij elke stap heb toegelicht wat er is uitgevoerd. Indien ik bestaande scripts heb gebruikt, licht ik ook toe wat ik heb aangepast en waarom. Verder laat ik de output van mijn code zien aan de hand van krona visualisaties, tabellen en grafieken (staafdiagram + lijngrafiek). Als laatste houd ik een README bij voor deze opdracht, waarin ik toelicht waar elk bestand voor deze opdracht voor dient.
