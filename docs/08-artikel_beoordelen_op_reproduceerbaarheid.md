@@ -4,16 +4,15 @@
 
 ## Gekozen artikel
 
-Het artikel dat is onderzocht voor deze opdracht is 'Infectivity and fatality of influenza in pre- and post-COVID-19 pandemic year', geschreven door Shuanglin Jing en Hao Wang.
+Het artikel dat werd onderzocht voor deze analyse is 'Infectivity and fatality of influenza in pre- and post-COVID-19 pandemic year', geschreven door Shuanglin Jing en Hao Wang.
 \
 \
-Link naar artikel:
-https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013229
+[Klik hier](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013229) om het artikel te zien.
 \
 \
 
 ### Onderzoeksvraag:
-De onderzoeksvraag is: Hoe zijn de epidemiologische kenmerken van influenza veranderd tussen de periode vóór en na de pandemie?
+De onderzoeksvraag is van het artikel is: Hoe zijn de epidemiologische kenmerken van influenza veranderd tussen de periode vóór en na de pandemie?
 \
 \
 
@@ -33,25 +32,15 @@ Er zijn twee wiskundige modellen gebruikt om de transmissie- en sterftecijfers v
 ## Beoordelingscriteria voor reproduceerbaarheid
 
 
-\begin{tabular}{l|l}
-\hline
-Transparency.Criteria & Response\\
-\hline
-Study Purpose & Yes\\
-\hline
-Data Availability Statement & Yes\\
-\hline
-Data Location & Yes\\
-\hline
-Study Location & Yes\\
-\hline
-Author Review & Yes\\
-\hline
-Funding Statement & Yes\\
-\hline
-Code Availability & Yes\\
-\hline
-\end{tabular}
+|Transparency.Criteria       |Response |
+|:---------------------------|:--------|
+|Study Purpose               |Yes      |
+|Data Availability Statement |Yes      |
+|Data Location               |Yes      |
+|Study Location              |Yes      |
+|Author Review               |Yes      |
+|Funding Statement           |Yes      |
+|Code Availability           |Yes      |
 
 
 ## Reproduceerbaarheid van de gedeelde R code
@@ -60,8 +49,7 @@ Code Availability & Yes\\
 -Het artikel staat in de website onder artikelen die R code bevatten, maar in werkelijkheid is er gebruik gemaakt van analyse in MATLAB, wat te zien is aan het gebruik van .m en .mat bestanden. Dit maakt volledige analyse in Rstudio niet mogelijk. \
 -Er zijn wel .csv en .xlsx bestanden beschikbaar. Deze zijn al in tidy format gezet.
 \
-Ik heb geprobeerd om figuur 1E van het artikel zoveel mogelijk te reproduceren in Rstudio. Hiervoor heb ik het bestand Death data(18-64).xlsx gebruikt. Dit bestand is hier te vinden: /
-https://github.com/shuanglinjing/Long-COVID-impact-on-influenza-infectivity-and-fatality/blob/master/Transmission%20and%20mortality%20rates%20of%20age%20structure%20model/Death%20data(18-64).xlsx
+Ik heb geprobeerd om figuur 1E van het artikel zoveel mogelijk te reproduceren in Rstudio. Hiervoor heb ik het bestand Death data(18-64).xlsx gebruikt. Dit bestand is [hier](https://github.com/shuanglinjing/Long-COVID-impact-on-influenza-infectivity-and-fatality/blob/master/Transmission%20and%20mortality%20rates%20of%20age%20structure%20model/Death%20data(18-64).xlsx) te vinden.
 
 
 ### Importeer de dataset Death data(18-64).xlsx
@@ -115,7 +103,7 @@ fig1e_data
 ```
 
 ```
-## # A tibble: 28 x 3
+## # A tibble: 28 × 3
 ##    SEASON  WEEK  `NUM INFLUENZA DEATHS`
 ##    <chr>   <fct>                  <dbl>
 ##  1 2023-24 40                         6
@@ -128,7 +116,7 @@ fig1e_data
 ##  8 2023-24 47                        42
 ##  9 2023-24 48                        38
 ## 10 2023-24 49                        69
-## # i 18 more rows
+## # ℹ 18 more rows
 ```
 
 
@@ -185,9 +173,12 @@ ggplot(
   )
 ```
 
-![](07-artikel_beoordelen_op_reproduceerbaarheid_files/figure-latex/ggplot-1.pdf)<!-- --> 
+<div class="figure">
+<img src="08-artikel_beoordelen_op_reproduceerbaarheid_files/figure-html/ggplot-1.png" alt="Aantal mensen van 18-64 jaar die tussen week 40 van 2023 en week 15 waren overleden aan influenza in de Verenigde Staten." width="672" />
+<p class="caption">(\#fig:ggplot)Aantal mensen van 18-64 jaar die tussen week 40 van 2023 en week 15 waren overleden aan influenza in de Verenigde Staten.</p>
+</div>
 
-Binnen Rstudio was het mogelijk om het aantal personen (18-64 jaar) dat per week was overleden aan influenza in seizoen 2023-2024 te visualiseren. De labels op de x-as en y-as komen ook overeen met het oorspronkelijke figuur. Een belangrijk verschil is dat de lijn nu is getrokken door het aantal overleden personen per week, terwijl in de oorspronkelijke figuur de lijn werd gebruik voor het geschatte aantal overleden personen. Dit komt omdat deze data niet kon worden teruggevonden, mogelijk is deze data opgesteld aan de hand van een functie die niet in Rstudio beschikbaar is. Het aantal overleden personen per week komt overeen met wat in figuur 1E afgebeeld stond.
+Binnen Rstudio was het mogelijk om het aantal personen (18-64 jaar) dat per week was overleden aan influenza in seizoen 2023-2024 te visualiseren. De labels op de x-as en y-as komen ook overeen met het oorspronkelijke figuur. Een belangrijk verschil is dat de lijn nu is getrokken door het aantal overleden personen per week, terwijl in de oorspronkelijke figuur de lijn werd gebruik voor het geschatte aantal overleden personen. Dit komt omdat deze data niet kon worden teruggevonden, mogelijk is deze data opgesteld aan de hand van een functie die niet in Rstudio beschikbaar is. Het aantal overleden personen per week komt overeen met wat in figuur 1E van het artikel afgebeeld stond.
 \
 \
 In de gemaakte figuur missen de volgende onderdelen: \
@@ -199,4 +190,4 @@ In de gemaakte figuur missen de volgende onderdelen: \
 ### Samenvatting
 Het artikel zelf voldoet aan de eisen voor reproduceerbaarheid. Het artikel verschijnt echter ten onrechte tussen de resultaten wanneer er gefilterd wordt op R code bij Data Availability. Het artikel hoort onder MATLAB gefilterd te worden. De reproduceerbaarheid binnen Rstudio is niet goed omdat Rstudio niet de benodigde functies heeft om de figuur volledig te reproduceren. De data die is gegeven lijkt wel overeen te komen met de figuren in het artikel en aan de hand van de figuur beschrijving van figuur 1 was het mogelijk om de figuur deels te reproduceren. \
 \
-Voor reproduceerbaarheid binnen Rstudio krijgt dit onderzoek daarom het cijfer 2. Als er voor deze opdracht met MATLAB gewerkt zou worden, zou deze score waarschijnlijk hoger zijn.
+Voor reproduceerbaarheid binnen Rstudio krijgt dit onderzoek daarom het cijfer 2. Als er voor deze analyse de mogelijkheid bestond om met MATLAB te werken, zou deze score waarschijnlijk hoger zijn.

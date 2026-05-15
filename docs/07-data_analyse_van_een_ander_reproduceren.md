@@ -12,11 +12,38 @@ library(readxl)
 
 # Importeer het bestand CE.LIQ.FLOW.062_Tidydata.xlsx in Rstudio
 dataset_4a <-read_excel("~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/4a_data_analyse_van_een_ander_reproduceren/CE.LIQ.FLOW.062_Tidydata.xlsx")
+
+# Bekijk de dataset en controleer of deze in tidy format staat
+dataset_4a
+```
+
+```
+## # A tibble: 360 × 34
+##    plateRow plateColumn vialNr dropCode expType    expReplicate expName        
+##    <lgl>    <lgl>        <dbl> <chr>    <chr>             <dbl> <chr>          
+##  1 NA       NA               1 a        experiment            3 CE.LIQ.FLOW.062
+##  2 NA       NA               1 b        experiment            3 CE.LIQ.FLOW.062
+##  3 NA       NA               1 c        experiment            3 CE.LIQ.FLOW.062
+##  4 NA       NA               1 d        experiment            3 CE.LIQ.FLOW.062
+##  5 NA       NA               1 e        experiment            3 CE.LIQ.FLOW.062
+##  6 NA       NA               2 a        experiment            3 CE.LIQ.FLOW.062
+##  7 NA       NA               2 b        experiment            3 CE.LIQ.FLOW.062
+##  8 NA       NA               2 c        experiment            3 CE.LIQ.FLOW.062
+##  9 NA       NA               2 d        experiment            3 CE.LIQ.FLOW.062
+## 10 NA       NA               2 e        experiment            3 CE.LIQ.FLOW.062
+## # ℹ 350 more rows
+## # ℹ 27 more variables: expDate <dttm>, expResearcher <chr>, expTime <dbl>,
+## #   expUnit <chr>, expVolumeCounted <dbl>, RawData <dbl>, compCASRN <chr>,
+## #   compName <chr>, compConcentration <chr>, compUnit <chr>,
+## #   compDelivery <chr>, compVehicle <chr>, elegansStrain <chr>,
+## #   elegansInput <dbl>, bacterialStrain <chr>, bacterialTreatment <chr>,
+## #   bacterialOD600 <dbl>, bacterialConcX <dbl>, bacterialVolume <dbl>, …
 ```
 \
-De data is goed ingelezen en is al in tidy format gezet, er hoeft dus niks aangepast te worden.
+De data is goed ingelezen en is al in tidy format gezet, er hoeft dus niks aangepast te worden aan het format van de data.
 
 ## Data types voor RawData, compName en compConcentration
+Voor deze ananlyse wordt gebruikt gemaakt van de variabelen RawData, compName en compConcentration. Eerst moet gecontroleerd worden of het data type voor deze variabelen klopt zodat er een scatterplot kan worden gemaakt. RawData en comConcentration moeten numeric zijn en compName moet character zijn.
 
 
 ``` r
@@ -63,7 +90,10 @@ str(dataset_4a$compConcentration)
 ##  num [1:360] 4.99 4.99 4.99 4.99 4.99 4.99 4.99 4.99 4.99 4.99 ...
 ```
 
+Voor compConcentration was het data type character in plaats van numeric, het data type werd daarom aangepast naar numeric.
+
 ## Scatterplot
+Vervolgens werd er een scatter plot gemaakt voor de verschillende chemicaliën en concentraties.
 
 
 ``` r
@@ -85,7 +115,7 @@ ggplot(data = dataset_4a, aes(x = compConcentration, y = RawData)) +
   theme(axis.text.x = element_text(size = 8))
 ```
 
-<img src="06-data_analyse_van_een_ander_reproduceren_files/figure-html/Scatterplot-1.png" alt="" width="672" />
+<img src="07-data_analyse_van_een_ander_reproduceren_files/figure-html/Scatterplot-1.png" alt="" width="672" />
 
 ## Normaliseer de data
 
@@ -134,6 +164,7 @@ str(dataset_4a$compConcentration)
 ```
 
 ## Scatterplot met genormaliseerde waarden
+Na het normaliseren van de waarden werd er een nieuwe scatterplot gemaakt met de genormaliseerde waarden.
 
 
 ``` r
@@ -157,7 +188,7 @@ ggplot(dataset_4a_normalised, aes(x = compConcentration, y = RawData_norm)) +
   )
 ```
 
-<img src="06-data_analyse_van_een_ander_reproduceren_files/figure-html/normalised scatterplot-1.png" alt="" width="672" />
+<img src="07-data_analyse_van_een_ander_reproduceren_files/figure-html/normalised scatterplot-1.png" alt="" width="672" />
 
 ## Controlegroepen
 

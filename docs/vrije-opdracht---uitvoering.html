@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Vrije opdracht - Uitvoering | Portfolio Workflows</title>
+  <meta name="description" content="Dit is mijn portfolio voor de cursus Workflows van de minor Data Sciences for Biology" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Vrije opdracht - Uitvoering | Portfolio Workflows" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Dit is mijn portfolio voor de cursus Workflows van de minor Data Sciences for Biology" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Vrije opdracht - Uitvoering | Portfolio Workflows" />
+  
+  <meta name="twitter:description" content="Dit is mijn portfolio voor de cursus Workflows van de minor Data Sciences for Biology" />
+  
+
+<meta name="author" content="Rachel van der Kreeft" />
+
+
+<meta name="date" content="2026-05-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="vrije-opdracht---introductie.html"/>
+<link rel="next" href="rna-sequencing-repository.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Portfolio Workflows</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introductie</a></li>
+<li class="chapter" data-level="2" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html"><i class="fa fa-check"></i><b>2</b> Curriculum Vitae</a></li>
+<li class="chapter" data-level="3" data-path="plan-voor-de-toekomst.html"><a href="plan-voor-de-toekomst.html"><i class="fa fa-check"></i><b>3</b> Plan voor de toekomst</a></li>
+<li class="chapter" data-level="4" data-path="vrije-opdracht---introductie.html"><a href="vrije-opdracht---introductie.html"><i class="fa fa-check"></i><b>4</b> Vrije opdracht - Introductie</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="vrije-opdracht---introductie.html"><a href="vrije-opdracht---introductie.html#planning"><i class="fa fa-check"></i><b>4.1</b> 2. Planning</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="vrije-opdracht---introductie.html"><a href="vrije-opdracht---introductie.html#fase-2-data-structureren-demultiplexing-6-uur"><i class="fa fa-check"></i><b>4.1.1</b> Fase 2 – Data structureren &amp; demultiplexing (6 uur)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="vrije-opdracht---introductie.html"><a href="vrije-opdracht---introductie.html#fase-3-taxonomische-profiling-10-uur"><i class="fa fa-check"></i><b>4.1.2</b> Fase 3 – Taxonomische profiling (10 uur)</a></li>
+<li class="chapter" data-level="4.1.3" data-path="vrije-opdracht---introductie.html"><a href="vrije-opdracht---introductie.html#fase-4-visualisatie-interpretatie-5-uur"><i class="fa fa-check"></i><b>4.1.3</b> Fase 4 – Visualisatie &amp; interpretatie (5 uur)</a></li>
+<li class="chapter" data-level="4.1.4" data-path="vrije-opdracht---introductie.html"><a href="vrije-opdracht---introductie.html#fase-6-rapportage-in-bookdown-5-uur"><i class="fa fa-check"></i><b>4.1.4</b> Fase 6 – Rapportage in Bookdown (5 uur)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html"><i class="fa fa-check"></i><b>5</b> Vrije opdracht - Uitvoering</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#conda-installeren"><i class="fa fa-check"></i><b>5.1</b> 1. conda installeren</a></li>
+<li class="chapter" data-level="5.2" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#conda-environment-opzetten"><i class="fa fa-check"></i><b>5.2</b> 2. conda environment opzetten</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#krona-handmatig-installeren"><i class="fa fa-check"></i><b>5.2.1</b> Krona handmatig installeren</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#van-.bam-naar-.fastq"><i class="fa fa-check"></i><b>5.3</b> 3. Van .bam naar .fastq</a></li>
+<li class="chapter" data-level="5.4" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#analyse-met-nanoplot"><i class="fa fa-check"></i><b>5.4</b> 4. Analyse met NanoPlot</a></li>
+<li class="chapter" data-level="5.5" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#reads-filteren"><i class="fa fa-check"></i><b>5.5</b> 5. Reads filteren</a></li>
+<li class="chapter" data-level="5.6" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#kraken2"><i class="fa fa-check"></i><b>5.6</b> 6. Kraken2</a></li>
+<li class="chapter" data-level="5.7" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#bracken"><i class="fa fa-check"></i><b>5.7</b> 7. Bracken</a></li>
+<li class="chapter" data-level="5.8" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#krona"><i class="fa fa-check"></i><b>5.8</b> 8. Krona</a>
+<ul>
+<li class="chapter" data-level="5.8.1" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#bracken-en-krona-met-threshold"><i class="fa fa-check"></i><b>5.8.1</b> bracken en krona met threshold</a></li>
+<li class="chapter" data-level="5.8.2" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#bracken-analyse-met-hogere-thresholds"><i class="fa fa-check"></i><b>5.8.2</b> bracken analyse met hogere thresholds</a></li>
+<li class="chapter" data-level="5.8.3" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#aantal-soorten-bacteri%C3%ABn-per-threshold"><i class="fa fa-check"></i><b>5.8.3</b> Aantal soorten bacteriën per threshold</a></li>
+<li class="chapter" data-level="5.8.4" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#alternatief-krona-vanuit-kraken2"><i class="fa fa-check"></i><b>5.8.4</b> Alternatief: krona vanuit kraken2</a></li>
+</ul></li>
+<li class="chapter" data-level="5.9" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#relatieve-prevalenties-volledige-dataset-vergelijken-met-individuele-datasets"><i class="fa fa-check"></i><b>5.9</b> 9. Relatieve prevalenties volledige dataset vergelijken met individuele datasets</a></li>
+<li class="chapter" data-level="5.10" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#conclusie-en-discussie"><i class="fa fa-check"></i><b>5.10</b> 10. Conclusie en discussie</a>
+<ul>
+<li class="chapter" data-level="5.10.1" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#data"><i class="fa fa-check"></i><b>5.10.1</b> Data</a></li>
+<li class="chapter" data-level="5.10.2" data-path="vrije-opdracht---uitvoering.html"><a href="vrije-opdracht---uitvoering.html#reproduceerbaarheid"><i class="fa fa-check"></i><b>5.10.2</b> Reproduceerbaarheid</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="rna-sequencing-repository.html"><a href="rna-sequencing-repository.html"><i class="fa fa-check"></i><b>6</b> RNA-sequencing repository</a></li>
+<li class="chapter" data-level="7" data-path="portfolio-repository.html"><a href="portfolio-repository.html"><i class="fa fa-check"></i><b>7</b> Portfolio repository</a></li>
+<li class="chapter" data-level="8" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html"><i class="fa fa-check"></i><b>8</b> Data analyse van een ander reproduceren</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#data-inlezen"><i class="fa fa-check"></i><b>8.1</b> Data inlezen</a></li>
+<li class="chapter" data-level="8.2" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#data-types-voor-rawdata-compname-en-compconcentration"><i class="fa fa-check"></i><b>8.2</b> Data types voor RawData, compName en compConcentration</a></li>
+<li class="chapter" data-level="8.3" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#scatterplot"><i class="fa fa-check"></i><b>8.3</b> Scatterplot</a></li>
+<li class="chapter" data-level="8.4" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#normaliseer-de-data"><i class="fa fa-check"></i><b>8.4</b> Normaliseer de data</a></li>
+<li class="chapter" data-level="8.5" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#scatterplot-met-genormaliseerde-waarden"><i class="fa fa-check"></i><b>8.5</b> Scatterplot met genormaliseerde waarden</a></li>
+<li class="chapter" data-level="8.6" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#controlegroepen"><i class="fa fa-check"></i><b>8.6</b> Controlegroepen</a></li>
+<li class="chapter" data-level="8.7" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#stappenplan-voor-vervolgonderzoek"><i class="fa fa-check"></i><b>8.7</b> Stappenplan voor vervolgonderzoek</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html"><i class="fa fa-check"></i><b>9</b> Artikel beoordelen op reproduceerbaarheid</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#gekozen-artikel"><i class="fa fa-check"></i><b>9.1</b> Gekozen artikel</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#onderzoeksvraag"><i class="fa fa-check"></i><b>9.1.1</b> Onderzoeksvraag:</a></li>
+<li class="chapter" data-level="9.1.2" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#methode"><i class="fa fa-check"></i><b>9.1.2</b> Methode:</a></li>
+<li class="chapter" data-level="9.1.3" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#resultaten"><i class="fa fa-check"></i><b>9.1.3</b> Resultaten:</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#beoordelingscriteria-voor-reproduceerbaarheid"><i class="fa fa-check"></i><b>9.2</b> Beoordelingscriteria voor reproduceerbaarheid</a></li>
+<li class="chapter" data-level="9.3" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#reproduceerbaarheid-van-de-gedeelde-r-code"><i class="fa fa-check"></i><b>9.3</b> Reproduceerbaarheid van de gedeelde R code</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#importeer-de-dataset-death-data18-64.xlsx"><i class="fa fa-check"></i><b>9.3.1</b> Importeer de dataset Death data(18-64).xlsx</a></li>
+<li class="chapter" data-level="9.3.2" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#selecteren-en-filteren-van-data"><i class="fa fa-check"></i><b>9.3.2</b> Selecteren en filteren van data</a></li>
+<li class="chapter" data-level="9.3.3" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#samenvatting"><i class="fa fa-check"></i><b>9.3.3</b> Samenvatting</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="r-package.html"><a href="r-package.html"><i class="fa fa-check"></i><b>10</b> R package</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="r-package.html"><a href="r-package.html#portfoliotools"><i class="fa fa-check"></i><b>10.1</b> portfoliotools</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="r-package.html"><a href="r-package.html#installation"><i class="fa fa-check"></i><b>10.1.1</b> Installation</a></li>
+<li class="chapter" data-level="10.1.2" data-path="r-package.html"><a href="r-package.html#load-portfoliotools-package"><i class="fa fa-check"></i><b>10.1.2</b> Load portfoliotools package</a></li>
+<li class="chapter" data-level="10.1.3" data-path="r-package.html"><a href="r-package.html#filter_range"><i class="fa fa-check"></i><b>10.1.3</b> filter_range</a></li>
+<li class="chapter" data-level="10.1.4" data-path="r-package.html"><a href="r-package.html#drop_na_cols"><i class="fa fa-check"></i><b>10.1.4</b> drop_na_cols</a></li>
+<li class="chapter" data-level="10.1.5" data-path="r-package.html"><a href="r-package.html#select_columns"><i class="fa fa-check"></i><b>10.1.5</b> select_columns</a></li>
+<li class="chapter" data-level="10.1.6" data-path="r-package.html"><a href="r-package.html#summary_by_group"><i class="fa fa-check"></i><b>10.1.6</b> summary_by_group</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="bronvermelding.html"><a href="bronvermelding.html"><i class="fa fa-check"></i><b>11</b> Bronvermelding</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="bronvermelding.html"><a href="bronvermelding.html#introductie-1"><i class="fa fa-check"></i><b>11.1</b> Introductie</a></li>
+<li class="chapter" data-level="11.2" data-path="bronvermelding.html"><a href="bronvermelding.html#referentielijst"><i class="fa fa-check"></i><b>11.2</b> Referentielijst</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="geparametrizeerde-rmarkdown.html"><a href="geparametrizeerde-rmarkdown.html"><i class="fa fa-check"></i><b>12</b> Geparametrizeerde Rmarkdown</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="geparametrizeerde-rmarkdown.html"><a href="geparametrizeerde-rmarkdown.html#introductie-2"><i class="fa fa-check"></i><b>12.1</b> Introductie</a></li>
+<li class="chapter" data-level="12.2" data-path="geparametrizeerde-rmarkdown.html"><a href="geparametrizeerde-rmarkdown.html#demonstratie"><i class="fa fa-check"></i><b>12.2</b> Demonstratie</a></li>
+<li class="chapter" data-level="12.3" data-path="geparametrizeerde-rmarkdown.html"><a href="geparametrizeerde-rmarkdown.html#html-rapport"><i class="fa fa-check"></i><b>12.3</b> html rapport</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Portfolio Workflows</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="vrije-opdracht---uitvoering" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Vrije opdracht - Uitvoering<a href="vrije-opdracht---uitvoering.html#vrije-opdracht---uitvoering" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Belangrijk: Omdat het aangeleverde bestand en de bestanden die met deze workflow gegenereerd werden veel opslag innemen, is besloten om de opdracht in de Rstudio server uit te werken in plaats van de lokale versie. Voor zover mogelijk zijn de gegenereerde bestanden in de <a href="https://github.com/RachelvanderKreeft/dsfb2_workflows_portfolio.git">repository</a> geplaatst.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="vrije-opdracht---uitvoering.html#cb1-1" tabindex="-1"></a><span class="co"># Importeren van PNG bestanden</span></span>
+<span id="cb1-2"><a href="vrije-opdracht---uitvoering.html#cb1-2" tabindex="-1"></a><span class="fu">library</span>(png)</span>
+<span id="cb1-3"><a href="vrije-opdracht---uitvoering.html#cb1-3" tabindex="-1"></a><span class="fu">library</span>(grid)</span>
+<span id="cb1-4"><a href="vrije-opdracht---uitvoering.html#cb1-4" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span>
+<span id="cb1-5"><a href="vrije-opdracht---uitvoering.html#cb1-5" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="vrije-opdracht---uitvoering.html#cb1-6" tabindex="-1"></a><span class="co"># Importeren van Excel bestanden</span></span>
+<span id="cb1-7"><a href="vrije-opdracht---uitvoering.html#cb1-7" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-8"><a href="vrije-opdracht---uitvoering.html#cb1-8" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="vrije-opdracht---uitvoering.html#cb1-9" tabindex="-1"></a><span class="co"># Grafieken maken</span></span>
+<span id="cb1-10"><a href="vrije-opdracht---uitvoering.html#cb1-10" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-11"><a href="vrije-opdracht---uitvoering.html#cb1-11" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<p><br />
+</p>
+<div id="conda-installeren" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> 1. conda installeren<a href="vrije-opdracht---uitvoering.html#conda-installeren" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dit onderdeel hoeft alleen uitgevoerd te worden indien het conda installatie script nog niet is geïnstalleerd in Rstudio. Indien conda al is geïnstalleerd: begin bij stap 2.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="vrije-opdracht---uitvoering.html#cb2-1" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="vrije-opdracht---uitvoering.html#cb2-2" tabindex="-1"></a><span class="co"># Download het conda installatie script</span></span>
+<span id="cb2-3"><a href="vrije-opdracht---uitvoering.html#cb2-3" tabindex="-1"></a><span class="fu">wget</span> https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</span>
+<span id="cb2-4"><a href="vrije-opdracht---uitvoering.html#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="vrije-opdracht---uitvoering.html#cb2-5" tabindex="-1"></a><span class="co"># Run het conda installatie script</span></span>
+<span id="cb2-6"><a href="vrije-opdracht---uitvoering.html#cb2-6" tabindex="-1"></a><span class="fu">bash</span> Miniconda3-latest-Linux-x86_64.sh <span class="at">-b</span></span>
+<span id="cb2-7"><a href="vrije-opdracht---uitvoering.html#cb2-7" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="vrije-opdracht---uitvoering.html#cb2-8" tabindex="-1"></a><span class="co"># Belangrijk: Na installatie, sluit de terminal en open vervolgens een nieuwe terminal (menubalk -&gt; tools -&gt; terminal). Dit is nodig om (mini)conda te initieren</span></span></code></pre></div>
+<p><br />
+</p>
+</div>
+<div id="conda-environment-opzetten" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> 2. conda environment opzetten<a href="vrije-opdracht---uitvoering.html#conda-environment-opzetten" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Voor deze analyse werden twee environments aangemaakt. In de eerste environment werden de packages samtools, NanoPlot, kraken2 en bracken geïnstalleerd. In de tweede environment werd krona geïnstalleerd. Krona moet in een aparte environment worden geïnstalleerd omdat krona andere dependencies heeft.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="vrije-opdracht---uitvoering.html#cb3-1" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="vrije-opdracht---uitvoering.html#cb3-2" tabindex="-1"></a><span class="co"># Aanmaken van een environment met samtools, NanoPlot, kraken2 en bracken</span></span>
+<span id="cb3-3"><a href="vrije-opdracht---uitvoering.html#cb3-3" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> nanopore_clean <span class="at">-c</span> conda-forge <span class="at">-c</span> bioconda <span class="dt">\</span></span>
+<span id="cb3-4"><a href="vrije-opdracht---uitvoering.html#cb3-4" tabindex="-1"></a>samtools nanoplot kraken2 bracken</span>
+<span id="cb3-5"><a href="vrije-opdracht---uitvoering.html#cb3-5" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="vrije-opdracht---uitvoering.html#cb3-6" tabindex="-1"></a><span class="co"># Activeer de environment</span></span>
+<span id="cb3-7"><a href="vrije-opdracht---uitvoering.html#cb3-7" tabindex="-1"></a><span class="ex">conda</span> activate nanopore_clean</span>
+<span id="cb3-8"><a href="vrije-opdracht---uitvoering.html#cb3-8" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="vrije-opdracht---uitvoering.html#cb3-9" tabindex="-1"></a><span class="co"># Maak een aparte environment voor krona (krona heeft namelijk andere dependencies)</span></span>
+<span id="cb3-10"><a href="vrije-opdracht---uitvoering.html#cb3-10" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> krona</span>
+<span id="cb3-11"><a href="vrije-opdracht---uitvoering.html#cb3-11" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="vrije-opdracht---uitvoering.html#cb3-12" tabindex="-1"></a><span class="co"># Installeer de krona package in de nieuwe environment (krona werd op een andere manier geïnstalleerd omdat conda create -n in een incomplete installatie resulteerde)</span></span>
+<span id="cb3-13"><a href="vrije-opdracht---uitvoering.html#cb3-13" tabindex="-1"></a><span class="ex">conda</span> install bioconda::krona</span>
+<span id="cb3-14"><a href="vrije-opdracht---uitvoering.html#cb3-14" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="vrije-opdracht---uitvoering.html#cb3-15" tabindex="-1"></a><span class="co"># Deactiveer de krona environment</span></span>
+<span id="cb3-16"><a href="vrije-opdracht---uitvoering.html#cb3-16" tabindex="-1"></a><span class="ex">conda</span> deactivate</span>
+<span id="cb3-17"><a href="vrije-opdracht---uitvoering.html#cb3-17" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="vrije-opdracht---uitvoering.html#cb3-18" tabindex="-1"></a><span class="co"># Activeer de environment nanopore_clean opnieuw</span></span>
+<span id="cb3-19"><a href="vrije-opdracht---uitvoering.html#cb3-19" tabindex="-1"></a><span class="ex">conda</span> activate nanopore_clean</span></code></pre></div>
+<p><br />
+</p>
+<div id="krona-handmatig-installeren" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Krona handmatig installeren<a href="vrije-opdracht---uitvoering.html#krona-handmatig-installeren" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Soms mist krona na installatie het taxonomy bestand. Wanneer ktImportTaxonomy van de krona package dan wordt gebruikt, resulteert dit in de melding ‘’Taxonomy not found in…’’. Indien dit het geval is, kunnen de onderstaande stappen worden uitgevoerd om alsnog het taxonomy bestand te downloaden.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="vrije-opdracht---uitvoering.html#cb4-1" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="vrije-opdracht---uitvoering.html#cb4-2" tabindex="-1"></a><span class="co"># Krona handmatig installeren</span></span>
+<span id="cb4-3"><a href="vrije-opdracht---uitvoering.html#cb4-3" tabindex="-1"></a><span class="co"># Stap 1 — ga naar taxonomy folder</span></span>
+<span id="cb4-4"><a href="vrije-opdracht---uitvoering.html#cb4-4" tabindex="-1"></a><span class="bu">cd</span> ~/miniconda3/envs/krona/opt/krona/taxonomy</span>
+<span id="cb4-5"><a href="vrije-opdracht---uitvoering.html#cb4-5" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="vrije-opdracht---uitvoering.html#cb4-6" tabindex="-1"></a><span class="co"># Stap 2 — download direct (belangrijk)</span></span>
+<span id="cb4-7"><a href="vrije-opdracht---uitvoering.html#cb4-7" tabindex="-1"></a><span class="fu">wget</span> https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz</span>
+<span id="cb4-8"><a href="vrije-opdracht---uitvoering.html#cb4-8" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="vrije-opdracht---uitvoering.html#cb4-9" tabindex="-1"></a><span class="co"># Stap 3 — unpack</span></span>
+<span id="cb4-10"><a href="vrije-opdracht---uitvoering.html#cb4-10" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xzf</span> taxdump.tar.gz</span>
+<span id="cb4-11"><a href="vrije-opdracht---uitvoering.html#cb4-11" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="vrije-opdracht---uitvoering.html#cb4-12" tabindex="-1"></a><span class="co"># Stap 4 — check resultaat</span></span>
+<span id="cb4-13"><a href="vrije-opdracht---uitvoering.html#cb4-13" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
+<p><br />
+De Python versie in de environment nanopore_clean was 3.13.13. De versies van de packages waren als volgt:<br />
+-samtools 1.23.1<br />
+-NanoPlot 1.46.2<br />
+-kraken2 2.0.8_beta<br />
+-bracken 3.1<br />
+<br />
+In de environment krona werd versie 2.8.1 van krona gebruikt.<br />
+<br />
+</p>
+</div>
+</div>
+<div id="van-.bam-naar-.fastq" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> 3. Van .bam naar .fastq<a href="vrije-opdracht---uitvoering.html#van-.bam-naar-.fastq" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>De output van de nanopore sequencing werd in de Rstudio server aangeleverd als een .bam bestand. Het originele output bestand van de sequencing is terug te vinden in de Rstudio server van daur1 via de volgende pathway:
+/home/data/projecticum/nanopore/paradontitis/16S114_exp1_VL5B06_11122025<br />
+<br />
+Met behulp van samtools werd het .bam bestand omgezet naar een fastq bestand.<br />
+<br />
+Belangrijk: Vaak worden output bestanden als fastq aangeleverd. Indien dit het geval is, kan stap 3 worden overgeslagen.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="vrije-opdracht---uitvoering.html#cb5-1" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="vrije-opdracht---uitvoering.html#cb5-2" tabindex="-1"></a><span class="co"># Zet het .bam bestand om in een .fastq bestand</span></span>
+<span id="cb5-3"><a href="vrije-opdracht---uitvoering.html#cb5-3" tabindex="-1"></a><span class="ex">samtools</span> fastq <span class="st">&quot;~/parodontitis16s/raw_data/16S_exp1_11122025.bam&quot;</span> <span class="op">&gt;</span> <span class="st">&quot;~/parodontitis16s/data/16S_exp1_11122025_filtered.fastq&quot;</span></span></code></pre></div>
+<p><br />
+Belangrijk: Demultiplexing werd in het oorspronkelijke project uitgevoerd met MinKNOW op een krachtigere rekenomgeving. Voor deze heranalyse was deze stap niet reproduceerbaar omdat er geen krachtige rekenomgeving beschikbaar was en omdat alleen het .bam bestand beschikbaar was zonder ruwe barcode-informatie. De demultiplexing werd waarschijnlijk oorspronkelijk op het FAST5 bestand uitgevoerd en dit bestand is alleen beschikbaar op de laptop waarop de nanopore sequencing was uitgevoerd. Daarom is ervoor gekozen om de rest van de analyse op de dataset met alle samples uit te voeren. Dit betekent wel dat de data voor de parodontitis samples en de samples van de gezonde personen niet van elkaar gescheiden zijn, wat betekent dat de resultaten van analyses kunnen afwijken van de resultaten van het projecticum.<br />
+<br />
+</p>
+</div>
+<div id="analyse-met-nanoplot" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> 4. Analyse met NanoPlot<a href="vrije-opdracht---uitvoering.html#analyse-met-nanoplot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>NanoPlot is een quality control tool voor Nanopore sequencing data. Het genereert statistieken en visualisaties over readlengte, kwaliteit en sequencing output.<br />
+<br />
+Eerst werd de NanoPlot analyse uitgevoerd zonder de data te filteren.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="vrije-opdracht---uitvoering.html#cb6-1" tabindex="-1"></a></span>
+<span id="cb6-2"><a href="vrije-opdracht---uitvoering.html#cb6-2" tabindex="-1"></a><span class="co"># Voer een NanoPlot analyse uit zonder de reads te filteren</span></span>
+<span id="cb6-3"><a href="vrije-opdracht---uitvoering.html#cb6-3" tabindex="-1"></a><span class="ex">NanoPlot</span> <span class="dt">\</span></span>
+<span id="cb6-4"><a href="vrije-opdracht---uitvoering.html#cb6-4" tabindex="-1"></a>--fastq ~/parodontitis16s/data/16S_exp1_11122025_filtered.fastq <span class="dt">\</span></span>
+<span id="cb6-5"><a href="vrije-opdracht---uitvoering.html#cb6-5" tabindex="-1"></a>--outdir ~/parodontitis16s/nanoplot_output <span class="dt">\</span></span>
+<span id="cb6-6"><a href="vrije-opdracht---uitvoering.html#cb6-6" tabindex="-1"></a>--threads 6</span></code></pre></div>
+<p><br />
+Hieronder staat een samenvatting van de statistieken van de NanoPlot analyse.<br />
+<br />
+General summary:  <br />
+Mean read length: 1,612.0<br />
+Mean read quality: 11.8<br />
+Median read length: 1,597.0<br />
+Median read quality: 14.2<br />
+Number of reads: 5,582,411.0<br />
+Read length N50: 1,600.0<br />
+STDEV read length: 1,054.3<br />
+Total bases: 8,998,837,569.0<br />
+Number, percentage and megabases of reads above quality cutoffs<br />
+&gt;Q10: 4778884 (85.6%) 7677.8Mb<br />
+&gt;Q15: 1975244 (35.4%) 3176.4Mb<br />
+&gt;Q20: 1611 (0.0%) 2.2Mb<br />
+&gt;Q25: 13 (0.0%) 0.0Mb<br />
+&gt;Q30: 3 (0.0%) 0.0Mb<br />
+<br />
+</p>
+<p>Zoals hierboven te zien is, had 85.6% van de reads een kwaliteitsscore van &gt;Q10. 35.4% van deze reads had een kwaliteitsscore van &gt;Q15. Slechts 1627 reads hadden een kwaliteitsscore van Q20 of hoger.<br />
+<br />
+In figuur 1 is de lengte van de reads uitgezet tegen de kwaliteit van deze reads bij de ongefilterde data.<br />
+<br />
+</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-6-1.png" alt="Figuur 1: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads van de ongefilterde data." width="1440" />
+<p class="caption">
+Figure 5.1: Figuur 1: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads van de ongefilterde data.
+</p>
+</div>
+<p><br />
+Zoals in figuur 1 te zien is, waren de meeste reads 5k of kleiner. Een paar reads waren veel groter dan de rest van de reads. Het is voor deze reads mogelijk dat twee of meer DNA-fragmenten tijdens de library prep aan elkaar zijn gaan plakken. De meeste van deze reads hadden een kwaliteitsscore van minder dan Q10, dus het is ook mogelijk dat een deel van het DNA niet goed is afgelezen tijdens de sequencing, waardoor ze als één lange read werden geregistreerd.<br />
+<br />
+</p>
+</div>
+<div id="reads-filteren" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> 5. Reads filteren<a href="vrije-opdracht---uitvoering.html#reads-filteren" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Voordat verdere analyse op de dataset uitgevoerd kan worden, moeten eerst de reads gefilterd worden op kwaliteitsscore en lengte van de reads.<br />
+<br />
+Voor het project werd de data gefilterd op een kwaliteitsscore van &gt;Q10 en een lengte van 1200 tot 2000 bp. Bij nanopore sequencing is de error rate hoger dan bij illuma, daarom werd deze dataset gefilterd op &gt;Q10 in plaats van &gt;Q30, dit betekent dat de kans dat de reads kloppen 90% is. Daarnaast werd op een lengte van 1200 tot 2000 bp gefilterd omdat verwacht werd dat de 16s regio’s van de meeste bacteriën ongeveer tussen de 1400 bp en 1600 bp lang zou zijn, maar bekend was dat sommige bacteriesoorten een kortere of langere 16s regio konden hebben.<br />
+<br />
+Voor deze analyse werd gekozen om de data deze keer op dezelfde manier te filteren.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="vrije-opdracht---uitvoering.html#cb7-1" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="vrije-opdracht---uitvoering.html#cb7-2" tabindex="-1"></a><span class="co"># Voer een NanoPlot analyse uit waarbij de reads worden gefilterd op &gt;Q10 en een lengte van 1200 tot 2000 bp</span></span>
+<span id="cb7-3"><a href="vrije-opdracht---uitvoering.html#cb7-3" tabindex="-1"></a><span class="ex">NanoPlot</span> <span class="dt">\</span></span>
+<span id="cb7-4"><a href="vrije-opdracht---uitvoering.html#cb7-4" tabindex="-1"></a>--fastq ~/parodontitis16s/data/16S_exp1_11122025.fastq <span class="dt">\</span></span>
+<span id="cb7-5"><a href="vrije-opdracht---uitvoering.html#cb7-5" tabindex="-1"></a>--minqual 10 <span class="dt">\</span></span>
+<span id="cb7-6"><a href="vrije-opdracht---uitvoering.html#cb7-6" tabindex="-1"></a>--minlength 1200 <span class="dt">\</span></span>
+<span id="cb7-7"><a href="vrije-opdracht---uitvoering.html#cb7-7" tabindex="-1"></a>--maxlength 2000 <span class="dt">\</span></span>
+<span id="cb7-8"><a href="vrije-opdracht---uitvoering.html#cb7-8" tabindex="-1"></a>--outdir ~/parodontitis16s/analyses/filtered <span class="dt">\</span></span>
+<span id="cb7-9"><a href="vrije-opdracht---uitvoering.html#cb7-9" tabindex="-1"></a>--threads 6</span></code></pre></div>
+<p><br />
+De General summary van het NanoPlot rapport veranderd niet wanneer de data is gefilterd, daarom is ervoor gekozen deze hier niet te laten zien.<br />
+<br />
+In figuur 2 is de lengte van de reads uitgezet tegen de kwaliteit van deze reads bij de gefilterde data.<br />
+<br />
+</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-8-1.png" alt="Figuur 2: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads. Voor dit figuur werd gefilterd op &gt;Q10 en een lengte van 1200 tot 1600 bp." width="1440" />
+<p class="caption">
+Figure 5.2: Figuur 2: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads. Voor dit figuur werd gefilterd op &gt;Q10 en een lengte van 1200 tot 1600 bp.
+</p>
+</div>
+<p><br />
+Zoals in figuur 2 te zien is, waren de meeste reads ongeveer tussen de 1500 en 1650 bp lang. Dit komt overeen met wat tijdens het projecticum werd waargenomen.<br />
+<br />
+</p>
+</div>
+<div id="kraken2" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> 6. Kraken2<a href="vrije-opdracht---uitvoering.html#kraken2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Kraken2 werd gebruikt om de reads toe te wijzen aan bacteriesoorten. Om deze reads toe te kunnen wijzen, moet er gebruik worden gemaakt van een database dat informatie over de sequenties van bacteriesoorten bevat. Voor deze analyse werd gebruik gemaakt van de minikraken2_v2_8GB_201904_UPDATE database.<br />
+<br />
+In de daur1 Rstudio server was de database beschikbaar in een gedeelde map. Voor gebruikers zonder bestaande installatie is deze database publiek beschikbaar via de officiële Kraken2-repository.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="vrije-opdracht---uitvoering.html#cb8-1" tabindex="-1"></a></span>
+<span id="cb8-2"><a href="vrije-opdracht---uitvoering.html#cb8-2" tabindex="-1"></a><span class="co"># Voer een kraken2 analyse uit</span></span>
+<span id="cb8-3"><a href="vrije-opdracht---uitvoering.html#cb8-3" tabindex="-1"></a><span class="ex">kraken2</span> <span class="dt">\</span></span>
+<span id="cb8-4"><a href="vrije-opdracht---uitvoering.html#cb8-4" tabindex="-1"></a>  <span class="at">--db</span> /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE <span class="dt">\</span></span>
+<span id="cb8-5"><a href="vrije-opdracht---uitvoering.html#cb8-5" tabindex="-1"></a>  <span class="at">--threads</span> 6 <span class="dt">\</span></span>
+<span id="cb8-6"><a href="vrije-opdracht---uitvoering.html#cb8-6" tabindex="-1"></a>  <span class="at">--report</span> ~/parodontitis16s/analyses/kraken2/16S_exp1_11122025.report <span class="dt">\</span></span>
+<span id="cb8-7"><a href="vrije-opdracht---uitvoering.html#cb8-7" tabindex="-1"></a>  <span class="at">--output</span> ~/parodontitis16s/analyses/kraken2/16S_exp1_11122025.out <span class="dt">\</span></span>
+<span id="cb8-8"><a href="vrije-opdracht---uitvoering.html#cb8-8" tabindex="-1"></a>  <span class="at">--use-names</span> <span class="dt">\</span></span>
+<span id="cb8-9"><a href="vrije-opdracht---uitvoering.html#cb8-9" tabindex="-1"></a>  ~/parodontitis16s/data/16S_exp1_11122025.fastq</span></code></pre></div>
+<p><br />
+Uit de kraken2 analyse kwamen de volgende resultaten:<br />
+5582411 sequences (8998.84 Mbp) processed in 110.178s (3040.0 Kseq/m, 4900.52 Mbp/m).<br />
+5360420 sequences classified (96.02%)<br />
+221991 sequences unclassified (3.98%)<br />
+<br />
+Van de reads kon 96.02% geclassificeerd worden, voor deze reeds kon dus een taxonomische toewijzing worden gemaakt. 3.98% van de reads konden niet geclassificeerd worden. Deze reads waren waarschijnlijk van lage kwaliteit óf deze reads waren afkomstig van organismen die niet in de minikraken2_v2_8GB_201904_UPDATE database voorkomen.<br />
+<br />
+</p>
+</div>
+<div id="bracken" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> 7. Bracken<a href="vrije-opdracht---uitvoering.html#bracken" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Vervolgens werd een bracken analyse uitgevoerd, hiermee werd de abundantie van de bacteriesoorten opnieuw bepaald. Eerst werd de bracken analyse uitgevoerd op species niveau en een threshold van 0, wat betekent dat alle reads werden meegenomen.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="vrije-opdracht---uitvoering.html#cb9-1" tabindex="-1"></a></span>
+<span id="cb9-2"><a href="vrije-opdracht---uitvoering.html#cb9-2" tabindex="-1"></a><span class="co"># Voer een bracken analyse uit op species niveau en met een threshold van 0</span></span>
+<span id="cb9-3"><a href="vrije-opdracht---uitvoering.html#cb9-3" tabindex="-1"></a><span class="ex">bracken</span> <span class="dt">\</span></span>
+<span id="cb9-4"><a href="vrije-opdracht---uitvoering.html#cb9-4" tabindex="-1"></a>  <span class="at">-d</span> /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE <span class="dt">\</span></span>
+<span id="cb9-5"><a href="vrije-opdracht---uitvoering.html#cb9-5" tabindex="-1"></a>  <span class="at">-i</span> ~/parodontitis16s/analyses/kraken2/16S_exp1_11122025.report <span class="dt">\</span></span>
+<span id="cb9-6"><a href="vrije-opdracht---uitvoering.html#cb9-6" tabindex="-1"></a>  <span class="at">-o</span> ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold0.bracken <span class="dt">\</span></span>
+<span id="cb9-7"><a href="vrije-opdracht---uitvoering.html#cb9-7" tabindex="-1"></a>  <span class="at">-l</span> S <span class="dt">\</span></span>
+<span id="cb9-8"><a href="vrije-opdracht---uitvoering.html#cb9-8" tabindex="-1"></a>  <span class="at">-t</span> 0  </span></code></pre></div>
+<p><br />
+De bracken analyse geeft de volgende resultaten:<br />
+&gt;&gt;&gt; Threshold: 0<br />
+&gt;&gt;&gt; Number of species in sample: 3034<br />
+&gt;&gt; Number of species with reads &gt; threshold: 3034<br />
+&gt;&gt; Number of species with reads &lt; threshold: 0<br />
+&gt;&gt;&gt; Total reads in sample: 5582411<br />
+&gt;&gt; Total reads kept at species level (reads &gt; threshold): 4376954<br />
+&gt;&gt; Total reads discarded (species reads &lt; threshold): 0<br />
+&gt;&gt; Reads distributed: 983434<br />
+&gt;&gt; Reads not distributed (eg. no species above threshold): 32<br />
+&gt;&gt; Unclassified reads: 221991<br />
+</p>
+<p><br />
+-Voor de bracken analyse had kraken2 4376954 reads op speciesniveau bepaald.
+-983434 reads die door kraken2 niet op speciesniveau konden worden bepaald, werden door bracken alsnog op speciesniveau bepaald.<br />
+-32 reads konden niet toegewezen worden aan een bacteriesoort.<br />
+-Het aantal ongeclassificeerde reads blijft gelijk; 221991 reads zijn ongeclassificeerd.<br />
+<br />
+</p>
+</div>
+<div id="krona" class="section level2 hasAnchor" number="5.8">
+<h2><span class="header-section-number">5.8</span> 8. Krona<a href="vrije-opdracht---uitvoering.html#krona" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>De volgende stap is het uitvoeren van een krona visualisatie. Krona gebruikt de relatieve prevalenties van de bacteriesoorten die door een kraken2 of bracken analyse zijn gedetecteerd.<br />
+<br />
+Voor deze visualisatie werd gekozen om het bracken bestand als input te gebruiken.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="vrije-opdracht---uitvoering.html#cb10-1" tabindex="-1"></a></span>
+<span id="cb10-2"><a href="vrije-opdracht---uitvoering.html#cb10-2" tabindex="-1"></a><span class="co"># Selecteer de variabelen taxonomy_id en fraction_total_reads en zet de output daarvan in een .txt bestand</span></span>
+<span id="cb10-3"><a href="vrije-opdracht---uitvoering.html#cb10-3" tabindex="-1"></a><span class="fu">awk</span> <span class="at">-F</span><span class="st">&#39;\t&#39;</span> <span class="st">&#39;NR&gt;1 {print $6 &quot;\t&quot; $2}&#39;</span> <span class="dt">\</span></span>
+<span id="cb10-4"><a href="vrije-opdracht---uitvoering.html#cb10-4" tabindex="-1"></a>~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold0.bracken <span class="dt">\</span></span>
+<span id="cb10-5"><a href="vrije-opdracht---uitvoering.html#cb10-5" tabindex="-1"></a><span class="op">&gt;</span> ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold0.bracken.txt</span>
+<span id="cb10-6"><a href="vrije-opdracht---uitvoering.html#cb10-6" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="vrije-opdracht---uitvoering.html#cb10-7" tabindex="-1"></a><span class="co"># Maak een krona visualisatie</span></span>
+<span id="cb10-8"><a href="vrije-opdracht---uitvoering.html#cb10-8" tabindex="-1"></a><span class="ex">ktImportTaxonomy</span> <span class="dt">\</span></span>
+<span id="cb10-9"><a href="vrije-opdracht---uitvoering.html#cb10-9" tabindex="-1"></a>~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold0.bracken.txt <span class="dt">\</span></span>
+<span id="cb10-10"><a href="vrije-opdracht---uitvoering.html#cb10-10" tabindex="-1"></a>-o ~/parodontitis16s/analyses/krona/16S_exp1_11122025_bracken_species_threshold0.html</span></code></pre></div>
+<p><br />
+In figuur 3 is de krona visualisatie te zien.<br />
+</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-12-1.png" alt="Figuur 3: Krona visualisatie op species niveau en een threshold van 0." width="672" />
+<p class="caption">
+Figure 5.3: Figuur 3: Krona visualisatie op species niveau en een threshold van 0.
+</p>
+</div>
+<p><br />
+Opmerking: De .html bestanden van de krona visualisaties kunnen niet direct in dit document worden geladen. Deze bestanden zijn terug te vinden in de GitHub repository. <a href="https://github.com/RachelvanderKreeft/dsfb2_workflows_portfolio/tree/main/projecten/2_vrije_opdracht/analyses/krona">Klik hier</a> De .html bestanden zijn interactief, er kan geklikt worden op de cirkeldiagram om meer details te zien over de bacteriesoorten.<br />
+<br />
+In figuur 3 (en de andere krona figuren) zijn de bacteriesoorten niet direct op species niveau te zien, in de .html bestanden kan dit zichtbaar worden gemaakt. Raadpleeg voor figuur 3 het .html bestand 16S_exp1_11122025_bracken_species_threshold0.html in de GitHub repository.<br />
+<br />
+In figuur 3 worden nu de prevalenties van 3034 bacteriesoorten gerepresenteerd. Van bepaalde bacteriegroepen komen veel subspecies voor die weinig reads bevatten. Het is mogelijk om bacteriesoorten met weinig reads eruit te filteren door de threshold voor de bracken analyse aan te passen.<br />
+<br />
+</p>
+<div id="bracken-en-krona-met-threshold" class="section level3 hasAnchor" number="5.8.1">
+<h3><span class="header-section-number">5.8.1</span> bracken en krona met threshold<a href="vrije-opdracht---uitvoering.html#bracken-en-krona-met-threshold" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Tijdens het projecticum werden bacteriesoorten met minder dan 5 reads uit de dataset gehaald voor de krona visualisatie.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="vrije-opdracht---uitvoering.html#cb11-1" tabindex="-1"></a></span>
+<span id="cb11-2"><a href="vrije-opdracht---uitvoering.html#cb11-2" tabindex="-1"></a><span class="co"># Voer een bracken analyse uit op species niveau en met een threshold van 5</span></span>
+<span id="cb11-3"><a href="vrije-opdracht---uitvoering.html#cb11-3" tabindex="-1"></a><span class="ex">bracken</span> <span class="dt">\</span></span>
+<span id="cb11-4"><a href="vrije-opdracht---uitvoering.html#cb11-4" tabindex="-1"></a>  <span class="at">-d</span> /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE <span class="dt">\</span></span>
+<span id="cb11-5"><a href="vrije-opdracht---uitvoering.html#cb11-5" tabindex="-1"></a>  <span class="at">-i</span> ~/parodontitis16s/analyses/kraken2/16S_exp1_11122025.report <span class="dt">\</span></span>
+<span id="cb11-6"><a href="vrije-opdracht---uitvoering.html#cb11-6" tabindex="-1"></a>  <span class="at">-o</span> ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold5.bracken <span class="dt">\</span></span>
+<span id="cb11-7"><a href="vrije-opdracht---uitvoering.html#cb11-7" tabindex="-1"></a>  <span class="at">-l</span> S <span class="dt">\</span></span>
+<span id="cb11-8"><a href="vrije-opdracht---uitvoering.html#cb11-8" tabindex="-1"></a>  <span class="at">-t</span> 5  </span></code></pre></div>
+<p><br />
+De bracken analyse met threshold 5 geeft de volgende resultaten:<br />
+&gt;&gt;&gt; Threshold: 5<br />
+&gt;&gt;&gt; Number of species in sample: 3034<br />
+&gt;&gt; Number of species with reads &gt; threshold: 1216<br />
+&gt;&gt; Number of species with reads &lt; threshold: 1818<br />
+&gt;&gt;&gt; Total reads in sample: 5582411<br />
+&gt;&gt; Total reads kept at species level (reads &gt; threshold): 4373399<br />
+&gt;&gt; Total reads discarded (species reads &lt; threshold): 3555<br />
+&gt;&gt; Reads distributed: 981503<br />
+&gt;&gt; Reads not distributed (eg. no species above threshold): 1963<br />
+&gt;&gt; Unclassified reads: 221991<br />
+</p>
+<p><br />
+Van de 3034 bacteriesoorten voldeden 1216 bacteriesoorten aan de threshold van 5 reads. 1818 bacteriesoorten voldeden niet aan deze threshold, deze bacteriesoorten hadden samen 1963 reads.<br />
+ </p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="vrije-opdracht---uitvoering.html#cb12-1" tabindex="-1"></a></span>
+<span id="cb12-2"><a href="vrije-opdracht---uitvoering.html#cb12-2" tabindex="-1"></a><span class="co"># Selecteer de variabelen taxonomy_id en fraction_total_reads en zet de output daarvan in een .txt bestand</span></span>
+<span id="cb12-3"><a href="vrije-opdracht---uitvoering.html#cb12-3" tabindex="-1"></a><span class="fu">awk</span> <span class="at">-F</span><span class="st">&#39;\t&#39;</span> <span class="st">&#39;NR&gt;1 {print $6 &quot;\t&quot; $2}&#39;</span> <span class="dt">\</span></span>
+<span id="cb12-4"><a href="vrije-opdracht---uitvoering.html#cb12-4" tabindex="-1"></a>~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold5.bracken <span class="dt">\</span></span>
+<span id="cb12-5"><a href="vrije-opdracht---uitvoering.html#cb12-5" tabindex="-1"></a><span class="op">&gt;</span> ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold5.txt</span>
+<span id="cb12-6"><a href="vrije-opdracht---uitvoering.html#cb12-6" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="vrije-opdracht---uitvoering.html#cb12-7" tabindex="-1"></a><span class="co"># Maak een krona visualisatie</span></span>
+<span id="cb12-8"><a href="vrije-opdracht---uitvoering.html#cb12-8" tabindex="-1"></a><span class="ex">ktImportTaxonomy</span> <span class="dt">\</span></span>
+<span id="cb12-9"><a href="vrije-opdracht---uitvoering.html#cb12-9" tabindex="-1"></a>~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold5.txt <span class="dt">\</span></span>
+<span id="cb12-10"><a href="vrije-opdracht---uitvoering.html#cb12-10" tabindex="-1"></a>-o ~/parodontitis16s/analyses/krona/16S_exp1_11122025_bracken_species_threshold5.html</span></code></pre></div>
+<p><br />
+In figuur 4 is de krona visualisatie te zien waarbij was gefilterd op minimaal 5 reads per bacteriesoort.<br />
+</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-15-1.png" alt="Figuur 4: Krona visualisatie op species niveau en een threshold van 5." width="672" />
+<p class="caption">
+Figure 5.4: Figuur 4: Krona visualisatie op species niveau en een threshold van 5.
+</p>
+</div>
+<p><br />
+Raadpleeg voor figuur 4 het html bestand 16S_exp1_11122025_bracken_species_threshold5.html in de GitHub repository om de resultaten in meer detail te kunnen zien.<br />
+<br />
+Deze visualisatie bevat 1216 bacteriesoorten in plaats van 3034. Desondanks blijven de prevalenties van de overgebleven bacteriesoorten klein.<br />
+<br />
+Tijdens het projecticum bleven er 673 bacteriesoorten over bij de patiënten samples en 453 bacteriesoorten bij de controlesamples bij gebruik van dezelfde threshold. Dat zou neerkomen op maximaal 1126 gevonden bacteriesoorten, maar het werkelijke aantal ligt waarschijnlijk veel lager omdat beide datasets overeenkomsten hadden in de gevonden bacteriesoorten.<br />
+<br />
+Omdat de dataset voor deze opdracht zowel de patiëntensamples als de controlesamples bevat, zijn er meer reads aanwezig in de dataset. Hierdoor wordt de threshold van 5 reads sneller bereikt. Hieronder worden de resultaten van het projecticum vergeleken met de resultaten van deze opdracht.<br />
+<br />
+</p>
+<div id="krona-visualisatie-van-patiënten-en-controlemonsters-apart" class="section level4 hasAnchor" number="5.8.1.1">
+<h4><span class="header-section-number">5.8.1.1</span> Krona visualisatie van patiënten en controlemonsters apart<a href="vrije-opdracht---uitvoering.html#krona-visualisatie-van-pati%C3%ABnten-en-controlemonsters-apart" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Om een idee te geven van hoe de krona visualisaties eruit zagen tijdens het projecticum, worden deze figuren hieronder weergegeven. Tijdens het projecticum werd apart naar de samenstelling van het mondmicrobioom gekeken in samples van patiënten met parodontitis en in samples van gezonde personen.<br />
+<br />
+Opmerking: van deze figuren zijn geen .html bestanden meer beschikbaar.<br />
+<br />
+</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-16"></span>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-16-1.png" alt="Figuur 5: Krona visualisatie van de patiëntensamples. De Krona visualisatie bevat in totaal 453 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum." width="672" />
+<p class="caption">
+Figure 5.5: Figuur 5: Krona visualisatie van de patiëntensamples. De Krona visualisatie bevat in totaal 453 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum.
+</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-17"></span>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-17-1.png" alt="Figuur 6: Krona visualisatie van de controlesamples. De Krona visualisatie bevat in totaal 673 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum." width="672" />
+<p class="caption">
+Figure 5.6: Figuur 6: Krona visualisatie van de controlesamples. De Krona visualisatie bevat in totaal 673 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum.
+</p>
+</div>
+<p><br />
+In beide krona visualisaties van het projecticum zijn er bacteriesoorten afgebeeld met een veel hogere prevalentie dan in de krona visualisatie van deze analyse. Zo zijn bij de controlemonsters 26% van de reads aan <em>Haemophilus parainfluenzae</em> en 13% van de reads aan <em>Stretopcoccus pneumoniae</em> gekoppeld.<br />
+<br />
+</p>
+</div>
+</div>
+<div id="bracken-analyse-met-hogere-thresholds" class="section level3 hasAnchor" number="5.8.2">
+<h3><span class="header-section-number">5.8.2</span> bracken analyse met hogere thresholds<a href="vrije-opdracht---uitvoering.html#bracken-analyse-met-hogere-thresholds" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Om het effect van een hogere threshold op de samenstelling van de data te testen, werd dezelfde bracken analyse uitgevoerd met een threshold van 10, 20, 30, 40 en 50 reads. Er is voor een maximale threshold van 50 gekozen omdat hogere thresholds kunnen resulteren in een vertekend beeld van de data. Hieronder staat de uitwerking van de analyse met een threshold van 50 reads.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="vrije-opdracht---uitvoering.html#cb13-1" tabindex="-1"></a></span>
+<span id="cb13-2"><a href="vrije-opdracht---uitvoering.html#cb13-2" tabindex="-1"></a><span class="co"># Voer een bracken analyse uit op species niveau en met een threshold van 50</span></span>
+<span id="cb13-3"><a href="vrije-opdracht---uitvoering.html#cb13-3" tabindex="-1"></a><span class="ex">bracken</span> <span class="dt">\</span></span>
+<span id="cb13-4"><a href="vrije-opdracht---uitvoering.html#cb13-4" tabindex="-1"></a>  <span class="at">-d</span> /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE <span class="dt">\</span></span>
+<span id="cb13-5"><a href="vrije-opdracht---uitvoering.html#cb13-5" tabindex="-1"></a>  <span class="at">-i</span> ~/parodontitis16s/analyses/kraken2/16S_exp1_11122025.report <span class="dt">\</span></span>
+<span id="cb13-6"><a href="vrije-opdracht---uitvoering.html#cb13-6" tabindex="-1"></a>  <span class="at">-o</span> ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold50.bracken <span class="dt">\</span></span>
+<span id="cb13-7"><a href="vrije-opdracht---uitvoering.html#cb13-7" tabindex="-1"></a>  <span class="at">-l</span> S <span class="dt">\</span></span>
+<span id="cb13-8"><a href="vrije-opdracht---uitvoering.html#cb13-8" tabindex="-1"></a>  <span class="at">-t</span> 50  </span></code></pre></div>
+<p><br />
+De bracken analyse met threshold 5 geeft de volgende resultaten:<br />
+&gt;&gt;&gt; Threshold: 50<br />
+&gt;&gt;&gt; Number of species in sample: 3034<br />
+&gt;&gt; Number of species with reads &gt; threshold: 480<br />
+&gt;&gt; Number of species with reads &lt; threshold: 2554<br />
+&gt;&gt;&gt; Total reads in sample: 5582411<br />
+&gt;&gt; Total reads kept at species level (reads &gt; threshold): 4362630<br />
+&gt;&gt; Total reads discarded (species reads &lt; threshold): 14324<br />
+&gt;&gt; Reads distributed: 974628<br />
+&gt;&gt; Reads not distributed (eg. no species above threshold): 8838<br />
+&gt;&gt; Unclassified reads: 221991<br />
+</p>
+<p><br />
+Van de 3034 bacteriesoorten voldeden 480 bacteriesoorten aan de threshold van 50 reads. 2554 bacteriesoorten voldeden niet aan deze threshold, deze bacteriesoorten hadden samen 8838 reads.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="vrije-opdracht---uitvoering.html#cb14-1" tabindex="-1"></a></span>
+<span id="cb14-2"><a href="vrije-opdracht---uitvoering.html#cb14-2" tabindex="-1"></a><span class="co"># Selecteer de variabelen taxonomy_id en fraction_total_reads en zet de output daarvan in een .txt bestand</span></span>
+<span id="cb14-3"><a href="vrije-opdracht---uitvoering.html#cb14-3" tabindex="-1"></a><span class="fu">awk</span> <span class="at">-F</span><span class="st">&#39;\t&#39;</span> <span class="st">&#39;NR&gt;1 {print $6 &quot;\t&quot; $2}&#39;</span> <span class="dt">\</span></span>
+<span id="cb14-4"><a href="vrije-opdracht---uitvoering.html#cb14-4" tabindex="-1"></a>~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold50.bracken <span class="dt">\</span></span>
+<span id="cb14-5"><a href="vrije-opdracht---uitvoering.html#cb14-5" tabindex="-1"></a><span class="op">&gt;</span> ~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold50.txt</span>
+<span id="cb14-6"><a href="vrije-opdracht---uitvoering.html#cb14-6" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="vrije-opdracht---uitvoering.html#cb14-7" tabindex="-1"></a><span class="co"># Maak een krona visualisatie</span></span>
+<span id="cb14-8"><a href="vrije-opdracht---uitvoering.html#cb14-8" tabindex="-1"></a><span class="ex">ktImportTaxonomy</span> <span class="dt">\</span></span>
+<span id="cb14-9"><a href="vrije-opdracht---uitvoering.html#cb14-9" tabindex="-1"></a>~/parodontitis16s/analyses/bracken/16S_exp1_11122025_bracken_species_threshold50.txt <span class="dt">\</span></span>
+<span id="cb14-10"><a href="vrije-opdracht---uitvoering.html#cb14-10" tabindex="-1"></a>-o ~/parodontitis16s/analyses/krona/16S_exp1_11122025_bracken_species_threshold50.html</span></code></pre></div>
+<p><br />
+In figuur 7 is de krona visualisatie te zien waarbij was gefilterd op minimaal 5 reads per bacteriesoort.<br />
+<br />
+</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-20"></span>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-20-1.png" alt="Figuur 7: Krona visualisatie op species niveau en een threshold van 50." width="672" />
+<p class="caption">
+Figure 5.7: Figuur 7: Krona visualisatie op species niveau en een threshold van 50.
+</p>
+</div>
+<p><br />
+Raadpleeg voor figuur 7 het html bestand 16S_exp1_11122025_bracken_species_threshold50.html in de GitHub repository om de resultaten in meer detail te kunnen zien.<br />
+<br />
+De prevalenties van de bacteriën blijven laag, maar er zijn nu wel een paar bacteriesoorten die nu een prevalentie van meer dan 2% hebben. Dit kan betekenen dat er geen bacteriesoorten zijn die dominant zijn in deze dataset.<br />
+<br />
+</p>
+</div>
+<div id="aantal-soorten-bacteriën-per-threshold" class="section level3 hasAnchor" number="5.8.3">
+<h3><span class="header-section-number">5.8.3</span> Aantal soorten bacteriën per threshold<a href="vrije-opdracht---uitvoering.html#aantal-soorten-bacteri%C3%ABn-per-threshold" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Uiteindelijk werden de bracken analyse en de krona visualisatie uitgevoerd met thresholds van 0, 5, 10, 20, 30, 40 en 50. Zoals eerder benoemd neemt het aantal bacteriesoorten in de dataset af bij een hogere threshold.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="vrije-opdracht---uitvoering.html#cb15-1" tabindex="-1"></a><span class="co"># Maak een dataframe met de geteste thresholds en het aantal bacteriesoorten dat overblijft</span></span>
+<span id="cb15-2"><a href="vrije-opdracht---uitvoering.html#cb15-2" tabindex="-1"></a>threshold_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb15-3"><a href="vrije-opdracht---uitvoering.html#cb15-3" tabindex="-1"></a>  <span class="at">threshold =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>),</span>
+<span id="cb15-4"><a href="vrije-opdracht---uitvoering.html#cb15-4" tabindex="-1"></a>  aantal_soorten_bacteriën <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">3034</span>, <span class="dv">1216</span>, <span class="dv">888</span>, <span class="dv">662</span>, <span class="dv">565</span>, <span class="dv">519</span>, <span class="dv">480</span>)</span>
+<span id="cb15-5"><a href="vrije-opdracht---uitvoering.html#cb15-5" tabindex="-1"></a>)</span>
+<span id="cb15-6"><a href="vrije-opdracht---uitvoering.html#cb15-6" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="vrije-opdracht---uitvoering.html#cb15-7" tabindex="-1"></a><span class="co"># Laat dataframe zien in RMarkdown</span></span>
+<span id="cb15-8"><a href="vrije-opdracht---uitvoering.html#cb15-8" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb15-9"><a href="vrije-opdracht---uitvoering.html#cb15-9" tabindex="-1"></a>  threshold_df,</span>
+<span id="cb15-10"><a href="vrije-opdracht---uitvoering.html#cb15-10" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">1</span>,</span>
+<span id="cb15-11"><a href="vrije-opdracht---uitvoering.html#cb15-11" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Tabel 1: Aantal soorten bacteriën in bracken dataset bij verschillende thresholds.&quot;</span></span>
+<span id="cb15-12"><a href="vrije-opdracht---uitvoering.html#cb15-12" tabindex="-1"></a>)</span></code></pre></div>
+<table>
+<caption>(#tab:threshold tabel)Tabel 1: Aantal soorten bacteriën in bracken dataset bij verschillende thresholds.</caption>
+<thead>
+<tr class="header">
+<th align="right">threshold</th>
+<th align="right">aantal_soorten_bacteriën</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0</td>
+<td align="right">3034</td>
+</tr>
+<tr class="even">
+<td align="right">5</td>
+<td align="right">1216</td>
+</tr>
+<tr class="odd">
+<td align="right">10</td>
+<td align="right">888</td>
+</tr>
+<tr class="even">
+<td align="right">20</td>
+<td align="right">662</td>
+</tr>
+<tr class="odd">
+<td align="right">30</td>
+<td align="right">565</td>
+</tr>
+<tr class="even">
+<td align="right">40</td>
+<td align="right">519</td>
+</tr>
+<tr class="odd">
+<td align="right">50</td>
+<td align="right">480</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+Op basis van tabel 1 werd de onderstaande lijngrafiek gemaakt.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="vrije-opdracht---uitvoering.html#cb16-1" tabindex="-1"></a><span class="co"># Maak een lijngrafiek met het aantal overgebleven bacteriesoorten per geteste threshold</span></span>
+<span id="cb16-2"><a href="vrije-opdracht---uitvoering.html#cb16-2" tabindex="-1"></a><span class="fu">ggplot</span>(threshold_df, <span class="fu">aes</span>(<span class="at">x =</span> threshold, <span class="at">y =</span> aantal_soorten_bacteriën)) <span class="sc">+</span></span>
+<span id="cb16-3"><a href="vrije-opdracht---uitvoering.html#cb16-3" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb16-4"><a href="vrije-opdracht---uitvoering.html#cb16-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb16-5"><a href="vrije-opdracht---uitvoering.html#cb16-5" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb16-6"><a href="vrije-opdracht---uitvoering.html#cb16-6" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Effect van threshold op aantal behouden bacteriesoorten&quot;</span>,</span>
+<span id="cb16-7"><a href="vrije-opdracht---uitvoering.html#cb16-7" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Bracken threshold&quot;</span>,</span>
+<span id="cb16-8"><a href="vrije-opdracht---uitvoering.html#cb16-8" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Aantal taxa&quot;</span></span>
+<span id="cb16-9"><a href="vrije-opdracht---uitvoering.html#cb16-9" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb16-10"><a href="vrije-opdracht---uitvoering.html#cb16-10" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb16-11"><a href="vrije-opdracht---uitvoering.html#cb16-11" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb16-12"><a href="vrije-opdracht---uitvoering.html#cb16-12" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
+<span id="cb16-13"><a href="vrije-opdracht---uitvoering.html#cb16-13" tabindex="-1"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb16-14"><a href="vrije-opdracht---uitvoering.html#cb16-14" tabindex="-1"></a>    <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>)</span>
+<span id="cb16-15"><a href="vrije-opdracht---uitvoering.html#cb16-15" tabindex="-1"></a>  )</span></code></pre></div>
+<p><img src="04-vrije_opdracht_uitvoering_files/figure-html/threshold%20vergelijking-1.png" alt="" width="672" /></p>
+<p><br />
+In de lijngrafiek is te zien dat het grootste deel van de bacteriesoorten uit de dataset wordt gefilterd bij een threshold van 5. Dit betekent dat het grootste deel van de bacteriesoorten minder dan 5 keer werd gedetecteerd bij de bracken analyse. Ook bij een threshold van 10 was er sprake van afname van het aantal bacteriesoorten, maar deze afname was kleiner. Bij hogere thresholds is het aantal bacteriesoorten dat overblijft stabieler, wat erop wijst dat de overgebleven bacteriesoorten relatief veel reads hebben.<br />
+<br />
+</p>
+</div>
+<div id="alternatief-krona-vanuit-kraken2" class="section level3 hasAnchor" number="5.8.4">
+<h3><span class="header-section-number">5.8.4</span> Alternatief: krona vanuit kraken2<a href="vrije-opdracht---uitvoering.html#alternatief-krona-vanuit-kraken2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Het is ook mogelijk om een krona visualisatie te maken op basis van het kraken2 .report bestand. Hieronder staat hoe deze visualisatie vanuit het kraken2 bestand kan worden gemaakt. Het principe is hetzelfde, alleen staan de benodigde variabelen (aantal reads en Taxonomy ID) op een andere volgorde in het .report bestand.<br />
+<br />
+Voor de demonstratie van deze analyse is een threshold van 0 aangehouden.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="vrije-opdracht---uitvoering.html#cb17-1" tabindex="-1"></a></span>
+<span id="cb17-2"><a href="vrije-opdracht---uitvoering.html#cb17-2" tabindex="-1"></a><span class="co"># Selecteer de variabelen taxonomy_id en fraction_total_reads zet de output in een .txt bestand</span></span>
+<span id="cb17-3"><a href="vrije-opdracht---uitvoering.html#cb17-3" tabindex="-1"></a><span class="fu">awk</span> <span class="st">&#39;{print $3 &quot;\t&quot; $5}&#39;</span> <span class="dt">\</span></span>
+<span id="cb17-4"><a href="vrije-opdracht---uitvoering.html#cb17-4" tabindex="-1"></a>~/parodontitis16s/analyses/kraken2/16S_exp1_11122025.report <span class="dt">\</span></span>
+<span id="cb17-5"><a href="vrije-opdracht---uitvoering.html#cb17-5" tabindex="-1"></a><span class="op">&gt;</span> ~/parodontitis16s/analyses/krona/16S_exp1_11122025_krona_input.txt</span>
+<span id="cb17-6"><a href="vrije-opdracht---uitvoering.html#cb17-6" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="vrije-opdracht---uitvoering.html#cb17-7" tabindex="-1"></a><span class="co"># Maak een krona visualisatie</span></span>
+<span id="cb17-8"><a href="vrije-opdracht---uitvoering.html#cb17-8" tabindex="-1"></a><span class="ex">ktImportTaxonomy</span> <span class="dt">\</span></span>
+<span id="cb17-9"><a href="vrije-opdracht---uitvoering.html#cb17-9" tabindex="-1"></a>~/parodontitis16s/analyses/krona/16S_exp1_11122025_krona_input.txt <span class="dt">\</span></span>
+<span id="cb17-10"><a href="vrije-opdracht---uitvoering.html#cb17-10" tabindex="-1"></a>-o ~/parodontitis16s/analyses/krona/16S_exp1_11122025_krona.html</span></code></pre></div>
+<p><br />
+In figuur 8 is de krona visualisatie te zien waarbij gebruik werd gemaakt van de data van kraken2.<br />
+<br />
+</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-22"></span>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-22-1.png" alt="Figuur 9: Krona visualisatie op basis van kraken2 data op species niveau en een threshold van 0." width="672" />
+<p class="caption">
+Figure 5.8: Figuur 9: Krona visualisatie op basis van kraken2 data op species niveau en een threshold van 0.
+</p>
+</div>
+<p><br />
+Raadpleeg voor figuur 8 het html bestand 16S_exp1_11122025_kraken2_species_threshold0.html in de GitHub repository.<br />
+<br />
+De kraken2 krona visualisatie laat 6543 bacteriesoorten zien, terwijl de krona visualisatie vanuit bracken 3034 bacteriesoorten liet zien. Mogelijk spelen de inclusie van taxa met een lage abundantie en taxa met een onduidelijke classificatie hier een rol bij. Om deze hypothese te bevestigen, werd de onderstaande code gebruikt:<br />
+<br />
+</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="vrije-opdracht---uitvoering.html#cb18-1" tabindex="-1"></a></span>
+<span id="cb18-2"><a href="vrije-opdracht---uitvoering.html#cb18-2" tabindex="-1"></a><span class="co"># Controleer hoeveel bacteriesoorten minder dan 5 reads hebben</span></span>
+<span id="cb18-3"><a href="vrije-opdracht---uitvoering.html#cb18-3" tabindex="-1"></a><span class="fu">awk</span> <span class="st">&#39;$4==&quot;S&quot; &amp;&amp; $3&lt;=5 {count++} END {print count}&#39;</span> 16S_exp1_11122025.report</span>
+<span id="cb18-4"><a href="vrije-opdracht---uitvoering.html#cb18-4" tabindex="-1"></a><span class="co">## 2289</span></span>
+<span id="cb18-5"><a href="vrije-opdracht---uitvoering.html#cb18-5" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="vrije-opdracht---uitvoering.html#cb18-6" tabindex="-1"></a><span class="co"># Controleer hoeveel reads deze bacteriesoorten vertegenwoordigen</span></span>
+<span id="cb18-7"><a href="vrije-opdracht---uitvoering.html#cb18-7" tabindex="-1"></a><span class="fu">awk</span> <span class="st">&#39;$4==&quot;S&quot; &amp;&amp; $3&lt;=5 {sum+=$3} END {print sum}&#39;</span> 16S_exp1_11122025.report</span>
+<span id="cb18-8"><a href="vrije-opdracht---uitvoering.html#cb18-8" tabindex="-1"></a><span class="co">## 3081</span></span></code></pre></div>
+<p><br />
+Hieruit is gekomen dat 2289 bacteriesoorten minder dan 5 reads hebben, deze bacteriesoorten vertegenwoordigen 3081 reads.<br />
+<br />
+</p>
+</div>
+</div>
+<div id="relatieve-prevalenties-volledige-dataset-vergelijken-met-individuele-datasets" class="section level2 hasAnchor" number="5.9">
+<h2><span class="header-section-number">5.9</span> 9. Relatieve prevalenties volledige dataset vergelijken met individuele datasets<a href="vrije-opdracht---uitvoering.html#relatieve-prevalenties-volledige-dataset-vergelijken-met-individuele-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Tijdens het projecticum werden 22 bacteriesoorten geselecteerd waarvan de relatieve prevalenties werden vergeleken tussen de patiënten samples en de controlesamples. Deze bacteriën werden volgens de volgende criteria uitgekozen:<br />
+<br />
+1. Vroege kolonisatoren: <em>Actinomyces</em> en <em>Streptococcus</em> soorten.<br />
+2. Zorgen voor progressie van een tandvleesontsteking naar parodontitis: <em>Fusobacterium</em> soorten.<br />
+3. Soorten waarvan bekend is dat ze een rol spelen bij parondititis: <em>Porphyromonas gingivalis</em>, <em>Tannerella forsythia</em> en <em>Treponema denticola</em>.
+4. Soorten die een rol spelen bij de opbouw van het microbioom en normaal gesproken op de plekken binden waar de bacteriën geassocieerd met parodontitis ook aan kunnen binden.<br />
+<br />
+Het doel van dit onderdeel is om de relatieve prevalenties van deze bacteriesoorten in de volledige dataset te vergelijken met de relatieve prevalenties die in de gescheiden datasets werden gevonden. Voor de relatieve prevalenties wordt gebruik gemaakt van de bracken resultaten waarbij een threshold van 5 is gebruikt.<br />
+<br />
+Oorspronkelijk werden zowel de tabel met relatieve prevalenties als de bijhorende staafdiagram in Excel gemaakt. Voor deze opdracht is gekozen om de tabel in Excel handmatig aan te vullen met de relatieve prevalenties van de volledige dataset en de rest van de uitwerking in Rstudio te doen om de reproduceerbaarheid van de uitwerking te verhogen.<br />
+<br />
+Opmerking: De relatieve prevalenties van <em>Actinomyces sp.</em> en <em>Streptococcus sp.</em> werden bepaald door de relatieve prevalenties van meerdere subspecies bij elkaar op te tellen. Zo kwamen bij <em>Actinomyces sp.</em> onder andere <em>Actinomyces sp. oral taxon 414</em> en <em>Actinomyces sp. oral taxon 897</em> voor.<br />
+<br />
+Eerst werd de tabel met relatieve prevalenties in Rstudio geïmporteerd.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="vrije-opdracht---uitvoering.html#cb19-1" tabindex="-1"></a><span class="co"># Importeer Excel bestand met relatieve prevalenties per bacteriesoort</span></span>
+<span id="cb19-2"><a href="vrije-opdracht---uitvoering.html#cb19-2" tabindex="-1"></a>dataset_prevalentie <span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">&quot;~/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/2_vrije_opdracht/data/relatieve_prevalentie_vergelijking.xlsx&quot;</span>)</span>
+<span id="cb19-3"><a href="vrije-opdracht---uitvoering.html#cb19-3" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="vrije-opdracht---uitvoering.html#cb19-4" tabindex="-1"></a><span class="co"># Laat tabel zien in RMarkdown</span></span>
+<span id="cb19-5"><a href="vrije-opdracht---uitvoering.html#cb19-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb19-6"><a href="vrije-opdracht---uitvoering.html#cb19-6" tabindex="-1"></a>  dataset_prevalentie,</span>
+<span id="cb19-7"><a href="vrije-opdracht---uitvoering.html#cb19-7" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">5</span>,</span>
+<span id="cb19-8"><a href="vrije-opdracht---uitvoering.html#cb19-8" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Tabel 2: Relatieve prevalentie van geselecteerde bacteriesoorten (Bracken threshold 5)&quot;</span></span>
+<span id="cb19-9"><a href="vrije-opdracht---uitvoering.html#cb19-9" tabindex="-1"></a>)</span></code></pre></div>
+<table>
+<caption>(#tab:excel importeren)Tabel 2: Relatieve prevalentie van geselecteerde bacteriesoorten (Bracken threshold 5)</caption>
+<colgroup>
+<col width="36%" />
+<col width="25%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Bacteriën</th>
+<th align="right">Volledige_dataset</th>
+<th align="right">Patient_merge</th>
+<th align="right">Control_merge</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Actinomyces sp.</td>
+<td align="right">0.00252</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="even">
+<td align="left">Veillonella parvula</td>
+<td align="right">0.01333</td>
+<td align="right">0.409</td>
+<td align="right">3.219</td>
+</tr>
+<tr class="odd">
+<td align="left">Actinomyces odontolyticus</td>
+<td align="right">0.00000</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="even">
+<td align="left">Eikenella corrodens</td>
+<td align="right">0.00323</td>
+<td align="right">1.080</td>
+<td align="right">0.168</td>
+</tr>
+<tr class="odd">
+<td align="left">Capnocytophaga sputigena</td>
+<td align="right">0.00008</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus mitis</td>
+<td align="right">0.00565</td>
+<td align="right">0.426</td>
+<td align="right">3.426</td>
+</tr>
+<tr class="odd">
+<td align="left">Streptococcus oralis</td>
+<td align="right">0.00550</td>
+<td align="right">2.246</td>
+<td align="right">0.467</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus sanguinis</td>
+<td align="right">0.01495</td>
+<td align="right">8.493</td>
+<td align="right">4.571</td>
+</tr>
+<tr class="odd">
+<td align="left">Streptococcus sp.</td>
+<td align="right">0.00634</td>
+<td align="right">10.481</td>
+<td align="right">34.475</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus gordonii</td>
+<td align="right">0.00871</td>
+<td align="right">0.219</td>
+<td align="right">0.839</td>
+</tr>
+<tr class="odd">
+<td align="left">Streptococcus intermedius</td>
+<td align="right">0.01829</td>
+<td align="right">0.971</td>
+<td align="right">4.207</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus gracilis</td>
+<td align="right">0.00000</td>
+<td align="right">0.025</td>
+<td align="right">0.047</td>
+</tr>
+<tr class="odd">
+<td align="left">Campylobacter rectus</td>
+<td align="right">0.00000</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="even">
+<td align="left">Campylobacter showae</td>
+<td align="right">0.00000</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="odd">
+<td align="left">Enterococcus faecalis</td>
+<td align="right">0.00014</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="even">
+<td align="left">Fusobacterium nucleatum</td>
+<td align="right">0.03602</td>
+<td align="right">1.537</td>
+<td align="right">0.157</td>
+</tr>
+<tr class="odd">
+<td align="left">Fusobacterium polymorphum</td>
+<td align="right">0.00000</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="even">
+<td align="left">Prevotella intermedia</td>
+<td align="right">0.00313</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="odd">
+<td align="left">Peptostreptococcus micros</td>
+<td align="right">0.00000</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="even">
+<td align="left">Porphyromonas gingivalis</td>
+<td align="right">0.00328</td>
+<td align="right">0.985</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="odd">
+<td align="left">Tannerella forsythia</td>
+<td align="right">0.00602</td>
+<td align="right">0.173</td>
+<td align="right">0.000</td>
+</tr>
+<tr class="even">
+<td align="left">Treponema denticola</td>
+<td align="right">0.00372</td>
+<td align="right">0.005</td>
+<td align="right">0.000</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+De dataset stond nog in wide format, met de functie pivot_longer() werd deze dataset naar tidy format omgezet.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="vrije-opdracht---uitvoering.html#cb20-1" tabindex="-1"></a><span class="co"># Gebruik pivot_longer() zodat de data in tidy format staat</span></span>
+<span id="cb20-2"><a href="vrije-opdracht---uitvoering.html#cb20-2" tabindex="-1"></a>dataset_prevalentie_tidy <span class="ot">&lt;-</span> dataset_prevalentie <span class="sc">%&gt;%</span></span>
+<span id="cb20-3"><a href="vrije-opdracht---uitvoering.html#cb20-3" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb20-4"><a href="vrije-opdracht---uitvoering.html#cb20-4" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">c</span>(Volledige_dataset, Patient_merge, Control_merge),</span>
+<span id="cb20-5"><a href="vrije-opdracht---uitvoering.html#cb20-5" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">&quot;Dataset&quot;</span>,</span>
+<span id="cb20-6"><a href="vrije-opdracht---uitvoering.html#cb20-6" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">&quot;Percentage&quot;</span></span>
+<span id="cb20-7"><a href="vrije-opdracht---uitvoering.html#cb20-7" tabindex="-1"></a>  )</span>
+<span id="cb20-8"><a href="vrije-opdracht---uitvoering.html#cb20-8" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="vrije-opdracht---uitvoering.html#cb20-9" tabindex="-1"></a><span class="co"># Laat de tidy tabel zien in RMarkdown</span></span>
+<span id="cb20-10"><a href="vrije-opdracht---uitvoering.html#cb20-10" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb20-11"><a href="vrije-opdracht---uitvoering.html#cb20-11" tabindex="-1"></a>  dataset_prevalentie_tidy,</span>
+<span id="cb20-12"><a href="vrije-opdracht---uitvoering.html#cb20-12" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">5</span>,</span>
+<span id="cb20-13"><a href="vrije-opdracht---uitvoering.html#cb20-13" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">&quot;Tabel 3: Relatieve prevalentie van geselecteerde bacteriesoorten in tidy format (Bracken threshold 5)&quot;</span></span>
+<span id="cb20-14"><a href="vrije-opdracht---uitvoering.html#cb20-14" tabindex="-1"></a>)</span></code></pre></div>
+<table>
+<caption>(#tab:dataset tidy maken)Tabel 3: Relatieve prevalentie van geselecteerde bacteriesoorten in tidy format (Bracken threshold 5)</caption>
+<thead>
+<tr class="header">
+<th align="left">Bacteriën</th>
+<th align="left">Dataset</th>
+<th align="right">Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Actinomyces sp.</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00252</td>
+</tr>
+<tr class="even">
+<td align="left">Actinomyces sp.</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="odd">
+<td align="left">Actinomyces sp.</td>
+<td align="left">Control_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="even">
+<td align="left">Veillonella parvula</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.01333</td>
+</tr>
+<tr class="odd">
+<td align="left">Veillonella parvula</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.40900</td>
+</tr>
+<tr class="even">
+<td align="left">Veillonella parvula</td>
+<td align="left">Control_merge</td>
+<td align="right">3.21900</td>
+</tr>
+<tr class="odd">
+<td align="left">Actinomyces odontolyticus</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="even">
+<td align="left">Actinomyces odontolyticus</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="odd">
+<td align="left">Actinomyces odontolyticus</td>
+<td align="left">Control_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="even">
+<td align="left">Eikenella corrodens</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00323</td>
+</tr>
+<tr class="odd">
+<td align="left">Eikenella corrodens</td>
+<td align="left">Patient_merge</td>
+<td align="right">1.08000</td>
+</tr>
+<tr class="even">
+<td align="left">Eikenella corrodens</td>
+<td align="left">Control_merge</td>
+<td align="right">0.16800</td>
+</tr>
+<tr class="odd">
+<td align="left">Capnocytophaga sputigena</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00008</td>
+</tr>
+<tr class="even">
+<td align="left">Capnocytophaga sputigena</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="odd">
+<td align="left">Capnocytophaga sputigena</td>
+<td align="left">Control_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus mitis</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00565</td>
+</tr>
+<tr class="odd">
+<td align="left">Streptococcus mitis</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.42600</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus mitis</td>
+<td align="left">Control_merge</td>
+<td align="right">3.42600</td>
+</tr>
+<tr class="odd">
+<td align="left">Streptococcus oralis</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00550</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus oralis</td>
+<td align="left">Patient_merge</td>
+<td align="right">2.24600</td>
+</tr>
+<tr class="odd">
+<td align="left">Streptococcus oralis</td>
+<td align="left">Control_merge</td>
+<td align="right">0.46700</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus sanguinis</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.01495</td>
+</tr>
+<tr class="odd">
+<td align="left">Streptococcus sanguinis</td>
+<td align="left">Patient_merge</td>
+<td align="right">8.49300</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus sanguinis</td>
+<td align="left">Control_merge</td>
+<td align="right">4.57100</td>
+</tr>
+<tr class="odd">
+<td align="left">Streptococcus sp.</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00634</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus sp.</td>
+<td align="left">Patient_merge</td>
+<td align="right">10.48100</td>
+</tr>
+<tr class="odd">
+<td align="left">Streptococcus sp.</td>
+<td align="left">Control_merge</td>
+<td align="right">34.47500</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus gordonii</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00871</td>
+</tr>
+<tr class="odd">
+<td align="left">Streptococcus gordonii</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.21900</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus gordonii</td>
+<td align="left">Control_merge</td>
+<td align="right">0.83900</td>
+</tr>
+<tr class="odd">
+<td align="left">Streptococcus intermedius</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.01829</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus intermedius</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.97100</td>
+</tr>
+<tr class="odd">
+<td align="left">Streptococcus intermedius</td>
+<td align="left">Control_merge</td>
+<td align="right">4.20700</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus gracilis</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="odd">
+<td align="left">Streptococcus gracilis</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.02500</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus gracilis</td>
+<td align="left">Control_merge</td>
+<td align="right">0.04700</td>
+</tr>
+<tr class="odd">
+<td align="left">Campylobacter rectus</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="even">
+<td align="left">Campylobacter rectus</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="odd">
+<td align="left">Campylobacter rectus</td>
+<td align="left">Control_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="even">
+<td align="left">Campylobacter showae</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="odd">
+<td align="left">Campylobacter showae</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="even">
+<td align="left">Campylobacter showae</td>
+<td align="left">Control_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="odd">
+<td align="left">Enterococcus faecalis</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00014</td>
+</tr>
+<tr class="even">
+<td align="left">Enterococcus faecalis</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="odd">
+<td align="left">Enterococcus faecalis</td>
+<td align="left">Control_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="even">
+<td align="left">Fusobacterium nucleatum</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.03602</td>
+</tr>
+<tr class="odd">
+<td align="left">Fusobacterium nucleatum</td>
+<td align="left">Patient_merge</td>
+<td align="right">1.53700</td>
+</tr>
+<tr class="even">
+<td align="left">Fusobacterium nucleatum</td>
+<td align="left">Control_merge</td>
+<td align="right">0.15700</td>
+</tr>
+<tr class="odd">
+<td align="left">Fusobacterium polymorphum</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="even">
+<td align="left">Fusobacterium polymorphum</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="odd">
+<td align="left">Fusobacterium polymorphum</td>
+<td align="left">Control_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="even">
+<td align="left">Prevotella intermedia</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00313</td>
+</tr>
+<tr class="odd">
+<td align="left">Prevotella intermedia</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="even">
+<td align="left">Prevotella intermedia</td>
+<td align="left">Control_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="odd">
+<td align="left">Peptostreptococcus micros</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="even">
+<td align="left">Peptostreptococcus micros</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="odd">
+<td align="left">Peptostreptococcus micros</td>
+<td align="left">Control_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="even">
+<td align="left">Porphyromonas gingivalis</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00328</td>
+</tr>
+<tr class="odd">
+<td align="left">Porphyromonas gingivalis</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.98500</td>
+</tr>
+<tr class="even">
+<td align="left">Porphyromonas gingivalis</td>
+<td align="left">Control_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="odd">
+<td align="left">Tannerella forsythia</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00602</td>
+</tr>
+<tr class="even">
+<td align="left">Tannerella forsythia</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.17300</td>
+</tr>
+<tr class="odd">
+<td align="left">Tannerella forsythia</td>
+<td align="left">Control_merge</td>
+<td align="right">0.00000</td>
+</tr>
+<tr class="even">
+<td align="left">Treponema denticola</td>
+<td align="left">Volledige_dataset</td>
+<td align="right">0.00372</td>
+</tr>
+<tr class="odd">
+<td align="left">Treponema denticola</td>
+<td align="left">Patient_merge</td>
+<td align="right">0.00500</td>
+</tr>
+<tr class="even">
+<td align="left">Treponema denticola</td>
+<td align="left">Control_merge</td>
+<td align="right">0.00000</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+Van de tidy dataset werd vervolgens een staafdiagram gemaakt.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="vrije-opdracht---uitvoering.html#cb21-1" tabindex="-1"></a><span class="co"># Maak een staafdiagram van de relatieve prevalenties van 22 geselecteerde bacteriën in de volledige dataset, de patiënten samples en de controlesamples</span></span>
+<span id="cb21-2"><a href="vrije-opdracht---uitvoering.html#cb21-2" tabindex="-1"></a><span class="fu">ggplot</span>(dataset_prevalentie_tidy,</span>
+<span id="cb21-3"><a href="vrije-opdracht---uitvoering.html#cb21-3" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> Bacteriën, <span class="at">y =</span> Percentage, <span class="at">fill =</span> Dataset)) <span class="sc">+</span></span>
+<span id="cb21-4"><a href="vrije-opdracht---uitvoering.html#cb21-4" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
+<span id="cb21-5"><a href="vrije-opdracht---uitvoering.html#cb21-5" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb21-6"><a href="vrije-opdracht---uitvoering.html#cb21-6" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Relatieve prevalentie van geselecteerde bacteriesoorten&quot;</span>,</span>
+<span id="cb21-7"><a href="vrije-opdracht---uitvoering.html#cb21-7" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Bacteriesoort&quot;</span>,</span>
+<span id="cb21-8"><a href="vrije-opdracht---uitvoering.html#cb21-8" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Relatieve prevalentie (%)&quot;</span>,</span>
+<span id="cb21-9"><a href="vrije-opdracht---uitvoering.html#cb21-9" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">&quot;Dataset&quot;</span></span>
+<span id="cb21-10"><a href="vrije-opdracht---uitvoering.html#cb21-10" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb21-11"><a href="vrije-opdracht---uitvoering.html#cb21-11" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb21-12"><a href="vrije-opdracht---uitvoering.html#cb21-12" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb21-13"><a href="vrije-opdracht---uitvoering.html#cb21-13" tabindex="-1"></a>    <span class="co"># Titel</span></span>
+<span id="cb21-14"><a href="vrije-opdracht---uitvoering.html#cb21-14" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
+<span id="cb21-15"><a href="vrije-opdracht---uitvoering.html#cb21-15" tabindex="-1"></a></span>
+<span id="cb21-16"><a href="vrije-opdracht---uitvoering.html#cb21-16" tabindex="-1"></a>    <span class="co"># X- en Y-as titels</span></span>
+<span id="cb21-17"><a href="vrije-opdracht---uitvoering.html#cb21-17" tabindex="-1"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb21-18"><a href="vrije-opdracht---uitvoering.html#cb21-18" tabindex="-1"></a>    <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb21-19"><a href="vrije-opdracht---uitvoering.html#cb21-19" tabindex="-1"></a></span>
+<span id="cb21-20"><a href="vrije-opdracht---uitvoering.html#cb21-20" tabindex="-1"></a>    <span class="co"># Tekst van de bacteriën (x-as labels)</span></span>
+<span id="cb21-21"><a href="vrije-opdracht---uitvoering.html#cb21-21" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(</span>
+<span id="cb21-22"><a href="vrije-opdracht---uitvoering.html#cb21-22" tabindex="-1"></a>      <span class="at">angle =</span> <span class="dv">45</span>,</span>
+<span id="cb21-23"><a href="vrije-opdracht---uitvoering.html#cb21-23" tabindex="-1"></a>      <span class="at">hjust =</span> <span class="dv">1</span>,</span>
+<span id="cb21-24"><a href="vrije-opdracht---uitvoering.html#cb21-24" tabindex="-1"></a>      <span class="at">vjust =</span> <span class="dv">1</span>,</span>
+<span id="cb21-25"><a href="vrije-opdracht---uitvoering.html#cb21-25" tabindex="-1"></a>      <span class="at">size =</span> <span class="dv">9</span></span>
+<span id="cb21-26"><a href="vrije-opdracht---uitvoering.html#cb21-26" tabindex="-1"></a>    ),</span>
+<span id="cb21-27"><a href="vrije-opdracht---uitvoering.html#cb21-27" tabindex="-1"></a></span>
+<span id="cb21-28"><a href="vrije-opdracht---uitvoering.html#cb21-28" tabindex="-1"></a>    <span class="co"># y-as cijfers</span></span>
+<span id="cb21-29"><a href="vrije-opdracht---uitvoering.html#cb21-29" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb21-30"><a href="vrije-opdracht---uitvoering.html#cb21-30" tabindex="-1"></a></span>
+<span id="cb21-31"><a href="vrije-opdracht---uitvoering.html#cb21-31" tabindex="-1"></a>    <span class="co"># Legenda</span></span>
+<span id="cb21-32"><a href="vrije-opdracht---uitvoering.html#cb21-32" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb21-33"><a href="vrije-opdracht---uitvoering.html#cb21-33" tabindex="-1"></a>    <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">11</span>)</span>
+<span id="cb21-34"><a href="vrije-opdracht---uitvoering.html#cb21-34" tabindex="-1"></a>  )</span></code></pre></div>
+<p><img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-24-1.png" alt="" width="1440" /></p>
+<p><br />
+Vanwege de lage prevalenties van de bacteriesoorten in de volledige dataset is het lastig om deze af te lezen in de staafdiagram. Daarom wordt voor de conclusie gebruik gemaakt van de onbewerkte tabel.<br />
+<br />
+</p>
+</div>
+<div id="conclusie-en-discussie" class="section level2 hasAnchor" number="5.10">
+<h2><span class="header-section-number">5.10</span> 10. Conclusie en discussie<a href="vrije-opdracht---uitvoering.html#conclusie-en-discussie" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="data" class="section level3 hasAnchor" number="5.10.1">
+<h3><span class="header-section-number">5.10.1</span> Data<a href="vrije-opdracht---uitvoering.html#data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="nanoplot" class="section level4 hasAnchor" number="5.10.1.1">
+<h4><span class="header-section-number">5.10.1.1</span> NanoPlot<a href="vrije-opdracht---uitvoering.html#nanoplot" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>85.6% van de reads had een kwaliteitsscore van &gt;Q10. 35.4% van deze reads had een kwaliteitsscore van &gt;Q15. Slechts 1627 reads hadden een kwlaiteitsscore van Q20 of hoger. De meeste reads waren tussen de 1500 en 1650 bp lang.<br />
+<br />
+</p>
+</div>
+<div id="bracken-en-krona" class="section level4 hasAnchor" number="5.10.1.2">
+<h4><span class="header-section-number">5.10.1.2</span> bracken en krona<a href="vrije-opdracht---uitvoering.html#bracken-en-krona" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In de volledige dataset werden 3034 bacteriesoorten gevonden. Bij hogere thresholds nam het aantal bacteriesoorten dat in de dataset overbleef af, waarbij de grootste daling tussen threshold 0 en 5 plaatsvond. Het aantal bacteriesoorten was stabieler bij thresholds hoger dan 10. Om ruis te reduceren en om te voorkomen dat bacteriesoorten met een hoger aantal reads onterecht uit de dataset worden gefilterd, zou een threshold van 5 tot 10 het beste zijn voor deze dataset.<br />
+<br />
+Bij threshold 5 bleven er 1216 bacteriesoorten over. In de dataset van de patiënten samples waren 673 bacteriesoorten gevonden en in de dataset met controlesamples 453 bacteriesoorten. Bij de individuele datasets komt een deel van de bacteriesoorten in beide datasets voor, dus het totaal gevonden bacteriesoorten in de individuele datasets samen zal minder dan 1126 soorten zijn. Dat betekent dat er in de volledige dataset meer bacteriesoorten zijn die voldeden aan de threshold van 5 omdat deze dataset meer reads bevatte.<br />
+<br />
+</p>
+</div>
+<div id="relatieve-prevalenties-vergelijken" class="section level4 hasAnchor" number="5.10.1.3">
+<h4><span class="header-section-number">5.10.1.3</span> Relatieve prevalenties vergelijken<a href="vrije-opdracht---uitvoering.html#relatieve-prevalenties-vergelijken" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Bij de volledige dataset werden lagere prevalenties bij de geselecteerde bacteriesoorten gevonden dan bij de datasets met alleen patiënten samples of controlesamples. Dit kan verklaard worden omdat de volledige dataset uit veel meer reads bestond en niet alle bacteriesoorten in zowel de patiënten samples of controlesamples zaten.<br />
+<br />
+Bijna alle bacteriesoorten die niet werden gedetecteerd in de patiënten samples of controlesamples, werden ook niet gedetecteerd in de volledige dataset. De uitzondering hierop was <em>Actinomyces sp.</em>, deze soort had een relatieve prevalentie van 0.00252% in de volledige dataset. <em>Actinomyces sp.</em> had meerdere subspecies met lage relatieve prevalenties. Er bestaat daarom een kans dat bij de volledige data de threshold van 5 reads wel was bereikt, terwijl dit bij de losse datasets niet het geval was.<br />
+<br />
+Opvallend was dat <em>Streptococcus gracilis</em> helemaal niet werd teruggevonden in de volledige dataset, terwijl deze wel in de losse datasets gevonden werd. Het is mogelijk dat tijdens de bracken analyse de reads iets anders zijn verdeeld. Daarnaast kan taxonomische ambiguïteit binnen het genus <em>Streptococcus</em> ertoe leiden dat reads worden toegewezen aan hogere taxonomische niveaus, zoals Streptococcus spp., in plaats van aan specifieke species.<br />
+<br />
+</p>
+</div>
+</div>
+<div id="reproduceerbaarheid" class="section level3 hasAnchor" number="5.10.2">
+<h3><span class="header-section-number">5.10.2</span> Reproduceerbaarheid<a href="vrije-opdracht---uitvoering.html#reproduceerbaarheid" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Demultiplexing bleek uiteindelijk niet mogelijk te zijn omdat oorspronkelijk MinKNOW werd gebruikt op een krachtigere rekenomgeving en omdat het FAST5 bestand niet via de daur1 server beschikbaar was. Dit heeft erin geresulteerd dat de resultaten niet precies hetzelfde waren als de resultaten van het projecticum. De overige stappen waren wel reproduceerbaar.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="vrije-opdracht---introductie.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rna-sequencing-repository.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": {},
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

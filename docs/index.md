@@ -1,20 +1,47 @@
 --- 
 title: "Portfolio Workflows"
 author: "Rachel van der Kreeft"
-date: "2026-04-22"
+date: "25 mei 2026"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
 documentclass: book
-# bibliography: [book.bib, packages.bib]
-# biblio-style: apalike
-# link-citations: yes
-github-repo: rstudio/bookdown-demo
-description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+bibliography: bibliography.bib
+csl: vancouver-ama.csl
+link-citations: yes
+github-repo: RachelvanderKreeft/dsfb2_workflows_portfolio
+description: "Dit is mijn portfolio voor de cursus Workflows van de minor Data Sciences for Biology"
 ---
 
 # Introductie
 
-Introductie wordt toegevoegd in de eindversie
+In dit portfolio presenteer ik mijn werk en leerproces voor het onderdeel Workflows van de cursus Data Science for Biology 2. De opgenomen opdrachten laten zien hoe ik de theorie heb toegepast, keuzes heb onderbouwd en mezelf inhoudelijk heb ontwikkeld. \
+\
+
+## Overzicht van opdrachten
+Het portfolio bestaat uit de volgende volgende opdrachten: \
+**2.** Curriculum vitae: Bevat mijn curriculum vitae.
+
+**3.** Plan voor de toekomst: Beschrijft op wat voor bedrijf ik mezelf later zie werken en welke data science skills ik daarvoor wil leren.
+
+**4 + 5.** Vrije opdracht: Voor deze opdracht werd 32 uur besteed aan het leren van een nieuwe zelf gekozen Data Science skill. Voor deze opdracht werd gekeken naar een 16s sequencing dataset met 8 parodontitis samples en 4 controlesamples afkomstig van het projecticum van de specialisatie Biomolecular Research. Tijdens dit project hadden ik en drie andere studenten de samenstelling van het orale microbioom van patiënten met parodontitis vergeleken met het orale microbioom van gezonde personen. Het doel van deze opdracht was om de reproduceerbaarheid van deze dataset te controlen, aanvullende statische testen uit te voeren op de dataset en om mijn skills in metagenomics te verbeteren.
+
+**6.** RNA-sequencing repository: Voor deze opdracht werden de Guerilla Analytics regels toegepast voor data management op de RNA-sequencing formatieve opdracht van de *DAUR2* module uit de cursus *Data Sciences for Biology 1*
+
+**7.** Portfolio repository: Voor deze opdracht werden de Guerilla Analytics regels toegepast voor data management op de portfolio repository.
+
+
+**8.** Data analyse van een ander reproduceren: Voor deze opdracht werd gekeken naar de data van een collega-laborant. Deze analyse werd reproduceerbaar uitgewerkt in een RMarkdown bestand. De data is afkomstig van het HU lectoraat Innovative Testing in Life Sciences & Chemistry.
+
+
+**9.** Artikel beoordelen op reproduceerbaarheid: Voor deze opdracht is de reproduceerbaarheid van het artikel 'Infectivity and fatality of influenza in pre- and post-COVID-19 pandemic year' van Shuanglin Jing,Hao Wang beoordeeld. [Klik hier](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013229) om het artikel te zien.
+
+
+**10.** R package: Voor deze opdracht werd een eigen R package aangemaakt. De R package bestaat uit 4 functies voor het opschonen, filteren, samenvatten en selecteren van kolommen in data. [Klik hier](https://github.com/RachelvanderKreeft/portfoliotools.git) voor meer informatie over de R package.
+
+
+**11.** Bronvermelding: Voor deze opdracht is een korte introductie geschreven over het projecticum project waaraan ik heb gewerkt voor de cursus Data Sciences for Biology 2. De gebruikte bronnen werden opgenomen in een .bib file en werden geciteerd via automatische inline referenties.
+
+
+**12.** Geparametrizeerde Rmarkdown: Het doel van deze opdracht was om een geparametrizeerde Rmarkdown rapport te maken voor het aantal COVID-19 gevallen in Europa en op een creatieve manier te demonstreren dat de geparametrizeerde Rmarkdown rapport werkt. 
 
 
 
