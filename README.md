@@ -27,22 +27,22 @@ Bevat de bestanden waar het online portfolio uit opgebouwd is.
 -Gebruikte packages: vitae
 
 #### 1b_plan_voor toekomst:
--Beschrijft waar ik mijzelf over 1-2 jaar zie werken en welke skills ik op dit 
+-Beschrijft waar ik mezelf over 1-2 jaar zie werken en welke skills ik op dit 
 moment wil leren.
 
 #### 2_vrije_opdracht
--Voor deze opdracht werd 32 uur besteed aan het leren een nieuwe zelf gekozen Data 
+-Voor deze opdracht werd 32 uur besteed aan het leren van een nieuwe zelf gekozen Data 
 Science skill.
--Voor deze opdracht werd gekeken naar naar een 16s sequencing dataset met 8 parodontitis
+-Voor deze opdracht werd gekeken naar een 16s sequencing dataset met 8 parodontitis
 samples en 4 controlesamples afkomstig van het projecticum van de specialisatie
 Biomolecular Research. Tijdens dit project hadden ik en drie andere studenten de 
 samenstelling van het orale microbioom van patiënten met parodontitis vergeleken met
-het orale microbioom van gezonde personen. Het doel was om de reproduceerbaarheid van
-deze dataset te controlen, aanvullende statische testen uit te voeren op de dataset
-en om mijn skills in metagenomics te verbeteren.
+het orale microbioom van gezonde personen. Het doel van deze opdracht was om de 
+reproduceerbaarheid van deze dataset te controlen, aanvullende statische testen uit te 
+voeren op de dataset en om mijn skills in metagenomics te verbeteren.
 
 ### 3a_formatieve_opdracht_rna-seq_daur2
--Voor deze opdracht werden de Guerilla Analytics regels toegepast voor data management op de RNA-sequencing formatieve opdracht van de *DAUR2* module uit de cursus *Data Sciences for Biology 2*
+-Voor deze opdracht werden de Guerilla Analytics regels toegepast voor data management op de RNA-sequencing formatieve opdracht van de *DAUR2* module uit de cursus *Data Sciences for Biology 1*
 -Gebruikte packages: fs, here, png, grid, gridExtra
 
 ### 3b_portfolio_repository

@@ -4,26 +4,25 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 11 Geparametrizeerde Rmarkdown | Portfolio Workflows</title>
-  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <title>Hoofdstuk 12 Geparametrizeerde Rmarkdown | Portfolio Workflows</title>
+  <meta name="description" content="Dit is mijn portfolio voor de cursus Workflows van de minor Data Sciences for Biology" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 11 Geparametrizeerde Rmarkdown | Portfolio Workflows" />
+  <meta property="og:title" content="Hoofdstuk 12 Geparametrizeerde Rmarkdown | Portfolio Workflows" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  <meta property="og:description" content="Dit is mijn portfolio voor de cursus Workflows van de minor Data Sciences for Biology" />
+  <meta name="github-repo" content="RachelvanderKreeft/dsfb2_workflows_portfolio" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 11 Geparametrizeerde Rmarkdown | Portfolio Workflows" />
+  <meta name="twitter:title" content="Hoofdstuk 12 Geparametrizeerde Rmarkdown | Portfolio Workflows" />
   
-  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="twitter:description" content="Dit is mijn portfolio voor de cursus Workflows van de minor Data Sciences for Biology" />
   
 
 <meta name="author" content="Rachel van der Kreeft" />
 
 
-<meta name="date" content="2026-05-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +53,71 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -98,72 +162,100 @@ div.csl-indent {
 <li><a href="./">Portfolio Workflows</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introductie</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introductie</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#overzicht-van-opdrachten"><i class="fa fa-check"></i><b>1.1</b> Overzicht van opdrachten</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html"><i class="fa fa-check"></i><b>2</b> Curriculum Vitae</a></li>
 <li class="chapter" data-level="3" data-path="plan-voor-de-toekomst.html"><a href="plan-voor-de-toekomst.html"><i class="fa fa-check"></i><b>3</b> Plan voor de toekomst</a></li>
-<li class="chapter" data-level="4" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html"><i class="fa fa-check"></i><b>4</b> Vrije opdracht</a>
+<li class="chapter" data-level="4" data-path="vrije-opdracht-introductie.html"><a href="vrije-opdracht-introductie.html"><i class="fa fa-check"></i><b>4</b> Vrije opdracht - Introductie</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#het-kiezen-van-een-nieuwe-data-science-for-biology-skill"><i class="fa fa-check"></i><b>4.1</b> Het kiezen van een nieuwe Data Science for Biology skill</a></li>
-<li class="chapter" data-level="4.2" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#planning"><i class="fa fa-check"></i><b>4.2</b> Planning</a>
+<li class="chapter" data-level="4.1" data-path="vrije-opdracht-introductie.html"><a href="vrije-opdracht-introductie.html#het-kiezen-van-een-nieuwe-data-science-for-biology-skill"><i class="fa fa-check"></i><b>4.1</b> Het kiezen van een nieuwe Data Science for Biology skill</a></li>
+<li class="chapter" data-level="4.2" data-path="vrije-opdracht-introductie.html"><a href="vrije-opdracht-introductie.html#planning"><i class="fa fa-check"></i><b>4.2</b> Planning</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-1-afbakening-voorbereiding"><i class="fa fa-check"></i><b>4.2.1</b> Fase 1 – Afbakening &amp; voorbereiding</a></li>
-<li class="chapter" data-level="4.2.2" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-2-data-structureren-demultiplexing-6-uur"><i class="fa fa-check"></i><b>4.2.2</b> Fase 2 – Data structureren &amp; demultiplexing (6 uur)</a></li>
-<li class="chapter" data-level="4.2.3" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-3-taxonomische-profiling-6-uur"><i class="fa fa-check"></i><b>4.2.3</b> Fase 3 – Taxonomische profiling (6 uur)</a></li>
-<li class="chapter" data-level="4.2.4" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-4-microbiome-analyse-in-r-phyloseq-8-uur"><i class="fa fa-check"></i><b>4.2.4</b> Fase 4 – Microbiome analyse in R (phyloseq) (8 uur)</a></li>
-<li class="chapter" data-level="4.2.5" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-5-visualisatie-interpretatie-5-uur"><i class="fa fa-check"></i><b>4.2.5</b> Fase 5 – Visualisatie &amp; interpretatie (5 uur)</a></li>
-<li class="chapter" data-level="4.2.6" data-path="vrije-opdracht.html"><a href="vrije-opdracht.html#fase-6-rapportage-in-bookdown-3-uur"><i class="fa fa-check"></i><b>4.2.6</b> Fase 6 – Rapportage in Bookdown (3 uur)</a></li>
+<li class="chapter" data-level="4.2.1" data-path="vrije-opdracht-introductie.html"><a href="vrije-opdracht-introductie.html#fase-1-afbakening-voorbereiding-6-uur"><i class="fa fa-check"></i><b>4.2.1</b> Fase 1 – Afbakening &amp; voorbereiding (6 uur)</a></li>
+<li class="chapter" data-level="4.2.2" data-path="vrije-opdracht-introductie.html"><a href="vrije-opdracht-introductie.html#fase-2-data-structureren-demultiplexing-6-uur"><i class="fa fa-check"></i><b>4.2.2</b> Fase 2 – Data structureren &amp; demultiplexing (6 uur)</a></li>
+<li class="chapter" data-level="4.2.3" data-path="vrije-opdracht-introductie.html"><a href="vrije-opdracht-introductie.html#fase-3-taxonomische-profiling-10-uur"><i class="fa fa-check"></i><b>4.2.3</b> Fase 3 – Taxonomische profiling (10 uur)</a></li>
+<li class="chapter" data-level="4.2.4" data-path="vrije-opdracht-introductie.html"><a href="vrije-opdracht-introductie.html#fase-4-visualisatie-interpretatie-5-uur"><i class="fa fa-check"></i><b>4.2.4</b> Fase 4 – Visualisatie &amp; interpretatie (5 uur)</a></li>
+<li class="chapter" data-level="4.2.5" data-path="vrije-opdracht-introductie.html"><a href="vrije-opdracht-introductie.html#fase-6-rapportage-in-bookdown-5-uur"><i class="fa fa-check"></i><b>4.2.5</b> Fase 6 – Rapportage in Bookdown (5 uur)</a></li>
+<li class="chapter" data-level="4.2.6" data-path="vrije-opdracht-introductie.html"><a href="vrije-opdracht-introductie.html#laten-zien-dat-skill-geleerd-is"><i class="fa fa-check"></i><b>4.2.6</b> Laten zien dat skill geleerd is</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="rna-sequencing-repository.html"><a href="rna-sequencing-repository.html"><i class="fa fa-check"></i><b>5</b> RNA-sequencing repository</a></li>
-<li class="chapter" data-level="6" data-path="portfolio-repository.html"><a href="portfolio-repository.html"><i class="fa fa-check"></i><b>6</b> Portfolio repository</a></li>
-<li class="chapter" data-level="7" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html"><i class="fa fa-check"></i><b>7</b> Data analyse van een ander reproduceren</a>
+<li class="chapter" data-level="5" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html"><i class="fa fa-check"></i><b>5</b> Vrije opdracht - Uitvoering</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#data-inlezen"><i class="fa fa-check"></i><b>7.1</b> Data inlezen</a></li>
-<li class="chapter" data-level="7.2" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#data-types-voor-rawdata-compname-en-compconcentration"><i class="fa fa-check"></i><b>7.2</b> Data types voor RawData, compName en compConcentration</a></li>
-<li class="chapter" data-level="7.3" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#scatterplot"><i class="fa fa-check"></i><b>7.3</b> Scatterplot</a></li>
-<li class="chapter" data-level="7.4" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#normaliseer-de-data"><i class="fa fa-check"></i><b>7.4</b> Normaliseer de data</a></li>
-<li class="chapter" data-level="7.5" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#scatterplot-met-genormaliseerde-waarden"><i class="fa fa-check"></i><b>7.5</b> Scatterplot met genormaliseerde waarden</a></li>
-<li class="chapter" data-level="7.6" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#controlegroepen"><i class="fa fa-check"></i><b>7.6</b> Controlegroepen</a></li>
-<li class="chapter" data-level="7.7" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#stappenplan-voor-vervolgonderzoek"><i class="fa fa-check"></i><b>7.7</b> Stappenplan voor vervolgonderzoek</a></li>
+<li class="chapter" data-level="5.1" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#conda-installeren"><i class="fa fa-check"></i><b>5.1</b> conda installeren</a></li>
+<li class="chapter" data-level="5.2" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#conda-environment-opzetten"><i class="fa fa-check"></i><b>5.2</b> conda environment opzetten</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#krona-handmatig-installeren"><i class="fa fa-check"></i><b>5.2.1</b> Krona handmatig installeren</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html"><i class="fa fa-check"></i><b>8</b> Artikel beoordelen op reproduceerbaarheid</a>
+<li class="chapter" data-level="5.3" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#van-.bam-naar-.fastq"><i class="fa fa-check"></i><b>5.3</b> Van .bam naar .fastq</a></li>
+<li class="chapter" data-level="5.4" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#analyse-met-nanoplot"><i class="fa fa-check"></i><b>5.4</b> Analyse met NanoPlot</a></li>
+<li class="chapter" data-level="5.5" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#reads-filteren"><i class="fa fa-check"></i><b>5.5</b> Reads filteren</a></li>
+<li class="chapter" data-level="5.6" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#kraken2"><i class="fa fa-check"></i><b>5.6</b> Kraken2</a></li>
+<li class="chapter" data-level="5.7" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#bracken"><i class="fa fa-check"></i><b>5.7</b> Bracken</a></li>
+<li class="chapter" data-level="5.8" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#krona"><i class="fa fa-check"></i><b>5.8</b> Krona</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#gekozen-artikel"><i class="fa fa-check"></i><b>8.1</b> Gekozen artikel</a>
-<ul>
-<li class="chapter" data-level="8.1.1" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#onderzoeksvraag"><i class="fa fa-check"></i><b>8.1.1</b> Onderzoeksvraag:</a></li>
-<li class="chapter" data-level="8.1.2" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#methode"><i class="fa fa-check"></i><b>8.1.2</b> Methode:</a></li>
-<li class="chapter" data-level="8.1.3" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#resultaten"><i class="fa fa-check"></i><b>8.1.3</b> Resultaten:</a></li>
+<li class="chapter" data-level="5.8.1" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#bracken-en-krona-met-threshold"><i class="fa fa-check"></i><b>5.8.1</b> bracken en krona met threshold</a></li>
+<li class="chapter" data-level="5.8.2" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#bracken-analyse-met-hogere-thresholds"><i class="fa fa-check"></i><b>5.8.2</b> bracken analyse met hogere thresholds</a></li>
+<li class="chapter" data-level="5.8.3" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#aantal-soorten-bacteri%C3%ABn-per-threshold"><i class="fa fa-check"></i><b>5.8.3</b> Aantal soorten bacteriën per threshold</a></li>
+<li class="chapter" data-level="5.8.4" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#alternatief-krona-vanuit-kraken2"><i class="fa fa-check"></i><b>5.8.4</b> Alternatief: krona vanuit kraken2</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#beoordelingscriteria-voor-reproduceerbaarheid"><i class="fa fa-check"></i><b>8.2</b> Beoordelingscriteria voor reproduceerbaarheid</a></li>
-<li class="chapter" data-level="8.3" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#reproduceerbaarheid-van-de-gedeelde-r-code"><i class="fa fa-check"></i><b>8.3</b> Reproduceerbaarheid van de gedeelde R code</a>
+<li class="chapter" data-level="5.9" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#relatieve-prevalenties-volledige-dataset-vergelijken-met-individuele-datasets"><i class="fa fa-check"></i><b>5.9</b> Relatieve prevalenties volledige dataset vergelijken met individuele datasets</a></li>
+<li class="chapter" data-level="5.10" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#conclusie-en-discussie"><i class="fa fa-check"></i><b>5.10</b> Conclusie en discussie</a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#importeer-de-dataset-death-data18-64.xlsx"><i class="fa fa-check"></i><b>8.3.1</b> Importeer de dataset Death data(18-64).xlsx</a></li>
-<li class="chapter" data-level="8.3.2" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#selecteren-en-filteren-van-data"><i class="fa fa-check"></i><b>8.3.2</b> Selecteren en filteren van data</a></li>
-<li class="chapter" data-level="8.3.3" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#samenvatting"><i class="fa fa-check"></i><b>8.3.3</b> Samenvatting</a></li>
+<li class="chapter" data-level="5.10.1" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#data"><i class="fa fa-check"></i><b>5.10.1</b> Data</a></li>
+<li class="chapter" data-level="5.10.2" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#reproduceerbaarheid"><i class="fa fa-check"></i><b>5.10.2</b> Reproduceerbaarheid</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="r-package.html"><a href="r-package.html"><i class="fa fa-check"></i><b>9</b> R package</a>
+<li class="chapter" data-level="6" data-path="rna-sequencing-repository.html"><a href="rna-sequencing-repository.html"><i class="fa fa-check"></i><b>6</b> RNA-sequencing repository</a></li>
+<li class="chapter" data-level="7" data-path="portfolio-repository.html"><a href="portfolio-repository.html"><i class="fa fa-check"></i><b>7</b> Portfolio repository</a></li>
+<li class="chapter" data-level="8" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html"><i class="fa fa-check"></i><b>8</b> Data analyse van een ander reproduceren</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="r-package.html"><a href="r-package.html#portfoliotools"><i class="fa fa-check"></i><b>9.1</b> portfoliotools</a>
+<li class="chapter" data-level="8.1" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#data-inlezen"><i class="fa fa-check"></i><b>8.1</b> Data inlezen</a></li>
+<li class="chapter" data-level="8.2" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#data-types-voor-rawdata-compname-en-compconcentration"><i class="fa fa-check"></i><b>8.2</b> Data types voor RawData, compName en compConcentration</a></li>
+<li class="chapter" data-level="8.3" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#scatterplot"><i class="fa fa-check"></i><b>8.3</b> Scatterplot</a></li>
+<li class="chapter" data-level="8.4" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#normaliseer-de-data"><i class="fa fa-check"></i><b>8.4</b> Normaliseer de data</a></li>
+<li class="chapter" data-level="8.5" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#scatterplot-met-genormaliseerde-waarden"><i class="fa fa-check"></i><b>8.5</b> Scatterplot met genormaliseerde waarden</a></li>
+<li class="chapter" data-level="8.6" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#controlegroepen"><i class="fa fa-check"></i><b>8.6</b> Controlegroepen</a></li>
+<li class="chapter" data-level="8.7" data-path="data-analyse-van-een-ander-reproduceren.html"><a href="data-analyse-van-een-ander-reproduceren.html#stappenplan-voor-vervolgonderzoek"><i class="fa fa-check"></i><b>8.7</b> Stappenplan voor vervolgonderzoek</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html"><i class="fa fa-check"></i><b>9</b> Artikel beoordelen op reproduceerbaarheid</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="r-package.html"><a href="r-package.html#installation"><i class="fa fa-check"></i><b>9.1.1</b> Installation</a></li>
-<li class="chapter" data-level="9.1.2" data-path="r-package.html"><a href="r-package.html#load-portfoliotools-package"><i class="fa fa-check"></i><b>9.1.2</b> Load portfoliotools package</a></li>
-<li class="chapter" data-level="9.1.3" data-path="r-package.html"><a href="r-package.html#filter_range"><i class="fa fa-check"></i><b>9.1.3</b> filter_range</a></li>
-<li class="chapter" data-level="9.1.4" data-path="r-package.html"><a href="r-package.html#drop_na_cols"><i class="fa fa-check"></i><b>9.1.4</b> drop_na_cols</a></li>
-<li class="chapter" data-level="9.1.5" data-path="r-package.html"><a href="r-package.html#select_columns"><i class="fa fa-check"></i><b>9.1.5</b> select_columns</a></li>
-<li class="chapter" data-level="9.1.6" data-path="r-package.html"><a href="r-package.html#summary_by_group"><i class="fa fa-check"></i><b>9.1.6</b> summary_by_group</a></li>
+<li class="chapter" data-level="9.1" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#gekozen-artikel"><i class="fa fa-check"></i><b>9.1</b> Gekozen artikel</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#onderzoeksvraag"><i class="fa fa-check"></i><b>9.1.1</b> Onderzoeksvraag:</a></li>
+<li class="chapter" data-level="9.1.2" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#methode"><i class="fa fa-check"></i><b>9.1.2</b> Methode:</a></li>
+<li class="chapter" data-level="9.1.3" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#resultaten"><i class="fa fa-check"></i><b>9.1.3</b> Resultaten:</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#beoordelingscriteria-voor-reproduceerbaarheid"><i class="fa fa-check"></i><b>9.2</b> Beoordelingscriteria voor reproduceerbaarheid</a></li>
+<li class="chapter" data-level="9.3" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#reproduceerbaarheid-van-de-gedeelde-r-code"><i class="fa fa-check"></i><b>9.3</b> Reproduceerbaarheid van de gedeelde R code</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#importeer-de-dataset-death-data18-64.xlsx"><i class="fa fa-check"></i><b>9.3.1</b> Importeer de dataset Death data(18-64).xlsx</a></li>
+<li class="chapter" data-level="9.3.2" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#selecteren-en-filteren-van-data"><i class="fa fa-check"></i><b>9.3.2</b> Selecteren en filteren van data</a></li>
+<li class="chapter" data-level="9.3.3" data-path="artikel-beoordelen-op-reproduceerbaarheid.html"><a href="artikel-beoordelen-op-reproduceerbaarheid.html#samenvatting"><i class="fa fa-check"></i><b>9.3.3</b> Samenvatting</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="bronvermelding.html"><a href="bronvermelding.html"><i class="fa fa-check"></i><b>10</b> Bronvermelding</a>
+<li class="chapter" data-level="10" data-path="r-package.html"><a href="r-package.html"><i class="fa fa-check"></i><b>10</b> R package</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="bronvermelding.html"><a href="bronvermelding.html#introductie-1"><i class="fa fa-check"></i><b>10.1</b> Introductie</a></li>
-<li class="chapter" data-level="10.2" data-path="bronvermelding.html"><a href="bronvermelding.html#referentielijst"><i class="fa fa-check"></i><b>10.2</b> Referentielijst</a></li>
+<li class="chapter" data-level="10.1" data-path="r-package.html"><a href="r-package.html#portfoliotools"><i class="fa fa-check"></i><b>10.1</b> portfoliotools</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="r-package.html"><a href="r-package.html#installation"><i class="fa fa-check"></i><b>10.1.1</b> Installation</a></li>
+<li class="chapter" data-level="10.1.2" data-path="r-package.html"><a href="r-package.html#load-portfoliotools-package"><i class="fa fa-check"></i><b>10.1.2</b> Load portfoliotools package</a></li>
+<li class="chapter" data-level="10.1.3" data-path="r-package.html"><a href="r-package.html#filter_range"><i class="fa fa-check"></i><b>10.1.3</b> filter_range</a></li>
+<li class="chapter" data-level="10.1.4" data-path="r-package.html"><a href="r-package.html#drop_na_cols"><i class="fa fa-check"></i><b>10.1.4</b> drop_na_cols</a></li>
+<li class="chapter" data-level="10.1.5" data-path="r-package.html"><a href="r-package.html#select_columns"><i class="fa fa-check"></i><b>10.1.5</b> select_columns</a></li>
+<li class="chapter" data-level="10.1.6" data-path="r-package.html"><a href="r-package.html#summary_by_group"><i class="fa fa-check"></i><b>10.1.6</b> summary_by_group</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="geparametrizeerde-rmarkdown.html"><a href="geparametrizeerde-rmarkdown.html"><i class="fa fa-check"></i><b>11</b> Geparametrizeerde Rmarkdown</a>
+</ul></li>
+<li class="chapter" data-level="11" data-path="bronvermelding.html"><a href="bronvermelding.html"><i class="fa fa-check"></i><b>11</b> Bronvermelding</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="geparametrizeerde-rmarkdown.html"><a href="geparametrizeerde-rmarkdown.html#introductie-2"><i class="fa fa-check"></i><b>11.1</b> Introductie</a></li>
-<li class="chapter" data-level="11.2" data-path="geparametrizeerde-rmarkdown.html"><a href="geparametrizeerde-rmarkdown.html#demonstratie"><i class="fa fa-check"></i><b>11.2</b> Demonstratie</a></li>
-<li class="chapter" data-level="11.3" data-path="geparametrizeerde-rmarkdown.html"><a href="geparametrizeerde-rmarkdown.html#html-rapport"><i class="fa fa-check"></i><b>11.3</b> html rapport</a></li>
+<li class="chapter" data-level="11.1" data-path="bronvermelding.html"><a href="bronvermelding.html#introductie-1"><i class="fa fa-check"></i><b>11.1</b> Introductie</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="geparametrizeerde-rmarkdown.html"><a href="geparametrizeerde-rmarkdown.html"><i class="fa fa-check"></i><b>12</b> Geparametrizeerde Rmarkdown</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="geparametrizeerde-rmarkdown.html"><a href="geparametrizeerde-rmarkdown.html#introductie-2"><i class="fa fa-check"></i><b>12.1</b> Introductie</a></li>
+<li class="chapter" data-level="12.2" data-path="geparametrizeerde-rmarkdown.html"><a href="geparametrizeerde-rmarkdown.html#demonstratie"><i class="fa fa-check"></i><b>12.2</b> Demonstratie</a></li>
+<li class="chapter" data-level="12.3" data-path="geparametrizeerde-rmarkdown.html"><a href="geparametrizeerde-rmarkdown.html#html-rapport"><i class="fa fa-check"></i><b>12.3</b> html rapport</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -185,10 +277,10 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="geparametrizeerde-rmarkdown" class="section level1 hasAnchor" number="11">
-<h1><span class="header-section-number">Chapter 11</span> Geparametrizeerde Rmarkdown<a href="geparametrizeerde-rmarkdown.html#geparametrizeerde-rmarkdown" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="introductie-2" class="section level2 hasAnchor" number="11.1">
-<h2><span class="header-section-number">11.1</span> Introductie<a href="geparametrizeerde-rmarkdown.html#introductie-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="geparametrizeerde-rmarkdown" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">Hoofdstuk 12</span> Geparametrizeerde Rmarkdown<a href="geparametrizeerde-rmarkdown.html#geparametrizeerde-rmarkdown" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introductie-2" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> Introductie<a href="geparametrizeerde-rmarkdown.html#introductie-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In de onderstaande video is de werking van de geparametrizeerde Rmarkdown rapport voor het aantal COVID-19 gevallen in Europa te zien. Het rapport bevat 3 parameters:<br />
 1. Het land waarover het rapport gaat.<br />
 2. Het jaar van de metingen in het rapport.<br />
@@ -198,15 +290,15 @@ De gerendeerde rapporten bevatten een grafiek voor het aantal COVID-19 gevallen 
 <p><br />
 </p>
 </div>
-<div id="demonstratie" class="section level2 hasAnchor" number="11.2">
-<h2><span class="header-section-number">11.2</span> Demonstratie<a href="geparametrizeerde-rmarkdown.html#demonstratie" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="demonstratie" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> Demonstratie<a href="geparametrizeerde-rmarkdown.html#demonstratie" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Hu_vHWpzqW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 <p><br />
 </p>
 </div>
-<div id="html-rapport" class="section level2 hasAnchor" number="11.3">
-<h2><span class="header-section-number">11.3</span> html rapport<a href="geparametrizeerde-rmarkdown.html#html-rapport" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="html-rapport" class="section level2 hasAnchor" number="12.3">
+<h2><span class="header-section-number">12.3</span> html rapport<a href="geparametrizeerde-rmarkdown.html#html-rapport" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Hieronder is het .html rapport van het eerste voorbeeld van de video te zien. Dit rapport bevat het aantal covid gevallen en het aantal mensen dat was gestorven als gevolg van covid tussen juli en december 2022 in Nederland.</p>
 <iframe src="covid_Netherlands_2022_7-12.html" style="width:100%; height:1500px; border:none;"></iframe>
 

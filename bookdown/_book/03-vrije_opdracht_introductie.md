@@ -1,0 +1,63 @@
+# Vrije opdracht - Introductie {#vrije-opdracht-introductie}
+
+
+
+## Het kiezen van een nieuwe Data Science for Biology skill 
+Tijdens de cursus Projecticum Biomolecular Research had ik samen met een paar medestudenten onderzoek gedaan naar de samenstelling van het orale microbioom van parodontitis patïenten en van gezonde mensen. 
+\
+\
+Er waren acht parondontitis samples en vier samples van gezonde personen beschikbaar, hierop werd 16s en whole genome sequencing uitgevoerd met de MinION mk1b. Na het sequencen werd er één .bam bestand gegenereerd met alle reads van alle samples. Door middel van demultiplexing werd de data gescheiden op basis van de barcodes die waren gebruikt, waarbij iedere sample aan 1 barcode was gekoppeld. In Rstudio werd het .bam bestand eerst met samtools omgezet tot een fastq bestand en vanuit dit bestand kon de kwaliteit van de reads vervolgens worden bepaald door middel van een nanoplot analyse. Daarna werden kraken2 en bracken gebruikt om te bepalen welke bacteriesoorten in de dataset aanwezig waren. De laatste stap binnen Rstudio was het maken van een krona visualisatie van iedere sample, oftewel een cirkeldiagram waarin de samenstelling van de bacteriën per taxonomisch niveau werd weergeven. Verder waren er grafieken gemaakt waarin de relatieve abundance van een aantal bacteriesoorten van de parodontitis samples werden vergeleken met de samples van de gezonde mensen.
+\
+\
+Zoals vermeld in het hoofdstuk [Plan voor de toekomst](#plan-voor-de-toekomst) wil ik mijn kennis in metagenomics analyses verdiepen of vebreden. Voor de vrije opdracht wil ik gebruik maken van de de 16s sequencing data van de laatste 16s sequencing run die was uitgevoerd voor het projecticum. Van deze dataset is al bekend dat niet alle bacteriesoorten die werden verwacht werden gedetecteerd en dat sommige bacteriesoorten alleen op hogere taxa werden gedecteerd. Daarnaast werd de dataset aangeleverd als .bam bestand en mogelijk heb ik geen toegang tot dezelfde programma's als tijdens het projecticum. Dit kan op gebied van data-analyse extra uitdagingen geven.
+\
+\
+Het doel van deze opdracht is dat ik een metagenomics workflow kan toepassen op een realistische dataset en dat ik indien mogelijk aanvullende statistische testen uitvoer op de 16s sequencing data.
+\
+
+## Planning
+
+\
+Het volledige portfolio moet op 25 mei voor 23:59 worden ingeleverd, deze opdracht moet dus in ongeveer vier weken af zijn. Omdat er ook andere opdrachten voor het portfolio worden uitgevoerd, is het handig als deze opdracht in ongeveer drie weken afgerond is. Dat betekent dat er ongeveer 11 uur per week aan deze opdracht moet worden besteed. Er wordt aan deze opdracht gewerkt op dagen dat er geen les is, het streven is om 3 tot 4 dagen in de week ongeveer 4 uur per dag aan de opdracht te besteden. Indien er tijd overblijft na het maken van de overige portfolio opdrachten en de uitvoering van het data science projecticum, kan het aantal uur opgehoogd worden.
+\
+\
+
+### Fase 1 – Afbakening & voorbereiding (6 uur)
+-Projectdoel en onderzoeksvraag vastleggen. \
+-Data van 16s sequencing van Rstudio server halen. \
+-Bepalen van de analysemethode. \
+-Controleren wat de workflow voor de dataset was bij Projecticum Biomolecular Research. \
+-Eventueel een korte literatuurverkenning (parodontitis + microbiome). \
+\
+
+### Fase 2 – Data structureren & demultiplexing (6 uur)
+-Controleren hoe barcodes in BAM zijn opgeslagen. \
+-BAM naar FASTQ omzetten. \
+-Indien mogelijk: Demultiplexen in 8 parodontitis + 4 gezonde samples (bleek achteraf niet mogelijk te zijn omdat hiervoor niet de juiste bestanden beschikbaar waren en omdat demultiplexing tools veel van de CPU van een computer vragen). \
+-Bestandsstructuur organiseren. \
+\
+
+### Fase 3 – Taxonomische profiling (10 uur)
+-Taxonomische classificatie uitvoeren met kraken2 en bracken. \
+-Resultaten van deze opdracht vergelijken met de resultaten van het projecticum. \
+\
+
+### Fase 4 – Visualisatie & interpretatie (5 uur)
+-Krona visualisaties maken met verschillende thresholds voor aantal reads. \
+-Resultaten van verschillende thresholds vergelijken in een grafiek. \
+-Interpreteren: verschillen tussen volledige datasets en datasets met alleen patiënten samples en controlesamples, ontbrekende verwachte taxa. \
+\
+
+### Fase 6 – Rapportage in Bookdown (5 uur)
+-Methoden beschrijven. \
+-Resultaten samenvatten. \
+-Conclusie + discussie + reflectie. \
+\
+
+### Laten zien dat skill geleerd is
+Ik laat zien dat deze skill geleerd is door de code te laten zien die ik heb gebruikt of zelf heb gemaakt, waarbij ik bij elke stap heb toegelicht wat er is uitgevoerd. Verder laat ik de output van mijn code zien aan de hand van krona visualisaties, tabellen en grafieken (staafdiagram + lijngrafiek). Als laatste houd ik een README bij voor deze opdracht, waarin ik toelicht waar elk bestand voor deze opdracht voor dient.
+
+\
+Zie het hoofdstuk [Vrije opdracht - Uitvoering](#vrije-opdracht-uitvoering) voor de uitvoering van deze opdracht.
+
+
