@@ -17,4 +17,7 @@ Voor de ontwikkeling van het dashboard wordt gebruik gemaakt van de RStudio-pack
 \
 \
 
-\bibliography{bibliography.bib}
+## Referenties {-}
+
+::: {#refs}
+:::
