@@ -97,7 +97,7 @@
 ## │   ├── now.json
 ## │   ├── packages.bib
 ## │   ├── preamble.tex
-## │   ├── render55801a453e08.rds
+## │   ├── render55802eec3fa.rds
 ## │   ├── style.css
 ## │   ├── toc.css
 ## │   ├── vancouver-ama.csl
@@ -179,12 +179,9 @@
 ## │   │   ├── plan-voor-de-toekomst.html
 ## │   │   ├── portfolio-repository.html
 ## │   │   ├── r-package.html
-## │   │   ├── references.html
 ## │   │   ├── rna-sequencing-repository.html
 ## │   │   ├── search_index.json
 ## │   │   ├── style.css
-## │   │   ├── vrije-opdracht---introductie.html
-## │   │   ├── vrije-opdracht---uitvoering.html
 ## │   │   ├── vrije-opdracht-introductie.html
 ## │   │   └── vrije-opdracht-uitvoering.html
 ## │   ├── _bookdown.yml
