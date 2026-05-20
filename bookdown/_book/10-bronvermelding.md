@@ -17,5 +17,5 @@ Voor de ontwikkeling van het dashboard wordt gebruik gemaakt van de RStudio-pack
 \
 \
 
-::: {#refs}
-:::
+## Referenties
+
