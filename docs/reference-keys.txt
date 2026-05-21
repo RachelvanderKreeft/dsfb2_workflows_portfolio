@@ -6,6 +6,9 @@ fig:unnamed-chunk-16
 fig:unnamed-chunk-17
 fig:unnamed-chunk-20
 fig:unnamed-chunk-22
+fig:unnamed-chunk-25
+fig:unnamed-chunk-29
+fig:unnamed-chunk-32
 fig:ggplot
 introductie
 overzicht-van-opdrachten
@@ -42,6 +45,12 @@ nanoplot
 bracken-en-krona
 relatieve-prevalenties-vergelijken
 reproduceerbaarheid
+workflow-toepassen-op-een-illumina-sequencing-dataset
+analyse-met-fastqc
+kraken2-1
+bracken-met-threshold-0
+krona-1
+bracken-en-krona-met-threshold-5
 rna-sequencing-repository
 portfolio-repository
 data-analyse-van-een-ander-reproduceren
@@ -72,8 +81,8 @@ select_columns
 summary_by_group
 bronvermelding
 introductie-1
+referenties
 geparametrizeerde-rmarkdown
 introductie-2
 demonstratie
 html-rapport
-referenties

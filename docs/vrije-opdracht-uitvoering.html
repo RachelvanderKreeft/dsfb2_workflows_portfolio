@@ -201,10 +201,18 @@ div.csl-indent {
 <li class="chapter" data-level="5.8.4" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#alternatief-krona-vanuit-kraken2"><i class="fa fa-check"></i><b>5.8.4</b> Alternatief: krona vanuit kraken2</a></li>
 </ul></li>
 <li class="chapter" data-level="5.9" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#relatieve-prevalenties-volledige-dataset-vergelijken-met-individuele-datasets"><i class="fa fa-check"></i><b>5.9</b> Relatieve prevalenties volledige dataset vergelijken met individuele datasets</a></li>
-<li class="chapter" data-level="5.10" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#conclusie-en-discussie"><i class="fa fa-check"></i><b>5.10</b> Conclusie en discussie</a>
+<li class="chapter" data-level="5.10" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#conclusie-en-discussie"><i class="fa fa-check"></i><b>5.10</b> 10. Conclusie en discussie</a>
 <ul>
 <li class="chapter" data-level="5.10.1" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#data"><i class="fa fa-check"></i><b>5.10.1</b> Data</a></li>
 <li class="chapter" data-level="5.10.2" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#reproduceerbaarheid"><i class="fa fa-check"></i><b>5.10.2</b> Reproduceerbaarheid</a></li>
+</ul></li>
+<li class="chapter" data-level="5.11" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#workflow-toepassen-op-een-illumina-sequencing-dataset"><i class="fa fa-check"></i><b>5.11</b> Workflow toepassen op een illumina sequencing dataset</a>
+<ul>
+<li class="chapter" data-level="5.11.1" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#analyse-met-fastqc"><i class="fa fa-check"></i><b>5.11.1</b> Analyse met fastqc</a></li>
+<li class="chapter" data-level="5.11.2" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#kraken2-1"><i class="fa fa-check"></i><b>5.11.2</b> kraken2</a></li>
+<li class="chapter" data-level="5.11.3" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#bracken-met-threshold-0"><i class="fa fa-check"></i><b>5.11.3</b> bracken met threshold 0</a></li>
+<li class="chapter" data-level="5.11.4" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#krona-1"><i class="fa fa-check"></i><b>5.11.4</b> Krona</a></li>
+<li class="chapter" data-level="5.11.5" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#bracken-en-krona-met-threshold-5"><i class="fa fa-check"></i><b>5.11.5</b> bracken en krona met threshold 5</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="rna-sequencing-repository.html"><a href="rna-sequencing-repository.html"><i class="fa fa-check"></i><b>6</b> RNA-sequencing repository</a></li>
@@ -250,6 +258,7 @@ div.csl-indent {
 <li class="chapter" data-level="11" data-path="bronvermelding.html"><a href="bronvermelding.html"><i class="fa fa-check"></i><b>11</b> Bronvermelding</a>
 <ul>
 <li class="chapter" data-level="11.1" data-path="bronvermelding.html"><a href="bronvermelding.html#introductie-1"><i class="fa fa-check"></i><b>11.1</b> Introductie</a></li>
+<li class="chapter" data-level="11.2" data-path="bronvermelding.html"><a href="bronvermelding.html#referenties"><i class="fa fa-check"></i><b>11.2</b> Referenties</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="geparametrizeerde-rmarkdown.html"><a href="geparametrizeerde-rmarkdown.html"><i class="fa fa-check"></i><b>12</b> Geparametrizeerde Rmarkdown</a>
 <ul>
@@ -294,7 +303,6 @@ div.csl-indent {
 <div id="conda-installeren" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> conda installeren<a href="vrije-opdracht-uitvoering.html#conda-installeren" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Dit onderdeel hoeft alleen uitgevoerd te worden indien het conda installatie script nog niet is geïnstalleerd in Rstudio. Indien conda al is geïnstalleerd: begin bij stap 2.<br />
-<br />
 </p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="vrije-opdracht-uitvoering.html#cb2-1" tabindex="-1"></a></span>
 <span id="cb2-2"><a href="vrije-opdracht-uitvoering.html#cb2-2" tabindex="-1"></a><span class="co"># Download het conda installatie script</span></span>
@@ -308,7 +316,6 @@ div.csl-indent {
 <div id="conda-environment-opzetten" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> conda environment opzetten<a href="vrije-opdracht-uitvoering.html#conda-environment-opzetten" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Voor deze analyse werden twee environments aangemaakt. In de eerste environment werden de packages samtools, NanoPlot, kraken2 en bracken geïnstalleerd. In de tweede environment werd krona geïnstalleerd. Krona moet in een aparte environment worden geïnstalleerd omdat krona andere dependencies heeft.<br />
-<br />
 </p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="vrije-opdracht-uitvoering.html#cb3-1" tabindex="-1"></a></span>
 <span id="cb3-2"><a href="vrije-opdracht-uitvoering.html#cb3-2" tabindex="-1"></a><span class="co"># Aanmaken van een environment met samtools, NanoPlot, kraken2 en bracken</span></span>
@@ -329,12 +336,9 @@ div.csl-indent {
 <span id="cb3-17"><a href="vrije-opdracht-uitvoering.html#cb3-17" tabindex="-1"></a></span>
 <span id="cb3-18"><a href="vrije-opdracht-uitvoering.html#cb3-18" tabindex="-1"></a><span class="co"># Activeer de environment nanopore_clean opnieuw</span></span>
 <span id="cb3-19"><a href="vrije-opdracht-uitvoering.html#cb3-19" tabindex="-1"></a><span class="ex">conda</span> activate nanopore_clean</span></code></pre></div>
-<p><br />
-</p>
 <div id="krona-handmatig-installeren" class="section level3 hasAnchor" number="5.2.1">
 <h3><span class="header-section-number">5.2.1</span> Krona handmatig installeren<a href="vrije-opdracht-uitvoering.html#krona-handmatig-installeren" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Soms mist krona na installatie het taxonomy bestand. Wanneer ktImportTaxonomy van de krona package dan wordt gebruikt, resulteert dit in de melding ‘’Taxonomy not found in…’’. Indien dit het geval is, kunnen de onderstaande stappen worden uitgevoerd om alsnog het taxonomy bestand te downloaden.<br />
-<br />
 </p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="vrije-opdracht-uitvoering.html#cb4-1" tabindex="-1"></a></span>
 <span id="cb4-2"><a href="vrije-opdracht-uitvoering.html#cb4-2" tabindex="-1"></a><span class="co"># Krona handmatig installeren</span></span>
@@ -418,9 +422,9 @@ In figuur 1 is de lengte van de reads uitgezet tegen de kwaliteit van deze reads
 <br />
 </p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-6-1.png" alt="Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads van de ongefilterde data." width="1440" />
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-6-1.png" alt="Figuur 1: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads van de ongefilterde data." width="1440" />
 <p class="caption">
-Figure 5.1: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads van de ongefilterde data.
+Figure 5.1: Figuur 1: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads van de ongefilterde data.
 </p>
 </div>
 <p><br />
@@ -453,9 +457,9 @@ In figuur 2 is de lengte van de reads uitgezet tegen de kwaliteit van deze reads
 <br />
 </p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-8-1.png" alt="Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads. Voor dit figuur werd gefilterd op &gt;Q10 en een lengte van 1200 tot 1600 bp." width="1440" />
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-8-1.png" alt="Figuur 2: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads. Voor dit figuur werd gefilterd op &gt;Q10 en een lengte van 1200 tot 1600 bp." width="1440" />
 <p class="caption">
-Figure 5.2: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads. Voor dit figuur werd gefilterd op &gt;Q10 en een lengte van 1200 tot 1600 bp.
+Figure 5.2: Figuur 2: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads. Voor dit figuur werd gefilterd op &gt;Q10 en een lengte van 1200 tot 1600 bp.
 </p>
 </div>
 <p><br />
@@ -544,9 +548,9 @@ Voor deze visualisatie werd gekozen om het bracken bestand als input te gebruike
 In figuur 3 is de krona visualisatie te zien.<br />
 </p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-12-1.png" alt="Krona visualisatie op species niveau en een threshold van 0." width="672" />
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-12-1.png" alt="Figuur 3: Krona visualisatie op species niveau en een threshold van 0." width="672" />
 <p class="caption">
-Figure 5.3: Krona visualisatie op species niveau en een threshold van 0.
+Figure 5.3: Figuur 3: Krona visualisatie op species niveau en een threshold van 0.
 </p>
 </div>
 <p><br />
@@ -559,7 +563,7 @@ In figuur 3 worden nu de prevalenties van 3034 bacteriesoorten gerepresenteerd. 
 </p>
 <div id="bracken-en-krona-met-threshold" class="section level3 hasAnchor" number="5.8.1">
 <h3><span class="header-section-number">5.8.1</span> bracken en krona met threshold<a href="vrije-opdracht-uitvoering.html#bracken-en-krona-met-threshold" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Tijdens het projecticum werden bacteriesoorten met minder dan 5 reads uit de dataset gehaald voor de krona visualisatie.<br />
+<p>Tijdens het projecticum werden bacteriesoorten met minder dan 5 reads uit de dataset gehaald voor de krona visualisatie. Om de resultaten van de volledige dataset te kunnen vergelijken met de resultaten van de samples van patiënten met parodontitis en van gezonde personen, wordt deze stap ook voor deze analyse uitgeoverd.<br />
 <br />
 </p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="vrije-opdracht-uitvoering.html#cb11-1" tabindex="-1"></a></span>
@@ -600,9 +604,9 @@ Van de 3034 bacteriesoorten voldeden 1216 bacteriesoorten aan de threshold van 5
 In figuur 4 is de krona visualisatie te zien waarbij was gefilterd op minimaal 5 reads per bacteriesoort.<br />
 </p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-15-1.png" alt="Krona visualisatie op species niveau en een threshold van 5." width="672" />
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-15-1.png" alt="Figuur 4: Krona visualisatie op species niveau en een threshold van 5." width="672" />
 <p class="caption">
-Figure 5.4: Krona visualisatie op species niveau en een threshold van 5.
+Figure 5.4: Figuur 4: Krona visualisatie op species niveau en een threshold van 5.
 </p>
 </div>
 <p><br />
@@ -623,15 +627,15 @@ Opmerking: van deze figuren zijn geen .html bestanden meer beschikbaar.<br />
 <br />
 </p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-16"></span>
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-16-1.png" alt="Krona visualisatie van de patiëntensamples. De Krona visualisatie bevat in totaal 453 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum." width="672" />
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-16-1.png" alt="Figuur 5: Krona visualisatie van de patiëntensamples. De Krona visualisatie bevat in totaal 453 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum." width="672" />
 <p class="caption">
-Figure 5.5: Krona visualisatie van de patiëntensamples. De Krona visualisatie bevat in totaal 453 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum.
+Figure 5.5: Figuur 5: Krona visualisatie van de patiëntensamples. De Krona visualisatie bevat in totaal 453 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum.
 </p>
 </div>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-17"></span>
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-17-1.png" alt="Krona visualisatie van de controlesamples. De Krona visualisatie bevat in totaal 673 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum." width="672" />
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-17-1.png" alt="Figuur 6: Krona visualisatie van de controlesamples. De Krona visualisatie bevat in totaal 673 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum." width="672" />
 <p class="caption">
-Figure 5.6: Krona visualisatie van de controlesamples. De Krona visualisatie bevat in totaal 673 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum.
+Figure 5.6: Figuur 6: Krona visualisatie van de controlesamples. De Krona visualisatie bevat in totaal 673 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum.
 </p>
 </div>
 <p><br />
@@ -685,9 +689,9 @@ In figuur 7 is de krona visualisatie te zien waarbij was gefilterd op minimaal 5
 <br />
 </p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-20"></span>
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-20-1.png" alt="Krona visualisatie op species niveau en een threshold van 50." width="672" />
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-20-1.png" alt="Figuur 7: Krona visualisatie op species niveau en een threshold van 50." width="672" />
 <p class="caption">
-Figure 5.7: Krona visualisatie op species niveau en een threshold van 50.
+Figure 5.7: Figuur 7: Krona visualisatie op species niveau en een threshold van 50.
 </p>
 </div>
 <p><br />
@@ -796,17 +800,17 @@ Voor de demonstratie van deze analyse is een threshold van 0 aangehouden.<br />
 <span id="cb17-9"><a href="vrije-opdracht-uitvoering.html#cb17-9" tabindex="-1"></a>~/parodontitis16s/analyses/krona/16S_exp1_11122025_krona_input.txt <span class="dt">\</span></span>
 <span id="cb17-10"><a href="vrije-opdracht-uitvoering.html#cb17-10" tabindex="-1"></a>-o ~/parodontitis16s/analyses/krona/16S_exp1_11122025_krona.html</span></code></pre></div>
 <p><br />
-In figuur 9 is de krona visualisatie te zien waarbij gebruik werd gemaakt van de data van kraken2.<br />
+In figuur 8 is de krona visualisatie te zien waarbij gebruik werd gemaakt van de data van kraken2.<br />
 <br />
 </p>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-22"></span>
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-22-1.png" alt="Krona visualisatie op basis van kraken2 data op species niveau en een threshold van 0." width="672" />
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-22-1.png" alt="Figuur 9: Krona visualisatie op basis van kraken2 data op species niveau en een threshold van 0." width="672" />
 <p class="caption">
-Figure 5.8: Krona visualisatie op basis van kraken2 data op species niveau en een threshold van 0.
+Figure 5.8: Figuur 9: Krona visualisatie op basis van kraken2 data op species niveau en een threshold van 0.
 </p>
 </div>
 <p><br />
-Raadpleeg voor figuur 9 het html bestand 16S_exp1_11122025_kraken2_species_threshold0.html in de GitHub repository.<br />
+Raadpleeg voor figuur 8 het html bestand 16S_exp1_11122025_kraken2_species_threshold0.html in de GitHub repository.<br />
 <br />
 De kraken2 krona visualisatie laat 6543 bacteriesoorten zien, terwijl de krona visualisatie vanuit bracken 3034 bacteriesoorten liet zien. Mogelijk spelen de inclusie van taxa met een lage abundantie en taxa met een onduidelijke classificatie hier een rol bij. Om deze hypothese te bevestigen, werd de onderstaande code gebruikt:<br />
 <br />
@@ -1408,7 +1412,7 @@ Vanwege de lage prevalenties van de bacteriesoorten in de volledige dataset is h
 </p>
 </div>
 <div id="conclusie-en-discussie" class="section level2 hasAnchor" number="5.10">
-<h2><span class="header-section-number">5.10</span> Conclusie en discussie<a href="vrije-opdracht-uitvoering.html#conclusie-en-discussie" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2><span class="header-section-number">5.10</span> 10. Conclusie en discussie<a href="vrije-opdracht-uitvoering.html#conclusie-en-discussie" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="data" class="section level3 hasAnchor" number="5.10.1">
 <h3><span class="header-section-number">5.10.1</span> Data<a href="vrije-opdracht-uitvoering.html#data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="nanoplot" class="section level4 hasAnchor" number="5.10.1.1">
@@ -1438,7 +1442,204 @@ Opvallend was dat <em>Streptococcus gracilis</em> helemaal niet werd teruggevond
 </div>
 <div id="reproduceerbaarheid" class="section level3 hasAnchor" number="5.10.2">
 <h3><span class="header-section-number">5.10.2</span> Reproduceerbaarheid<a href="vrije-opdracht-uitvoering.html#reproduceerbaarheid" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Demultiplexing bleek uiteindelijk niet mogelijk te zijn omdat oorspronkelijk MinKNOW werd gebruikt op een krachtigere rekenomgeving en omdat het FAST5 bestand niet via de daur1 server beschikbaar was. Dit heeft erin geresulteerd dat de resultaten niet precies hetzelfde waren als de resultaten van het projecticum. De overige stappen waren wel reproduceerbaar.</p>
+<p>Demultiplexing bleek uiteindelijk niet mogelijk te zijn omdat oorspronkelijk MinKNOW werd gebruikt op een krachtigere rekenomgeving en omdat het FAST5 bestand niet via de daur1 server beschikbaar was. Dit heeft erin geresulteerd dat de resultaten niet precies hetzelfde waren als de resultaten van het projecticum. De overige stappen waren wel reproduceerbaar.<br />
+<br />
+</p>
+</div>
+</div>
+<div id="workflow-toepassen-op-een-illumina-sequencing-dataset" class="section level2 hasAnchor" number="5.11">
+<h2><span class="header-section-number">5.11</span> Workflow toepassen op een illumina sequencing dataset<a href="vrije-opdracht-uitvoering.html#workflow-toepassen-op-een-illumina-sequencing-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Om aan te tonen dat de eerder beschreven workflow ook op andere datasets werkt, werd de workflow toegepast op de metagenomics mock1 dataset van de cursus daur2. Deze dataset is een illumina dataset met paired-end sequencing reads die was gegenereerd om identificatiealgoritmes te testen.<br />
+<br />
+De dataset kan worden gevonden in de daur Rstudio server in de gedeelde folder /home/daur2/metagenomics/reader_data/ en de bestanden die werden gebruikt voor deze analyse waren HU1_MOCK1_L001_R1_001.fastq.gz (forward reads) en HU1_MOCK1_L001_R2_001.fastq.gz (reverse reads).<br />
+<br />
+Omdat deze data van illumina sequencing afkomsting is in plaats van nanopore sequencing, moest de workflow iets aangepast worden. Het grootste verschil is dat fastqc werd gebruikt in plaats van nanoplot. De workflow voor kraken2, bracken en krona was bijna identiek. Een ander verschil is dat deze bestanden al als .fastq bestanden waren geleverd, waardoor het niet nodig was om deze bestanden in een ander format over te zetten.<br />
+<br />
+</p>
+<div id="analyse-met-fastqc" class="section level3 hasAnchor" number="5.11.1">
+<h3><span class="header-section-number">5.11.1</span> Analyse met fastqc<a href="vrije-opdracht-uitvoering.html#analyse-met-fastqc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="vrije-opdracht-uitvoering.html#cb22-1" tabindex="-1"></a></span>
+<span id="cb22-2"><a href="vrije-opdracht-uitvoering.html#cb22-2" tabindex="-1"></a><span class="co"># activeer de fastqc environment</span></span>
+<span id="cb22-3"><a href="vrije-opdracht-uitvoering.html#cb22-3" tabindex="-1"></a><span class="ex">conda</span> activate fastqc</span>
+<span id="cb22-4"><a href="vrije-opdracht-uitvoering.html#cb22-4" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="vrije-opdracht-uitvoering.html#cb22-5" tabindex="-1"></a><span class="co"># Voer een FastQC-analyse uit op de forward reads</span></span>
+<span id="cb22-6"><a href="vrije-opdracht-uitvoering.html#cb22-6" tabindex="-1"></a><span class="ex">fastqc</span> <span class="at">-o</span> ~/parodontitis16s/analyses/fastqc /home/daur2/metagenomics/reader_data/HU1_MOCK1_L001_R1_001.fastq.gz</span>
+<span id="cb22-7"><a href="vrije-opdracht-uitvoering.html#cb22-7" tabindex="-1"></a></span>
+<span id="cb22-8"><a href="vrije-opdracht-uitvoering.html#cb22-8" tabindex="-1"></a><span class="co"># Voer een FastQC-analyse uit op de reverse reads</span></span>
+<span id="cb22-9"><a href="vrije-opdracht-uitvoering.html#cb22-9" tabindex="-1"></a><span class="ex">fastqc</span> <span class="at">-o</span> ~/parodontitis16s/analyses/fastqc /home/daur2/metagenomics/reader_data/HU1_MOCK1_L001_R2_001.fastq.gz</span>
+<span id="cb22-10"><a href="vrije-opdracht-uitvoering.html#cb22-10" tabindex="-1"></a></span>
+<span id="cb22-11"><a href="vrije-opdracht-uitvoering.html#cb22-11" tabindex="-1"></a><span class="co"># deactiveer de fastqc environment</span></span>
+<span id="cb22-12"><a href="vrije-opdracht-uitvoering.html#cb22-12" tabindex="-1"></a><span class="ex">conda</span> deactivate</span></code></pre></div>
+<p><br />
+Zie de map fastqc binnen analyses voor de fastQC rapporten. In het fastQC rapport worden verschillende eigenschappen over de reads samengevat. Voor illumina sequencing zijn vooral de Per base sequence quality en de Per sequence quality scores belangrijk. In figuur 10 zijn de resultaten van de Per base sequence quality voor de forward en reverse reads te zien.<br />
+</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-25"></span>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-25-1.png" alt="Figuur 10: Per base sequence quality distributie voor mock1 data van daur2. Links; kwaliteitscores van de forward reads, de kwaliteitsscore is 36 op de Phred-schaal. Rechts; Kwaliteitsscores van de reverse reads, de kwaliteitsscore varieert van 25 tot 36 op de Phred-schaal. Alle basen hebben aflezingen van zeer hoge kwaliteit (&gt;30), wat aangeeft dat de reads een nauwkeurigheid hebben van &gt;99,9%." width="100%" />
+<p class="caption">
+Figure 5.9: Figuur 10: Per base sequence quality distributie voor mock1 data van daur2. Links; kwaliteitscores van de forward reads, de kwaliteitsscore is 36 op de Phred-schaal. Rechts; Kwaliteitsscores van de reverse reads, de kwaliteitsscore varieert van 25 tot 36 op de Phred-schaal. Alle basen hebben aflezingen van zeer hoge kwaliteit (&gt;30), wat aangeeft dat de reads een nauwkeurigheid hebben van &gt;99,9%.
+</p>
+</div>
+<p><br />
+-HU1_MOCK1_L001_R1_001.fastq.gz (forward reads): 40237621 reads, reads hebben een lengte tussen 50-151 bp, gemiddelde kwaliteitsscore was 36. Er zijn 0 reads van slechte kwaliteit. Er hoeft dus geen data verwijderd te worden.<br />
+<br />
+-HU1_MOCK1_L001_R2_001.fastq.gz (reverse reads): 40237621 reads, reads hebben een lengte tussen 50-151 bp, gemiddelde kwaliteitsscore was 36. Van basen 125 tot 151 is er een grotere spreiding in kwaliteit van reads, maar de minimale kwaliteitsscore voor deze basen is 25. Er zijn 0 reads van slechte kwaliteit. Er hoeft dus geen data verwijderd te worden.<br />
+<br />
+</p>
+</div>
+<div id="kraken2-1" class="section level3 hasAnchor" number="5.11.2">
+<h3><span class="header-section-number">5.11.2</span> kraken2<a href="vrije-opdracht-uitvoering.html#kraken2-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Vervolgens werd een kraken2 analyse op de dataset uitgevoerd. Voor de kraken2 analyse moesten voor deze dataset twee extra opties worden toegevoerd. /
+/
+1. –paired: Hiermee wordt aangegeven dat de twee .fastq-bestanden paired-end sequencing reads zijn en dat ze samen moeten worden geïnterpreteerd. Het resultaat daarvan is één .report bestand en één .out bestand die alle reads bevatten. /
+2. – gzip-compressed: Deze optie wordt toegevoegd wanneer de datasets gezipped zijn. /
+/
+Let op: Het mock1.kraken.out bestand wordt 7.6 Gb, daardoor kan het iets langer duren totdat de kraken2 analyse volledig is uitgevoerd. /</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="vrije-opdracht-uitvoering.html#cb23-1" tabindex="-1"></a></span>
+<span id="cb23-2"><a href="vrije-opdracht-uitvoering.html#cb23-2" tabindex="-1"></a><span class="co"># Activeer de nanopore_clean environment</span></span>
+<span id="cb23-3"><a href="vrije-opdracht-uitvoering.html#cb23-3" tabindex="-1"></a><span class="ex">conda</span> activate nanopore_clean</span>
+<span id="cb23-4"><a href="vrije-opdracht-uitvoering.html#cb23-4" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="vrije-opdracht-uitvoering.html#cb23-5" tabindex="-1"></a><span class="co"># Voer een kraken2 analyse uit op een illumina dataset</span></span>
+<span id="cb23-6"><a href="vrije-opdracht-uitvoering.html#cb23-6" tabindex="-1"></a><span class="ex">kraken2</span> <span class="dt">\</span></span>
+<span id="cb23-7"><a href="vrije-opdracht-uitvoering.html#cb23-7" tabindex="-1"></a>  <span class="at">--db</span> /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE <span class="dt">\</span></span>
+<span id="cb23-8"><a href="vrije-opdracht-uitvoering.html#cb23-8" tabindex="-1"></a>  <span class="at">--threads</span> 6 <span class="dt">\</span></span>
+<span id="cb23-9"><a href="vrije-opdracht-uitvoering.html#cb23-9" tabindex="-1"></a>  <span class="at">--paired</span> <span class="dt">\</span></span>
+<span id="cb23-10"><a href="vrije-opdracht-uitvoering.html#cb23-10" tabindex="-1"></a>  <span class="at">--gzip-compressed</span> <span class="dt">\</span></span>
+<span id="cb23-11"><a href="vrije-opdracht-uitvoering.html#cb23-11" tabindex="-1"></a>  <span class="at">--report</span> ~/parodontitis16s/analyses/kraken2/mock1.report.report <span class="dt">\</span></span>
+<span id="cb23-12"><a href="vrije-opdracht-uitvoering.html#cb23-12" tabindex="-1"></a>  <span class="at">--output</span> ~/parodontitis16s/analyses/kraken2/mock1.kraken.out <span class="dt">\</span></span>
+<span id="cb23-13"><a href="vrije-opdracht-uitvoering.html#cb23-13" tabindex="-1"></a>  <span class="at">--use-names</span> <span class="dt">\</span></span>
+<span id="cb23-14"><a href="vrije-opdracht-uitvoering.html#cb23-14" tabindex="-1"></a>  /home/daur2/metagenomics/reader_data/HU1_MOCK1_L001_R1_001.fastq.gz /home/daur2/metagenomics/reader_data/HU1_MOCK1_L001_R2_001.fastq.gz</span></code></pre></div>
+<p><br />
+Uit de kraken2 analyse kwamen de volgende resultaten:<br />
+40237621 sequences (11308.61 Mbp) processed in 212.514s (11360.5 Kseq/m, 3192.81 Mbp/m).<br />
+36477304 sequences classified (90.65%)<br />
+3760317 sequences unclassified (9.35%)<br />
+<br />
+Van de reads kon 90.65% geclassificeerd worden, voor deze reeds kon dus een taxonomische toewijzing worden gemaakt. 9.35% van de reads konden niet geclassificeerd worden. Deze reads waren waarschijnlijk afkomstig van organismen die niet in de minikraken2_v2_8GB_201904_UPDATE database voorkomen.<br />
+<br />
+</p>
+</div>
+<div id="bracken-met-threshold-0" class="section level3 hasAnchor" number="5.11.3">
+<h3><span class="header-section-number">5.11.3</span> bracken met threshold 0<a href="vrije-opdracht-uitvoering.html#bracken-met-threshold-0" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Vervolgens werd er een bracken analyse op de dataset uitgevoerd. Deze werd eerst uitgevoerd met een threshold van 0.<br />
+</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="vrije-opdracht-uitvoering.html#cb24-1" tabindex="-1"></a></span>
+<span id="cb24-2"><a href="vrije-opdracht-uitvoering.html#cb24-2" tabindex="-1"></a><span class="co"># Voer een bracken analyse uit op species niveau en met een threshold van 0</span></span>
+<span id="cb24-3"><a href="vrije-opdracht-uitvoering.html#cb24-3" tabindex="-1"></a><span class="ex">bracken</span> <span class="dt">\</span></span>
+<span id="cb24-4"><a href="vrije-opdracht-uitvoering.html#cb24-4" tabindex="-1"></a>  <span class="at">-d</span> /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE <span class="dt">\</span></span>
+<span id="cb24-5"><a href="vrije-opdracht-uitvoering.html#cb24-5" tabindex="-1"></a>  <span class="at">-i</span> ~/parodontitis16s/analyses/kraken2/mock1.report.report <span class="dt">\</span></span>
+<span id="cb24-6"><a href="vrije-opdracht-uitvoering.html#cb24-6" tabindex="-1"></a>  <span class="at">-o</span> ~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold0.bracken <span class="dt">\</span></span>
+<span id="cb24-7"><a href="vrije-opdracht-uitvoering.html#cb24-7" tabindex="-1"></a>  <span class="at">-l</span> S <span class="dt">\</span></span>
+<span id="cb24-8"><a href="vrije-opdracht-uitvoering.html#cb24-8" tabindex="-1"></a>  <span class="at">-t</span> 0  </span></code></pre></div>
+<p>De bracken analyse met threshold 5 geeft de volgende resultaten:<br />
+&gt;&gt;&gt; Threshold: 0<br />
+&gt;&gt;&gt; Number of species in sample: 2055<br />
+&gt;&gt; Number of species with reads &gt; threshold: 2055<br />
+&gt;&gt; Number of species with reads &lt; threshold: 0<br />
+&gt;&gt;&gt; Total reads in sample: 40237621<br />
+&gt;&gt; Total reads kept at species level (reads &gt; threshold): 21811852<br />
+&gt;&gt; Total reads discarded (species reads &lt; threshold): 0<br />
+&gt;&gt; Reads distributed: 14665045<br />
+&gt;&gt; Reads not distributed (eg. no species above threshold): 407<br />
+&gt;&gt; Unclassified reads: 3760317<br />
+</p>
+<p><br />
+-Er werden 2055 bacteriesoorten gevonden in de dataset.
+-Voor de bracken analyse had kraken2 21811852 reads op speciesniveau bepaald.<br />
+-14665045 reads die door kraken2 niet op speciesniveau konden worden bepaald, werden door bracken alsnog op speciesniveau bepaald.<br />
+-407 reads konden niet toegewezen worden aan een bacteriesoort.<br />
+-3760317 reads zijn ongeclassificeerd.<br />
+<br />
+</p>
+</div>
+<div id="krona-1" class="section level3 hasAnchor" number="5.11.4">
+<h3><span class="header-section-number">5.11.4</span> Krona<a href="vrije-opdracht-uitvoering.html#krona-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>De volgende stap is het uitvoeren van een krona visualisatie op de dataset met threshold 0. Voor deze visualisatie werd gekozen om het bracken bestand als input te gebruiken.<br />
+<br />
+</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="vrije-opdracht-uitvoering.html#cb25-1" tabindex="-1"></a></span>
+<span id="cb25-2"><a href="vrije-opdracht-uitvoering.html#cb25-2" tabindex="-1"></a><span class="co"># Activeer de krona environment</span></span>
+<span id="cb25-3"><a href="vrije-opdracht-uitvoering.html#cb25-3" tabindex="-1"></a><span class="ex">conda</span> activate krona</span>
+<span id="cb25-4"><a href="vrije-opdracht-uitvoering.html#cb25-4" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="vrije-opdracht-uitvoering.html#cb25-5" tabindex="-1"></a><span class="co"># Selecteer de variabelen taxonomy_id en fraction_total_reads en zet de output daarvan in een .txt bestand</span></span>
+<span id="cb25-6"><a href="vrije-opdracht-uitvoering.html#cb25-6" tabindex="-1"></a><span class="fu">awk</span> <span class="at">-F</span><span class="st">&#39;\t&#39;</span> <span class="st">&#39;NR&gt;1 {print $6 &quot;\t&quot; $2}&#39;</span> <span class="dt">\</span></span>
+<span id="cb25-7"><a href="vrije-opdracht-uitvoering.html#cb25-7" tabindex="-1"></a>~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold0.bracken <span class="dt">\</span></span>
+<span id="cb25-8"><a href="vrije-opdracht-uitvoering.html#cb25-8" tabindex="-1"></a><span class="op">&gt;</span> ~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold0.txt</span>
+<span id="cb25-9"><a href="vrije-opdracht-uitvoering.html#cb25-9" tabindex="-1"></a></span>
+<span id="cb25-10"><a href="vrije-opdracht-uitvoering.html#cb25-10" tabindex="-1"></a><span class="co"># Maak een krona visualisatie</span></span>
+<span id="cb25-11"><a href="vrije-opdracht-uitvoering.html#cb25-11" tabindex="-1"></a><span class="ex">ktImportTaxonomy</span> <span class="dt">\</span></span>
+<span id="cb25-12"><a href="vrije-opdracht-uitvoering.html#cb25-12" tabindex="-1"></a>~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold0.txt <span class="dt">\</span></span>
+<span id="cb25-13"><a href="vrije-opdracht-uitvoering.html#cb25-13" tabindex="-1"></a>-o ~/parodontitis16s/analyses/krona/mock1_kraken_bracken_species_threshold0.html</span></code></pre></div>
+<p><br />
+In figuur 11 is de krona visualisatie te zien van de illumina dataset zonder dat gefilterd werd op het aantal reads.<br />
+</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-29"></span>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-29-1.png" alt="Figuur 11: Krona visualisatie op species niveau en een threshold van 0." width="672" />
+<p class="caption">
+Figure 5.10: Figuur 11: Krona visualisatie op species niveau en een threshold van 0.
+</p>
+</div>
+<p><br />
+Raadpleeg voor figuur 11 het html bestand mock1_kraken_bracken_species_threshold0 in de GitHub repository om de resultaten in meer detail te kunnen zien.<br />
+<br />
+In figuur 11 worden nu de prevalenties van 2055 bacteriesoorten gerepresenteerd. Zoals in de krona visualisatie te zien is, zijn er meerdere bacteriesoorten in de dataset aanwezig met prevalenties van tussen de 1% en 5%. Van bepaalde bacteriegroepen komen veel subspecies voor Verder bestaat 1% van de reads uit virussen en 1% uit archaea. 2% van de reads werden onder [other root] gezet. Deze reads bevatten taxonomy IDs die niet in de lokale database van krona voorkomen.<br />
+<br />
+</p>
+</div>
+<div id="bracken-en-krona-met-threshold-5" class="section level3 hasAnchor" number="5.11.5">
+<h3><span class="header-section-number">5.11.5</span> bracken en krona met threshold 5<a href="vrije-opdracht-uitvoering.html#bracken-en-krona-met-threshold-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ook voor deze dataset wordt gefilterd op bacteriesoorten met minimaal 5 reads.<br />
+</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="vrije-opdracht-uitvoering.html#cb26-1" tabindex="-1"></a></span>
+<span id="cb26-2"><a href="vrije-opdracht-uitvoering.html#cb26-2" tabindex="-1"></a><span class="co"># Activeer de nanopore_clean environment</span></span>
+<span id="cb26-3"><a href="vrije-opdracht-uitvoering.html#cb26-3" tabindex="-1"></a><span class="ex">conda</span> activate nanopore_clean</span>
+<span id="cb26-4"><a href="vrije-opdracht-uitvoering.html#cb26-4" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="vrije-opdracht-uitvoering.html#cb26-5" tabindex="-1"></a><span class="co"># Voer een bracken analyse uit op species niveau en met een threshold van 0</span></span>
+<span id="cb26-6"><a href="vrije-opdracht-uitvoering.html#cb26-6" tabindex="-1"></a><span class="ex">bracken</span> <span class="dt">\</span></span>
+<span id="cb26-7"><a href="vrije-opdracht-uitvoering.html#cb26-7" tabindex="-1"></a>  <span class="at">-d</span> /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE <span class="dt">\</span></span>
+<span id="cb26-8"><a href="vrije-opdracht-uitvoering.html#cb26-8" tabindex="-1"></a>  <span class="at">-i</span> ~/parodontitis16s/analyses/kraken2/mock1.report.report <span class="dt">\</span></span>
+<span id="cb26-9"><a href="vrije-opdracht-uitvoering.html#cb26-9" tabindex="-1"></a>  <span class="at">-o</span> ~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold5.bracken <span class="dt">\</span></span>
+<span id="cb26-10"><a href="vrije-opdracht-uitvoering.html#cb26-10" tabindex="-1"></a>  <span class="at">-l</span> S <span class="dt">\</span></span>
+<span id="cb26-11"><a href="vrije-opdracht-uitvoering.html#cb26-11" tabindex="-1"></a>  <span class="at">-t</span> 5  </span></code></pre></div>
+<p><br />
+De bracken analyse met threshold 5 geeft de volgende resultaten:<br />
+&gt;&gt;&gt; Threshold: 5<br />
+&gt;&gt;&gt; Number of species in sample: 2055<br />
+&gt;&gt; Number of species with reads &gt; threshold: 1147<br />
+&gt;&gt; Number of species with reads &lt; threshold: 908<br />
+&gt;&gt;&gt; Total reads in sample: 40237621<br />
+&gt;&gt; Total reads kept at species level (reads &gt; threshold): 21810446<br />
+&gt;&gt; Total reads discarded (species reads &lt; threshold): 1406<br />
+&gt;&gt; Reads distributed: 14664930<br />
+&gt;&gt; Reads not distributed (eg. no species above threshold): 522<br />
+&gt;&gt; Unclassified reads: 3760317<br />
+</p>
+<p><br />
+Van de 2055 bacteriesoorten voldeden 1147 bacteriesoorten aan de threshold van 5 reads. 908 bacteriesoorten voldeden niet aan deze threshold, deze bacteriesoorten hadden samen 1406 reads.<br />
+ </p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="vrije-opdracht-uitvoering.html#cb27-1" tabindex="-1"></a></span>
+<span id="cb27-2"><a href="vrije-opdracht-uitvoering.html#cb27-2" tabindex="-1"></a><span class="co"># Activeer de krona environment</span></span>
+<span id="cb27-3"><a href="vrije-opdracht-uitvoering.html#cb27-3" tabindex="-1"></a><span class="ex">conda</span> activate krona</span>
+<span id="cb27-4"><a href="vrije-opdracht-uitvoering.html#cb27-4" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="vrije-opdracht-uitvoering.html#cb27-5" tabindex="-1"></a><span class="co"># Selecteer de variabelen taxonomy_id en fraction_total_reads en zet de output daarvan in een .txt bestand</span></span>
+<span id="cb27-6"><a href="vrije-opdracht-uitvoering.html#cb27-6" tabindex="-1"></a><span class="fu">awk</span> <span class="at">-F</span><span class="st">&#39;\t&#39;</span> <span class="st">&#39;NR&gt;1 {print $6 &quot;\t&quot; $2}&#39;</span> <span class="dt">\</span></span>
+<span id="cb27-7"><a href="vrije-opdracht-uitvoering.html#cb27-7" tabindex="-1"></a>~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold5.bracken <span class="dt">\</span></span>
+<span id="cb27-8"><a href="vrije-opdracht-uitvoering.html#cb27-8" tabindex="-1"></a><span class="op">&gt;</span> ~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold5.txt</span>
+<span id="cb27-9"><a href="vrije-opdracht-uitvoering.html#cb27-9" tabindex="-1"></a></span>
+<span id="cb27-10"><a href="vrije-opdracht-uitvoering.html#cb27-10" tabindex="-1"></a><span class="co"># Maak een krona visualisatie</span></span>
+<span id="cb27-11"><a href="vrije-opdracht-uitvoering.html#cb27-11" tabindex="-1"></a><span class="ex">ktImportTaxonomy</span> <span class="dt">\</span></span>
+<span id="cb27-12"><a href="vrije-opdracht-uitvoering.html#cb27-12" tabindex="-1"></a>~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold5.txt <span class="dt">\</span></span>
+<span id="cb27-13"><a href="vrije-opdracht-uitvoering.html#cb27-13" tabindex="-1"></a>-o ~/parodontitis16s/analyses/krona/mock1_kraken_bracken_species_threshold5.html</span></code></pre></div>
+<p><br />
+In figuur 12 is de krona visualisatie te zien van de illumina dataset waarbij was gefilterd op minimaal 5 reads per bacteriesoort.<br />
+</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-32"></span>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-32-1.png" alt="Figuur 12: Krona visualisatie op species niveau en een threshold van 5." width="672" />
+<p class="caption">
+Figure 5.11: Figuur 12: Krona visualisatie op species niveau en een threshold van 5.
+</p>
+</div>
+<p><br />
+In figuur 12 worden nu de prevalenties van 1147 bacteriesoorten gerepresenteerd. Ook in de dataset met threshold 5 werden bacteriesoorten gevonden met prevalenties van tussen de 1% en 5%. In deze dataset bestaat nog maar 1% van de reads uit [other root] in plaats van 2%, voor virussen en archaea blijven dit allebei 1% van de reads.</p>
 
 </div>
 </div>
