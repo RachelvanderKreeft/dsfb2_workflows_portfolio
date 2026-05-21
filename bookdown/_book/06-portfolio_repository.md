@@ -34,6 +34,9 @@
 ## │   │       ├── unnamed-chunk-20-1.png
 ## │   │       ├── unnamed-chunk-22-1.png
 ## │   │       ├── unnamed-chunk-24-1.png
+## │   │       ├── unnamed-chunk-25-1.png
+## │   │       ├── unnamed-chunk-29-1.png
+## │   │       ├── unnamed-chunk-32-1.png
 ## │   │       ├── unnamed-chunk-6-1.png
 ## │   │       └── unnamed-chunk-8-1.png
 ## │   ├── 05-formatieve_opdracht_rna-seq_daur2.md
@@ -97,7 +100,7 @@
 ## │   ├── now.json
 ## │   ├── packages.bib
 ## │   ├── preamble.tex
-## │   ├── render55802eec3fa.rds
+## │   ├── render6038120d6327.rds
 ## │   ├── style.css
 ## │   ├── toc.css
 ## │   ├── vancouver-ama.csl
@@ -116,6 +119,9 @@
 ## │   │   │       ├── unnamed-chunk-20-1.png
 ## │   │   │       ├── unnamed-chunk-22-1.png
 ## │   │   │       ├── unnamed-chunk-24-1.png
+## │   │   │       ├── unnamed-chunk-25-1.png
+## │   │   │       ├── unnamed-chunk-29-1.png
+## │   │   │       ├── unnamed-chunk-32-1.png
 ## │   │   │       ├── unnamed-chunk-6-1.png
 ## │   │   │       └── unnamed-chunk-8-1.png
 ## │   │   ├── 05-formatieve_opdracht_rna-seq_daur2.md
@@ -269,12 +275,9 @@
 ## │   ├── portfolio-repository.html
 ## │   ├── r-package.html
 ## │   ├── reference-keys.txt
-## │   ├── references.html
 ## │   ├── rna-sequencing-repository.html
 ## │   ├── search_index.json
 ## │   ├── style.css
-## │   ├── vrije-opdracht---introductie.html
-## │   ├── vrije-opdracht---uitvoering.html
 ## │   ├── vrije-opdracht-introductie.html
 ## │   └── vrije-opdracht-uitvoering.html
 ## ├── dsfb2_workflows_portfolio.Rproj
@@ -317,12 +320,17 @@
 ## │   │   │   │   ├── 16S_exp1_11122025_bracken_species_threshold5.txt
 ## │   │   │   │   ├── 16S_exp1_11122025_bracken_species_threshold50.bracken
 ## │   │   │   │   └── 16S_exp1_11122025_bracken_species_threshold50.txt
+## │   │   │   ├── fastqc
+## │   │   │   │   ├── mock1_kraken_bracken_species_threshold0.html
+## │   │   │   │   └── mock1_kraken_bracken_species_threshold5.html
 ## │   │   │   ├── kraken2
 ## │   │   │   │   └── 16S_exp1_11122025.report
 ## │   │   │   ├── krona
 ## │   │   │   │   ├── 16S_exp1_11122025_bracken_species_threshold0.html
 ## │   │   │   │   ├── 16S_exp1_11122025_bracken_species_threshold5.html
-## │   │   │   │   └── 16S_exp1_11122025_bracken_species_threshold50.html
+## │   │   │   │   ├── 16S_exp1_11122025_bracken_species_threshold50.html
+## │   │   │   │   ├── mock1_kraken_bracken_species_threshold0.html
+## │   │   │   │   └── mock1_kraken_bracken_species_threshold5.html
 ## │   │   │   ├── nanoplot_filtered
 ## │   │   │   │   ├── NanoPlot-report.html
 ## │   │   │   │   ├── NanoStats.txt
@@ -343,7 +351,11 @@
 ## │   │   │   ├── 16S_exp1_11122025_bracken_species_threshold0.png
 ## │   │   │   ├── 16S_exp1_11122025_bracken_species_threshold5.png
 ## │   │   │   ├── 16S_exp1_11122025_bracken_species_threshold50.png
-## │   │   │   └── 16S_exp1_11122025_kraken2_species_threshold0.png
+## │   │   │   ├── 16S_exp1_11122025_kraken2_species_threshold0.png
+## │   │   │   ├── fastqc_mock2_R1_per_base_quality.png
+## │   │   │   ├── fastqc_mock2_R2_per_base_quality.png
+## │   │   │   ├── mock1_kraken_bracken_species_threshold0.png
+## │   │   │   └── mock1_kraken_bracken_species_threshold5.png
 ## │   │   ├── vrije_opdracht_introductie.html
 ## │   │   ├── vrije_opdracht_introductie.Rmd
 ## │   │   ├── vrije_opdracht_uitvoering.html

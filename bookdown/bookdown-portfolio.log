@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.5.5)  13 MAY 2026 14:50
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.2) (preloaded format=xelatex 2026.5.5)  21 MAY 2026 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1099,34 +1099,39 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 ] (bookdown-portfolio.toc
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 5.
+(Font)              scaled to size 7.0pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 5.
+(Font)              scaled to size 5.0pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 5.
+(Font)              scaled to size 10.00092pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 5.
+(Font)              scaled to size 7.00064pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 5.
+(Font)              scaled to size 5.00046pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 5.
+(Font)              scaled to size 9.99893pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 5.
+(Font)              scaled to size 6.99925pt on input line 2.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 5.
+(Font)              scaled to size 4.99947pt on input line 2.
 [3])
 \tf@toc=\write4
 \openout4 = `bookdown-portfolio.toc'.
 
 [4]
 Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
+
+ []
+
 [5
 
-] [6
-
-]
+] [6]
 Chapter 2.
-[7] [8
+[7
+
+] [8
 
 ]
 Chapter 3.
@@ -1135,43 +1140,37 @@ Chapter 3.
 ]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--162
+Underfull \hbox (badness 10000) in paragraph at lines 180--187
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 165--176
+Underfull \hbox (badness 10000) in paragraph at lines 190--193
 
  []
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 165--176
-\TU/lmr/m/n/10 Het volledige portfolio moet op 25 mei voor 23:59 worden ingelev
-erd,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--176
+Underfull \hbox (badness 10000) in paragraph at lines 196--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--184
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 187--190
+Underfull \hbox (badness 10000) in paragraph at lines 205--210
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 193--196
+Underfull \hbox (badness 10000) in paragraph at lines 213--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--199
+Underfull \hbox (badness 10000) in paragraph at lines 219--223
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--230
 
  []
 
@@ -1180,83 +1179,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 197--199
 ]
 Chapter 5.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 215.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 245.
+[15] [16
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
+]
+Chapter 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
+
+ []
+
+[17] [18
+
+]
+Chapter 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--234
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 252--254
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 279--280
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 283--285
-
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 304--313
-
- []
-
-
-Overfull \hbox (20.57pt too wide) in paragraph at lines 316--323
-\TU/lmr/m/n/10 /home/data/projecticum/nanopore/paradontitis/16S114_exp1_VL5B06_
-11122025 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--323
-
- []
-
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 332--335
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 338--342
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 354--373
-
- []
-
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 374--378
-
- []
-
-File: 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-6-1.pdf Gra
-phic file (type pdf)
-<use 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-6-1.pdf>
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--388
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 391--397
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
@@ -1264,64 +1207,133 @@ Underfull \hbox (badness 10000) in paragraph at lines 391--397
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 412--417
+Underfull \hbox (badness 10000) in paragraph at lines 325--334
 
  []
 
+[20]
+Chapter 8.
+
+Overfull \hbox (20.57pt too wide) in paragraph at lines 337--344
+\TU/lmr/m/n/10 /home/data/projecticum/nanopore/paradontitis/16S114_exp1_VL5B06_
+11122025 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--344
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--356
+
+ []
+
+[21
+
+] [22
+
+]
+Chapter 9.
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--394
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 395--399
+
+ []
+
+File: 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-6-1.pdf Gra
+phic file (type pdf)
+<use 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-6-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 406--409
+
+ []
+
+[24]
+Chapter 10.
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--418
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--438
+
+ []
+
+[25
+
+]
 File: 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-8-1.pdf Gra
 phic file (type pdf)
 <use 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-8-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 424--427
+Underfull \hbox (badness 10000) in paragraph at lines 445--448
 
  []
 
+[26]
+Chapter 11.
 
-Underfull \hbox (badness 3354) in paragraph at lines 430--434
+Underfull \hbox (badness 3354) in paragraph at lines 451--455
 \TU/lmr/m/n/10 werd gebruik gemaakt van de minikraken2_v2_8GB_201904_UPDATE
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--434
+Underfull \hbox (badness 10000) in paragraph at lines 451--455
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[20]
-Underfull \hbox (badness 1067) in paragraph at lines 449--457
+Underfull \hbox (badness 1067) in paragraph at lines 470--478
 \TU/lmr/m/n/10 kwaliteit óf deze reads waren afkomstig van organismen die niet 
 in de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--457
+Underfull \hbox (badness 10000) in paragraph at lines 470--478
 
  []
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 460--462
+[27
 
- []
+] [28]
+Chapter 12.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 476--488
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 489--495
-
- []
-
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 498--502
+Underfull \hbox (badness 10000) in paragraph at lines 481--483
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 518--520
+Underfull \hbox (badness 10000) in paragraph at lines 497--509
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 510--516
+
+ []
+
+[29
+
+] [30]
+Chapter 13.
+
+Underfull \hbox (badness 10000) in paragraph at lines 519--523
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 539--541
 
  []
 
@@ -1329,39 +1341,41 @@ File: 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-12-1.pdf Gr
 aphic file (type pdf)
 <use 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-12-1.pdf>
 
-Underfull \hbox (badness 1838) in paragraph at lines 527--534
+Underfull \hbox (badness 1838) in paragraph at lines 548--555
 \TU/lmr/m/n/10 In figuur 3 (en de andere krona figuren) zijn de bacteriesoorten
  niet
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 527--534
+Underfull \hbox (badness 1226) in paragraph at lines 548--555
 \TU/lmr/m/n/10 direct op species niveau te zien, in de .html bestanden kan dit 
 zicht-
  []
 
 
-Underfull \hbox (badness 3039) in paragraph at lines 527--534
+Underfull \hbox (badness 3039) in paragraph at lines 548--555
 \TU/lmr/m/n/10 baar worden gemaakt. Raadpleeg voor figuur 3 het .html bestand
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--534
+Underfull \hbox (badness 10000) in paragraph at lines 548--555
+
+ []
+
+[31
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 558--560
+
+ []
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 574--586
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 537--539
-
- []
-
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 553--565
-
- []
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 585--587
+Underfull \hbox (badness 10000) in paragraph at lines 606--608
 
  []
 
@@ -1369,22 +1383,25 @@ File: 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-15-1.pdf Gr
 aphic file (type pdf)
 <use 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-15-1.pdf>
 
-Overfull \hbox (79.39pt too wide) in paragraph at lines 594--603
+Overfull \hbox (79.39pt too wide) in paragraph at lines 615--624
 \TU/lmr/m/n/10 Raadpleeg voor figuur 4 het html bestand 16S_exp1_11122025_brack
 en_species_threshold5.html
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 594--603
+Underfull \hbox (badness 10000) in paragraph at lines 615--624
+
+ []
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 627--631
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 606--610
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- []
-
-[25]
+[34]
 File: 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-16-1.pdf Gr
 aphic file (type pdf)
 <use 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-16-1.pdf>
@@ -1392,30 +1409,34 @@ File: 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-17-1.pdf Gr
 aphic file (type pdf)
 <use 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-17-1.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 623--626
+Underfull \hbox (badness 10000) in paragraph at lines 644--647
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--631
+Underfull \hbox (badness 10000) in paragraph at lines 650--652
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[26] [27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 645--657
+[35] [36]
+Underfull \hbox (badness 10000) in paragraph at lines 666--678
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 658--661
+Underfull \hbox (badness 10000) in paragraph at lines 679--682
 
  []
 
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 677--680
+
+Overfull \vbox (0.30296pt too high) detected at line 696
+ []
+
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 698--701
 
  []
 
@@ -1423,47 +1444,50 @@ File: 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-20-1.pdf Gr
 aphic file (type pdf)
 <use 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-20-1.pdf>
 
-Overfull \hbox (84.39pt too wide) in paragraph at lines 687--692
+Overfull \hbox (84.39pt too wide) in paragraph at lines 708--713
 \TU/lmr/m/n/10 Raadpleeg voor figuur 7 het html bestand 16S_exp1_11122025_brack
 en_species_threshold50.html
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 687--692
+Underfull \hbox (badness 10000) in paragraph at lines 708--713
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 695--697
-
- []
-
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 740--743
+Underfull \hbox (badness 10000) in paragraph at lines 716--718
 
  []
 
 
-Overfull \vbox (2.13992pt too high) detected at line 762
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 761--764
+
  []
 
-[31]
+
+Overfull \vbox (0.13292pt too high) detected at line 783
+ []
+
+[39]
 File: 04-vrije_opdracht_uitvoering_files/figure-latex/threshold vergelijking-1.
 pdf Graphic file (type pdf)
 <use 04-vrije_opdracht_uitvoering_files/figure-latex/threshold vergelijking-1.p
 df>
 
-Underfull \hbox (badness 10000) in paragraph at lines 766--769
+Underfull \hbox (badness 10000) in paragraph at lines 787--790
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 772--776
+Underfull \hbox (badness 10000) in paragraph at lines 793--797
 
  []
 
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 792--795
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 813--816
 
  []
 
@@ -1471,97 +1495,226 @@ File: 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-22-1.pdf Gr
 aphic file (type pdf)
 <use 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-22-1.pdf>
 
-Overfull \hbox (79.95001pt too wide) in paragraph at lines 802--807
+Overfull \hbox (79.95001pt too wide) in paragraph at lines 823--828
 \TU/lmr/m/n/10 Raadpleeg voor figuur 8 het html bestand 16S_exp1_11122025_krake
 n2_species_threshold0.html
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 802--807
+Underfull \hbox (badness 10000) in paragraph at lines 823--828
 
  []
 
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 821--824
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 842--845
 
  []
 
+[42]
+Chapter 14.
 
-Underfull \hbox (badness 10000) in paragraph at lines 827--842
+Underfull \hbox (badness 10000) in paragraph at lines 848--863
 
  []
 
-[34]
-Overfull \hbox (43.36006pt too wide) in paragraph at lines 861--910
+[43
+
+]
+Overfull \hbox (43.36006pt too wide) in paragraph at lines 882--931
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 912--915
+Underfull \hbox (badness 10000) in paragraph at lines 933--936
 
  []
 
 
-LaTeX Warning: Float too large for page by 322.29959pt on input line 1076.
+LaTeX Warning: Float too large for page by 322.29959pt on input line 1097.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1078--1081
+Underfull \hbox (badness 10000) in paragraph at lines 1099--1102
 
  []
 
 
-Underfull \vbox (badness 1231) has occurred while \output is active []
-
-
-Overfull \hbox (177.52235pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 5.9.  9. RELATIEVE PREVALENTIES VOLLEDIGE DATASET VERGELIJKEN M
-ET INDIVIDUELE DATASETS \TU/lmr/m/n/10 35
+Overfull \hbox (227.38235pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 44 \TU/lmr/m/sl/10 CHAPTER 14.  9. RELATIEVE PREVALENTIES VOLLED
+IGE DATASET VERGELIJKEN MET INDIVIDUELE DATASETS
  []
 
-[35] [36]
-Overfull \hbox (177.52235pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 5.9.  9. RELATIEVE PREVALENTIES VOLLEDIGE DATASET VERGELIJKEN M
-ET INDIVIDUELE DATASETS \TU/lmr/m/n/10 37
+[44] [45]
+Overfull \hbox (227.38235pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 46 \TU/lmr/m/sl/10 CHAPTER 14.  9. RELATIEVE PREVALENTIES VOLLED
+IGE DATASET VERGELIJKEN MET INDIVIDUELE DATASETS
  []
 
-[37]
+[46]
 File: 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-24-1.pdf Gr
 aphic file (type pdf)
 <use 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-24-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[38]
-Underfull \hbox (badness 10000) in paragraph at lines 1123--1126
+[47]
+Underfull \hbox (badness 10000) in paragraph at lines 1144--1147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1133--1135
+Overfull \hbox (227.38235pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 48 \TU/lmr/m/sl/10 CHAPTER 14.  9. RELATIEVE PREVALENTIES VOLLED
+IGE DATASET VERGELIJKEN MET INDIVIDUELE DATASETS
+ []
+
+[48]
+Chapter 15.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1154--1156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1138--1142
+Underfull \hbox (badness 10000) in paragraph at lines 1159--1163
 
  []
 
-[39]
-Underfull \hbox (badness 10000) in paragraph at lines 1145--1151
+
+Underfull \hbox (badness 10000) in paragraph at lines 1166--1172
 
  []
 
-[40]
-Chapter 6.
+[49
 
-Overfull \hbox (342.75pt too wide) in paragraph at lines 1268--1268
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1177
+
+ []
+
+[50]
+Chapter 16.
+
+Underfull \hbox (badness 2469) in paragraph at lines 1180--1186
+\TU/lmr/m/n/10 gebruikt voor deze analyse waren HU1_MOCK1_L001_R1_001.fastq.gz
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1180--1186
+
+ []
+
+[51
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1206--1208
+
+ []
+
+File: 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-25-1.pdf Gr
+aphic file (type pdf)
+<use 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-25-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1213--1218
+
+ []
+
+
+Overfull \hbox (76.9734pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 52 \TU/lmr/m/sl/10 CHAPTER 16.  WORKFLOW TOEPASSEN OP EEN ILLUMI
+NA SEQUENCING DATASET
+ []
+
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 1247--1255
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1258--1259
+
+ []
+
+[53]
+Underfull \hbox (badness 10000) in paragraph at lines 1273--1284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1285--1292
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1295--1297
+
+ []
+
+
+Overfull \hbox (76.9734pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 54 \TU/lmr/m/sl/10 CHAPTER 16.  WORKFLOW TOEPASSEN OP EEN ILLUMI
+NA SEQUENCING DATASET
+ []
+
+[54]
+Underfull \hbox (badness 10000) in paragraph at lines 1316--1318
+
+ []
+
+File: 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-29-1.pdf Gr
+aphic file (type pdf)
+<use 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-29-1.pdf>
+
+Overfull \hbox (34.99pt too wide) in paragraph at lines 1325--1330
+\TU/lmr/m/n/10 Raadpleeg voor figuur 11 het html bestand mock1_kraken_bracken_s
+pecies_threshold0
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1325--1330
+
+ []
+
+[55]
+Underfull \hbox (badness 10000) in paragraph at lines 1333--1334
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1351--1363
+
+ []
+
+
+Overfull \hbox (76.9734pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 56 \TU/lmr/m/sl/10 CHAPTER 16.  WORKFLOW TOEPASSEN OP EEN ILLUMI
+NA SEQUENCING DATASET
+ []
+
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 1386--1388
+
+ []
+
+File: 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-32-1.pdf Gr
+aphic file (type pdf)
+<use 04-vrije_opdracht_uitvoering_files/figure-latex/unnamed-chunk-32-1.pdf>
+[57]
+Overfull \hbox (76.9734pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 58 \TU/lmr/m/sl/10 CHAPTER 16.  WORKFLOW TOEPASSEN OP EEN ILLUMI
+NA SEQUENCING DATASET
+ []
+
+[58]
+Chapter 17.
+
+Overfull \hbox (342.75pt too wide) in paragraph at lines 1510--1510
 []\TU/lmtt/m/n/10 ## ~/documents/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflow
 s_portfolio/projecten/3a_formatieve_opdracht_rna-seq_daur2/rnaseq_ipsc[] 
  []
 
-[41
+[59
 
-] [42]
+] [60]
 File: 05-formatieve_opdracht_rna-seq_daur2_files/figure-latex/readme-1.pdf Grap
 hic file (type pdf)
 <use 05-formatieve_opdracht_rna-seq_daur2_files/figure-latex/readme-1.pdf>
@@ -1569,133 +1722,278 @@ File: 05-formatieve_opdracht_rna-seq_daur2_files/figure-latex/readme-2.pdf Grap
 hic file (type pdf)
 <use 05-formatieve_opdracht_rna-seq_daur2_files/figure-latex/readme-2.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1270--1271
+Underfull \hbox (badness 10000) in paragraph at lines 1512--1513
 [][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[43] [44]
-Chapter 7.
+[61] [62]
+Chapter 18.
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (33.0pt too wide) in paragraph at lines 2049--2049
 []\TU/lmtt/m/n/10 ## ~/documents/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflow
 s_portfolio[] 
  []
 
-[45
+[63
 
-] [46] [47] [48] [49] [50] [51]
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1787--1787
+] [64] [65] [66]
+Overfull \hbox (164.25pt too wide) in paragraph at lines 2049--2049
+[]\TU/lmtt/m/n/10 ## |   |   +-- relatieve-prevalenties-volledige-dataset-verge
+lijken-met-individuele-datasets.html[] 
+ []
+
+[67]
+Overfull \hbox (38.25pt too wide) in paragraph at lines 2049--2049
+[]\TU/lmtt/m/n/10 ## |   |   \-- workflow-toepassen-op-een-illumina-sequencing-
+dataset.html[] 
+ []
+
+[68] [69]
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2049--2049
 []\TU/lmtt/m/n/10 ## |   |   |   +-- Presentatie Parodontitis 16s sequencing ei
 ndversie.pptx[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (33.0pt too wide) in paragraph at lines 2049--2049
 []\TU/lmtt/m/n/10 ## |   |   |   +-- read_length_vs_quality_filtered_original a
 nalysis.png[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2049--2049
 []\TU/lmtt/m/n/10 ## |   |   |   |   +-- 16S_exp1_11122025_bracken_species_thre
 shold0.bracken[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (69.75pt too wide) in paragraph at lines 2049--2049
 []\TU/lmtt/m/n/10 ## |   |   |   |   +-- 16S_exp1_11122025_bracken_species_thre
 shold0.bracken.txt[] 
  []
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2049--2049
 []\TU/lmtt/m/n/10 ## |   |   |   |   +-- 16S_exp1_11122025_bracken_species_thre
 shold5.bracken[] 
  []
 
 
-Overfull \hbox (27.75pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (27.75pt too wide) in paragraph at lines 2049--2049
 []\TU/lmtt/m/n/10 ## |   |   |   |   +-- 16S_exp1_11122025_bracken_species_thre
 shold5.txt[] 
  []
 
 
-Overfull \hbox (54.0pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (54.0pt too wide) in paragraph at lines 2049--2049
 []\TU/lmtt/m/n/10 ## |   |   |   |   +-- 16S_exp1_11122025_bracken_species_thre
 shold50.bracken[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (33.0pt too wide) in paragraph at lines 2049--2049
 []\TU/lmtt/m/n/10 ## |   |   |   |   \-- 16S_exp1_11122025_bracken_species_thre
 shold50.txt[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2049--2049
+[]\TU/lmtt/m/n/10 ## |   |   |   |   +-- mock1_kraken_bracken_species_threshold
+0.html[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2049--2049
+[]\TU/lmtt/m/n/10 ## |   |   |   |   \-- mock1_kraken_bracken_species_threshold
+5.html[] 
+ []
+
+[70]
+Overfull \hbox (33.0pt too wide) in paragraph at lines 2049--2049
 []\TU/lmtt/m/n/10 ## |   |   |   |   +-- 16S_exp1_11122025_bracken_species_thre
 shold0.html[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (33.0pt too wide) in paragraph at lines 2049--2049
 []\TU/lmtt/m/n/10 ## |   |   |   |   +-- 16S_exp1_11122025_bracken_species_thre
 shold5.html[] 
  []
 
 
-Overfull \hbox (38.25pt too wide) in paragraph at lines 1787--1787
-[]\TU/lmtt/m/n/10 ## |   |   |   |   \-- 16S_exp1_11122025_bracken_species_thre
+Overfull \hbox (38.25pt too wide) in paragraph at lines 2049--2049
+[]\TU/lmtt/m/n/10 ## |   |   |   |   +-- 16S_exp1_11122025_bracken_species_thre
 shold50.html[] 
  []
 
-[52]
-Overfull \hbox (1.5pt too wide) in paragraph at lines 1787--1787
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2049--2049
+[]\TU/lmtt/m/n/10 ## |   |   |   |   +-- mock1_kraken_bracken_species_threshold
+0.html[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2049--2049
+[]\TU/lmtt/m/n/10 ## |   |   |   |   \-- mock1_kraken_bracken_species_threshold
+5.html[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 2049--2049
 []\TU/lmtt/m/n/10 ## |   |   |   +-- 16S_exp1_11122025_bracken_species_patiente
 n.png[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2049--2049
 []\TU/lmtt/m/n/10 ## |   |   |   +-- 16S_exp1_11122025_bracken_species_threshol
 d0.png[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2049--2049
 []\TU/lmtt/m/n/10 ## |   |   |   +-- 16S_exp1_11122025_bracken_species_threshol
 d5.png[] 
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 1787--1787
+Overfull \hbox (12.0pt too wide) in paragraph at lines 2049--2049
 []\TU/lmtt/m/n/10 ## |   |   |   +-- 16S_exp1_11122025_bracken_species_threshol
 d50.png[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 1787--1787
-[]\TU/lmtt/m/n/10 ## |   |   |   \-- 16S_exp1_11122025_kraken2_species_threshol
+Overfull \hbox (6.75pt too wide) in paragraph at lines 2049--2049
+[]\TU/lmtt/m/n/10 ## |   |   |   +-- 16S_exp1_11122025_kraken2_species_threshol
 d0.png[] 
  []
 
-[53] [54] [55]
+[71] [72] [73]
 File: 06-portfolio_repository_files/figure-latex/readme-1.pdf Graphic file (typ
 e pdf)
 <use 06-portfolio_repository_files/figure-latex/readme-1.pdf>
-[56]
-Chapter 8.
-[57
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[74] [75] [76
 
 ]
-Overfull \hbox (17.25pt too wide) in paragraph at lines 1863--1863
+Chapter 19.
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ##    plateRow plateColumn vialNr dropCode expType    expRepl
+icate expName[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ##    <lgl>    <lgl>        <dbl> <chr>    <chr>             
+<dbl> <chr>[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ##  1 NA       NA               1 a        experiment        
+    3 CE.LIQ.FLOW.062[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ##  2 NA       NA               1 b        experiment        
+    3 CE.LIQ.FLOW.062[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ##  3 NA       NA               1 c        experiment        
+    3 CE.LIQ.FLOW.062[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ##  4 NA       NA               1 d        experiment        
+    3 CE.LIQ.FLOW.062[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ##  5 NA       NA               1 e        experiment        
+    3 CE.LIQ.FLOW.062[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ##  6 NA       NA               2 a        experiment        
+    3 CE.LIQ.FLOW.062[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ##  7 NA       NA               2 b        experiment        
+    3 CE.LIQ.FLOW.062[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ##  8 NA       NA               2 c        experiment        
+    3 CE.LIQ.FLOW.062[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ##  9 NA       NA               2 d        experiment        
+    3 CE.LIQ.FLOW.062[] 
+ []
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ## 10 NA       NA               2 e        experiment        
+    3 CE.LIQ.FLOW.062[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ## # i 27 more variables: expDate <dttm>, expResearcher <chr>
+, expTime <dbl>,[] 
+ []
+
+[77]
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ## #   expUnit <chr>, expVolumeCounted <dbl>, RawData <dbl>, 
+compCASRN <chr>,[] 
+ []
+
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ## #   compDelivery <chr>, compVehicle <chr>, elegansStrain <
+chr>,[] 
+ []
+
+
+Overfull \hbox (48.75pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ## #   elegansInput <dbl>, bacterialStrain <chr>, bacterialTr
+eatment <chr>,[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 2092--2092
+[]\TU/lmtt/m/n/10 ## #   bacterialOD600 <dbl>, bacterialConcX <dbl>, bacterialV
+olume <dbl>, ...[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 2153--2153
 []\TU/lmtt/m/n/10 ##  num [1:360] 4.99 4.99 4.99 4.99 4.99 4.99 4.99 4.99 4.99 
 4.99 ...[] 
  []
 
+
+Underfull \vbox (badness 1436) has occurred while \output is active []
+
+[78]
 File: 07-data_analyse_van_een_ander_reproduceren_files/figure-latex/Scatterplot
 -1.pdf Graphic file (type pdf)
 <use 07-data_analyse_van_een_ander_reproduceren_files/figure-latex/Scatterplot-
@@ -1703,212 +2001,205 @@ File: 07-data_analyse_van_een_ander_reproduceren_files/figure-latex/Scatterplot
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[58]
+[79]
 
 LaTeX Font Warning: Font shape `TU/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/sl' tried instead on input line 1901.
+(Font)              Font shape `TU/lmtt/b/sl' tried instead on input line 2195.
 
 
-[59]
-Overfull \hbox (17.25pt too wide) in paragraph at lines 1939--1939
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 2233--2233
 []\TU/lmtt/m/n/10 ##  num [1:360] 4.99 4.99 4.99 4.99 4.99 4.99 4.99 4.99 4.99 
 4.99 ...[] 
  []
 
+[80]
 File: 07-data_analyse_van_een_ander_reproduceren_files/figure-latex/normalised 
 scatterplot-1.pdf Graphic file (type pdf)
 <use 07-data_analyse_van_een_ander_reproduceren_files/figure-latex/normalised s
 catterplot-1.pdf>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[60]
-Overfull \hbox (64.5pt too wide) in paragraph at lines 1979--1979
+Overfull \hbox (64.5pt too wide) in paragraph at lines 2275--2275
 []\TU/lmtt/m/n/10 ## [1] "experiment"      "controlPositive" "controlNegative" 
 "controlVehicleA"[] 
  []
 
+[81]
+Underfull \hbox (badness 10000) in paragraph at lines 2287--2288
 
-Underfull \hbox (badness 10000) in paragraph at lines 1991--1992
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 2307--2309
+
+ []
+
+
+Underfull \hbox (badness 3657) in paragraph at lines 2309--2311
+[]\TU/lmr/m/n/10 Controleer of de data in tidy format staat (voor het bestand
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2309--2311
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2311--2313
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2313--2315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2317
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2317--2321
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2321--2323
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2323--2325
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2325--2327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2327--2329
+
+ []
+
+[82] [83] [84
+
+]
+Chapter 20.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2336--2340
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2343--2345
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2348--2350
+
+ []
+
+[85]
+Underfull \hbox (badness 10000) in paragraph at lines 2359--2359
+[]\TU/lmr/bx/n/14.4 Beoordelingscriteria voor reproduceer-
+ []
+
+
+Overfull \hbox (9.65671pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 86 \TU/lmr/m/sl/10 CHAPTER 20.  ARTIKEL BEOORDELEN OP REPRODUCEE
+RBAARHEID
+ []
+
+[86]
+Underfull \hbox (badness 10000) in paragraph at lines 2403--2407
+
+ []
+
+[87]
+Underfull \vbox (badness 10000) detected at line 2510
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[61]
-Underfull \hbox (badness 10000) in paragraph at lines 2011--2013
 
+Overfull \hbox (9.65671pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 88 \TU/lmr/m/sl/10 CHAPTER 20.  ARTIKEL BEOORDELEN OP REPRODUCEE
+RBAARHEID
  []
 
-
-Underfull \hbox (badness 3657) in paragraph at lines 2013--2015
-[]\TU/lmr/m/n/10 Controleer of de data in tidy format staat (voor het bestand
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2013--2015
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2015--2017
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2017--2019
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2019--2021
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2021--2025
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2025--2027
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2027--2029
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2029--2031
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2031--2033
-
- []
-
-[62]
-Chapter 9.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2040--2045
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2048--2050
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2053--2055
-
- []
-
-[63
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 2064--2064
-[]\TU/lmr/bx/n/14.4 Beoordelingscriteria voor reproduceer-
- []
-
-
-Underfull \hbox (badness 1043) in paragraph at lines 2086--2086
-[]\TU/lmr/bx/n/14.4 Reproduceerbaarheid van de gedeelde R
- []
-
-
-Overfull \hbox (4.65671pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 64 \TU/lmr/m/sl/10 CHAPTER 9.  ARTIKEL BEOORDELEN OP REPRODUCEER
-BAARHEID
- []
-
-[64]
-Underfull \hbox (badness 10000) in paragraph at lines 2109--2113
-
- []
-
-
-Overfull \vbox (1.23578pt too high) detected at line 2144
- []
-
-[65]
-Overfull \hbox (4.65671pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 66 \TU/lmr/m/sl/10 CHAPTER 9.  ARTIKEL BEOORDELEN OP REPRODUCEER
-BAARHEID
- []
-
-[66]
+[88]
 File: 08-artikel_beoordelen_op_reproduceerbaarheid_files/figure-latex/ggplot-1.
 pdf Graphic file (type pdf)
 <use 08-artikel_beoordelen_op_reproduceerbaarheid_files/figure-latex/ggplot-1.p
 df>
 
-Underfull \hbox (badness 10000) in paragraph at lines 2220--2226
+Underfull \hbox (badness 10000) in paragraph at lines 2518--2524
 
  []
 
-[67]
-Overfull \hbox (4.65671pt too wide) has occurred while \output is active
-\TU/lmr/m/n/10 68 \TU/lmr/m/sl/10 CHAPTER 9.  ARTIKEL BEOORDELEN OP REPRODUCEER
-BAARHEID
+[89]
+Overfull \hbox (9.65671pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 90 \TU/lmr/m/sl/10 CHAPTER 20.  ARTIKEL BEOORDELEN OP REPRODUCEE
+RBAARHEID
  []
 
-[68]
-Chapter 10.
+[90]
+Chapter 21.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2235--2238
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2241--2250
+Underfull \hbox (badness 10000) in paragraph at lines 2535--2537
 
  []
 
-[69
 
-] [70] [71] [72
+Underfull \hbox (badness 10000) in paragraph at lines 2540--2549
+
+ []
+
+[91
+
+] [92] [93] [94
 
 ]
-Chapter 11.
+Chapter 22.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2372--2380
-
- []
-
-[73] [74]
-Chapter 12.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2394--2395
+Underfull \hbox (badness 10000) in paragraph at lines 2671--2679
 
  []
 
+[95] [96]
+Chapter 23.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2398--2399
+Underfull \hbox (badness 10000) in paragraph at lines 2693--2694
 
  []
 
-(bookdown-portfolio.bbl [75
 
-] [76
+Underfull \hbox (badness 10000) in paragraph at lines 2697--2698
 
-]) [77] (bookdown-portfolio.aux)
+ []
+
+(bookdown-portfolio.bbl [97
+
+] [98
+
+]) [99] (bookdown-portfolio.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 19641 strings out of 402807
- 361834 string characters out of 5445136
- 967698 words of memory out of 5000000
- 48268 multiletter control sequences out of 15000+600000
+ 19699 strings out of 402807
+ 364386 string characters out of 5445136
+ 971552 words of memory out of 5000000
+ 48323 multiletter control sequences out of 15000+600000
  634204 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,8n,114p,1108b,1538s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on bookdown-portfolio.pdf (77 pages).
+Output written on bookdown-portfolio.pdf (99 pages).

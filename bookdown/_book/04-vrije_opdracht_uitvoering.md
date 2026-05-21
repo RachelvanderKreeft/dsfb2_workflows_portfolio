@@ -19,10 +19,8 @@ library(tidyverse)
 library(ggplot2)
 ```
 
-
 ## conda installeren
 Dit onderdeel hoeft alleen uitgevoerd te worden indien het conda installatie script nog niet is geïnstalleerd in Rstudio. Indien conda al is geïnstalleerd: begin bij stap 2. \
-\
 
 
 ``` bash
@@ -37,10 +35,8 @@ bash Miniconda3-latest-Linux-x86_64.sh -b
 
 ```
 
-
 ## conda environment opzetten
 Voor deze analyse werden twee environments aangemaakt. In de eerste environment werden de packages samtools, NanoPlot, kraken2 en bracken geïnstalleerd. In de tweede environment werd krona geïnstalleerd. Krona moet in een aparte environment worden geïnstalleerd omdat krona andere dependencies heeft. \
-\
 
 
 ``` bash
@@ -66,11 +62,8 @@ conda activate nanopore_clean
 
 ```
 
-\
-
 ### Krona handmatig installeren
 Soms mist krona na installatie het taxonomy bestand. Wanneer ktImportTaxonomy van de krona package dan wordt gebruikt, resulteert dit in de melding ''Taxonomy not found in...''. Indien dit het geval is, kunnen de onderstaande stappen worden uitgevoerd om alsnog het taxonomy bestand te downloaden. \
-\
 
 
 ``` bash
@@ -99,7 +92,6 @@ De Python versie in de environment nanopore_clean was 3.13.13. De versies van de
 \
 In de environment krona werd versie 2.8.1 van krona gebruikt. \
 \
-
 
 ## Van .bam naar .fastq
 
@@ -168,8 +160,8 @@ In figuur 1 is de lengte van de reads uitgezet tegen de kwaliteit van deze reads
 \
 
 <div class="figure">
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-6-1.png" alt="Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads van de ongefilterde data." width="1440" />
-<p class="caption">(\#fig:unnamed-chunk-6)Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads van de ongefilterde data.</p>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-6-1.png" alt="Figuur 1: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads van de ongefilterde data." width="1440" />
+<p class="caption">(\#fig:unnamed-chunk-6)Figuur 1: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads van de ongefilterde data.</p>
 </div>
 
 \
@@ -207,8 +199,8 @@ In figuur 2 is de lengte van de reads uitgezet tegen de kwaliteit van deze reads
 \
 
 <div class="figure">
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-8-1.png" alt="Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads. Voor dit figuur werd gefilterd op &gt;Q10 en een lengte van 1200 tot 1600 bp." width="1440" />
-<p class="caption">(\#fig:unnamed-chunk-8)Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads. Voor dit figuur werd gefilterd op >Q10 en een lengte van 1200 tot 1600 bp.</p>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-8-1.png" alt="Figuur 2: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads. Voor dit figuur werd gefilterd op &gt;Q10 en een lengte van 1200 tot 1600 bp." width="1440" />
+<p class="caption">(\#fig:unnamed-chunk-8)Figuur 2: Lengte van de nanopore sequencing reads uitgezet tegen de kwaliteit van de reads. Voor dit figuur werd gefilterd op >Q10 en een lengte van 1200 tot 1600 bp.</p>
 </div>
 
 \
@@ -309,8 +301,8 @@ In figuur 3 is de krona visualisatie te zien.
 \
 
 <div class="figure">
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-12-1.png" alt="Krona visualisatie op species niveau en een threshold van 0." width="672" />
-<p class="caption">(\#fig:unnamed-chunk-12)Krona visualisatie op species niveau en een threshold van 0.</p>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-12-1.png" alt="Figuur 3: Krona visualisatie op species niveau en een threshold van 0." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-12)Figuur 3: Krona visualisatie op species niveau en een threshold van 0.</p>
 </div>
 
 \
@@ -325,7 +317,7 @@ In figuur 3 worden nu de prevalenties van 3034 bacteriesoorten gerepresenteerd. 
 
 
 ### bracken en krona met threshold
-Tijdens het projecticum werden bacteriesoorten met minder dan 5 reads uit de dataset gehaald voor de krona visualisatie. \
+Tijdens het projecticum werden bacteriesoorten met minder dan 5 reads uit de dataset gehaald voor de krona visualisatie. Om de resultaten van de volledige dataset te kunnen vergelijken met de resultaten van de samples van patiënten met parodontitis en van gezonde personen, wordt deze stap ook voor deze analyse uitgeoverd. \
 \
 
 
@@ -380,8 +372,8 @@ In figuur 4 is de krona visualisatie te zien waarbij was gefilterd op minimaal 5
 
 
 <div class="figure">
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-15-1.png" alt="Krona visualisatie op species niveau en een threshold van 5." width="672" />
-<p class="caption">(\#fig:unnamed-chunk-15)Krona visualisatie op species niveau en een threshold van 5.</p>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-15-1.png" alt="Figuur 4: Krona visualisatie op species niveau en een threshold van 5." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-15)Figuur 4: Krona visualisatie op species niveau en een threshold van 5.</p>
 </div>
 
 \
@@ -406,14 +398,14 @@ Opmerking: van deze figuren zijn geen .html bestanden meer beschikbaar. \
 \
 
 <div class="figure">
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-16-1.png" alt="Krona visualisatie van de patiëntensamples. De Krona visualisatie bevat in totaal 453 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum." width="672" />
-<p class="caption">(\#fig:unnamed-chunk-16)Krona visualisatie van de patiëntensamples. De Krona visualisatie bevat in totaal 453 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum.</p>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-16-1.png" alt="Figuur 5: Krona visualisatie van de patiëntensamples. De Krona visualisatie bevat in totaal 453 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-16)Figuur 5: Krona visualisatie van de patiëntensamples. De Krona visualisatie bevat in totaal 453 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum.</p>
 </div>
 
 
 <div class="figure">
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-17-1.png" alt="Krona visualisatie van de controlesamples. De Krona visualisatie bevat in totaal 673 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum." width="672" />
-<p class="caption">(\#fig:unnamed-chunk-17)Krona visualisatie van de controlesamples. De Krona visualisatie bevat in totaal 673 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum.</p>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-17-1.png" alt="Figuur 6: Krona visualisatie van de controlesamples. De Krona visualisatie bevat in totaal 673 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-17)Figuur 6: Krona visualisatie van de controlesamples. De Krona visualisatie bevat in totaal 673 bacteriesoorten. Het figuur was tot stand gekomen tijdens het projecticum.</p>
 </div>
 
 \
@@ -477,8 +469,8 @@ In figuur 7 is de krona visualisatie te zien waarbij was gefilterd op minimaal 5
 \
 
 <div class="figure">
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-20-1.png" alt="Krona visualisatie op species niveau en een threshold van 50." width="672" />
-<p class="caption">(\#fig:unnamed-chunk-20)Krona visualisatie op species niveau en een threshold van 50.</p>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-20-1.png" alt="Figuur 7: Krona visualisatie op species niveau en een threshold van 50." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-20)Figuur 7: Krona visualisatie op species niveau en een threshold van 50.</p>
 </div>
 
 \
@@ -575,16 +567,16 @@ ktImportTaxonomy \
 ```
 
 \
-In figuur 9 is de krona visualisatie te zien waarbij gebruik werd gemaakt van de data van kraken2. \
+In figuur 8 is de krona visualisatie te zien waarbij gebruik werd gemaakt van de data van kraken2. \
 \
 
 <div class="figure">
-<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-22-1.png" alt="Krona visualisatie op basis van kraken2 data op species niveau en een threshold van 0." width="672" />
-<p class="caption">(\#fig:unnamed-chunk-22)Krona visualisatie op basis van kraken2 data op species niveau en een threshold van 0.</p>
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-22-1.png" alt="Figuur 9: Krona visualisatie op basis van kraken2 data op species niveau en een threshold van 0." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-22)Figuur 9: Krona visualisatie op basis van kraken2 data op species niveau en een threshold van 0.</p>
 </div>
 
 \
-Raadpleeg voor figuur 9 het html bestand 16S_exp1_11122025_kraken2_species_threshold0.html in de GitHub repository.
+Raadpleeg voor figuur 8 het html bestand 16S_exp1_11122025_kraken2_species_threshold0.html in de GitHub repository.
 \
 \
 De kraken2 krona visualisatie laat 6543 bacteriesoorten zien, terwijl de krona visualisatie vanuit bracken 3034 bacteriesoorten liet zien. Mogelijk spelen de inclusie van taxa met een lage abundantie en taxa met een onduidelijke classificatie hier een rol bij. Om deze hypothese te bevestigen, werd de onderstaande code gebruikt: \
@@ -815,7 +807,7 @@ ggplot(dataset_prevalentie_tidy,
 Vanwege de lage prevalenties van de bacteriesoorten in de volledige dataset is het lastig om deze af te lezen in de staafdiagram. Daarom wordt voor de conclusie gebruik gemaakt van de onbewerkte tabel. \
 \
 
-## Conclusie en discussie
+## 10. Conclusie en discussie
 ### Data
 #### NanoPlot
 85.6% van de reads had een kwaliteitsscore van >Q10. 35.4% van deze reads had een kwaliteitsscore van >Q15. Slechts 1627 reads hadden een kwlaiteitsscore van Q20 of hoger. De meeste reads waren tussen de 1500 en 1650 bp lang.
@@ -842,4 +834,243 @@ Opvallend was dat *Streptococcus gracilis* helemaal niet werd teruggevonden in d
 \
 
 ### Reproduceerbaarheid
-Demultiplexing bleek uiteindelijk niet mogelijk te zijn omdat oorspronkelijk MinKNOW werd gebruikt op een krachtigere rekenomgeving en omdat het FAST5 bestand niet via de daur1 server beschikbaar was. Dit heeft erin geresulteerd dat de resultaten niet precies hetzelfde waren als de resultaten van het projecticum. De overige stappen waren wel reproduceerbaar.
+Demultiplexing bleek uiteindelijk niet mogelijk te zijn omdat oorspronkelijk MinKNOW werd gebruikt op een krachtigere rekenomgeving en omdat het FAST5 bestand niet via de daur1 server beschikbaar was. Dit heeft erin geresulteerd dat de resultaten niet precies hetzelfde waren als de resultaten van het projecticum. De overige stappen waren wel reproduceerbaar. \
+\
+
+## Workflow toepassen op een illumina sequencing dataset
+Om aan te tonen dat de eerder beschreven workflow ook op andere datasets werkt, werd de workflow toegepast op de metagenomics mock1 dataset van de cursus daur2. Deze dataset is een illumina dataset met paired-end sequencing reads die was gegenereerd om identificatiealgoritmes te testen.
+\
+\
+De dataset kan worden gevonden in de daur Rstudio server in de gedeelde folder /home/daur2/metagenomics/reader_data/ en de bestanden die werden gebruikt voor deze analyse waren HU1_MOCK1_L001_R1_001.fastq.gz (forward reads) en HU1_MOCK1_L001_R2_001.fastq.gz (reverse reads).
+\
+\
+Omdat deze data van illumina sequencing afkomsting is in plaats van nanopore sequencing, moest de workflow iets aangepast worden. Het grootste verschil is dat fastqc werd gebruikt in plaats van nanoplot. De workflow voor kraken2, bracken en krona was bijna identiek. Een ander verschil is dat deze bestanden al als .fastq bestanden waren geleverd, waardoor het niet nodig was om deze bestanden in een ander format over te zetten.
+\
+\
+
+### Analyse met fastqc
+
+
+
+``` bash
+
+# activeer de fastqc environment
+conda activate fastqc
+
+# Voer een FastQC-analyse uit op de forward reads
+fastqc -o ~/parodontitis16s/analyses/fastqc /home/daur2/metagenomics/reader_data/HU1_MOCK1_L001_R1_001.fastq.gz
+
+# Voer een FastQC-analyse uit op de reverse reads
+fastqc -o ~/parodontitis16s/analyses/fastqc /home/daur2/metagenomics/reader_data/HU1_MOCK1_L001_R2_001.fastq.gz
+
+# deactiveer de fastqc environment
+conda deactivate
+
+```
+
+\
+Zie de map fastqc binnen analyses voor de fastQC rapporten. In het fastQC rapport worden verschillende eigenschappen over de reads samengevat. Voor illumina sequencing zijn vooral de Per base sequence quality en de Per sequence quality scores belangrijk. In figuur 10 zijn de resultaten van de Per base sequence quality voor de forward en reverse reads te zien.
+\
+
+<div class="figure">
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-25-1.png" alt="Figuur 10: Per base sequence quality distributie voor mock1 data van daur2. Links; kwaliteitscores van de forward reads, de kwaliteitsscore is 36 op de Phred-schaal. Rechts; Kwaliteitsscores van de reverse reads, de kwaliteitsscore varieert van 25 tot 36 op de Phred-schaal. Alle basen hebben aflezingen van zeer hoge kwaliteit (&gt;30), wat aangeeft dat de reads een nauwkeurigheid hebben van &gt;99,9%." width="100%" />
+<p class="caption">(\#fig:unnamed-chunk-25)Figuur 10: Per base sequence quality distributie voor mock1 data van daur2. Links; kwaliteitscores van de forward reads, de kwaliteitsscore is 36 op de Phred-schaal. Rechts; Kwaliteitsscores van de reverse reads, de kwaliteitsscore varieert van 25 tot 36 op de Phred-schaal. Alle basen hebben aflezingen van zeer hoge kwaliteit (>30), wat aangeeft dat de reads een nauwkeurigheid hebben van >99,9%.</p>
+</div>
+
+\
+-HU1_MOCK1_L001_R1_001.fastq.gz (forward reads): 40237621 reads, reads hebben een lengte tussen 50-151 bp, gemiddelde kwaliteitsscore was 36. Er zijn 0 reads van slechte kwaliteit. Er hoeft dus geen data verwijderd te worden. \
+\
+-HU1_MOCK1_L001_R2_001.fastq.gz (reverse reads): 40237621 reads, reads hebben een lengte tussen 50-151 bp, gemiddelde kwaliteitsscore was 36. Van basen 125 tot 151 is er een grotere spreiding in kwaliteit van reads, maar de minimale kwaliteitsscore voor deze basen is 25. Er zijn 0 reads van slechte kwaliteit. Er hoeft dus geen data verwijderd te worden. \
+\
+
+### kraken2
+Vervolgens werd een kraken2 analyse op de dataset uitgevoerd. Voor de kraken2 analyse moesten voor deze dataset twee extra opties worden toegevoerd. /
+/
+1. --paired: Hiermee wordt aangegeven dat de twee .fastq-bestanden paired-end sequencing reads zijn en dat ze samen moeten worden geïnterpreteerd. Het resultaat daarvan is één .report bestand en één .out bestand die alle reads bevatten. /
+2. -- gzip-compressed: Deze optie wordt toegevoegd wanneer de datasets gezipped zijn. /
+/
+Let op: Het mock1.kraken.out bestand wordt 7.6 Gb, daardoor kan het iets langer duren totdat de kraken2 analyse volledig is uitgevoerd. /
+
+
+
+``` bash
+
+# Activeer de nanopore_clean environment
+conda activate nanopore_clean
+
+# Voer een kraken2 analyse uit op een illumina dataset
+kraken2 \
+  --db /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE \
+  --threads 6 \
+  --paired \
+  --gzip-compressed \
+  --report ~/parodontitis16s/analyses/kraken2/mock1.report.report \
+  --output ~/parodontitis16s/analyses/kraken2/mock1.kraken.out \
+  --use-names \
+  /home/daur2/metagenomics/reader_data/HU1_MOCK1_L001_R1_001.fastq.gz /home/daur2/metagenomics/reader_data/HU1_MOCK1_L001_R2_001.fastq.gz
+
+```
+
+\
+Uit de kraken2 analyse kwamen de volgende resultaten: \
+40237621 sequences (11308.61 Mbp) processed in 212.514s (11360.5 Kseq/m, 3192.81 Mbp/m). \
+36477304 sequences classified (90.65%) \
+3760317 sequences unclassified (9.35%) \
+\
+Van de reads kon 90.65% geclassificeerd worden, voor deze reeds kon dus een taxonomische toewijzing worden gemaakt. 9.35% van de reads konden niet geclassificeerd worden. Deze reads waren waarschijnlijk afkomstig van organismen die niet in de minikraken2_v2_8GB_201904_UPDATE database voorkomen. \
+\
+
+
+### bracken met threshold 0
+Vervolgens werd er een bracken analyse op de dataset uitgevoerd. Deze werd eerst uitgevoerd met een threshold van 0. \
+
+
+
+``` bash
+
+# Voer een bracken analyse uit op species niveau en met een threshold van 0
+bracken \
+  -d /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE \
+  -i ~/parodontitis16s/analyses/kraken2/mock1.report.report \
+  -o ~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold0.bracken \
+  -l S \
+  -t 0  
+
+```
+
+De bracken analyse met threshold 5 geeft de volgende resultaten:\
+  >>> Threshold: 0 \
+    >>> Number of species in sample: 2055 \
+          >> Number of species with reads > threshold: 2055 \
+          >> Number of species with reads < threshold: 0 \
+    >>> Total reads in sample: 40237621 \
+          >> Total reads kept at species level (reads > threshold): 21811852 \
+          >> Total reads discarded (species reads < threshold): 0 \
+          >> Reads distributed: 14665045 \
+          >> Reads not distributed (eg. no species above threshold): 407 \
+          >> Unclassified reads: 3760317 \
+
+\
+-Er werden 2055 bacteriesoorten gevonden in de dataset.
+-Voor de bracken analyse had kraken2 21811852 reads op speciesniveau bepaald. \
+-14665045 reads die door kraken2 niet op speciesniveau konden worden bepaald, werden door bracken alsnog op speciesniveau bepaald. \
+-407 reads konden niet toegewezen worden aan een bacteriesoort. \
+-3760317 reads zijn ongeclassificeerd. \
+\
+
+### Krona
+De volgende stap is het uitvoeren van een krona visualisatie op de dataset met threshold 0. Voor deze visualisatie werd gekozen om het bracken bestand als input te gebruiken. \
+\
+
+
+``` bash
+
+# Activeer de krona environment
+conda activate krona
+
+# Selecteer de variabelen taxonomy_id en fraction_total_reads en zet de output daarvan in een .txt bestand
+awk -F'\t' 'NR>1 {print $6 "\t" $2}' \
+~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold0.bracken \
+> ~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold0.txt
+
+# Maak een krona visualisatie
+ktImportTaxonomy \
+~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold0.txt \
+-o ~/parodontitis16s/analyses/krona/mock1_kraken_bracken_species_threshold0.html
+
+```
+
+
+\
+In figuur 11 is de krona visualisatie te zien van de illumina dataset zonder dat gefilterd werd op het aantal reads.
+\
+
+<div class="figure">
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-29-1.png" alt="Figuur 11: Krona visualisatie op species niveau en een threshold van 0." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-29)Figuur 11: Krona visualisatie op species niveau en een threshold van 0.</p>
+</div>
+
+\
+Raadpleeg voor figuur 11 het html bestand mock1_kraken_bracken_species_threshold0 in de GitHub repository om de resultaten in meer detail te kunnen zien.
+\
+\
+In figuur 11 worden nu de prevalenties van 2055 bacteriesoorten gerepresenteerd. Zoals in de krona visualisatie te zien is, zijn er meerdere bacteriesoorten in de dataset aanwezig met prevalenties van tussen de 1% en 5%. Van bepaalde bacteriegroepen komen veel subspecies voor Verder bestaat 1% van de reads uit virussen en 1% uit archaea. 2% van de reads werden onder [other root] gezet. Deze reads bevatten taxonomy IDs die niet in de lokale database van krona voorkomen. \
+\
+
+### bracken en krona met threshold 5
+Ook voor deze dataset wordt gefilterd op bacteriesoorten met minimaal 5 reads.
+\
+
+
+``` bash
+
+# Activeer de nanopore_clean environment
+conda activate nanopore_clean
+
+# Voer een bracken analyse uit op species niveau en met een threshold van 0
+bracken \
+  -d /home/daur2/metagenomics/minikraken2_v2_8GB_201904_UPDATE \
+  -i ~/parodontitis16s/analyses/kraken2/mock1.report.report \
+  -o ~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold5.bracken \
+  -l S \
+  -t 5  
+
+```
+
+\
+De bracken analyse met threshold 5 geeft de volgende resultaten: \
+>>> Threshold: 5 \
+    >>> Number of species in sample: 2055 \
+          >> Number of species with reads > threshold: 1147 \
+          >> Number of species with reads < threshold: 908 \
+    >>> Total reads in sample: 40237621 \
+          >> Total reads kept at species level (reads > threshold): 21810446 \
+          >> Total reads discarded (species reads < threshold): 1406 \
+          >> Reads distributed: 14664930 \
+          >> Reads not distributed (eg. no species above threshold): 522 \
+          >> Unclassified reads: 3760317 \
+
+\
+Van de 2055 bacteriesoorten voldeden 1147 bacteriesoorten aan de threshold van 5 reads. 908 bacteriesoorten voldeden niet aan deze threshold, deze bacteriesoorten hadden samen 1406 reads. \
+\          
+
+
+
+``` bash
+
+# Activeer de krona environment
+conda activate krona
+
+# Selecteer de variabelen taxonomy_id en fraction_total_reads en zet de output daarvan in een .txt bestand
+awk -F'\t' 'NR>1 {print $6 "\t" $2}' \
+~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold5.bracken \
+> ~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold5.txt
+
+# Maak een krona visualisatie
+ktImportTaxonomy \
+~/parodontitis16s/analyses/bracken/mock1_kraken_bracken_species_threshold5.txt \
+-o ~/parodontitis16s/analyses/krona/mock1_kraken_bracken_species_threshold5.html
+
+```
+
+\
+In figuur 12 is de krona visualisatie te zien van de illumina dataset waarbij was gefilterd op minimaal 5 reads per bacteriesoort.
+\
+
+<div class="figure">
+<img src="04-vrije_opdracht_uitvoering_files/figure-html/unnamed-chunk-32-1.png" alt="Figuur 12: Krona visualisatie op species niveau en een threshold van 5." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-32)Figuur 12: Krona visualisatie op species niveau en een threshold van 5.</p>
+</div>
+
+\
+In figuur 12 worden nu de prevalenties van 1147 bacteriesoorten gerepresenteerd. Ook in de dataset met threshold 5 werden bacteriesoorten gevonden met prevalenties van tussen de 1% en 5%. In deze dataset bestaat nog maar 1% van de reads uit [other root] in plaats van 2%, voor virussen en archaea blijven dit allebei 1% van de reads.
+
+
+
+
+
+
+
+
+
+
