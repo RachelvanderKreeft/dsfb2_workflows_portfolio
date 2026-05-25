@@ -213,6 +213,7 @@ div.csl-indent {
 <li class="chapter" data-level="5.11.3" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#bracken-met-threshold-0"><i class="fa fa-check"></i><b>5.11.3</b> bracken met threshold 0</a></li>
 <li class="chapter" data-level="5.11.4" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#krona-1"><i class="fa fa-check"></i><b>5.11.4</b> Krona</a></li>
 <li class="chapter" data-level="5.11.5" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#bracken-en-krona-met-threshold-5"><i class="fa fa-check"></i><b>5.11.5</b> bracken en krona met threshold 5</a></li>
+<li class="chapter" data-level="5.11.6" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#conclusie"><i class="fa fa-check"></i><b>5.11.6</b> Conclusie:</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="rna-sequencing-repository.html"><a href="rna-sequencing-repository.html"><i class="fa fa-check"></i><b>6</b> RNA-sequencing repository</a></li>
@@ -258,7 +259,7 @@ div.csl-indent {
 <li class="chapter" data-level="11" data-path="bronvermelding.html"><a href="bronvermelding.html"><i class="fa fa-check"></i><b>11</b> Bronvermelding</a>
 <ul>
 <li class="chapter" data-level="11.1" data-path="bronvermelding.html"><a href="bronvermelding.html#introductie-1"><i class="fa fa-check"></i><b>11.1</b> Introductie</a></li>
-<li class="chapter" data-level="11.2" data-path="bronvermelding.html"><a href="bronvermelding.html#referenties"><i class="fa fa-check"></i><b>11.2</b> Referenties</a></li>
+<li class="chapter" data-level="11.2" data-path="bronvermelding.html"><a href="bronvermelding.html#referentielijst"><i class="fa fa-check"></i><b>11.2</b> Referentielijst</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="geparametrizeerde-rmarkdown.html"><a href="geparametrizeerde-rmarkdown.html"><i class="fa fa-check"></i><b>12</b> Geparametrizeerde Rmarkdown</a>
 <ul>
@@ -288,6 +289,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="data-analyse-van-een-ander-reproduceren" class="section level1 hasAnchor" number="8">
 <h1><span class="header-section-number">Hoofdstuk 8</span> Data analyse van een ander reproduceren<a href="data-analyse-van-een-ander-reproduceren.html#data-analyse-van-een-ander-reproduceren" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Voor deze opdracht werd gekeken naar de data van een collega-laborant. Deze analyse werd reproduceerbaar uitgewerkt in een RMarkdown bestand. De data is afkomstig van het HU lectoraat Innovative Testing in Life Sciences &amp; Chemistry.</p>
 <div id="data-inlezen" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> Data inlezen<a href="data-analyse-van-een-ander-reproduceren.html#data-inlezen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="data-analyse-van-een-ander-reproduceren.html#cb30-1" tabindex="-1"></a><span class="co"># Laad de libraries tidyverse en readxl</span></span>
@@ -320,11 +322,11 @@ div.csl-indent {
 ## #   elegansInput &lt;dbl&gt;, bacterialStrain &lt;chr&gt;, bacterialTreatment &lt;chr&gt;,
 ## #   bacterialOD600 &lt;dbl&gt;, bacterialConcX &lt;dbl&gt;, bacterialVolume &lt;dbl&gt;, …</code></pre>
 <p><br />
-De data is goed ingelezen en is al in tidy format gezet, er hoeft dus niks aangepast te worden aan het format van de data.</p>
+De data werd goed ingelezen en was al in tidy format gezet, er hoefde dus niks aangepast te worden aan het format van de data.</p>
 </div>
 <div id="data-types-voor-rawdata-compname-en-compconcentration" class="section level2 hasAnchor" number="8.2">
 <h2><span class="header-section-number">8.2</span> Data types voor RawData, compName en compConcentration<a href="data-analyse-van-een-ander-reproduceren.html#data-types-voor-rawdata-compname-en-compconcentration" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Voor deze ananlyse wordt gebruikt gemaakt van de variabelen RawData, compName en compConcentration. Eerst moet gecontroleerd worden of het data type voor deze variabelen klopt zodat er een scatterplot kan worden gemaakt. RawData en comConcentration moeten numeric zijn en compName moet character zijn.</p>
+<p>Voor deze ananlyse werd gebruik gemaakt van de variabelen RawData, compName en compConcentration. Eerst werd gecontroleerd of het data type voor deze variabelen klopt zodat er een scatterplot kon worden gemaakt. RawData en comConcentration moesten het data type numeric zijn en compName moest character zijn.</p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="data-analyse-van-een-ander-reproduceren.html#cb32-1" tabindex="-1"></a><span class="co"># Controleer data type voor de kolom RawData</span></span>
 <span id="cb32-2"><a href="data-analyse-van-een-ander-reproduceren.html#cb32-2" tabindex="-1"></a><span class="fu">class</span>(dataset_4a<span class="sc">$</span>RawData)  </span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
@@ -364,7 +366,7 @@ De data is goed ingelezen en is al in tidy format gezet, er hoeft dus niks aange
 </div>
 <div id="normaliseer-de-data" class="section level2 hasAnchor" number="8.4">
 <h2><span class="header-section-number">8.4</span> Normaliseer de data<a href="data-analyse-van-een-ander-reproduceren.html#normaliseer-de-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>De gemiddelde waarde voor de negatieve controle (controlNegative) moet gelijk zijn als 1. De andere meetwaarden (experiment, controlPositive en controlVehicleA) moeten worden uitgedrukt als een fractie daarvan.</p>
+<p>De gemiddelde waarde voor de negatieve controle (controlNegative) moest gelijk worden gesteld aan de waarde 1. De andere meetwaarden (experiment, controlPositive en controlVehicleA) werden uitgedrukt als een fractie daarvan.</p>
 <div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="data-analyse-van-een-ander-reproduceren.html#cb43-1" tabindex="-1"></a><span class="co"># Bereken het gemiddelde van de negatieve controle</span></span>
 <span id="cb43-2"><a href="data-analyse-van-een-ander-reproduceren.html#cb43-2" tabindex="-1"></a>mean_neg_control <span class="ot">&lt;-</span> dataset_4a <span class="sc">%&gt;%</span></span>
 <span id="cb43-3"><a href="data-analyse-van-een-ander-reproduceren.html#cb43-3" tabindex="-1"></a>  <span class="fu">filter</span>(expType <span class="sc">==</span> <span class="st">&quot;controlNegative&quot;</span>) <span class="sc">%&gt;%</span></span>
@@ -420,44 +422,30 @@ De data is goed ingelezen en is al in tidy format gezet, er hoeft dus niks aange
 <p>De groepen die voor dit experiment waren gebruikt waren als volgt:<br />
 -experiment: Deze groep bevat de echte chemicaliën + concentraties die getest moeten worden voor de onderzoeksvraag.<br />
 -controlNegative: Is de negatieve controle. Hier is géén toxische stof aan toegevoegd.<br />
--controlPositive:Is de positieve controle. bij deze conditie wordt een chemicalie gebruikt waarvan bekend is dat het een toxisch effect heeft.<br />
+-controlPositive: Is de positieve controle. bij deze conditie wordt een chemicalie gebruikt waarvan bekend is dat het een toxisch effect heeft.<br />
 -controlVehicleA: Bevat alleen oplosmiddel (bijvoorbeeld DMSO of een buffer). Hiermee wordt gecontroleerd of het oplosmiddel zelf effect heeft.<br />
 <br />
 De data werd genormaliseerd omdat dit de experimentele variabiliteit tussen groepen verminderd. Hierdoor wordt directe vergelijking van behandelingseffecten tussen verschillende verbindingen en concentraties mogelijk.</p>
 </div>
 <div id="stappenplan-voor-vervolgonderzoek" class="section level2 hasAnchor" number="8.7">
 <h2><span class="header-section-number">8.7</span> Stappenplan voor vervolgonderzoek<a href="data-analyse-van-een-ander-reproduceren.html#stappenplan-voor-vervolgonderzoek" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Om de IC50 concentratie van de verschillende chemicaliën te bepalen, moet er een dose-response analyse met een log-logistisch model worden uitgevoerd. In Rstudio is hiervoor het drc package beschikbaar. Om deze analyse uit te kunnen voeren, moeten de volgende stappen worden uitgevoerd:<br />
+<p>Om de IC50 concentratie van de verschillende chemicaliën te bepalen, mowr er een dose-response analyse met een log-logistisch model worden uitgevoerd. In Rstudio is hiervoor het drc package beschikbaar. Om deze analyse uit te kunnen voeren, moeten de volgende stappen worden uitgevoerd:<br />
 </p>
-<ol style="list-style-type: decimal">
-<li>Installeer het drc package</li>
-</ol>
+<p><strong>1.</strong> Installeer het drc package</p>
 <div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="data-analyse-van-een-ander-reproduceren.html#cb52-1" tabindex="-1"></a><span class="fu">install.packages</span>(drc)</span></code></pre></div>
-<ol start="2" style="list-style-type: decimal">
-<li>Laad de data in Rstudio.<br />
-</li>
-<li>Controleer of de data in tidy format staat (voor het bestand CE.LIQ.FLOW.062_Tidydata.xlsx is dit al het geval)<br />
-</li>
-<li>Voer normalisatie van de data uit, waarbij het gemiddelde van de negatieve controle gelijk wordt gesteld aan 1.<br />
-</li>
-<li>Maak een scatterplot waarin dose en response tegenover elkaar worden gezet.<br />
-</li>
-<li>Kies een niet-liniair model, vaak wordt het log-logistisch model (LL.4) gebruikt<br />
-</li>
-<li>Model fitten met drc, oftewel: probeer een wiskundig model te laten passen op de biologische data.<br />
+<p><strong>2.</strong> Laad de data in Rstudio.<br />
+<strong>3.</strong> Controleer of de data in tidy format staat (voor het bestand CE.LIQ.FLOW.062_Tidydata.xlsx is dit al het geval)<br />
+<strong>4.</strong> Voer normalisatie van de data uit, waarbij het gemiddelde van de negatieve controle gelijk wordt gesteld aan 1.<br />
+<strong>5.</strong> Maak een scatterplot waarin dose en response tegenover elkaar worden gezet.<br />
+<strong>6.</strong> Kies een niet-liniair model, vaak wordt het log-logistisch model (LL.4) gebruikt<br />
+<strong>7.</strong> Model fitten met drc, oftewel: probeer een wiskundig model te laten passen op de biologische data.<br />
 -Hiermee wordt onderzocht welke curve het verband tussen de dosis en het effect het beste omschrijft.<br />
 -Vaak is dit een S-curve.<br />
-</li>
-<li>Visualiseer de dosis-response curves.<br />
-</li>
-<li>Voer de IC50 / ED50 berekening uit.<br />
-</li>
-<li>Vergelijk de IC50 waarden van de verschillende chemicaliën.<br />
-</li>
-<li>Interpretatie van resultaten.<br />
-</li>
-<li>Voeg een modelvalidatie toe.</li>
-</ol>
+<strong>8.</strong> Visualiseer de dosis-response curves.<br />
+<strong>9.</strong> Voer de IC50 / ED50 berekening uit.<br />
+<strong>10.</strong> Vergelijk de IC50 waarden van de verschillende chemicaliën.<br />
+<strong>11.</strong> Interpretatie van resultaten.<br />
+<strong>12.</strong> Voeg een modelvalidatie toe.</p>
 
 </div>
 </div>

@@ -13,18 +13,25 @@ description: "Dit is mijn portfolio voor de cursus Workflows van de minor Data S
 
 # Introductie
 
-In dit portfolio presenteer ik mijn werk en leerproces voor het onderdeel Workflows van de cursus Data Science for Biology 2. De opgenomen opdrachten laten zien hoe ik de theorie heb toegepast, keuzes heb onderbouwd en mezelf inhoudelijk heb ontwikkeld. \
+In dit portfolio presenteer ik mijn werk voor het onderdeel Workflows van de cursus Data Science for Biology 2. De opgenomen opdrachten laten zien hoe ik de theorie heb toegepast, keuzes heb onderbouwd en mezelf inhoudelijk heb ontwikkeld. \
+\
+De Github repository voor de portfolio kan via [deze link](https://github.com/RachelvanderKreeft/dsfb2_workflows_portfolio) worden bereikt.
+\
 \
 
 ## Overzicht van opdrachten
-Het portfolio bestaat uit de volgende volgende opdrachten: \
+Het portfolio bestaat uit verschillende opdrachten. Hieronder staat een overzicht van de uitgevoerde opdrachten en daarvoor staat in welk hoofdstuk de opdracht te vinden is: \
 **2.** Curriculum vitae: Bevat mijn curriculum vitae.
 
-**3.** Plan voor de toekomst: Beschrijft op wat voor bedrijf ik mezelf later zie werken en welke data science skills ik daarvoor wil leren.
 
-**4 + 5.** Vrije opdracht: Voor deze opdracht werd 32 uur besteed aan het leren van een nieuwe zelf gekozen Data Science skill. Voor deze opdracht werd gekeken naar een 16s sequencing dataset met 8 parodontitis samples en 4 controlesamples afkomstig van het projecticum van de specialisatie Biomolecular Research. Tijdens dit project hadden ik en drie andere studenten de samenstelling van het orale microbioom van patiënten met parodontitis vergeleken met het orale microbioom van gezonde personen. Het doel van deze opdracht was om de reproduceerbaarheid van deze dataset te controlen, aanvullende statische testen uit te voeren op de dataset en om mijn skills in metagenomics te verbeteren.
+**3.** Plan voor de toekomst: Hierin beschrijf ik waar ik mezelf over 1-2 jaar zie werken en welke data science skills ik daarvoor wil leren.
+
+
+**4 + 5.** Vrije opdracht: Voor deze opdracht werd 32 uur besteed aan het leren van een nieuwe zelf gekozen Data Science skill. Voor deze opdracht werd gekeken naar een 16s sequencing dataset met 8 parodontitis samples en 4 controlesamples afkomstig van het projecticum van de specialisatie Biomolecular Research. Tijdens dit project hadden ik en drie andere studenten de samenstelling van het orale microbioom van patiënten met parodontitis vergeleken met het orale microbioom van gezonde personen. Het doel van deze opdracht was om de reproduceerbaarheid van deze dataset te controlen, aanvullende statische testen uit te voeren op de dataset en om mijn skills in metagenomics te verbeteren. Vervolgens werd dezelfde workflow toegepast op een andere dataset.
+
 
 **6.** RNA-sequencing repository: Voor deze opdracht werden de Guerilla Analytics regels toegepast voor data management op de RNA-sequencing formatieve opdracht van de *DAUR2* module uit de cursus *Data Sciences for Biology 1*
+
 
 **7.** Portfolio repository: Voor deze opdracht werden de Guerilla Analytics regels toegepast voor data management op de portfolio repository.
 

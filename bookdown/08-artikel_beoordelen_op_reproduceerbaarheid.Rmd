@@ -6,10 +6,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Gekozen artikel
 
-Het artikel dat werd onderzocht voor deze analyse is 'Infectivity and fatality of influenza in pre- and post-COVID-19 pandemic year', geschreven door Shuanglin Jing en Hao Wang.
-\
-\
-[Klik hier](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013229) om het artikel te zien.
+Het artikel dat werd onderzocht voor deze analyse is 'Infectivity and fatality of influenza in pre- and post-COVID-19 pandemic year', geschreven door Shuanglin Jing en Hao Wang. [Klik hier](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013229) om het artikel te zien.
 \
 \
 

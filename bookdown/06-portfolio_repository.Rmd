@@ -1,5 +1,8 @@
 # Portfolio repository
 
+Voor deze opdracht werden de Guerilla Analytics regels toegepast voor data management op de portfolio repository. [Klik hier](https://github.com/RachelvanderKreeft/dsfb2_workflows_portfolio) om de portfolio repository te zien.
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 

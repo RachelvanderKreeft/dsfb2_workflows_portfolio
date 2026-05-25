@@ -2,6 +2,9 @@
 
 
 
+Voor deze opdracht werden de Guerilla Analytics regels toegepast voor data management op de RNA-sequencing formatieve opdracht van de *DAUR2* module uit de cursus *Data Sciences for Biology 1*
+
+
 
 ```
 ## ~/documents/dsfb2/dsfb2_workflows_portfolio/dsfb2_workflows_portfolio/projecten/3a_formatieve_opdracht_rna-seq_daur2/rnaseq_ipsc
