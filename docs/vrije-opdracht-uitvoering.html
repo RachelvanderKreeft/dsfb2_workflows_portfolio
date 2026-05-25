@@ -213,6 +213,7 @@ div.csl-indent {
 <li class="chapter" data-level="5.11.3" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#bracken-met-threshold-0"><i class="fa fa-check"></i><b>5.11.3</b> bracken met threshold 0</a></li>
 <li class="chapter" data-level="5.11.4" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#krona-1"><i class="fa fa-check"></i><b>5.11.4</b> Krona</a></li>
 <li class="chapter" data-level="5.11.5" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#bracken-en-krona-met-threshold-5"><i class="fa fa-check"></i><b>5.11.5</b> bracken en krona met threshold 5</a></li>
+<li class="chapter" data-level="5.11.6" data-path="vrije-opdracht-uitvoering.html"><a href="vrije-opdracht-uitvoering.html#conclusie"><i class="fa fa-check"></i><b>5.11.6</b> Conclusie:</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="rna-sequencing-repository.html"><a href="rna-sequencing-repository.html"><i class="fa fa-check"></i><b>6</b> RNA-sequencing repository</a></li>
@@ -258,7 +259,7 @@ div.csl-indent {
 <li class="chapter" data-level="11" data-path="bronvermelding.html"><a href="bronvermelding.html"><i class="fa fa-check"></i><b>11</b> Bronvermelding</a>
 <ul>
 <li class="chapter" data-level="11.1" data-path="bronvermelding.html"><a href="bronvermelding.html#introductie-1"><i class="fa fa-check"></i><b>11.1</b> Introductie</a></li>
-<li class="chapter" data-level="11.2" data-path="bronvermelding.html"><a href="bronvermelding.html#referenties"><i class="fa fa-check"></i><b>11.2</b> Referenties</a></li>
+<li class="chapter" data-level="11.2" data-path="bronvermelding.html"><a href="bronvermelding.html#referentielijst"><i class="fa fa-check"></i><b>11.2</b> Referentielijst</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="geparametrizeerde-rmarkdown.html"><a href="geparametrizeerde-rmarkdown.html"><i class="fa fa-check"></i><b>12</b> Geparametrizeerde Rmarkdown</a>
 <ul>
@@ -367,7 +368,7 @@ In de environment krona werd versie 2.8.1 van krona gebruikt.<br />
 </div>
 <div id="van-.bam-naar-.fastq" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> Van .bam naar .fastq<a href="vrije-opdracht-uitvoering.html#van-.bam-naar-.fastq" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>De output van de nanopore sequencing werd in de Rstudio server aangeleverd als een .bam bestand. Het originele output bestand van de sequencing is terug te vinden in de Rstudio server van daur1 via de volgende pathway:
+<p>De output van de nanopore sequencing werd in de Rstudio server aangeleverd als een .bam bestand. Dit bestand is terug te vinden in de Rstudio server van daur1 via de volgende pathway:
 /home/data/projecticum/nanopore/paradontitis/16S114_exp1_VL5B06_11122025<br />
 <br />
 Met behulp van samtools werd het .bam bestand omgezet naar een fastq bestand.<br />
@@ -1640,6 +1641,10 @@ Figure 5.11: Figuur 12: Krona visualisatie op species niveau en een threshold va
 </div>
 <p><br />
 In figuur 12 worden nu de prevalenties van 1147 bacteriesoorten gerepresenteerd. Ook in de dataset met threshold 5 werden bacteriesoorten gevonden met prevalenties van tussen de 1% en 5%. In deze dataset bestaat nog maar 1% van de reads uit [other root] in plaats van 2%, voor virussen en archaea blijven dit allebei 1% van de reads.</p>
+</div>
+<div id="conclusie" class="section level3 hasAnchor" number="5.11.6">
+<h3><span class="header-section-number">5.11.6</span> Conclusie:<a href="vrije-opdracht-uitvoering.html#conclusie" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>De workflow werkt ook op de illumina dataset. Het grootste verschil is dat voor het bepalen van de kwaliteit van de reads fastqc werd gebruikt in plaats van nanoplot. Verder kon voor illumina de kwaliteit van de reads per base worden bepaald, terwijl nanoplot alleen de kwalaiteit kan bepalen van hele reads. Voor kraken2 moesten de opties –paired en –gzip-compressed worden gebruikt. De optie –paired is hierbij standaard voor gepaarde reads, terwijl –gzip-compressed alleen werd gebruikt omdat de dataset gezipped was.</p>
 
 </div>
 </div>

@@ -95,7 +95,7 @@ In de environment krona werd versie 2.8.1 van krona gebruikt. \
 
 ## Van .bam naar .fastq
 
-De output van de nanopore sequencing werd in de Rstudio server aangeleverd als een .bam bestand. Het originele output bestand van de sequencing is terug te vinden in de Rstudio server van daur1 via de volgende pathway:
+De output van de nanopore sequencing werd in de Rstudio server aangeleverd als een .bam bestand. Dit bestand is terug te vinden in de Rstudio server van daur1 via de volgende pathway:
 /home/data/projecticum/nanopore/paradontitis/16S114_exp1_VL5B06_11122025 \
 \
 Met behulp van samtools werd het .bam bestand omgezet naar een fastq bestand. \
@@ -1066,11 +1066,5 @@ In figuur 12 is de krona visualisatie te zien van de illumina dataset waarbij wa
 In figuur 12 worden nu de prevalenties van 1147 bacteriesoorten gerepresenteerd. Ook in de dataset met threshold 5 werden bacteriesoorten gevonden met prevalenties van tussen de 1% en 5%. In deze dataset bestaat nog maar 1% van de reads uit [other root] in plaats van 2%, voor virussen en archaea blijven dit allebei 1% van de reads.
 
 
-
-
-
-
-
-
-
-
+### Conclusie:
+De workflow werkt ook op de illumina dataset. Het grootste verschil is dat voor het bepalen van de kwaliteit van de reads fastqc werd gebruikt in plaats van nanoplot. Verder kon voor illumina de kwaliteit van de reads per base worden bepaald, terwijl nanoplot alleen de kwalaiteit kan bepalen van hele reads. Voor kraken2 moesten de opties --paired en --gzip-compressed worden gebruikt. De optie --paired is hierbij standaard voor gepaarde reads, terwijl --gzip-compressed alleen werd gebruikt omdat de dataset gezipped was.

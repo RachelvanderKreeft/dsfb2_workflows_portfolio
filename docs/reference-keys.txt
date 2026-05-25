@@ -51,6 +51,7 @@ kraken2-1
 bracken-met-threshold-0
 krona-1
 bracken-en-krona-met-threshold-5
+conclusie
 rna-sequencing-repository
 portfolio-repository
 data-analyse-van-een-ander-reproduceren
@@ -81,7 +82,7 @@ select_columns
 summary_by_group
 bronvermelding
 introductie-1
-referenties
+referentielijst
 geparametrizeerde-rmarkdown
 introductie-2
 demonstratie

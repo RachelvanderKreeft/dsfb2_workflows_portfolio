@@ -1,5 +1,8 @@
 # Portfolio repository
 
+Voor deze opdracht werden de Guerilla Analytics regels toegepast voor data management op de portfolio repository. [Klik hier](https://github.com/RachelvanderKreeft/dsfb2_workflows_portfolio) om de portfolio repository te zien.
+
+
 
 
 
@@ -100,7 +103,7 @@
 ## │   ├── now.json
 ## │   ├── packages.bib
 ## │   ├── preamble.tex
-## │   ├── render6038120d6327.rds
+## │   ├── render2cd025145017.rds
 ## │   ├── style.css
 ## │   ├── toc.css
 ## │   ├── vancouver-ama.csl
@@ -185,6 +188,7 @@
 ## │   │   ├── plan-voor-de-toekomst.html
 ## │   │   ├── portfolio-repository.html
 ## │   │   ├── r-package.html
+## │   │   ├── reference-keys.txt
 ## │   │   ├── rna-sequencing-repository.html
 ## │   │   ├── search_index.json
 ## │   │   ├── style.css
@@ -211,6 +215,9 @@
 ## │   │       ├── unnamed-chunk-20-1.png
 ## │   │       ├── unnamed-chunk-22-1.png
 ## │   │       ├── unnamed-chunk-24-1.png
+## │   │       ├── unnamed-chunk-25-1.png
+## │   │       ├── unnamed-chunk-29-1.png
+## │   │       ├── unnamed-chunk-32-1.png
 ## │   │       ├── unnamed-chunk-6-1.png
 ## │   │       └── unnamed-chunk-8-1.png
 ## │   ├── 05-formatieve_opdracht_rna-seq_daur2.md
